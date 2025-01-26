@@ -2,11 +2,13 @@
 % figure out tank heat transfer properties
 
 Required_energy = 1000;  % MJ
+H2_energy_density = 120;    %MJ/kg
 Equivalent_battery_mass = Required_energy*10^6/(400*3600);
 Generator_efficiency = 0.3;
 m_LH2 = Required_energy/H2_energy_density/Generator_efficiency;
 
 % tank_size
+LH2_density = 70;
 AC_tank_vol_limit = 0.8;
 AC_tank_volume = m_LH2/LH2_density/AC_tank_vol_limit;
 AC_tank_radius = 0.5;

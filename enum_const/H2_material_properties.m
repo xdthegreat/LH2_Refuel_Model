@@ -1,10 +1,32 @@
 
+[v,e] = pyversion; 
+system([e,' -m pip install --user -U CoolProp']);
+
+% http://www.coolprop.org/coolprop/HighLevelAPI.html#parameter-table
+pressure_vector = 30000:10000:1100000;
+Temp_vector = 15:1:400;
+
+u_min_liquid = py.CoolProp.CoolProp.PropsSI('Umass','P|liquid', min(pressure_vector), 'T', min(Temp_vector), 'Hydrogen');  %get internal energy from pressure and temperature
+u_max_gas = py.CoolProp.CoolProp.PropsSI('Umass','P', max(pressure_vector), 'T', max(Temp_vector), 'Hydrogen');  %get internal energy from pressure and temperature
+
 % H2 properties
 load("H2Tables.mat")
 
-H2_energy_density = 120;    %MJ/kg
+% density lookup table
+short_temp_vector = Temp_vector(1:25);
+LH2_density_table = zeros(length(pressure_vector), length(short_temp_vector));
+for i = 1:length(pressure_vector)
+    for j  = 1:length(short_temp_vector)
+        %check if liquid phase exists
+        phase = py.CoolProp.CoolProp.PropsSI('Phase','P',pressure_vector(i),'T',Temp_vector(j),'Hydrogen');
+        if phase == 0 || phase == 6
+            LH2_density_table(i, j) = py.CoolProp.CoolProp.PropsSI('D','P|liquid',pressure_vector(i),'T',Temp_vector(j),'Hydrogen');
+        else
+            LH2_density_table(i, j) = 0;
+        end
+    end
+end
 
-LH2_density = 70;
 
 
 % steel data

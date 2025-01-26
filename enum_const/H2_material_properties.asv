@@ -1,0 +1,33 @@
+
+[v,e] = pyversion; 
+system([e,' -m pip install --user -U CoolProp']);
+
+% http://www.coolprop.org/coolprop/HighLevelAPI.html#parameter-table
+pressure_vector = 30000:10000:1100000;
+Temp_vector = 15:1:400;
+
+u_min_liquid = py.CoolProp.CoolProp.PropsSI('Umass','P|liquid', min(pressure_vector), 'T', min(Temp_vector), 'Hydrogen');  %get internal energy from pressure and temperature
+u_max_gas = py.CoolProp.CoolProp.PropsSI('Umass','P', max(pressure_vector), 'T', max(Temp_vector), 'Hydrogen');  %get internal energy from pressure and temperature
+
+% H2 properties
+load("H2Tables.mat")
+
+% density lookup table
+LH2_de
+for i = 1:length(pressure_vector)
+    for j  = 1:length(Temp_vector)
+        %check if liquid phase exists
+        py.CoolProp.CoolProp.PropsSI('D','P',pressure_vector(i),'T',Temp_vector(j),'Hydrogen');
+
+        py.CoolProp.CoolProp.PropsSI('D','P',pressure_vector(i),'T',Temp_vector(j),'Hydrogen');
+    end
+end
+
+
+
+% steel data
+steel_density = 8500;  %kg/m^3
+steel_emmissitivity = 0.6;
+radiation_constant = 5.67*10^-8;
+steel_conductivity = 45;
+steel_heat_capacity = 400;  %J/kg/K

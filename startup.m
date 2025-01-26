@@ -7,3 +7,4 @@ addpath("Control model\")
 
 run("H2_material_properties.m")
 run("design_details.m")
+run("stateflow_const.m")
