@@ -12,7 +12,7 @@ u_max_gas = py.CoolProp.CoolProp.PropsSI('Umass','P', max(pressure_vector), 'T',
 % H2 properties
 load("H2Tables.mat")
 
-% density lookup table
+%% density lookup table
 short_temp_vector = Temp_vector(1:25);
 LH2_density_table = zeros(length(pressure_vector), length(short_temp_vector));
 for i = 1:length(pressure_vector)

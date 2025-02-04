@@ -9,7 +9,7 @@ m_LH2 = Required_energy/H2_energy_density/Generator_efficiency;
 
 % tank_size
 LH2_density = 70;
-AC_tank_vol_limit = 0.8;
+AC_tank_vol_limit = 0.7;
 AC_tank_volume = m_LH2/LH2_density/AC_tank_vol_limit;
 AC_tank_radius = 0.5;
 AC_tank_cross_sectional_area = AC_tank_radius^2*pi;
@@ -26,17 +26,19 @@ max_pressure = 6;  %bar
 max_stress = 300;  %MPa
 Ambient_temp = 300;
 
-supply_pipe_inner_diameter = 0.02; %m
+supply_pipe_inner_diameter = 0.0254; %m
 supply_pipe_outer_diameter = 0.05;
 supply_pipe_inner_area = supply_pipe_inner_diameter^2*pi;
 supply_pipe_outer_area = supply_pipe_outer_diameter^2*pi;
-supply_valve_orifice_radius = 0.015;
+supply_valve_orifice_radius = 0.024;
 supply_valve_orifice_area = supply_valve_orifice_radius^2*pi;
 
 return_pipe_inner_diameter = 0.05;
 return_pipe_outer_diameter = 0.08;
 return_pipe_inner_area = return_pipe_inner_diameter^2*pi;
 return_pipe_outer_area = return_pipe_outer_diameter^2*pi;
+return_valve_orifice_radius = 0.045;
+return_valve_orifice_area = return_valve_orifice_radius^2*pi;
 
 wall_thickness = 1/1000;
 
@@ -50,6 +52,14 @@ hose_length = 20;  %m
 
 hose_thermal_conductivity = 0.01;  %W/(m*K)
 pipe_thermal_conductivity = 0.005;  %W/(m*K)
+liquid_supply_SOV_leak_frac = 1e-8;
 
 %Controller info
 timestep = 0.5;
+
+%case info:
+Initial_temp = 300;
+Initial_AC_LH2_frac = 0;
+Initial_AC_tank_pressure = 1.1;
+initial_hose_p = 1.1;
+stopTime = 1000;

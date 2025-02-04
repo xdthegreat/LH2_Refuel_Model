@@ -11,6 +11,8 @@ CHILLDOWN = 1;
 REFUEL = 3;
 DEFUEL = 2;
 WARMUP = 4;
+FEED = 5;
+ABORT_MODE = -1;
 
 REFUEL_MODE = true;
 DEFUEL_MODE = false;
