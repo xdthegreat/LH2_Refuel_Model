@@ -1,7 +1,10 @@
 
-
+clc
 %% run warm tank refuel then cold tank refuel
 
-model = "simspcae_automatic";
+model = "simscape_automatic";
 
-simOut = sim(model);
+simin = Simulink.SimulationInput(model);
+simin = setModelParameter(simin,SimulationMode="accelerator");
+
+simOut = sim(simin);

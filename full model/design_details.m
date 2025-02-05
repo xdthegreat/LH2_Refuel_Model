@@ -76,3 +76,5 @@ Initial_AC_Tank_Liquid_Temp = 20;
 Initial_AC_Tank_Gas_Temp = 300;
 initial_hose_p = 1.1;
 stopTime = 900;
+
+valve_laminar_p_ratio = 0.999;
