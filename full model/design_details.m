@@ -75,4 +75,4 @@ Initial_AC_tank_pressure = 1.1;
 Initial_AC_Tank_Liquid_Temp = 20;
 Initial_AC_Tank_Gas_Temp = 300;
 initial_hose_p = 1.1;
-stopTime = 500;
+stopTime = 900;

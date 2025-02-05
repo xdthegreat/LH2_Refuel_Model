@@ -13,16 +13,22 @@ u_max_gas = py.CoolProp.CoolProp.PropsSI('Umass','P', max(pressure_vector), 'T',
 load("H2Tables.mat")
 
 %% density lookup table
-short_temp_vector = Temp_vector(1:25);
-LH2_density_table = zeros(length(pressure_vector), length(short_temp_vector));
-for i = 1:length(pressure_vector)
-    for j  = 1:length(short_temp_vector)
+short_temp_vector = 15:0.1:30;
+short_pressure_vector = 30000:1000:700000;
+LH2_density_table = zeros(length(short_pressure_vector), length(short_temp_vector));
+for i = 1:length(short_pressure_vector)
+    for j = 1:length(short_temp_vector)
         %check if liquid phase exists
-        phase = py.CoolProp.CoolProp.PropsSI('Phase','P',pressure_vector(i),'T',Temp_vector(j),'Hydrogen');
+        phase = py.CoolProp.CoolProp.PropsSI('Phase','P',short_pressure_vector(i),'T',Temp_vector(j),'Hydrogen');
         if phase == 0 || phase == 6
-            LH2_density_table(i, j) = py.CoolProp.CoolProp.PropsSI('D','P|liquid',pressure_vector(i),'T',Temp_vector(j),'Hydrogen');
+            LH2_density_table(i, j) = py.CoolProp.CoolProp.PropsSI('D','P|liquid',short_pressure_vector(i),'T',Temp_vector(j),'Hydrogen');
         else
             LH2_density_table(i, j) = 0;
+        end
+    end
+    for j = 2:length(LH2_density_table(i, :))
+        if LH2_density_table(i, j) == 0 && LH2_density_table(i, j-1) ~= 0
+            LH2_density_table(i, j) = LH2_density_table(i, j-1);
         end
     end
 end
