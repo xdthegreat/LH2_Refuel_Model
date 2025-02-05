@@ -8,6 +8,12 @@ T_DIAGNOSTIC_elem = {'T_TANK_GS', 'T_PUMP_GS', 'T_GH2_SUPPLY_GS', 'T_VALVE_GS', 
     'T_HOSE_GS', 'T_COUPLINGS_GS', 'T_COUPLING_AC', 'T_BYPASS', 'T_TANK_AC', ...
     'T_ENGINE_FEED', 'T_COUPLING_AC_RETURN', 'T_HOSE_RETURN_GS', 'T_SOV_RETURN_GS'};
 
+GS_VALVE_FEEDBACK_elem = {'LH2_PROP_VALVE_POS', 'GH2_PROP_VALVE_POS', 'GS_Supply_SOV_POS'...
+    'GS_GH2_SOV_POS', 'GS_Return_SOV_POS', 'GS_RETURN_PROP_POS'};
+
+AC_VALVE_FEEDBACK_elem = {'AC_Return_SOV_POS', 'AC_Supply_SOV_POS', 'AC_Bypass_SOV_POS'...
+    'AC_Engine_SOV_POS'};
+
 clear elems
 for i = 1:length(P_DIAGNOSTIC_elem)
     elems(i) = Simulink.BusElement;
@@ -26,3 +32,21 @@ end
 
 T_DIAGNOSTIC = Simulink.Bus;
 T_DIAGNOSTIC.Elements = elems;
+
+clear elems
+for i = 1:length(GS_VALVE_FEEDBACK_elem)
+    elems(i) = Simulink.BusElement;
+    elems(i).Name = cell2mat(GS_VALVE_FEEDBACK_elem(i));
+end
+
+GS_VALVE_FEEDBACK = Simulink.Bus;
+GS_VALVE_FEEDBACK.Elements = elems;
+
+clear elems
+for i = 1:length(AC_VALVE_FEEDBACK_elem)
+    elems(i) = Simulink.BusElement;
+    elems(i).Name = cell2mat(AC_VALVE_FEEDBACK_elem(i));
+end
+
+AC_VALVE_FEEDBACK = Simulink.Bus;
+AC_VALVE_FEEDBACK.Elements = elems;
