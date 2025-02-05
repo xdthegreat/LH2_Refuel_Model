@@ -1,6 +1,10 @@
 
 
+clc
+clear all
+
 addpath("Components\")
+addpath("Sensitivity_sweep\")
 addpath("enum_const\")
 addpath("full model\")
 addpath("Control model\")

@@ -27,6 +27,9 @@ for i = 1:length(pressure_vector)
     end
 end
 
+%% thermal conductivity of H2
+LH2_conductivity = py.CoolProp.CoolProp.PropsSI('conductivity','P|liquid', 250000, 'T', 21, 'Hydrogen');
+GH2_conductivity = py.CoolProp.CoolProp.PropsSI('conductivity','P|gas', 250000, 'T', 24, 'Hydrogen');
 
 
 % steel data
