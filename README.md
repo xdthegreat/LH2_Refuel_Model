@@ -5,10 +5,17 @@
 
  matlab (R2024b)
 
- simhydraulics 
+ distrib_computing_toolbox
+
+ gpu_coder
+
+ matlab_coder
+
+ simhydraulics
 
  simscape
 
  simulink
- 
+
  stateflow
+ 
