@@ -6,46 +6,25 @@
 
 clc
 %% valve_diameter_sweep.m
+% This changes aircraft valve orifice area over a variety of values
 
 valve_diameter_vector = 0.01:0.002:0.024;
 
 tic;
-% for i = 1:length(valve_diameter_vector)
-% 
-%     supply_valve_orifice_radius = valve_diameter_vector(i);
-%     supply_valve_orifice_area = supply_valve_orifice_radius^2*pi;
-% 
-%     return_valve_orifice_radius = valve_diameter_vector(i)*2;
-%     return_valve_orifice_area = return_valve_orifice_radius^2*pi;
-% 
-%     engine_feed_valve_orifice_radius = valve_diameter_vector(i);
-%     engine_feed_valve_orifice_area = engine_feed_valve_orifice_radius^2*pi;
-% 
-% 
-%     model = "simscape_automatic";
-% 
-%     simin = Simulink.SimulationInput(model);
-%     simin = setModelParameter(simin,SimulationMode="accelerator");
-% 
-%     simOut(i) = sim(simin);
-% end
 
 %parsim version
 mdl = "simscape_automatic";
 simIn(1:length(valve_diameter_vector)) = Simulink.SimulationInput(mdl); 
 for i = 1:length(valve_diameter_vector) 
     simIn(i) = simIn(i).setModelParameter('SimulationMode','accelerator');
-    simIn(i) = simIn(i).setVariable('supply_valve_orifice_radius',valve_diameter_vector(i)); 
-    supply_valve_orifice_area_per_sim = valve_diameter_vector(i)^2*pi;
-    simIn(i) = simIn(i).setVariable('supply_valve_orifice_area',supply_valve_orifice_area_per_sim); 
+    AC_return_valve_inner_diameter = valve_diameter_vector(i)*2;
+    AC_return_valve_orifice_area = AC_return_valve_inner_diameter^2*pi;
+    simIn(i) = simIn(i).setVariable('AC_return_valve_orifice_area', AC_return_valve_orifice_area); 
 
-    simIn(i) = simIn(i).setVariable('return_valve_orifice_radius',valve_diameter_vector(i)*2); 
-    return_valve_orifice_area_per_sim = (valve_diameter_vector(i)*2)^2*pi;
-    simIn(i) = simIn(i).setVariable('return_valve_orifice_area',return_valve_orifice_area_per_sim);
+    AC_supply_valve_inner_diameter = 0.024;
+    AC_supply_valve_orifice_area = AC_supply_valve_inner_diameter^2*pi;
+    simIn(i) = simIn(i).setVariable('AC_supply_valve_orifice_area', AC_supply_valve_orifice_area); 
 
-    simIn(i) = simIn(i).setVariable('engine_feed_valve_orifice_radius',valve_diameter_vector(i)); 
-    engine_feed_valve_orifice_area_per_sim = valve_diameter_vector(i)^2*pi;
-    simIn(i) = simIn(i).setVariable('engine_feed_valve_orifice_area',engine_feed_valve_orifice_area_per_sim);
 end
 
 simOut = parsim(simIn);

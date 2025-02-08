@@ -3,7 +3,7 @@
 clc
 clear all
 
-addpath("Components\")
+addpath(genpath("Components\"))
 addpath("Sensitivity_sweep\")
 addpath("enum_const\")
 addpath("full model\")
@@ -13,3 +13,4 @@ run("H2_material_properties.m")
 run("bus_def.m")
 run("design_details.m")
 run("stateflow_const.m")
+run('load_part_details')
