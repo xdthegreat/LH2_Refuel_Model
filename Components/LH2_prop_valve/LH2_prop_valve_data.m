@@ -1,11 +1,8 @@
 
 
 %default settings
-LH2_prop_valve_inner_diameter = 0.03;
+LH2_prop_valve_inner_diameter = 0.04;
 LH2_prop_valve_orifice_area = LH2_prop_valve_inner_diameter^2*pi;
-
-LH2_prop_valve_port_inner_diameter = 0.04;
-LH2_prop_valve_port_inner_area = LH2_prop_valve_port_inner_diameter^2*pi;
 
 LH2_prop_valve_leakage = 1e-6;
 

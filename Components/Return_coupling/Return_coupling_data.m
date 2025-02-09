@@ -1,10 +1,8 @@
 
 
 %default settings
-return_coupling_port_inner_diameter = 0.0254;
-return_coupling_port_inner_area = return_coupling_port_inner_diameter^2*pi;
 
-return_coupling_valve_inner_diameter = 0.024;
+return_coupling_valve_inner_diameter = 0.09;
 return_coupling_valve_orifice_area = return_coupling_valve_inner_diameter^2*pi;
 
 return_coupling_valve_laminar_p_ratio = 0.999;

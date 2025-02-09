@@ -1,11 +1,8 @@
 
 
 %default settings
-GS_return_valve_inner_diameter = 0.04;
+GS_return_valve_inner_diameter = 0.09;
 GS_return_valve_orifice_area = GS_return_valve_inner_diameter^2*pi;
-
-GS_return_valve_port_inner_diameter = 0.05;
-GS_return_valve_port_inner_area = GS_return_valve_port_inner_diameter^2*pi;
 
 GS_return_valve_leakage = 1e-6;
 

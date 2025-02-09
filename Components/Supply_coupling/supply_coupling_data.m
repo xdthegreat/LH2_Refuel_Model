@@ -1,10 +1,7 @@
 
 
 %default settings
-supply_coupling_port_inner_diameter = 0.0254;
-supply_coupling_port_inner_area = supply_coupling_port_inner_diameter^2*pi;
-
-supply_coupling_valve_inner_diameter = 0.024;
+supply_coupling_valve_inner_diameter = 0.04;
 supply_coupling_valve_orifice_area = supply_coupling_valve_inner_diameter^2*pi;
 
 supply_coupling_valve_laminar_p_ratio = 0.999;

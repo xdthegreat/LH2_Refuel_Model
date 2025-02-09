@@ -43,4 +43,4 @@ steel_density = 8500;  %kg/m^3
 steel_emmissitivity = 0.6;
 radiation_constant = 5.67*10^-8;
 steel_conductivity = 45;
-steel_heat_capacity = 400;  %J/kg/K
+steel_heat_capacity = 467;  %J/kg/K

@@ -1,7 +1,7 @@
  
 
 % TODO: change model to fluids_&_control.slx if needed
-% change model to runtime configuration
+
 
 
 clc
@@ -22,11 +22,11 @@ for i = 1:length(valve_diameter_vector)
     AC_return_valve_orifice_area = AC_return_valve_inner_diameter^2*pi;
     simIn(i) = simIn(i).setVariable('AC_return_valve_orifice_area', AC_return_valve_orifice_area); 
 
-    AC_supply_valve_inner_diameter = 0.024;
+    AC_supply_valve_inner_diameter = valve_diameter_vector(i);
     AC_supply_valve_orifice_area = AC_supply_valve_inner_diameter^2*pi;
     simIn(i) = simIn(i).setVariable('AC_supply_valve_orifice_area', AC_supply_valve_orifice_area); 
     
-    AC_engine_valve_inner_diameter = 0.024;
+    AC_engine_valve_inner_diameter = valve_diameter_vector(i);
     AC_engine_valve_orifice_area = AC_engine_valve_inner_diameter^2*pi;
     simIn(i) = simIn(i).setVariable('AC_engine_valve_orifice_area', AC_engine_valve_orifice_area); 
 
