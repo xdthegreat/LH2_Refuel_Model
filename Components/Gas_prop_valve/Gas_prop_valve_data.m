@@ -9,3 +9,7 @@ Gas_prop_valve_leakage = 1e-6;
 Gas_prop_valve_laminar_p_ratio = 0.999;
 
 Gas_prop_valve_discharge_coeff = 0.64;
+
+Gas_prop_valve_gain = 9e-2;
+Gas_prop_valve_stroke = 3e-2;
+Gas_prop_valve_opening_speed = Gas_prop_valve_stroke/1;
