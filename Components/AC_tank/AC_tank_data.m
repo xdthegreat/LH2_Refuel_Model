@@ -9,5 +9,5 @@ AC_vent_valve_orifice_area = AC_vent_valve_orifice_inner_diameter^2*pi;
 
 AC_vent_valve_discharge_coeff = 0.64;
 
-AC_tank_vapour_heat_transfer_coeff = 20;
-AC_tank_liquid_heat_transfer_coeff = 100;
+AC_tank_vapour_heat_transfer_coeff = 200;
+AC_tank_liquid_heat_transfer_coeff = 1000;
