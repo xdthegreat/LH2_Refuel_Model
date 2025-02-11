@@ -18,8 +18,6 @@ H2Tables = twoPhaseFluidTables([u_min_liquid/1000,u_max_gas/1000],[min(pressure_
 save('H2Tables.mat', 'H2Tables')
 
 %% density lookup table
-short_temp_vector = 15:0.1:30;
-short_pressure_vector = 30000:1000:700000;
 LH2_density_table = zeros(length(short_pressure_vector), length(short_temp_vector));
 for i = 1:length(short_pressure_vector)
     for j = 1:length(short_temp_vector)

@@ -18,4 +18,12 @@
  simulink
 
  stateflow
+
+ Other libraries used:
  
+ Coolprop 
+
+ How to use:
+ Step 1: Run startup.m to load all variables and .mat files
+
+ Step 2: Run full_model/simscape_automatic.slx to verify that installation has completed correctly

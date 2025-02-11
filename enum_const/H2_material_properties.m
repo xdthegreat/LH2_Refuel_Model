@@ -4,6 +4,8 @@ load("H2Tables.mat")
 
 % load density lookup
 load("LH2_density_table.mat")
+short_temp_vector = 15:0.1:30;
+short_pressure_vector = 30000:1000:700000;
 
 
 
