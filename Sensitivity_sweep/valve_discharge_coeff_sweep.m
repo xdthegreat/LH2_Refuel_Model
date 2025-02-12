@@ -8,6 +8,7 @@ clc
 % This changes aircraft valve discharge coefficient over a variety of values
 
 valve_discharge_coeff_vector = 0.6:0.01:0.8;
+rapid_flag = false;
 
 tic;
 
@@ -15,9 +16,12 @@ tic;
 mdl = "simscape_automatic";
 simIn(1:length(valve_discharge_coeff_vector)) = Simulink.SimulationInput(mdl); 
 for i = 1:length(valve_discharge_coeff_vector) 
-    simIn(i) = simIn(i).setModelParameter('SimulationMode','accelerator');
-    % simIn(i) = simIn(i).setModelParameter(SimulationMode="rapid-accelerator");
-    % simIn(i) = simIn(i).setModelParameter(RapidAcceleratorUpToDateCheck="off");
+    if rapid_flag
+        simIn(i) = simIn(i).setModelParameter(SimulationMode="rapid-accelerator");
+        simIn(i) = simIn(i).setModelParameter(RapidAcceleratorUpToDateCheck="off");
+    else
+        simIn(i) = simIn(i).setModelParameter('SimulationMode','accelerator');
+    end
 
 
     AC_engine_valve_discharge_coeff_temp = valve_discharge_coeff_vector(i);
