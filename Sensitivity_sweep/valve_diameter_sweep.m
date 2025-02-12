@@ -9,7 +9,7 @@ clc
 % This changes aircraft valve orifice area over a variety of values
 
 valve_diameter_vector = 0.01:0.002:0.024;
-rapid_flag = false;
+rapid_flag = true;
 tic;
 
 %parsim version
