@@ -7,12 +7,9 @@ load("LH2_density_table.mat")
 short_temp_vector = 15:0.1:30;
 short_pressure_vector = 30000:1000:700000;
 
-
-
-%% thermal conductivity of H2
-LH2_conductivity = py.CoolProp.CoolProp.PropsSI('conductivity','P|liquid', 250000, 'T', 21, 'Hydrogen');
-GH2_conductivity = py.CoolProp.CoolProp.PropsSI('conductivity','P|gas', 250000, 'T', 24, 'Hydrogen');
-
+% load conductivity
+load('LH2_conductivity.mat')
+load('GH2_conductivity.mat')
 
 % steel data
 steel_density = 8500;  %kg/m^3
