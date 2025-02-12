@@ -17,6 +17,8 @@ mdl = "simscape_automatic";
 simIn(1:length(valve_diameter_vector)) = Simulink.SimulationInput(mdl); 
 for i = 1:length(valve_diameter_vector) 
     simIn(i) = simIn(i).setModelParameter('SimulationMode','accelerator');
+    % simIn(i) = simIn(i).setModelParameter(SimulationMode="rapid-accelerator");
+    % simIn(i) = simIn(i).setModelParameter(RapidAcceleratorUpToDateCheck="off");
 
     AC_return_valve_inner_diameter = valve_diameter_vector(i)*2;
     AC_return_valve_orifice_area = AC_return_valve_inner_diameter^2*pi;
