@@ -9,16 +9,16 @@ clc
 % This changes aircraft valve orifice area over a variety of values
 
 valve_diameter_vector = 0.01:0.002:0.024;
-rapid_flag = true;
+rapid_flag = false;
 tic;
 
 %parsim version
 mdl = "simscape_automatic";
+
 simIn(1:length(valve_diameter_vector)) = Simulink.SimulationInput(mdl); 
 for i = 1:length(valve_diameter_vector) 
     if rapid_flag
         simIn(i) = simIn(i).setModelParameter(SimulationMode="rapid-accelerator");
-        simIn(i) = simIn(i).setModelParameter(RapidAcceleratorUpToDateCheck="off");
     else
         simIn(i) = simIn(i).setModelParameter('SimulationMode','accelerator');
     end
@@ -37,7 +37,7 @@ for i = 1:length(valve_diameter_vector)
 
 end
 
-simOut = parsim(simIn);
+simOut = parsim(simIn, 'ShowSimulationManager', 'on');
 
 toc;
 
