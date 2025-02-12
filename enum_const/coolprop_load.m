@@ -37,3 +37,11 @@ for i = 1:length(short_pressure_vector)
 end
 
 save('LH2_density_table.mat', 'LH2_density_table')
+
+%% thermal conductivity of H2
+LH2_conductivity = py.CoolProp.CoolProp.PropsSI('conductivity','P|liquid', 250000, 'T', 21, 'Hydrogen');
+GH2_conductivity = py.CoolProp.CoolProp.PropsSI('conductivity','P|gas', 250000, 'T', 24, 'Hydrogen');
+
+
+save('LH2_conductivity.mat', 'LH2_conductivity')
+save('GH2_conductivity.mat', 'GH2_conductivity')
