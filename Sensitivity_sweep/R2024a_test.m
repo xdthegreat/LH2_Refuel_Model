@@ -13,7 +13,7 @@ rapid_flag = false;
 tic;
 
 %parsim version
-mdl = "simscape_automatic_FMU_R2024a";
+mdl = "simscape_automatic_R2024a";
 simIn(1:length(valve_diameter_vector)) = Simulink.SimulationInput(mdl); 
 for i = 1:length(valve_diameter_vector) 
 
