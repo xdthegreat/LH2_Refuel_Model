@@ -16,6 +16,9 @@ mdl = "simscape_automatic";
 simIn(1:length(valve_discharge_coeff_vector)) = Simulink.SimulationInput(mdl); 
 for i = 1:length(valve_discharge_coeff_vector) 
     simIn(i) = simIn(i).setModelParameter('SimulationMode','accelerator');
+    % simIn(i) = simIn(i).setModelParameter(SimulationMode="rapid-accelerator");
+    % simIn(i) = simIn(i).setModelParameter(RapidAcceleratorUpToDateCheck="off");
+
 
     AC_engine_valve_discharge_coeff_temp = valve_discharge_coeff_vector(i);
     simIn(i) = simIn(i).setVariable('AC_engine_valve_discharge_coeff', AC_engine_valve_discharge_coeff_temp); 
