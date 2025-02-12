@@ -11,6 +11,7 @@ addpath("enum_const\")
 addpath("full model\")
 addpath("Control model\")
 addpath("Component validation\")
+addpath("FMU\")
 
 load("model_data_full.mat")
 
