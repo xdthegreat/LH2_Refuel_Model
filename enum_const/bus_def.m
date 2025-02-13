@@ -15,6 +15,10 @@ GS_VALVE_FEEDBACK_elem = {'LH2_PROP_VALVE_POS', 'GH2_PROP_VALVE_POS', 'GS_Supply
 AC_VALVE_FEEDBACK_elem = {'AC_Return_SOV_POS', 'AC_Supply_SOV_POS', 'AC_Bypass_SOV_POS'...
     'AC_Engine_SOV_POS'};
 
+
+AC_QDOT_elem = {'AC_return_coupling_Qdot', 'AC_supply_coupling_Qdot', 'AC_bypass_line_Qdot', ...
+    'AC_Tank_return_line_Qdot', 'AC_TANK_SUPPLY_LINE_QDOT', 'Engine_feed_Qdot', 'AC_Tank_Vent_Qdot'};
+
 clear elems
 for i = 1:length(P_DIAGNOSTIC_elem)
     elems(i) = Simulink.BusElement;
@@ -51,3 +55,13 @@ end
 
 AC_VALVE_FEEDBACK = Simulink.Bus;
 AC_VALVE_FEEDBACK.Elements = elems;
+
+
+clear elems
+for i = 1:length(AC_QDOT_elem)
+    elems(i) = Simulink.BusElement;
+    elems(i).Name = cell2mat(AC_QDOT_elem(i));
+end
+
+AC_QDOT = Simulink.Bus;
+AC_QDOT.Elements = elems;
