@@ -8,7 +8,7 @@ clc
 % This changes aircraft valve discharge coefficient over a variety of values
 
 valve_discharge_coeff_vector = 0.6:0.01:0.8;
-rapid_flag = false;
+rapid_flag = true;
 
 tic;
 
