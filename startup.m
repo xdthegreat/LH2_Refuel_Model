@@ -5,18 +5,9 @@ clear all
 
 disp('Starting up LH2 Refuel Model, please read README.md and run startup.m')
 
-addpath(genpath("Components\"))
-addpath("Sensitivity_sweep\")
-addpath("enum_const\")
-addpath("full_model\")
-addpath("Control_model\")
-addpath("Component validation\")
-addpath("Backwards_compatibility\")
-addpath("FMU\")
+addpath(genpath("Model\"))
 
 % load("model_data_full.mat")
-
-%% used to refresh/regenerate model parameters
 
 run("H2_material_properties.m")
 run("bus_def.m")
