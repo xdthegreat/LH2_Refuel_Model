@@ -40,7 +40,7 @@ return_pipe_inner_diameter = 0.1;
 return_pipe_inner_area = return_pipe_inner_diameter^2*pi;
 return_pipe_outer_diameter = 0.15;
 return_pipe_outer_area = return_pipe_outer_diameter^2*pi;
-return_valve_orifice_diameter = 0.08;
+return_valve_orifice_diameter = 0.09;
 return_valve_orifice_area = return_valve_orifice_diameter^2*pi;
 
 wall_thickness = 2/1000;
