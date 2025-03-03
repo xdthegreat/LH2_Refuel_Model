@@ -8,7 +8,7 @@ clc
 %% valve_diameter_sweep.m
 % This changes aircraft valve orifice area over a variety of values
 
-valve_diameter_vector = 0.01:0.002:0.024;
+valve_diameter_vector = 0.02:0.002:0.04;
 rapid_flag = true;
 tic;
 
@@ -24,15 +24,15 @@ for i = 1:length(valve_diameter_vector)
     end
 
     AC_return_valve_inner_diameter = valve_diameter_vector(i)*2;
-    AC_return_valve_orifice_area = AC_return_valve_inner_diameter^2*pi;
+    AC_return_valve_orifice_area = AC_return_valve_inner_diameter^2*pi/4;
     simIn(i) = simIn(i).setVariable('AC_return_valve_orifice_area', AC_return_valve_orifice_area); 
 
     AC_supply_valve_inner_diameter = valve_diameter_vector(i);
-    AC_supply_valve_orifice_area = AC_supply_valve_inner_diameter^2*pi;
+    AC_supply_valve_orifice_area = AC_supply_valve_inner_diameter^2*pi/4;
     simIn(i) = simIn(i).setVariable('AC_supply_valve_orifice_area', AC_supply_valve_orifice_area); 
     
     AC_engine_valve_inner_diameter = valve_diameter_vector(i);
-    AC_engine_valve_orifice_area = AC_engine_valve_inner_diameter^2*pi;
+    AC_engine_valve_orifice_area = AC_engine_valve_inner_diameter^2*pi/4;
     simIn(i) = simIn(i).setVariable('AC_engine_valve_orifice_area', AC_engine_valve_orifice_area); 
 
 end

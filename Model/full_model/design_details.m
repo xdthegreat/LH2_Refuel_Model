@@ -29,19 +29,19 @@ GS_vent_cracking_delta_P = 5.4;
 GS_vent_open_delta_P = 6;
 GS_vent_discharge_coeff = 0.64;
 
-supply_pipe_inner_diameter = 0.05;
-supply_pipe_inner_area = supply_pipe_inner_diameter^2*pi;
-supply_pipe_outer_diameter = 0.1;
-supply_pipe_outer_area = supply_pipe_outer_diameter^2*pi;
-supply_valve_orifice_diameter = 0.04;
-supply_valve_orifice_area = supply_valve_orifice_diameter^2*pi;
+supply_pipe_inner_diameter = 0.1;
+supply_pipe_inner_area = supply_pipe_inner_diameter^2*pi/4;
+supply_pipe_outer_diameter = 0.13;
+supply_pipe_outer_area = supply_pipe_outer_diameter^2*pi/4;
+supply_valve_orifice_diameter = 0.09;
+supply_valve_orifice_area = supply_valve_orifice_diameter^2*pi/4;
 
 return_pipe_inner_diameter = 0.1;
-return_pipe_inner_area = return_pipe_inner_diameter^2*pi;
-return_pipe_outer_diameter = 0.15;
-return_pipe_outer_area = return_pipe_outer_diameter^2*pi;
+return_pipe_inner_area = return_pipe_inner_diameter^2*pi/4;
+return_pipe_outer_diameter = 0.13;
+return_pipe_outer_area = return_pipe_outer_diameter^2*pi/4;
 return_valve_orifice_diameter = 0.09;
-return_valve_orifice_area = return_valve_orifice_diameter^2*pi;
+return_valve_orifice_area = return_valve_orifice_diameter^2*pi/4;
 
 wall_thickness = 2/1000;
 
@@ -60,7 +60,7 @@ PID_timestep = 0.01;
 tf_delay = 1e-6;
 vent_tf_delay = 1e-4;
 AC_LH2_TARGET_DELTA_P = 0.03;
-AC_GH2_TARGET_DELTA_P = 0.02;
+AC_GH2_TARGET_DELTA_P = 0.045;
 
 %case info:
 Ambient_temp = 300;

@@ -1,11 +1,11 @@
 
 
 %default settings
-AC_vent_line_port_inner_diameter = 0.05;
-AC_vent_line_port_inner_area = AC_vent_line_port_inner_diameter^2*pi;
+AC_vent_line_port_inner_diameter = 0.1;
+AC_vent_line_port_inner_area = AC_vent_line_port_inner_diameter^2*pi/4;
 
-AC_vent_valve_orifice_inner_diameter = 0.045;
-AC_vent_valve_orifice_area = AC_vent_valve_orifice_inner_diameter^2*pi;
+AC_vent_valve_orifice_inner_diameter = 0.09;
+AC_vent_valve_orifice_area = AC_vent_valve_orifice_inner_diameter^2*pi/4;
 
 AC_vent_valve_discharge_coeff = 0.64;
 
