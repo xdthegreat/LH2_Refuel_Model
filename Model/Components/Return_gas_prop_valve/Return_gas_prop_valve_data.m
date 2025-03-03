@@ -2,7 +2,7 @@
 
 %default settings
 Return_gas_prop_valve_inner_diameter = 0.09;
-Return_gas_prop_valve_orifice_area = Return_gas_prop_valve_inner_diameter^2*pi;
+Return_gas_prop_valve_orifice_area = Return_gas_prop_valve_inner_diameter^2*pi/4;
 
 Return_gas_prop_valve_leakage = 1e-6;
 

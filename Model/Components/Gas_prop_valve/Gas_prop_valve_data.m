@@ -1,8 +1,8 @@
 
 
 %default settings
-Gas_prop_valve_inner_diameter = 0.04;
-Gas_prop_valve_orifice_area = Gas_prop_valve_inner_diameter^2*pi;
+Gas_prop_valve_inner_diameter = 0.08;
+Gas_prop_valve_orifice_area = Gas_prop_valve_inner_diameter^2*pi/4;
 
 Gas_prop_valve_leakage = 1e-6;
 

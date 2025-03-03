@@ -82,7 +82,7 @@ plot(Ground_LH2_total_time(start_warm_chilldown_index:idle_1_index), ...
 legend(["Supplied by ground station", "UAM tank gauge"])
 xlabel("Time (s)")
 ylabel("LH2 used (kg)")
-ylim([0, 50])
+ylim([0, 70])
 hold off
 disp("Total LH2 supplied by ground station = "+Ground_LH2_total(idle_1_index)+"kg.")
 disp("Total LH2 in the UAM tank = "+AC_LH2_total(idle_1_index)+"kg.")
@@ -110,7 +110,7 @@ plot(Ground_LH2_total_time(start_cold_chilldown_index:idle_3_index) - Ground_LH2
 legend(["Supplied by ground station", "UAM tank gauge"])
 xlabel("Time (s)")
 ylabel("LH2 used (kg)")
-ylim([0, 50])
+ylim([0, 60])
 hold off
 disp("Total LH2 supplied by ground station = " + ...
     (Ground_LH2_total(idle_3_index)-Ground_LH2_total(start_cold_chilldown_index)) + "kg.")
