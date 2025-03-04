@@ -16,7 +16,8 @@ AC_VALVE_FEEDBACK_elem = {'AC_Return_SOV_POS', 'AC_Supply_SOV_POS', 'AC_Bypass_S
     'AC_Engine_SOV_POS'};
 
 
-AC_QDOT_elem = {'AC_return_coupling_Qdot', 'AC_supply_coupling_Qdot', 'AC_bypass_line_Qdot', ...
+AC_QDOT_elem = {'AC_supply_line_Qdot', 'AC_return_line_Qdot', 'AC_return_coupling_Qdot', ...
+    'AC_supply_coupling_Qdot', 'AC_bypass_line_Qdot', ...
     'AC_Tank_return_line_Qdot', 'AC_TANK_SUPPLY_LINE_QDOT', 'Engine_feed_Qdot', 'AC_Tank_Vent_Qdot'};
 
 clear elems

@@ -172,8 +172,8 @@ disp("Mean flow speed for LH2 during cold tank fill is "+ mean_LH2_flow_speed_co
 
 
 % defuel chilldown
-AC_LH2_qdot_defuel_chilldown = simOut.yout{31}.Values.AC_supply_coupling_Qdot.Data(start_cold_chilldown_index:start_cold_tank_fill_index);
-AC_LH2_qdot_defuel_chilldown_time = simOut.yout{31}.Values.AC_supply_coupling_Qdot.Time(start_cold_chilldown_index:start_cold_tank_fill_index);
+AC_LH2_qdot_defuel_chilldown = simOut.yout{31}.Values.AC_supply_line_Qdot.Data(start_cold_chilldown_index:start_cold_tank_fill_index);
+AC_LH2_qdot_defuel_chilldown_time = simOut.yout{31}.Values.AC_supply_line_Qdot.Time(start_cold_chilldown_index:start_cold_tank_fill_index);
 figure(22)
 plot(AC_LH2_qdot_defuel_chilldown_time, AC_LH2_qdot_defuel_chilldown)
 title("LH2 flow rates during defuel chilldown")
@@ -182,3 +182,16 @@ max_LH2_flow_speed_defuel_chilldown = max(abs(AC_LH2_qdot_defuel_chilldown))/AC_
 disp("Max flow speed for LH2 during defuel chilldown is "+ max_LH2_flow_speed_defuel_chilldown + "m/s.")
 mean_LH2_flow_speed_defuel_chilldown = mean(abs(AC_LH2_qdot_defuel_chilldown))/AC_supply_line_port_inner_area;
 disp("Mean flow speed for LH2 during defuel chilldown is "+ mean_LH2_flow_speed_defuel_chilldown + "m/s.")
+
+normal_flow_rate_details = {"Warm tank refuel chilldown", mean_LH2_flow_speed_warm_chilldown, "m/s";
+    "Warm tank refuel tank filling", mean_LH2_flow_speed_warm_fill, "m/s";
+    "Warm tank refuel warmup", mean_GH2_flow_speed_warm_warmup, "m/s";
+    "Cold tank refuel chilldown", mean_LH2_flow_speed_cold_chilldown, "m/s";
+    "Cold tank refuel tank filling", mean_LH2_flow_speed_cold_fill, "m/s";
+    "Cold tank refuel warmup", mean_GH2_flow_speed_cold_warmup, "m/s";
+    "Defuel chilldown", mean_LH2_flow_speed_defuel_chilldown, "m/s";
+    "Defuel wamrup", mean_GH2_flow_speed_defuel, "m/s"};
+
+normal_flow_rate_details_table = cell2table(normal_flow_rate_details, ...
+    'VariableNames', {'Operation phase' 'Mean flow rate' 'Unit'});
+writetable(normal_flow_rate_details_table, "Graphs/normal flow rate details.xlsx")

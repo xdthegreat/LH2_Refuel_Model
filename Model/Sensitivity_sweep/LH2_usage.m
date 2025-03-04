@@ -86,6 +86,7 @@ ylim([0, 70])
 hold off
 disp("Total LH2 supplied by ground station = "+Ground_LH2_total(idle_1_index)+"kg.")
 disp("Total LH2 in the UAM tank = "+AC_LH2_total(idle_1_index)+"kg.")
+saveas(gcf, 'Graphs/LH2 consumption for warm tank refuel with unmodified calculations.png')
 
 % wall temp
 figure(4)
@@ -115,4 +116,5 @@ hold off
 disp("Total LH2 supplied by ground station = " + ...
     (Ground_LH2_total(idle_3_index)-Ground_LH2_total(start_cold_chilldown_index)) + "kg.")
 disp("Total LH2 in the UAM tank = "+AC_LH2_total(idle_1_index)+"kg.")
+saveas(gcf, 'Graphs/LH2 consumption for cold tank refuel with unmodified calculations.png')
 

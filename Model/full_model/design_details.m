@@ -59,7 +59,7 @@ timestep = 0.5;
 PID_timestep = 0.01;
 tf_delay = 1e-6;
 vent_tf_delay = 1e-4;
-AC_LH2_TARGET_DELTA_P = 0.03;
+AC_LH2_TARGET_DELTA_P = 0.04;
 AC_GH2_TARGET_DELTA_P = 0.045;
 
 %case info:

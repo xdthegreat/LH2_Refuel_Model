@@ -5,16 +5,17 @@ close all
 %% valve_diameter_sweep.m
 % This changes aircraft valve orifice area over a variety of values
 
-hose_length_vector = 5:1:20;
-rapid_flag = true;
+m_LH2_vector = 16:4:70;
+tank_volume_vector = m_LH2_vector./(70*AC_tank_vol_limit);
+rapid_flag = false;
 accel_flag = false;
 tic;
 
 %parsim version
 mdl = "simscape_automatic";
 
-simIn(1:length(hose_length_vector)) = Simulink.SimulationInput(mdl); 
-for i = 1:length(hose_length_vector) 
+simIn(1:length(tank_volume_vector)) = Simulink.SimulationInput(mdl); 
+for i = 1:length(tank_volume_vector) 
     if rapid_flag
         simIn(i) = simIn(i).setModelParameter(SimulationMode="rapid-accelerator");
     elseif accel_flag
@@ -23,7 +24,8 @@ for i = 1:length(hose_length_vector)
         simIn = simIn.setModelParameter('SimulationMode','normal');
     end
 
-    simIn(i) = simIn(i).setVariable('hose_length', hose_length_vector(i));
+    simIn(i) = simIn(i).setVariable('AC_tank_volume', tank_volume_vector(i));
+    simIn(i) = simIn(i).setVariable('m_LH2', m_LH2_vector(i));
 
 end
 
@@ -31,12 +33,13 @@ simOut = parsim(simIn, 'ShowSimulationManager', 'on');
 
 toc;
 
+
 %% Plotting stuff
 
 %plot length of hose against LH2 used
 
-LH2_consumed = [];
-LH2_in_AC_tank = [];
+LH2_consumed_warm_fill = [];
+LH2_in_AC_tank_warm_fill = [];
 
 for i = 1:length(simOut)
     if isempty(simOut(1, i).ErrorMessage)
@@ -73,16 +76,38 @@ for i = 1:length(simOut)
         % disp("Total LH2 supplied by ground station = "+Ground_LH2_total(idle_1_index)+"kg.")
         % disp("Total LH2 in the UAM tank = "+AC_LH2_total(idle_1_index)+"kg.")
 
-        LH2_consumed(i) = Ground_LH2_total(idle_1_index);
-        LH2_in_AC_tank(i) = AC_LH2_total(idle_1_index);
+        LH2_consumed_warm_fill(i) = Ground_LH2_total(idle_1_index);
+        LH2_in_AC_tank_warm_fill(i) = AC_LH2_total(idle_1_index);
+        frac_useful_LH2_warm_fill(i) = LH2_in_AC_tank_warm_fill(i)/LH2_consumed_warm_fill(i);
+
+        LH2_consumed_cold_fill(i) = Ground_LH2_total(idle_3_index) - Ground_LH2_total(idle_2_index);
+        LH2_in_AC_tank_cold_fill(i) = AC_LH2_total(idle_3_index) - AC_LH2_total(idle_2_index);
+        frac_useful_LH2_cold_fill(i) = LH2_in_AC_tank_cold_fill(i)/LH2_consumed_cold_fill(i);
+
+        time_warm_refuel(i) = Ground_LH2_total_time(idle_1_index);
 
     end
 end
 
 
 figure(1)
-plot(hose_length_vector, LH2_consumed)
-xlabel("Length of flexible hoses (m)")
-ylabel('LH2 consumed (kg)')
-titel("Total amount of LH2 consumed for warm tank refuel with different lengths of hoses")
-saveas(gcf, 'Graphs/LH2 consumption for warm tank refuel sweep with 5-20m hoses.png')
+plot(m_LH2_vector, frac_useful_LH2_warm_fill)
+xlabel("Tank maximum (kg)")
+ylabel('Fraction of LH2 in the tank/ fraction of LH2 in consumed')
+title("Fraction of useful LH2 for warm tank refuel with different tank sizes")
+saveas(gcf, 'Graphs/Fraction of useful LH2 vs tank size warm tank refuel.png')
+
+figure(2)
+plot(m_LH2_vector, frac_useful_LH2_cold_fill)
+xlabel("Tank maximum (kg)")
+ylabel('Fraction of LH2 in the tank/ fraction of LH2 in consumed')
+title("Fraction of useful LH2 for cold tank refuel with different tank sizes")
+saveas(gcf, 'Graphs/Fraction of useful LH2 vs tank size cold tank refuel.png')
+
+
+figure(3)
+plot(m_LH2_vector, time_warm_refuel)
+xlabel("Tank maximum (kg)")
+ylabel('Time taken per warm tank refuel (s)')
+title("Time taken for for warm tank refuel with different tank sizes")
+saveas(gcf, 'Graphs/Time taken for warm tank refuel vs tank size warm tank refuel.png')
