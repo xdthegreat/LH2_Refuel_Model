@@ -1,22 +1,22 @@
 
 
-clc
-close all
-%% valve_diameter_sweep.m
-% This changes aircraft valve orifice area over a variety of values
 
-hose_length_vector = 5:1:20;
+clc
+%% tank_wall_vapour_heat_transfer_coeff.m
+
+vapour_heat_transfer_coeff_vector = logspace(log10(0.1), log10(1000), 10); % to be changed
 rapid_flag = false;
 accel_flag = false;
 tic;
+
 
 %parsim version
 mdl = "simscape_automatic";
 
 clear simIn
 
-simIn(1:length(hose_length_vector)) = Simulink.SimulationInput(mdl); 
-for i = 1:length(hose_length_vector) 
+simIn(1:length(vapour_heat_transfer_coeff_vector)) = Simulink.SimulationInput(mdl); 
+for i = 1:length(vapour_heat_transfer_coeff_vector) 
     if rapid_flag
         simIn(i) = simIn(i).setModelParameter(SimulationMode="rapid-accelerator");
     elseif accel_flag
@@ -25,31 +25,35 @@ for i = 1:length(hose_length_vector)
         simIn = simIn.setModelParameter('SimulationMode','normal');
     end
 
-    simIn(i) = simIn(i).setVariable('hose_length', hose_length_vector(i));
+
+    simIn(i) = simIn(i).setVariable('AC_tank_vapour_heat_transfer_coeff', vapour_heat_transfer_coeff_vector(i)); 
 
     simIn(i) = simIn(i).setVariable('stopTime', 100000); 
 
 end
 
 if rapid_flag == false && accel_flag == false
-    simOut = parsim(simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
+    simOut = parsim(simIn, 'ShowSimulationManager', 'on', 'UseFastRestart', 'on');
 else
-    simOut = parsim(simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
+    simOut = parsim(simIn, 'ShowSimulationManager', 'on', 'UseFastRestart', 'off');
 end
 
 toc;
 
-%% Plotting stuff
 
-%plot length of hose against LH2 used
+%% plot
 
-LH2_consumed = [];
-LH2_in_AC_tank = [];
+time_warm_refuel = zeros([1, length(vapour_heat_transfer_coeff_vector)]);
+time_cold_refuel = zeros([1, length(vapour_heat_transfer_coeff_vector)]);
+LH2_consumption_vec = zeros([1, length(vapour_heat_transfer_coeff_vector)]);
 
 for i = 1:length(simOut)
     if isempty(simOut(1, i).ErrorMessage)
         AC_mode_data = simOut(1, i).yout{5}.Values.Data;
         AC_mode_time = simOut(1, i).yout{5}.Values.Time;
+
+        figure(i)
+        plot(AC_mode_time, AC_mode_data)
         
         mode_breakpoint_array = [];
         for j = 2:length(AC_mode_data)
@@ -57,7 +61,8 @@ for i = 1:length(simOut)
                 mode_breakpoint_array = [mode_breakpoint_array, AC_mode_time(j+1)];
             end
         end
-        
+
+        try
         start_warm_chilldown_index = find(simOut(1, i).tout == mode_breakpoint_array(1));
         start_warm_tank_fill_index = find(simOut(1, i).tout == mode_breakpoint_array(2));
         start_warm_warmup_index = find(simOut(1, i).tout == mode_breakpoint_array(3));
@@ -78,19 +83,26 @@ for i = 1:length(simOut)
         AC_LH2_total = simOut(1, i).yout{3}.Values.Data;
         Ground_LH2_total_time = simOut(1, i).yout{4}.Values.Time;
     
-        % disp("Total LH2 supplied by ground station = "+Ground_LH2_total(idle_1_index)+"kg.")
-        % disp("Total LH2 in the UAM tank = "+AC_LH2_total(idle_1_index)+"kg.")
+        disp("Total LH2 supplied by ground station = " + Ground_LH2_total(idle_1_index) + "kg.")
+        disp("Total LH2 in the UAM tank = " + AC_LH2_total(idle_1_index) + "kg.")
 
-        LH2_consumed(i) = Ground_LH2_total(idle_1_index);
-        LH2_in_AC_tank(i) = AC_LH2_total(idle_1_index);
+        time_warm_refuel(i) = Ground_LH2_total_time(idle_1_index);
+        time_cold_refuel(i) = Ground_LH2_total_time(idle_3_index) - Ground_LH2_total_time(idle_2_index);
+
+        LH2_consumption_vec(i) = Ground_LH2_total(idle_1_index);
+
+        catch
+        end
+
 
     end
 end
 
 
-figure(1)
-plot(hose_length_vector, LH2_consumed)
-xlabel("Length of flexible hoses (m)")
+figure(100)
+plot(vapour_heat_transfer_coeff_vector, LH2_consumption_vec)
+xlabel("Vapour heat transfer coefficient (W/K m^2)")
 ylabel('LH2 consumed (kg)')
-titel("Total amount of LH2 consumed for warm tank refuel with different lengths of hoses")
-saveas(gcf, 'Graphs/LH2 consumption for warm tank refuel sweep with 5-20m hoses.png')
+title("Total LH2 consumed for warm tank refuel with different UAM tank wall vapour heat transfer coefficient")
+set(gca, 'XScale', 'log')
+saveas(gcf, 'Graphs/LH2 consumed for warm tank filling vs UAM tank wall vapour heat transfer coefficient.png')

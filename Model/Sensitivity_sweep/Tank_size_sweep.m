@@ -14,6 +14,8 @@ tic;
 %parsim version
 mdl = "simscape_automatic";
 
+clear simIn
+
 simIn(1:length(tank_volume_vector)) = Simulink.SimulationInput(mdl); 
 for i = 1:length(tank_volume_vector) 
     if rapid_flag
@@ -29,14 +31,18 @@ for i = 1:length(tank_volume_vector)
 
 end
 
-simOut = parsim(simIn, 'ShowSimulationManager', 'on');
+if rapid_flag == false && accel_flag == false
+    simOut = parsim(simIn, 'ShowSimulationManager', 'on', 'UseFastRestart', 'on');
+else
+    simOut = parsim(simIn, 'ShowSimulationManager', 'on', 'UseFastRestart', 'off');
+end
 
 toc;
 
 
 %% Plotting stuff
 
-%plot length of hose against LH2 used
+%plot tank size against LH2 used
 
 LH2_consumed_warm_fill = [];
 LH2_in_AC_tank_warm_fill = [];

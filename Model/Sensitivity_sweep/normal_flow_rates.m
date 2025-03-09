@@ -19,7 +19,12 @@ else
     simIn = simIn.setModelParameter('SimulationMode','normal');
 end
 
-simOut = sim(simIn, ShowProgress="on");
+if rapid_flag == false && accel_flag == false
+    simOut = parsim(simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
+else
+    simOut = parsim(simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
+end
+
 toc;
 
 
@@ -82,110 +87,190 @@ start_defuel_disconnect = find(simOut.tout == mode_breakpoint_array(15));
 
 
 
+
+
+
+% mass flow analysis
+% warm tank warmup
+AC_GH2_mdot_warm_warmup = simOut.yout{32}.Values.AC_supply_line_Mdot.Data(start_warm_warmup_index:start_warm_disconnect_index);
+AC_GH2_mdot_warm_warmup_time = simOut.yout{32}.Values.AC_supply_line_Mdot.Time(start_warm_warmup_index:start_warm_disconnect_index);
+figure(10)
+plot(AC_GH2_mdot_warm_warmup_time, AC_GH2_mdot_warm_warmup)
+title("GH2 mass flow rates during warm tank warmup")
+xlabel('Time (s)')
+ylabel('Flow rate (kg/s)')
+
+max_GH2_mass_flow_speed_warm_warmup = max(abs(AC_GH2_mdot_warm_warmup));
+disp("Max mass flow rate for GH2 during warm tank warmup is "+ max_GH2_mass_flow_speed_warm_warmup + "kg/s.")
+mean_GH2_mass_flow_speed_warm_warmup = mean(abs(AC_GH2_mdot_warm_warmup));
+disp("Mean mass flow rate for GH2 during warm tank warmup is "+ mean_GH2_mass_flow_speed_warm_warmup + "kg/s.")
+
+% cold tank warmup
+AC_GH2_mdot_cold_warmup = simOut.yout{32}.Values.AC_supply_line_Mdot.Data(start_cold_warmup_index:start_cold_disconnect_index);
+AC_GH2_mdot_cold_warmup_time = simOut.yout{32}.Values.AC_supply_line_Mdot.Time(start_cold_warmup_index:start_cold_disconnect_index);
+figure(11)
+plot(AC_GH2_mdot_cold_warmup_time, AC_GH2_mdot_cold_warmup)
+title("GH2 mass flow rates during cold tank warmup")
+xlabel('Time (s)')
+ylabel('Flow rate (kg/s)')
+
+max_GH2_mass_flow_speed_cold_warmup = max(abs(AC_GH2_mdot_cold_warmup));
+disp("Max mass flow rate  for GH2 during cold tank warmup is "+ max_GH2_mass_flow_speed_cold_warmup + "kg/s.")
+mean_GH2_mass_flow_speed_cold_warmup = mean(abs(AC_GH2_mdot_cold_warmup));
+disp("Mean mass flow rate for GH2 during cold tank warmup is "+ mean_GH2_mass_flow_speed_cold_warmup + "kg/s.")
+
+% defuel
+AC_GH2_mdot_defuel = simOut.yout{32}.Values.AC_supply_line_Mdot.Data(start_defuel_drain_index:start_defuel_disconnect);
+AC_GH2_mdot_defuel_time = simOut.yout{32}.Values.AC_supply_line_Mdot.Time(start_defuel_drain_index:start_defuel_disconnect);
+figure(12)
+plot(AC_GH2_mdot_defuel_time, AC_GH2_mdot_defuel)
+title("GH2 mass flow rates during defuel tank drain")
+xlabel('Time (s)')
+ylabel('Flow rate (kg/s)')
+
+max_GH2_mass_flow_rate_defuel = max(abs(AC_GH2_mdot_defuel));
+disp("Max mass flow rate for GH2 during defuel tank drain is "+ max_GH2_mass_flow_rate_defuel + "kg/s.")
+mean_GH2_mass_flow_rate_defuel = mean(abs(AC_GH2_mdot_defuel));
+disp("Mean mass flow rate for GH2 during defuel tank drain is "+ mean_GH2_mass_flow_rate_defuel + "kg/s.")
+
+
+% LH2 flow rates
+% warm tank chilldown
+AC_LH2_mdot_warm_chilldown = simOut.yout{32}.Values.AC_supply_line_Mdot.Data(start_warm_chilldown_index:start_warm_tank_fill_index);
+AC_LH2_mdot_warm_chilldown_time = simOut.yout{32}.Values.AC_supply_line_Mdot.Time(start_warm_chilldown_index:start_warm_tank_fill_index);
+figure(20)
+plot(AC_LH2_mdot_warm_chilldown_time, AC_LH2_mdot_warm_chilldown)
+title("LH2 mass flow rate during warm tank chilldown")
+xlabel('Time (s)')
+ylabel('Flow rate (kg/s)')
+
+max_LH2_mass_flow_rate_warm_chilldown = max(abs(AC_LH2_mdot_warm_chilldown));
+disp("Max mass flow rate for LH2 during warm tank chilldown is "+ max_LH2_mass_flow_rate_warm_chilldown + "kg/s.")
+mean_LH2_mass_flow_rate_warm_chilldown = mean(abs(AC_LH2_mdot_warm_chilldown));
+disp("Mean mass flow rate for LH2 during warm tank chilldown is "+ mean_LH2_mass_flow_rate_warm_chilldown + "kg/s.")
+
+% warm tank fill
+AC_LH2_mdot_warm_fill = simOut.yout{32}.Values.AC_supply_line_Mdot.Data(start_warm_tank_fill_index:start_warm_warmup_index);
+AC_LH2_mdot_warm_fill_time = simOut.yout{32}.Values.AC_supply_line_Mdot.Time(start_warm_tank_fill_index:start_warm_warmup_index);
+figure(21)
+plot(AC_LH2_mdot_warm_fill_time, AC_LH2_mdot_warm_fill)
+title("LH2 mass flow rate during warm tank fill")
+xlabel('Time (s)')
+ylabel('Flow rate (kg/s)')
+
+max_LH2_mass_flow_rate_warm_fill = max(abs(AC_LH2_mdot_warm_fill));
+disp("Max mass flow rate for LH2 during warm tank fill is "+ max_LH2_mass_flow_rate_warm_fill + "kg/s.")
+mean_LH2_mass_flow_rate_warm_fill = mean(abs(AC_LH2_mdot_warm_fill));
+disp("Mean mass flow rate for LH2 during warm tank fill is "+ mean_LH2_mass_flow_rate_warm_fill + "kg/s.")
+
+
+% cold tank chilldown
+AC_LH2_mdot_cold_chilldown = simOut.yout{32}.Values.AC_supply_line_Mdot.Data(start_cold_chilldown_index:start_cold_tank_fill_index);
+AC_LH2_mdot_cold_chilldown_time = simOut.yout{32}.Values.AC_supply_line_Mdot.Time(start_cold_chilldown_index:start_cold_tank_fill_index);
+figure(22)
+plot(AC_LH2_mdot_cold_chilldown_time, AC_LH2_mdot_cold_chilldown)
+title("LH2 mass flow rate during cold tank chilldown")
+xlabel('Time (s)')
+ylabel('Flow rate (kg/s)')
+
+max_LH2_mass_flow_rate_cold_chilldown = max(abs(AC_LH2_mdot_cold_chilldown));
+disp("Max mass flow rate for LH2 during cold tank chilldown is "+ max_LH2_mass_flow_rate_cold_chilldown + "kg/s.")
+mean_LH2_mass_flow_rate_cold_chilldown = mean(abs(AC_LH2_mdot_cold_chilldown));
+disp("Mean mass flow rate for LH2 during cold tank chilldown is "+ mean_LH2_mass_flow_rate_cold_chilldown + "kg/s.")
+
+% cold tank fill
+AC_LH2_mdot_cold_fill = simOut.yout{32}.Values.AC_supply_line_Mdot.Data(start_cold_tank_fill_index:start_cold_warmup_index);
+AC_LH2_mdot_cold_fill_time = simOut.yout{32}.Values.AC_supply_line_Mdot.Time(start_cold_tank_fill_index:start_cold_warmup_index);
+figure(23)
+plot(AC_LH2_mdot_cold_fill_time, AC_LH2_mdot_cold_fill)
+title("LH2 mass flow rate during cold tank fill")
+xlabel('Time (s)')
+ylabel('Flow rate (kg/s)')
+
+max_LH2_mass_flow_rate_cold_fill = max(abs(AC_LH2_mdot_cold_fill));
+disp("Max mass flow rate for LH2 during cold tank fill is "+ max_LH2_mass_flow_rate_cold_fill + "kg/s.")
+mean_LH2_mass_flow_rate_cold_fill = mean(abs(AC_LH2_mdot_cold_fill));
+disp("Mean mass flow rate for LH2 during cold tank fill is "+ mean_LH2_mass_flow_rate_cold_fill + "kg/s.")
+
+
+% defuel chilldown
+AC_LH2_mdot_defuel_chilldown = simOut.yout{32}.Values.AC_supply_line_Mdot.Data(start_defuel_chilldown_index:start_defuel_drain_index);
+AC_LH2_mdot_defuel_chilldown_time = simOut.yout{31}.Values.AC_supply_line_Qdot.Time(start_defuel_chilldown_index:start_defuel_drain_index);
+figure(22)
+plot(AC_LH2_mdot_defuel_chilldown_time, AC_LH2_qdot_defuel_chilldown)
+title("LH2 mass flow rate during defuel chilldown")
+xlabel('Time (s)')
+ylabel('Flow rate (kg/s)')
+
+max_LH2_mass_flow_rate_defuel_chilldown = max(abs(AC_LH2_mdot_defuel_chilldown));
+disp("Max mass flow rate for LH2 during defuel chilldown is "+ max_LH2_mass_flow_rate_defuel_chilldown + "kg/s.")
+mean_LH2_mass_flow_rate_defuel_chilldown = mean(abs(AC_LH2_mdot_defuel_chilldown));
+disp("Mean mass flow rate for LH2 during defuel chilldown is "+ mean_LH2_mass_flow_rate_defuel_chilldown + "kg/s.")
+
+normal_mass_flow_rate_details = {"Warm tank refuel chilldown", mean_LH2_mass_flow_rate_warm_chilldown,  "kg/s";
+    "Warm tank refuel tank filling", mean_LH2_mass_flow_rate_warm_fill, "kg/s";
+    "Warm tank refuel warmup", mean_GH2_mass_flow_speed_warm_warmup,  "kg/s";
+    "Cold tank refuel chilldown", mean_LH2_mass_flow_rate_cold_chilldown,  "kg/s";
+    "Cold tank refuel tank filling", mean_LH2_mass_flow_rate_cold_fill,  "kg/s";
+    "Cold tank refuel warmup", mean_GH2_mass_flow_speed_cold_warmup,  "kg/s";
+    "Defuel chilldown", mean_LH2_mass_flow_rate_defuel_chilldown,  "kg/s";
+    "Defuel wamrup", mean_GH2_mass_flow_rate_defuel,  "kg/s"};
+
+normal_mass_flow_rate_details_table = cell2table(normal_mass_flow_rate_details, ...
+    'VariableNames', {'Operation phase' 'Mean mass flow rate' 'Unit'});
+writetable(normal_mass_flow_rate_details_table, "Graphs/normal mass flow rate details.xlsx")
+
+
+
+
+
+
+
+
+
+
+
 % GH2 flow rates
 % warm tank warmup
 AC_GH2_qdot_warm_warmup = simOut.yout{31}.Values.AC_supply_coupling_Qdot.Data(start_warm_warmup_index:start_warm_disconnect_index);
-AC_GH2_qdot_warm_warmup_time = simOut.yout{31}.Values.AC_supply_coupling_Qdot.Time(start_warm_warmup_index:start_warm_disconnect_index);
-figure(10)
-plot(AC_GH2_qdot_warm_warmup_time, AC_GH2_qdot_warm_warmup)
-title("GH2 flow rates during warm tank warmup")
-
-max_GH2_flow_speed_warm_warmup = max(abs(AC_GH2_qdot_warm_warmup))/AC_supply_line_port_inner_area;
-disp("Max flow speed for GH2 during warm tank warmup is "+ max_GH2_flow_speed_warm_warmup + "m/s.")
-mean_GH2_flow_speed_warm_warmup = mean(abs(AC_GH2_qdot_warm_warmup))/AC_supply_line_port_inner_area;
-disp("Mean flow speed for GH2 during warm tank warmup is "+ mean_GH2_flow_speed_warm_warmup + "m/s.")
+mean_GH2_mass_flow_speed_warm_warmup = mean(abs(AC_GH2_qdot_warm_warmup))/AC_supply_line_port_inner_area;
 
 % cold tank warmup
 AC_GH2_qdot_cold_warmup = simOut.yout{31}.Values.AC_supply_coupling_Qdot.Data(start_cold_warmup_index:start_cold_disconnect_index);
-AC_GH2_qdot_cold_warmup_time = simOut.yout{31}.Values.AC_supply_coupling_Qdot.Time(start_cold_warmup_index:start_cold_disconnect_index);
-figure(11)
-plot(AC_GH2_qdot_cold_warmup_time, AC_GH2_qdot_cold_warmup)
-title("GH2 flow rates during cold tank warmup")
-
-max_GH2_flow_speed_cold_warmup = max(abs(AC_GH2_qdot_cold_warmup))/AC_supply_line_port_inner_area;
-disp("Max flow speed for GH2 during cold tank warmup is "+ max_GH2_flow_speed_cold_warmup + "m/s.")
-mean_GH2_flow_speed_cold_warmup = mean(abs(AC_GH2_qdot_cold_warmup))/AC_supply_line_port_inner_area;
-disp("Mean flow speed for GH2 during cold tank warmup is "+ mean_GH2_flow_speed_cold_warmup + "m/s.")
+mean_GH2_mass_flow_speed_cold_warmup = mean(abs(AC_GH2_qdot_cold_warmup))/AC_supply_line_port_inner_area;
 
 % defuel
 AC_GH2_qdot_defuel = simOut.yout{31}.Values.AC_supply_coupling_Qdot.Data(start_defuel_drain_index:start_defuel_disconnect);
-AC_GH2_qdot_defuel_time = simOut.yout{31}.Values.AC_supply_coupling_Qdot.Time(start_defuel_drain_index:start_defuel_disconnect);
-figure(12)
-plot(AC_GH2_qdot_defuel_time, AC_GH2_qdot_defuel)
-title("GH2 flow rates during defuel tank drain")
-
-max_GH2_flow_speed_defuel = max(abs(AC_GH2_qdot_defuel))/AC_supply_line_port_inner_area;
-disp("Max flow speed for GH2 during defuel tank drain is "+ max_GH2_flow_speed_defuel + "m/s.")
 mean_GH2_flow_speed_defuel = mean(abs(AC_GH2_qdot_defuel))/AC_supply_line_port_inner_area;
-disp("Mean flow speed for GH2 during defuel tank drain is "+ mean_GH2_flow_speed_defuel + "m/s.")
 
 
 % LH2 flow rates
 % warm tank chilldown
 AC_LH2_qdot_warm_chilldown = simOut.yout{31}.Values.AC_supply_coupling_Qdot.Data(start_warm_chilldown_index:start_warm_tank_fill_index);
-AC_LH2_qdot_warm_chilldown_time = simOut.yout{31}.Values.AC_supply_coupling_Qdot.Time(start_warm_chilldown_index:start_warm_tank_fill_index);
-figure(20)
-plot(AC_LH2_qdot_warm_chilldown_time, AC_LH2_qdot_warm_chilldown)
-title("LH2 flow rates during warm tank chilldown")
-
-max_LH2_flow_speed_warm_chilldown = max(abs(AC_LH2_qdot_warm_chilldown))/AC_supply_line_port_inner_area;
-disp("Max flow speed for LH2 during warm tank chilldown is "+ max_LH2_flow_speed_warm_chilldown + "m/s.")
 mean_LH2_flow_speed_warm_chilldown = mean(abs(AC_LH2_qdot_warm_chilldown))/AC_supply_line_port_inner_area;
-disp("Mean flow speed for LH2 during warm tank chilldown is "+ mean_LH2_flow_speed_warm_chilldown + "m/s.")
 
 % warm tank fill
 AC_LH2_qdot_warm_fill = simOut.yout{31}.Values.AC_supply_coupling_Qdot.Data(start_warm_tank_fill_index:start_warm_warmup_index);
-AC_LH2_qdot_warm_fill_time = simOut.yout{31}.Values.AC_supply_coupling_Qdot.Time(start_warm_tank_fill_index:start_warm_warmup_index);
-figure(21)
-plot(AC_LH2_qdot_warm_fill_time, AC_LH2_qdot_warm_fill)
-title("LH2 flow rates during warm tank fill")
-
-max_LH2_flow_speed_warm_fill = max(abs(AC_LH2_qdot_warm_fill))/AC_supply_line_port_inner_area;
-disp("Max flow speed for LH2 during warm tank fill is "+ max_LH2_flow_speed_warm_fill + "m/s.")
 mean_LH2_flow_speed_warm_fill = mean(abs(AC_LH2_qdot_warm_fill))/AC_supply_line_port_inner_area;
-disp("Mean flow speed for LH2 during warm tank fill is "+ mean_LH2_flow_speed_warm_fill + "m/s.")
-
 
 % cold tank chilldown
 AC_LH2_qdot_cold_chilldown = simOut.yout{31}.Values.AC_supply_coupling_Qdot.Data(start_cold_chilldown_index:start_cold_tank_fill_index);
-AC_LH2_qdot_cold_chilldown_time = simOut.yout{31}.Values.AC_supply_coupling_Qdot.Time(start_cold_chilldown_index:start_cold_tank_fill_index);
-figure(22)
-plot(AC_LH2_qdot_cold_chilldown_time, AC_LH2_qdot_cold_chilldown)
-title("LH2 flow rates during cold tank chilldown")
-
-max_LH2_flow_speed_cold_chilldown = max(abs(AC_LH2_qdot_cold_chilldown))/AC_supply_line_port_inner_area;
-disp("Max flow speed for LH2 during cold tank chilldown is "+ max_LH2_flow_speed_cold_chilldown + "m/s.")
 mean_LH2_flow_speed_cold_chilldown = mean(abs(AC_LH2_qdot_cold_chilldown))/AC_supply_line_port_inner_area;
-disp("Mean flow speed for LH2 during cold tank chilldown is "+ mean_LH2_flow_speed_cold_chilldown + "m/s.")
 
 % cold tank fill
 AC_LH2_qdot_cold_fill = simOut.yout{31}.Values.AC_supply_coupling_Qdot.Data(start_cold_tank_fill_index:start_cold_warmup_index);
-AC_LH2_qdot_cold_fill_time = simOut.yout{31}.Values.AC_supply_coupling_Qdot.Time(start_cold_tank_fill_index:start_cold_warmup_index);
-figure(23)
-plot(AC_LH2_qdot_cold_fill_time, AC_LH2_qdot_cold_fill)
-title("LH2 flow rates during cold tank fill")
+AC_refuel_quality_check_cold_fill = simOut.yout{1}.Values.Data(start_cold_tank_fill_index:start_cold_warmup_index);
 
-max_LH2_flow_speed_cold_fill = max(abs(AC_LH2_qdot_cold_fill))/AC_supply_line_port_inner_area;
-disp("Max flow speed for LH2 during cold tank fill is "+ max_LH2_flow_speed_cold_fill + "m/s.")
 mean_LH2_flow_speed_cold_fill = mean(abs(AC_LH2_qdot_cold_fill))/AC_supply_line_port_inner_area;
-disp("Mean flow speed for LH2 during cold tank fill is "+ mean_LH2_flow_speed_cold_fill + "m/s.")
-
+mean_LH2_flow_speed_cold_fill_adjusted = mean(abs(AC_LH2_qdot_cold_fill.*(1-AC_refuel_quality_check_cold_fill)))/AC_supply_line_port_inner_area;
 
 % defuel chilldown
-AC_LH2_qdot_defuel_chilldown = simOut.yout{31}.Values.AC_supply_line_Qdot.Data(start_cold_chilldown_index:start_cold_tank_fill_index);
-AC_LH2_qdot_defuel_chilldown_time = simOut.yout{31}.Values.AC_supply_line_Qdot.Time(start_cold_chilldown_index:start_cold_tank_fill_index);
-figure(22)
-plot(AC_LH2_qdot_defuel_chilldown_time, AC_LH2_qdot_defuel_chilldown)
-title("LH2 flow rates during defuel chilldown")
-
-max_LH2_flow_speed_defuel_chilldown = max(abs(AC_LH2_qdot_defuel_chilldown))/AC_supply_line_port_inner_area;
-disp("Max flow speed for LH2 during defuel chilldown is "+ max_LH2_flow_speed_defuel_chilldown + "m/s.")
+AC_LH2_qdot_defuel_chilldown = simOut.yout{31}.Values.AC_supply_line_Qdot.Data(start_defuel_chilldown_index:start_defuel_drain_index);
 mean_LH2_flow_speed_defuel_chilldown = mean(abs(AC_LH2_qdot_defuel_chilldown))/AC_supply_line_port_inner_area;
-disp("Mean flow speed for LH2 during defuel chilldown is "+ mean_LH2_flow_speed_defuel_chilldown + "m/s.")
 
 normal_flow_rate_details = {"Warm tank refuel chilldown", mean_LH2_flow_speed_warm_chilldown, "m/s";
     "Warm tank refuel tank filling", mean_LH2_flow_speed_warm_fill, "m/s";
-    "Warm tank refuel warmup", mean_GH2_flow_speed_warm_warmup, "m/s";
+    "Warm tank refuel warmup", mean_GH2_mass_flow_speed_warm_warmup, "m/s";
     "Cold tank refuel chilldown", mean_LH2_flow_speed_cold_chilldown, "m/s";
     "Cold tank refuel tank filling", mean_LH2_flow_speed_cold_fill, "m/s";
     "Cold tank refuel warmup", mean_GH2_flow_speed_cold_warmup, "m/s";
@@ -195,3 +280,6 @@ normal_flow_rate_details = {"Warm tank refuel chilldown", mean_LH2_flow_speed_wa
 normal_flow_rate_details_table = cell2table(normal_flow_rate_details, ...
     'VariableNames', {'Operation phase' 'Mean flow rate' 'Unit'});
 writetable(normal_flow_rate_details_table, "Graphs/normal flow rate details.xlsx")
+
+disp(normal_flow_rate_details_table)
+

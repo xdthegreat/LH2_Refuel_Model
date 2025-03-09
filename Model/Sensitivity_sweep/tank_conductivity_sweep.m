@@ -1,25 +1,25 @@
- 
 
-% TODO: change model to fluids_&_control.slx if needed
-% Fix this and find out what is going on
+
+
 
 
 clc
-%% valve_diameter_sweep.m
-% This changes aircraft valve orifice area over a variety of values
+%% tank_conductivity_sweep.m
+% This changes aircraft valve discharge coefficient over a variety of values
 
-valve_diameter_vector = 0.008:0.001:0.01;
+AC_tank_equivalent_conductivity_vector = logspace(log10(1), log10(1200), 20)/(Ambient_temp-20)*AC_wall_thickness; % to be changed
 rapid_flag = false;
 accel_flag = false;
 tic;
+
 
 %parsim version
 mdl = "simscape_automatic";
 
 clear simIn
 
-simIn(1:length(valve_diameter_vector)) = Simulink.SimulationInput(mdl); 
-for i = 1:length(valve_diameter_vector) 
+simIn(1:length(AC_tank_equivalent_conductivity_vector)) = Simulink.SimulationInput(mdl); 
+for i = 1:length(AC_tank_equivalent_conductivity_vector) 
     if rapid_flag
         simIn(i) = simIn(i).setModelParameter(SimulationMode="rapid-accelerator");
     elseif accel_flag
@@ -29,13 +29,9 @@ for i = 1:length(valve_diameter_vector)
     end
 
 
-    simIn(i) = simIn(i).setVariable('AC_return_valve_orifice_area', (valve_diameter_vector(i)*8)^2*pi/4); 
+    simIn(i) = simIn(i).setVariable('AC_tank_equivalent_conductivity', AC_tank_equivalent_conductivity_vector(i)); 
 
-    simIn(i) = simIn(i).setVariable('AC_supply_valve_orifice_area', (valve_diameter_vector(i)*4.8)^2*pi/4); 
-   
-    simIn(i) = simIn(i).setVariable('AC_engine_valve_orifice_area', valve_diameter_vector(i)^2*pi/4); 
-
-    simIn(i) = simIn(i).setVariable('stopTime', 10000); 
+    simIn(i) = simIn(i).setVariable('stopTime', 100000); 
 
 end
 
@@ -48,9 +44,13 @@ end
 toc;
 
 
-%% ans processing
+%% plot
 
-time_warm_refuel = zeros([1, length(valve_diameter_vector)]);
+time_warm_refuel = zeros([1, length(AC_tank_equivalent_conductivity_vector)]);
+time_cold_refuel = zeros([1, length(AC_tank_equivalent_conductivity_vector)]);
+time_warm_fill = zeros([1, length(AC_tank_equivalent_conductivity_vector)]);
+
+LH2_consumption_vec = zeros([1, length(AC_tank_equivalent_conductivity_vector)]);
 
 
 for i = 1:length(simOut)
@@ -92,8 +92,13 @@ for i = 1:length(simOut)
         disp("Total LH2 supplied by ground station = " + Ground_LH2_total(idle_1_index) + "kg.")
         disp("Total LH2 in the UAM tank = " + AC_LH2_total(idle_1_index) + "kg.")
 
+        LH2_consumption_vec(i) = Ground_LH2_total(idle_1_index);
+
         time_warm_refuel(i) = Ground_LH2_total_time(idle_1_index);
         time_cold_refuel(i) = Ground_LH2_total_time(idle_3_index) - Ground_LH2_total_time(idle_2_index);
+
+        time_warm_fill(i) =  Ground_LH2_total_time(start_warm_warmup_index) - ...
+            Ground_LH2_total_time(start_warm_tank_fill_index);
         catch
         end
 
@@ -102,9 +107,38 @@ for i = 1:length(simOut)
 end
 
 
-figure(10)
-plot(valve_diameter_vector, time_warm_refuel)
-xlabel("Reference valve orifice diameter (m)")
+
+figure(100)
+plot(AC_tank_equivalent_conductivity_vector, time_warm_refuel)
+xlabel("Insulation equivalent conductivity (W/mK)")
 ylabel('Time taken per warm tank refuel (s)')
-title("Time taken for for warm tank refuel with different valve orifice diameter")
-saveas(gcf, 'Graphs/Time taken for warm tank refuel vs valve diameter.png')
+title("Time taken for for warm tank refuel with different insulation equivalent conductivity")
+saveas(gcf, 'Graphs/Time taken for warm tank refuel vs UAM tank insulation conductivity.png')
+
+
+
+figure(101)
+plot(AC_tank_equivalent_conductivity_vector, time_cold_refuel)
+xlabel("Insulation equivalent conductivity (W/mK)")
+ylabel('Time taken per cold tank refuel (s)')
+title("Time taken for for cold tank refuel with different insulation equivalent conductivity")
+set(gca, 'XScale', 'log')
+saveas(gcf, 'Graphs/Time taken for cold tank refuel vs UAM tank insulation conductivity.png')
+
+
+figure(102)
+plot(AC_tank_equivalent_conductivity_vector, time_warm_fill)
+xlabel("Insulation equivalent conductivity (W/mK)")
+ylabel('Time taken per cold tank refuel (s)')
+title("Time taken for for cold tank refuel with different insulation equivalent conductivity")
+set(gca, 'XScale', 'log')
+saveas(gcf, 'Graphs/Time taken for warm tank filling vs UAM tank insulation conductivity.png')
+
+
+figure(102)
+plot(AC_tank_equivalent_conductivity_vector, LH2_consumption_vec)
+xlabel("Insulation equivalent conductivity (W/mK)")
+ylabel('LH2 consumed (kg)')
+title("Total LH2 consumed for for cold tank refuel with different insulation equivalent conductivity")
+set(gca, 'XScale', 'log')
+saveas(gcf, 'Graphs/Lh2 consumed for warm tank filling vs UAM tank insulation conductivity.png')
