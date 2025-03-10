@@ -25,9 +25,9 @@ for i = 1:length(hose_length_vector)
     if rapid_flag
         hose_length_sweep_simIn(i) = hose_length_sweep_simIn(i).setModelParameter(SimulationMode="rapid-accelerator");
     elseif accel_flag
-        hose_length_sweep_simIn(i) = hose_length_sweep_simIn.setModelParameter('SimulationMode','accelerator');
+        hose_length_sweep_simIn(i) = hose_length_sweep_simIn(i).setModelParameter('SimulationMode','accelerator');
     else
-        hose_length_sweep_simIn(i) = hose_length_sweep_simIn.setModelParameter('SimulationMode','normal');
+        hose_length_sweep_simIn(i) = hose_length_sweep_simIn(i).setModelParameter('SimulationMode','normal');
     end
 
     hose_length_sweep_simIn(i) = hose_length_sweep_simIn(i).setVariable('hose_length', hose_length_vector(i));

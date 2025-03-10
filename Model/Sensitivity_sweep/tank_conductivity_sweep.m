@@ -29,9 +29,9 @@ for i = 1:length(AC_tank_equivalent_conductivity_vector)
     if rapid_flag
         tank_conductivity_sweep_simIn(i) = tank_conductivity_sweep_simIn(i).setModelParameter(SimulationMode="rapid-accelerator");
     elseif accel_flag
-        tank_conductivity_sweep_simIn(i) = tank_conductivity_sweep_simIn.setModelParameter('SimulationMode','accelerator');
+        tank_conductivity_sweep_simIn(i) = tank_conductivity_sweep_simIn(i).setModelParameter('SimulationMode','accelerator');
     else
-        tank_conductivity_sweep_simIn(i) = tank_conductivity_sweep_simIn.setModelParameter('SimulationMode','normal');
+        tank_conductivity_sweep_simIn(i) = tank_conductivity_sweep_simIn(i).setModelParameter('SimulationMode','normal');
     end
 
 

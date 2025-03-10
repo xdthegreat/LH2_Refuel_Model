@@ -27,9 +27,9 @@ for i = 1:length(LH2_FEED_PRES_VEC)
     if rapid_flag
         Feed_pressure_sweep_simIn(i) = Feed_pressure_sweep_simIn(i).setModelParameter(SimulationMode="rapid-accelerator");
     elseif accel_flag
-        Feed_pressure_sweep_simIn(i) = Feed_pressure_sweep_simIn.setModelParameter('SimulationMode','accelerator');
+        Feed_pressure_sweep_simIn(i) = Feed_pressure_sweep_simIn(i).setModelParameter('SimulationMode','accelerator');
     else
-        Feed_pressure_sweep_simIn(i) = Feed_pressure_sweep_simIn.setModelParameter('SimulationMode','normal');
+        Feed_pressure_sweep_simIn(i) = Feed_pressure_sweep_simIn(i).setModelParameter('SimulationMode','normal');
     end
 
     Feed_pressure_sweep_simIn(i) = Feed_pressure_sweep_simIn(i).setVariable('LH2_FEED_PRES', LH2_FEED_PRES_VEC(i));
