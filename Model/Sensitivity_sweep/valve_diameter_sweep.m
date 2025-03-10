@@ -53,10 +53,16 @@ end
 toc;
 %save run data
 save('Graphs/valve_diameter_sweep.mat', 'valve_diameter_sweep_simOut')
+zip('Graphs/valve_diameter_sweep.zip', 'Graphs/valve_diameter_sweep.mat')
 
 
 %% ans processing
-load('Graphs/valve_diameter_sweep.mat')
+
+try
+    load('Graphs/valve_diameter_sweep.mat')
+catch
+    disp('valve_diameter_sweep.mat not found')
+end
 
 
 time_warm_refuel = zeros([1, length(valve_diameter_vector)]);

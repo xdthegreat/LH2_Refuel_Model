@@ -37,9 +37,14 @@ toc;
 
 %save run data
 save('Graphs/normal_flow_rates.mat', 'normal_flow_rates_simOut')
+zip('Graphs/normal_flow_rates.zip', 'Graphs/normal_flow_rates.mat')
 
 %% graphing part
-load('Graphs/normal_flow_rates.mat')
+try
+    load('Graphs/normal_flow_rates.mat')
+catch
+    disp('normal_flow_rates.mat not found')
+end
 
 LH2_qdot = normal_flow_rates_simOut.yout{9}.Values.Data;
 LH2_qdot_time = normal_flow_rates_simOut.yout{9}.Values.Time;
