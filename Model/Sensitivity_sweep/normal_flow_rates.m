@@ -249,7 +249,7 @@ mean_GH2_mass_flow_speed_warm_warmup = mean(abs(AC_GH2_qdot_warm_warmup))/AC_sup
 
 % cold tank warmup
 AC_GH2_qdot_cold_warmup = normal_flow_rates_simOut.yout{31}.Values.AC_supply_coupling_Qdot.Data(start_cold_warmup_index:start_cold_disconnect_index);
-mean_GH2_mass_flow_speed_cold_warmup = mean(abs(AC_GH2_qdot_cold_warmup))/AC_supply_line_port_inner_area;
+mean_GH2_flow_speed_cold_warmup = mean(abs(AC_GH2_qdot_cold_warmup))/AC_supply_line_port_inner_area;
 
 % defuel
 AC_GH2_qdot_defuel = normal_flow_rates_simOut.yout{31}.Values.AC_supply_coupling_Qdot.Data(start_defuel_drain_index:start_defuel_disconnect);
