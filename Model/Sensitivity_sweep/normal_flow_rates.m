@@ -209,7 +209,7 @@ disp("Mean mass flow rate for LH2 during cold tank fill is "+ mean_LH2_mass_flow
 AC_LH2_mdot_defuel_chilldown = normal_flow_rates_simOut.yout{32}.Values.AC_supply_line_Mdot.Data(start_defuel_chilldown_index:start_defuel_drain_index);
 AC_LH2_mdot_defuel_chilldown_time = normal_flow_rates_simOut.yout{31}.Values.AC_supply_line_Qdot.Time(start_defuel_chilldown_index:start_defuel_drain_index);
 figure(22)
-plot(AC_LH2_mdot_defuel_chilldown_time, AC_LH2_qdot_defuel_chilldown)
+plot(AC_LH2_mdot_defuel_chilldown_time, AC_LH2_mdot_defuel_chilldown)
 title("LH2 mass flow rate during defuel chilldown")
 xlabel('Time (s)')
 ylabel('Flow rate (kg/s)')
