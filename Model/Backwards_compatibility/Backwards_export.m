@@ -1,6 +1,4 @@
 
-% model to load model
-open('simscape_automatic.slx')
 
 % list of models to export for R2024a
 model_list = {'GH2_prop_valve_controller', ...
@@ -19,17 +17,92 @@ for i = 1:length(model_list)
     model_list_R2024a{i} = "Model/Backwards_compatibility/" + model_list{i} + "_R2024a.slx";
 end
 
+
 % delete potentially doubled models
 for i = 1:length(model_list)
     delete(model_list_R2024a{i})
 end
 
-%export to R2024a
+
 for i = 1:length(model_list)
-    Simulink.exportToVersion(model_list{i}, model_list_R2024a{i}, 'R2024a', ...
+    load_system(model_list{i});
+    filename = save_system(model_list{i}, model_list_R2024a{i});
+end
+
+
+% load model
+open('simscape_automatic.slx')
+
+
+
+%% change referenced blocks
+
+for i = 1:length(model_list)
+    load_system(model_list_R2024a{i});
+end
+
+% simscape_automatic
+set_param('simscape_automatic_R2024a/Fluids and controls', 'ReferencedSubsystem', 'fluids_and_control_subsystem_R2024a')
+
+
+
+%fluids_and_control_subsystem
+set_param('fluids_and_control_subsystem_R2024a/LH2 prop valve controller', 'ReferencedSubsystem', 'LH2_prop_valve_controller_R2024a')
+set_param('fluids_and_control_subsystem_R2024a/GH2 prop valve controller', 'ReferencedSubsystem', 'GH2_prop_valve_controller_R2024a')
+set_param('fluids_and_control_subsystem_R2024a/LH2 Vent prop valve controller', 'ReferencedSubsystem', 'Vent_prop_valve_controller_R2024a')
+set_param('fluids_and_control_subsystem_R2024a/GH2 return prop valve controller', 'ReferencedSubsystem', 'Vent_prop_valve_controller_R2024a')
+set_param('fluids_and_control_subsystem_R2024a/AC Gauge computer', 'ReferencedSubsystem', 'AC_gauge_R2024a')
+set_param('fluids_and_control_subsystem_R2024a/Thermofluids', 'ReferencedSubsystem', 'simscape_thermofluids_full_subsystem_R2024a')
+
+
+
+%simscape_thermofluids_full_subsystem
+set_param('simscape_thermofluids_full_subsystem_R2024a/LH2 Proportional valve', 'ReferencedSubsystem', 'Return_gas_prop_valve_R2024a')
+set_param('simscape_thermofluids_full_subsystem_R2024a/GH2 vent proportional valve', 'ReferencedSubsystem', 'Return_gas_prop_valve_R2024a')
+set_param('simscape_thermofluids_full_subsystem_R2024a/GS_Supply_SOV', 'ReferencedSubsystem', 'GS_supply_SOV_R2024a')
+set_param('simscape_thermofluids_full_subsystem_R2024a/GS_GH2_Return', 'ReferencedSubsystem', 'GS_supply_SOV_R2024a')
+set_param('simscape_thermofluids_full_subsystem_R2024a/GS_Supply_Coupling', 'ReferencedSubsystem', 'Supply_coupling_R2024a')
+set_param('simscape_thermofluids_full_subsystem_R2024a/GS_Return_Coupling', 'ReferencedSubsystem', 'Return_coupling_R2024a')
+set_param('simscape_thermofluids_full_subsystem_R2024a/GS LH2 Return SOV', 'ReferencedSubsystem', 'GS_return_SOV_R2024a')
+set_param('simscape_thermofluids_full_subsystem_R2024a/GS GH2 SOV', 'ReferencedSubsystem', 'GS_return_SOV_R2024a')
+set_param('simscape_thermofluids_full_subsystem_R2024a/LH2 vent proportional valve', 'ReferencedSubsystem', 'Return_gas_prop_valve_R2024a')
+set_param('simscape_thermofluids_full_subsystem_R2024a/GH2 Proportional valve', 'ReferencedSubsystem', 'Gas_prop_valve_R2024a')
+
+set_param('simscape_thermofluids_full_subsystem_R2024a/AC_Return_Coupling', 'ReferencedSubsystem', 'Return_coupling_R2024a')
+set_param('simscape_thermofluids_full_subsystem_R2024a/AC_Supply_Coupling', 'ReferencedSubsystem', 'Supply_coupling_R2024a')
+set_param('simscape_thermofluids_full_subsystem_R2024a/AC_supply_line_pipe', 'ReferencedSubsystem', 'AC_supply_line_pipe_R2024a')
+set_param('simscape_thermofluids_full_subsystem_R2024a/AC return line pipe', 'ReferencedSubsystem', 'AC_return_line_pipe_R2024a')
+set_param('simscape_thermofluids_full_subsystem_R2024a/AC bypass pipe', 'ReferencedSubsystem', 'AC_bypass_pipe_R2024a')
+set_param('simscape_thermofluids_full_subsystem_R2024a/AC_Bypass_SOV', 'ReferencedSubsystem', 'AC_return_SOV_R2024a')
+set_param('simscape_thermofluids_full_subsystem_R2024a/AC_Supply_SOV', 'ReferencedSubsystem', 'AC_Supply_SOV_R2024a')
+set_param('simscape_thermofluids_full_subsystem_R2024a/AC_Return_SOV', 'ReferencedSubsystem', 'AC_Return_SOV_R2024a')
+set_param('simscape_thermofluids_full_subsystem_R2024a/AC tank', 'ReferencedSubsystem', 'AC_tank_R2024a')
+set_param('simscape_thermofluids_full_subsystem_R2024a/AC_Engine_SOV', 'ReferencedSubsystem', 'AC_Engine_SOV_R2024a')
+set_param('simscape_thermofluids_full_subsystem_R2024a/AC engine feed pipe', 'ReferencedSubsystem', 'AC_engine_line_pipe_R2024a')
+
+
+% save changed blocks
+% for i = 1:length(model_list)
+%     filename = save_system(model_list_R2024a{i}, 'SaveDirtyReferencedModels','on');
+% end
+
+
+%% export to R2024a
+
+%save copy first
+for i = 1:length(model_list)
+    load_system(model_list{i} + "_R2024a");
+    filename = save_system(model_list{i} + "_R2024a", ...
+        "Model/Backwards_compatibility/" + model_list{i} + "_R2024a_Copy");
+end
+
+
+for i = 1:length(model_list)
+    Simulink.exportToVersion(model_list{i} + "_R2024a_Copy", model_list_R2024a{i}, 'R2024a', ...
         'BreakUserLinks', false);
     pause(2)
 end
+
 
 
 % 
