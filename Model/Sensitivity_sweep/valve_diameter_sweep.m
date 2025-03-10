@@ -11,6 +11,7 @@ close all
 valve_diameter_vector = 0.008:0.001:0.01;
 rapid_flag = false;
 accel_flag = false;
+fast_restart_flag = false;
 tic;
 
 %check matlab version
@@ -28,9 +29,9 @@ for i = 1:length(valve_diameter_vector)
     if rapid_flag
         valve_diameter_sweep_simIn(i) = valve_diameter_sweep_simIn(i).setModelParameter(SimulationMode="rapid-accelerator");
     elseif accel_flag
-        valve_diameter_sweep_simIn = valve_diameter_sweep_simIn.setModelParameter('SimulationMode','accelerator');
+        valve_diameter_sweep_simIn(i) = valve_diameter_sweep_simIn.setModelParameter('SimulationMode','accelerator');
     else
-        valve_diameter_sweep_simIn = valve_diameter_sweep_simIn.setModelParameter('SimulationMode','normal');
+        valve_diameter_sweep_simIn(i) = valve_diameter_sweep_simIn.setModelParameter('SimulationMode','normal');
     end
 
 
@@ -44,7 +45,7 @@ for i = 1:length(valve_diameter_vector)
 
 end
 
-if rapid_flag == false && accel_flag == false
+if rapid_flag == false && accel_flag == false && fast_restart_flag
     valve_diameter_sweep_simOut = parsim(valve_diameter_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart', 'on');
 else
     valve_diameter_sweep_simOut = parsim(valve_diameter_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart', 'off');

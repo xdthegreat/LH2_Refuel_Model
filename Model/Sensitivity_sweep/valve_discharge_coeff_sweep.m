@@ -10,6 +10,7 @@ close all
 valve_discharge_coeff_vector = 0.4:0.02:0.8;
 rapid_flag = false;
 accel_flag = false;
+fast_restart_flag = false;
 tic;
 
 %check matlab version
@@ -27,9 +28,9 @@ for i = 1:length(valve_discharge_coeff_vector)
     if rapid_flag
         valve_discharge_coeff_sweep_simIn(i) = valve_discharge_coeff_sweep_simIn(i).setModelParameter(SimulationMode="rapid-accelerator");
     elseif accel_flag
-        valve_discharge_coeff_sweep_simIn = valve_discharge_coeff_sweep_simIn.setModelParameter('SimulationMode','accelerator');
+        valve_discharge_coeff_sweep_simIn(i) = valve_discharge_coeff_sweep_simIn.setModelParameter('SimulationMode','accelerator');
     else
-        valve_discharge_coeff_sweep_simIn = valve_discharge_coeff_sweep_simIn.setModelParameter('SimulationMode','normal');
+        valve_discharge_coeff_sweep_simIn(i) = valve_discharge_coeff_sweep_simIn.setModelParameter('SimulationMode','normal');
     end
 
 
@@ -47,7 +48,7 @@ for i = 1:length(valve_discharge_coeff_vector)
 end
 
 
-if rapid_flag == false && accel_flag == false
+if rapid_flag == false && accel_flag == false && fast_restart_flag
     valve_discharge_coeff_sweep_simOut = parsim(valve_discharge_coeff_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart', 'on');
 else
     valve_discharge_coeff_sweep_simOut = parsim(valve_discharge_coeff_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart', 'off');

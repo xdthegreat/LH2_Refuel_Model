@@ -1,0 +1,4 @@
+disp(123)
+   123
+
+diary off
