@@ -7,7 +7,8 @@ close all
 LH2_FEED_PRES_VEC = 0.2:0.1:0.4; %bar
  
 rapid_flag = false;
-accel_flag = false;
+accel_flag = false; 
+fast_restart_flag = false;
 tic;
 
 %check matlab version
@@ -26,16 +27,16 @@ for i = 1:length(LH2_FEED_PRES_VEC)
     if rapid_flag
         Feed_pressure_sweep_simIn(i) = Feed_pressure_sweep_simIn(i).setModelParameter(SimulationMode="rapid-accelerator");
     elseif accel_flag
-        Feed_pressure_sweep_simIn = Feed_pressure_sweep_simIn.setModelParameter('SimulationMode','accelerator');
+        Feed_pressure_sweep_simIn(i) = Feed_pressure_sweep_simIn.setModelParameter('SimulationMode','accelerator');
     else
-        Feed_pressure_sweep_simIn = Feed_pressure_sweep_simIn.setModelParameter('SimulationMode','normal');
+        Feed_pressure_sweep_simIn(i) = Feed_pressure_sweep_simIn.setModelParameter('SimulationMode','normal');
     end
 
     Feed_pressure_sweep_simIn(i) = Feed_pressure_sweep_simIn(i).setVariable('LH2_FEED_PRES', LH2_FEED_PRES_VEC(i));
 
 end
 
-if rapid_flag == false && accel_flag == false
+if rapid_flag == false && accel_flag == false && fast_restart_flag
     Feed_pressure_sweep_simOut = parsim(Feed_pressure_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart', 'on');
 else
     Feed_pressure_sweep_simOut = parsim(Feed_pressure_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart', 'off');

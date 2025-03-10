@@ -8,7 +8,8 @@ m_LH2_vector = 16:4:70;
 tank_volume_vector = m_LH2_vector./(70*AC_tank_vol_limit);
 AC_tank_surface_area_vector = AC_tank_cross_sectional_area*2 + AC_tank_radius*2*pi.*tank_volume_vector/AC_tank_cross_sectional_area;
 rapid_flag = false;
-accel_flag = false;
+accel_flag = false; 
+fast_restart_flag = false;
 tic;
 
 %check matlab version
@@ -27,9 +28,9 @@ for i = 1:length(tank_volume_vector)
     if rapid_flag
         Tank_size_sweep_simIn(i) = Tank_size_sweep_simIn(i).setModelParameter(SimulationMode="rapid-accelerator");
     elseif accel_flag
-        Tank_size_sweep_simIn = Tank_size_sweep_simIn.setModelParameter('SimulationMode','accelerator');
+        Tank_size_sweep_simIn(i) = Tank_size_sweep_simIn.setModelParameter('SimulationMode','accelerator');
     else
-        Tank_size_sweep_simIn = Tank_size_sweep_simIn.setModelParameter('SimulationMode','normal');
+        Tank_size_sweep_simIn(i) = Tank_size_sweep_simIn.setModelParameter('SimulationMode','normal');
     end
 
     Tank_size_sweep_simIn(i) = Tank_size_sweep_simIn(i).setVariable('AC_tank_volume', tank_volume_vector(i));
@@ -38,7 +39,7 @@ for i = 1:length(tank_volume_vector)
 
 end
 
-if rapid_flag == false && accel_flag == false
+if rapid_flag == false && accel_flag == false && fast_restart_flag
     Tank_size_sweep_simOut = parsim(Tank_size_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart', 'on');
 else
     Tank_size_sweep_simOut = parsim(Tank_size_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart', 'off');

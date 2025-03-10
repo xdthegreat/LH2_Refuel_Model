@@ -6,7 +6,8 @@ close all
 LH2_Feed_Temp_vec = 18:0.25:21; % K
  
 rapid_flag = false;
-accel_flag = false;
+accel_flag = false; 
+fast_restart_flag = false;
 tic;
 
 %check matlab version
@@ -25,16 +26,16 @@ for i = 1:length(LH2_Feed_Temp_vec)
     if rapid_flag
         Feed_temp_sweep_simIn(i) = Feed_temp_sweep_simIn(i).setModelParameter(SimulationMode="rapid-accelerator");
     elseif accel_flag
-        Feed_temp_sweep_simIn = Feed_temp_sweep_simIn.setModelParameter('SimulationMode','accelerator');
+        Feed_temp_sweep_simIn(i) = Feed_temp_sweep_simIn.setModelParameter('SimulationMode','accelerator');
     else
-        Feed_temp_sweep_simIn = Feed_temp_sweep_simIn.setModelParameter('SimulationMode','normal');
+        Feed_temp_sweep_simIn(i) = Feed_temp_sweep_simIn.setModelParameter('SimulationMode','normal');
     end
 
     Feed_temp_sweep_simIn(i) = Feed_temp_sweep_simIn(i).setVariable('LH2_Feed_Temp', LH2_Feed_Temp_vec(i));
 
 end
 
-if rapid_flag == false && accel_flag == false
+if rapid_flag == false && accel_flag == false && fast_restart_flag
     Feed_temp_sweep_simOut = parsim(Feed_temp_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart', 'on');
 else
     Feed_temp_sweep_simOut = parsim(Feed_temp_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart', 'off');
