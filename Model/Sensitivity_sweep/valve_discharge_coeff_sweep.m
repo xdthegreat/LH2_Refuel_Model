@@ -28,9 +28,9 @@ for i = 1:length(valve_discharge_coeff_vector)
     if rapid_flag
         valve_discharge_coeff_sweep_simIn(i) = valve_discharge_coeff_sweep_simIn(i).setModelParameter(SimulationMode="rapid-accelerator");
     elseif accel_flag
-        valve_discharge_coeff_sweep_simIn(i) = valve_discharge_coeff_sweep_simIn.setModelParameter('SimulationMode','accelerator');
+        valve_discharge_coeff_sweep_simIn(i) = valve_discharge_coeff_sweep_simIn(i).setModelParameter('SimulationMode','accelerator');
     else
-        valve_discharge_coeff_sweep_simIn(i) = valve_discharge_coeff_sweep_simIn.setModelParameter('SimulationMode','normal');
+        valve_discharge_coeff_sweep_simIn(i) = valve_discharge_coeff_sweep_simIn(i).setModelParameter('SimulationMode','normal');
     end
 
 

@@ -28,9 +28,9 @@ for i = 1:length(tank_volume_vector)
     if rapid_flag
         Tank_size_sweep_simIn(i) = Tank_size_sweep_simIn(i).setModelParameter(SimulationMode="rapid-accelerator");
     elseif accel_flag
-        Tank_size_sweep_simIn(i) = Tank_size_sweep_simIn.setModelParameter('SimulationMode','accelerator');
+        Tank_size_sweep_simIn(i) = Tank_size_sweep_simIn(i).setModelParameter('SimulationMode','accelerator');
     else
-        Tank_size_sweep_simIn(i) = Tank_size_sweep_simIn.setModelParameter('SimulationMode','normal');
+        Tank_size_sweep_simIn(i) = Tank_size_sweep_simIn(i).setModelParameter('SimulationMode','normal');
     end
 
     Tank_size_sweep_simIn(i) = Tank_size_sweep_simIn(i).setVariable('AC_tank_volume', tank_volume_vector(i));

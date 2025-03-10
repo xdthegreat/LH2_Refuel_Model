@@ -26,9 +26,9 @@ for i = 1:length(LH2_Feed_Temp_vec)
     if rapid_flag
         Feed_temp_sweep_simIn(i) = Feed_temp_sweep_simIn(i).setModelParameter(SimulationMode="rapid-accelerator");
     elseif accel_flag
-        Feed_temp_sweep_simIn(i) = Feed_temp_sweep_simIn.setModelParameter('SimulationMode','accelerator');
+        Feed_temp_sweep_simIn(i) = Feed_temp_sweep_simIn(i).setModelParameter('SimulationMode','accelerator');
     else
-        Feed_temp_sweep_simIn(i) = Feed_temp_sweep_simIn.setModelParameter('SimulationMode','normal');
+        Feed_temp_sweep_simIn(i) = Feed_temp_sweep_simIn(i).setModelParameter('SimulationMode','normal');
     end
 
     Feed_temp_sweep_simIn(i) = Feed_temp_sweep_simIn(i).setVariable('LH2_Feed_Temp', LH2_Feed_Temp_vec(i));

@@ -29,9 +29,9 @@ for i = 1:length(valve_diameter_vector)
     if rapid_flag
         valve_diameter_sweep_simIn(i) = valve_diameter_sweep_simIn(i).setModelParameter(SimulationMode="rapid-accelerator");
     elseif accel_flag
-        valve_diameter_sweep_simIn(i) = valve_diameter_sweep_simIn.setModelParameter('SimulationMode','accelerator');
+        valve_diameter_sweep_simIn(i) = valve_diameter_sweep_simIn(i).setModelParameter('SimulationMode','accelerator');
     else
-        valve_diameter_sweep_simIn(i) = valve_diameter_sweep_simIn.setModelParameter('SimulationMode','normal');
+        valve_diameter_sweep_simIn(i) = valve_diameter_sweep_simIn(i).setModelParameter('SimulationMode','normal');
     end
 
 

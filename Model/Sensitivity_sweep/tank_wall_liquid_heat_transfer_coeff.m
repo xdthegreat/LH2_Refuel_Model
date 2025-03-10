@@ -24,9 +24,9 @@ for i = 1:length(liquid_heat_transfer_coeff_vector)
     if rapid_flag
         tank_wall_liquid_heat_transfer_coeff_simIn(i) = tank_wall_liquid_heat_transfer_coeff_simIn(i).setModelParameter(SimulationMode="rapid-accelerator");
     elseif accel_flag
-        tank_wall_liquid_heat_transfer_coeff_simIn(i) = tank_wall_liquid_heat_transfer_coeff_simIn.setModelParameter('SimulationMode','accelerator');
+        tank_wall_liquid_heat_transfer_coeff_simIn(i) = tank_wall_liquid_heat_transfer_coeff_simIn(i).setModelParameter('SimulationMode','accelerator');
     else
-        tank_wall_liquid_heat_transfer_coeff_simIn(i) = tank_wall_liquid_heat_transfer_coeff_simIn.setModelParameter('SimulationMode','normal');
+        tank_wall_liquid_heat_transfer_coeff_simIn(i) = tank_wall_liquid_heat_transfer_coeff_simIn(i).setModelParameter('SimulationMode','normal');
     end
 
 
