@@ -27,9 +27,9 @@ for i = 1:length(hose_thermal_conductivity_vec)
     if rapid_flag
         hose_insulation_sweep_simIn(i) = hose_insulation_sweep_simIn(i).setModelParameter(SimulationMode="rapid-accelerator");
     elseif accel_flag
-        hose_insulation_sweep_simIn(i) = hose_insulation_sweep_simIn.setModelParameter('SimulationMode','accelerator');
+        hose_insulation_sweep_simIn(i) = hose_insulation_sweep_simIn(i).setModelParameter('SimulationMode','accelerator');
     else
-        hose_insulation_sweep_simIn(i) = hose_insulation_sweep_simIn.setModelParameter('SimulationMode','normal');
+        hose_insulation_sweep_simIn(i) = hose_insulation_sweep_simIn(i).setModelParameter('SimulationMode','normal');
     end
 
     hose_insulation_sweep_simIn(i) = hose_insulation_sweep_simIn(i).setVariable('hose_thermal_conductivity', hose_thermal_conductivity_vec(i));
