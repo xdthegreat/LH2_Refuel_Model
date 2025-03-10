@@ -47,9 +47,16 @@ toc;
 save('Graphs/hose_length_sweep.mat', 'hose_length_sweep_simOut')
 
 
+zip('Graphs/hose_length_sweep.zip', 'Graphs/hose_length_sweep.mat')
+
 
 %% plot
-load('Graphs/hose_length_sweep.mat')
+
+try
+    load('Graphs/hose_length_sweep.mat')
+catch
+    disp('hose_length_sweep.mat not found')
+end
 
 %plot length of hose against LH2 used
 

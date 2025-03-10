@@ -46,10 +46,17 @@ toc;
 %save run data
 save('Graphs/hose_insulation_sweep.mat', 'hose_insulation_sweep_simOut')
 
+zip('Graphs/hose_insulation_sweep.zip', 'Graphs/hose_insulation_sweep.mat')
 
 
 %% plot
-load('Graphs/hose_insulation_sweep.mat')
+
+try
+    load('Graphs/hose_insulation_sweep.mat')
+catch
+    disp('hose_insulation_sweep.mat not found')
+end
+
 
 %plot tank size against LH2 used
 

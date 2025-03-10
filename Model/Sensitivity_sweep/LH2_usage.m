@@ -40,11 +40,17 @@ toc;
 
 %save run data
 save('Graphs/LH2_usage.mat', 'LH2_usage_simOut')
+zip('Graphs/LH2_usage.zip', 'Graphs/LH2_usage.mat')
 
 
 
 %% plotting
-load('Graphs/LH2_usage.mat')
+
+try
+    load('Graphs/LH2_usage.mat')
+catch
+    disp('LH2_usage.mat not found')
+end
 
 
 % find time index of data

@@ -46,10 +46,16 @@ toc;
 %save run data
 save('Graphs/Feed_pressure_sweep.mat', 'Feed_pressure_sweep_simOut')
 
+zip('Graphs/Feed_pressure_sweep.zip', 'Graphs/Feed_pressure_sweep.mat')
 
 
 %% plot
-load('Graphs/Feed_pressure_sweep.mat')
+
+try
+    load('Graphs/Feed_pressure_sweep.mat')
+catch
+    disp('Feed_pressure_sweep.mat not found')
+end
 
 %plot tank size against LH2 used
 

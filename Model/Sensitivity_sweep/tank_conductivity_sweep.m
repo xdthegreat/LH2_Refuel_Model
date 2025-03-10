@@ -53,8 +53,16 @@ save('Graphs/tank_conductivity_sweep.mat', 'tank_conductivity_sweep_simOut')
 
 
 
+zip('Graphs/tank_conductivity_sweep.zip', 'Graphs/tank_conductivity_sweep.mat')
+
+
 %% plot
-load('Graphs/tank_conductivity_sweep.mat')
+
+try
+    load('Graphs/tank_conductivity_sweep.mat')
+catch
+    disp('tank_conductivity_sweep.mat not found')
+end
 
 
 time_warm_refuel = zeros([1, length(AC_tank_equivalent_conductivity_vector)]);
