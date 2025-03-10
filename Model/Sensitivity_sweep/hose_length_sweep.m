@@ -7,6 +7,7 @@ close all
 hose_length_vector = 5:1:20;
 rapid_flag = false;
 accel_flag = false;
+fast_restart_flag = false;
 tic;
 
 %check matlab version
@@ -24,9 +25,9 @@ for i = 1:length(hose_length_vector)
     if rapid_flag
         hose_length_sweep_simIn(i) = hose_length_sweep_simIn(i).setModelParameter(SimulationMode="rapid-accelerator");
     elseif accel_flag
-        hose_length_sweep_simIn = hose_length_sweep_simIn.setModelParameter('SimulationMode','accelerator');
+        hose_length_sweep_simIn(i) = hose_length_sweep_simIn.setModelParameter('SimulationMode','accelerator');
     else
-        hose_length_sweep_simIn = hose_length_sweep_simIn.setModelParameter('SimulationMode','normal');
+        hose_length_sweep_simIn(i) = hose_length_sweep_simIn.setModelParameter('SimulationMode','normal');
     end
 
     hose_length_sweep_simIn(i) = hose_length_sweep_simIn(i).setVariable('hose_length', hose_length_vector(i));
@@ -35,7 +36,7 @@ for i = 1:length(hose_length_vector)
 
 end
 
-if rapid_flag == false && accel_flag == false
+if rapid_flag == false && accel_flag == false && fast_restart_flag
     hose_length_sweep_simOut = parsim(hose_length_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
 else
     hose_length_sweep_simOut = parsim(hose_length_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');

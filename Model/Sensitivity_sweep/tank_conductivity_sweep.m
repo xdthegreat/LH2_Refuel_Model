@@ -9,7 +9,8 @@ close all
 
 AC_tank_equivalent_conductivity_vector = logspace(log10(1), log10(1200), 10)/(Ambient_temp-20)*AC_wall_thickness; % to be changed
 rapid_flag = false;
-accel_flag = false;
+accel_flag = false; 
+fast_restart_flag = false;
 tic;
 
 
@@ -28,9 +29,9 @@ for i = 1:length(AC_tank_equivalent_conductivity_vector)
     if rapid_flag
         tank_conductivity_sweep_simIn(i) = tank_conductivity_sweep_simIn(i).setModelParameter(SimulationMode="rapid-accelerator");
     elseif accel_flag
-        tank_conductivity_sweep_simIn = tank_conductivity_sweep_simIn.setModelParameter('SimulationMode','accelerator');
+        tank_conductivity_sweep_simIn(i) = tank_conductivity_sweep_simIn.setModelParameter('SimulationMode','accelerator');
     else
-        tank_conductivity_sweep_simIn = tank_conductivity_sweep_simIn.setModelParameter('SimulationMode','normal');
+        tank_conductivity_sweep_simIn(i) = tank_conductivity_sweep_simIn.setModelParameter('SimulationMode','normal');
     end
 
 
@@ -40,7 +41,7 @@ for i = 1:length(AC_tank_equivalent_conductivity_vector)
 
 end
 
-if rapid_flag == false && accel_flag == false
+if rapid_flag == false && accel_flag == false && fast_restart_flag
     tank_conductivity_sweep_simOut = parsim(tank_conductivity_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart', 'on');
 else
     tank_conductivity_sweep_simOut = parsim(tank_conductivity_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart', 'off');

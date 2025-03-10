@@ -7,7 +7,8 @@ close all
 hose_thermal_conductivity_vec = logspace(log10(0.001), log10(1000), 20); % W/mK
  
 rapid_flag = false;
-accel_flag = false;
+accel_flag = false; 
+fast_restart_flag = false;
 tic;
 
 %check matlab version
@@ -26,16 +27,16 @@ for i = 1:length(hose_thermal_conductivity_vec)
     if rapid_flag
         hose_insulation_sweep_simIn(i) = hose_insulation_sweep_simIn(i).setModelParameter(SimulationMode="rapid-accelerator");
     elseif accel_flag
-        hose_insulation_sweep_simIn = hose_insulation_sweep_simIn.setModelParameter('SimulationMode','accelerator');
+        hose_insulation_sweep_simIn(i) = hose_insulation_sweep_simIn.setModelParameter('SimulationMode','accelerator');
     else
-        hose_insulation_sweep_simIn = hose_insulation_sweep_simIn.setModelParameter('SimulationMode','normal');
+        hose_insulation_sweep_simIn(i) = hose_insulation_sweep_simIn.setModelParameter('SimulationMode','normal');
     end
 
     hose_insulation_sweep_simIn(i) = hose_insulation_sweep_simIn(i).setVariable('hose_thermal_conductivity', hose_thermal_conductivity_vec(i));
 
 end
 
-if rapid_flag == false && accel_flag == false
+if rapid_flag == false && accel_flag == false && fast_restart_flag
     hose_insulation_sweep_simOut = parsim(hose_insulation_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart', 'on');
 else
     hose_insulation_sweep_simOut = parsim(hose_insulation_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart', 'off');

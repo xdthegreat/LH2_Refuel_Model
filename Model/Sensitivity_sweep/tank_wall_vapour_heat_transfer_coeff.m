@@ -7,6 +7,7 @@ close all
 vapour_heat_transfer_coeff_vector = logspace(log10(0.1), log10(1000), 10); % to be changed
 rapid_flag = false;
 accel_flag = false;
+fast_restart_flag = false;
 tic;
 
 %check matlab version
@@ -24,9 +25,9 @@ for i = 1:length(vapour_heat_transfer_coeff_vector)
     if rapid_flag
         tank_wall_vapour_heat_transfer_coeff_simIn(i) = tank_wall_vapour_heat_transfer_coeff_simIn(i).setModelParameter(SimulationMode="rapid-accelerator");
     elseif accel_flag
-        tank_wall_vapour_heat_transfer_coeff_simIn = tank_wall_vapour_heat_transfer_coeff_simIn.setModelParameter('SimulationMode','accelerator');
+        tank_wall_vapour_heat_transfer_coeff_simIn(i) = tank_wall_vapour_heat_transfer_coeff_simIn.setModelParameter('SimulationMode','accelerator');
     else
-        tank_wall_vapour_heat_transfer_coeff_simIn = tank_wall_vapour_heat_transfer_coeff_simIn.setModelParameter('SimulationMode','normal');
+        tank_wall_vapour_heat_transfer_coeff_simIn(i) = tank_wall_vapour_heat_transfer_coeff_simIn.setModelParameter('SimulationMode','normal');
     end
 
 
@@ -36,7 +37,7 @@ for i = 1:length(vapour_heat_transfer_coeff_vector)
 
 end
 
-if rapid_flag == false && accel_flag == false
+if rapid_flag == false && accel_flag == false && fast_restart_flag
     tank_wall_vapour_heat_transfer_coeff_simOut = parsim(tank_wall_vapour_heat_transfer_coeff_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart', 'on');
 else
     tank_wall_vapour_heat_transfer_coeff_simOut = parsim(tank_wall_vapour_heat_transfer_coeff_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart', 'off');
