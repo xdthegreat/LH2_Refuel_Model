@@ -25,8 +25,8 @@ mass_flow_rate = m_LH2/refuel_time/60;
 max_pressure = 6;  %bar
 max_stress = 300;  %MPa
 
-GS_vent_cracking_delta_P = 5.4;
-GS_vent_open_delta_P = 6;
+GS_vent_cracking_delta_P = 4.4;
+GS_vent_open_delta_P = 5;
 GS_vent_discharge_coeff = 0.8;
 GS_vent_orifice_diameter = 0.1;
 GS_vent_orifice_area = GS_vent_orifice_diameter^2*pi/4;
@@ -66,8 +66,13 @@ tf_delay = 1e-6;
 vent_tf_delay = 1e-4;
 AC_LH2_TARGET_DELTA_P = 0.04;
 AC_GH2_TARGET_DELTA_P = 0.045;
+LH2_FEED_PRES = 0.3; %bar
+GH2_FEED_PRES = 0.2; %bar
+IDLE_FEED_PRES = 0.11; %bar
+
 
 %case info:
+LH2_Feed_Temp = 20;
 Ambient_temp = 300;
 Initial_temp = 300;
 Initial_AC_LH2_frac = 0;
@@ -75,6 +80,6 @@ Initial_AC_tank_pressure = 1.1;
 Initial_AC_Tank_Liquid_Temp = 20;
 Initial_AC_Tank_Gas_Temp = 300;
 initial_hose_p = 1.1;
-stopTime = 2000;
+stopTime = 10000;
 
 valve_laminar_p_ratio = 0.999;

@@ -1,36 +1,56 @@
 
 
-clc
 close all
 
-%% This simulates model in normal conditions to find GH2 supplied LH2 rates vs that in the tank
+%% LH2_usage.m 
+% This simulates model in normal conditions to find GH2 supplied LH2 rates vs that in the tank
 
-mdl = "simscape_automatic";
 rapid_flag = false;
 accel_flag = false;
 
-tic;
-simIn = Simulink.SimulationInput(mdl); 
-if rapid_flag
-    simIn = simIn.setModelParameter(SimulationMode="rapid-accelerator");
-elseif accel_flag
-    simIn = simIn.setModelParameter('SimulationMode','accelerator');
+%check matlab version
+v = matlabRelease;
+if strcmp(v.Release, 'R2024a')
+    mdl = "simscape_automatic_R2024a";
 else
-    simIn = simIn.setModelParameter('SimulationMode','normal');
+    mdl = "simscape_automatic";
 end
 
-simOut = sim(simIn, ShowProgress="on");
+
+clear LH2_usage_simIn
+tic;
+LH2_usage_simIn = Simulink.SimulationInput(mdl); 
+if rapid_flag
+    LH2_usage_simIn = LH2_usage_simIn.setModelParameter(SimulationMode="rapid-accelerator");
+elseif accel_flag
+    LH2_usage_simIn = LH2_usage_simIn.setModelParameter('SimulationMode','accelerator');
+else
+    LH2_usage_simIn = LH2_usage_simIn.setModelParameter('SimulationMode','normal');
+end
+
+
+if rapid_flag == false && accel_flag == false
+    LH2_usage_simOut = sim(LH2_usage_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
+else
+    LH2_usage_simOut = sim(LH2_usage_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
+end
+
 toc;
+
+
+%save run data
+save('Graphs/LH2_usage.mat', 'LH2_usage_simOut')
 
 
 
 %% plotting
+load('Graphs/LH2_usage.mat')
 
 
 % find time index of data
 figure(1)
-AC_mode_data = simOut.yout{5}.Values.Data;
-AC_mode_time = simOut.yout{5}.Values.Time;
+AC_mode_data = LH2_usage_simOut.yout{5}.Values.Data;
+AC_mode_time = LH2_usage_simOut.yout{5}.Values.Time;
 plot(AC_mode_time, AC_mode_data)
 title("AC modes")
 
@@ -41,26 +61,26 @@ for i = 2:length(AC_mode_data)
     end
 end
 
-start_warm_chilldown_index = find(simOut.tout == mode_breakpoint_array(1));
-start_warm_tank_fill_index = find(simOut.tout == mode_breakpoint_array(2));
-start_warm_warmup_index = find(simOut.tout == mode_breakpoint_array(3));
-start_warm_disconnect_index = find(simOut.tout == mode_breakpoint_array(4));
-idle_1_index = find(simOut.tout == mode_breakpoint_array(5));
-start_engine_feed_index = find(simOut.tout == mode_breakpoint_array(6));
-idle_2_index = find(simOut.tout == mode_breakpoint_array(7));
-start_cold_chilldown_index = find(simOut.tout == mode_breakpoint_array(8));
-start_cold_tank_fill_index = find(simOut.tout == mode_breakpoint_array(9));
-start_cold_warmup_index = find(simOut.tout == mode_breakpoint_array(10));
-start_cold_disconnect_index = find(simOut.tout == mode_breakpoint_array(11));
-idle_3_index = find(simOut.tout == mode_breakpoint_array(12));
-start_defuel_chilldown_index = find(simOut.tout == mode_breakpoint_array(13));
-start_defuel_drain_index = find(simOut.tout == mode_breakpoint_array(14));
-start_defuel_disconnect = find(simOut.tout == mode_breakpoint_array(15));
+start_warm_chilldown_index = find(LH2_usage_simOut.tout == mode_breakpoint_array(1));
+start_warm_tank_fill_index = find(LH2_usage_simOut.tout == mode_breakpoint_array(2));
+start_warm_warmup_index = find(LH2_usage_simOut.tout == mode_breakpoint_array(3));
+start_warm_disconnect_index = find(LH2_usage_simOut.tout == mode_breakpoint_array(4));
+idle_1_index = find(LH2_usage_simOut.tout == mode_breakpoint_array(5));
+start_engine_feed_index = find(LH2_usage_simOut.tout == mode_breakpoint_array(6));
+idle_2_index = find(LH2_usage_simOut.tout == mode_breakpoint_array(7));
+start_cold_chilldown_index = find(LH2_usage_simOut.tout == mode_breakpoint_array(8));
+start_cold_tank_fill_index = find(LH2_usage_simOut.tout == mode_breakpoint_array(9));
+start_cold_warmup_index = find(LH2_usage_simOut.tout == mode_breakpoint_array(10));
+start_cold_disconnect_index = find(LH2_usage_simOut.tout == mode_breakpoint_array(11));
+idle_3_index = find(LH2_usage_simOut.tout == mode_breakpoint_array(12));
+start_defuel_chilldown_index = find(LH2_usage_simOut.tout == mode_breakpoint_array(13));
+start_defuel_drain_index = find(LH2_usage_simOut.tout == mode_breakpoint_array(14));
+start_defuel_disconnect = find(LH2_usage_simOut.tout == mode_breakpoint_array(15));
 
 % LH2 usage for 
-Ground_LH2_total = simOut.yout{4}.Values.Data;
-AC_LH2_total = simOut.yout{3}.Values.Data;
-Ground_LH2_total_time = simOut.yout{4}.Values.Time;
+Ground_LH2_total = LH2_usage_simOut.yout{4}.Values.Data;
+AC_LH2_total = LH2_usage_simOut.yout{3}.Values.Data;
+Ground_LH2_total_time = LH2_usage_simOut.yout{4}.Values.Time;
 
 figure(2)
 hold on
@@ -92,8 +112,8 @@ saveas(gcf, 'Graphs/LH2 consumption for warm tank refuel with unmodified calcula
 figure(4)
 hold on
 title("UAM tank wall temperature against time")
-AC_tank_wall_temp_data = simOut.yout{17}.Values.Data;
-AC_tank_wall_temp_time = simOut.yout{17}.Values.Time;
+AC_tank_wall_temp_data = LH2_usage_simOut.yout{17}.Values.Data;
+AC_tank_wall_temp_time = LH2_usage_simOut.yout{17}.Values.Time;
 plot(AC_tank_wall_temp_time, AC_tank_wall_temp_data)
 xlabel("Time (s)")
 ylabel("Temperature (K)")

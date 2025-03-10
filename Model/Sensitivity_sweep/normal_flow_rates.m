@@ -1,36 +1,48 @@
 
 
-clc
 close all
 
 %% This simulates model in normal conditions to find flow rates
 
-mdl = "simscape_automatic";
+%check matlab version
+v = matlabRelease;
+if strcmp(v.Release, 'R2024a')
+    mdl = "simscape_automatic_R2024a";
+else
+    mdl = "simscape_automatic";
+end
+
 rapid_flag = false;
 accel_flag = false;
 
+clear normal_flow_rates_simIn
+
 tic;
-simIn = Simulink.SimulationInput(mdl); 
+normal_flow_rates_simIn = Simulink.SimulationInput(mdl); 
 if rapid_flag
-    simIn = simIn.setModelParameter(SimulationMode="rapid-accelerator");
+    normal_flow_rates_simIn = normal_flow_rates_simIn.setModelParameter(SimulationMode="rapid-accelerator");
 elseif accel_flag
-    simIn = simIn.setModelParameter('SimulationMode','accelerator');
+    normal_flow_rates_simIn = normal_flow_rates_simIn.setModelParameter('SimulationMode','accelerator');
 else
-    simIn = simIn.setModelParameter('SimulationMode','normal');
+    normal_flow_rates_simIn = normal_flow_rates_simIn.setModelParameter('SimulationMode','normal');
 end
 
 if rapid_flag == false && accel_flag == false
-    simOut = parsim(simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
+    normal_flow_rates_simOut = sim(normal_flow_rates_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
 else
-    simOut = parsim(simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
+    normal_flow_rates_simOut = sim(normal_flow_rates_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
 end
 
 toc;
 
+%save run data
+save('Graphs/normal_flow_rates.mat', 'normal_flow_rates_simOut')
 
 %% graphing part
-LH2_qdot = simOut.yout{9}.Values.Data;
-LH2_qdot_time = simOut.yout{9}.Values.Time;
+load('Graphs/normal_flow_rates.mat')
+
+LH2_qdot = normal_flow_rates_simOut.yout{9}.Values.Data;
+LH2_qdot_time = normal_flow_rates_simOut.yout{9}.Values.Time;
 figure(1)
 plot(LH2_qdot_time, LH2_qdot)
 title("LH2 flow rates over time")
@@ -38,8 +50,8 @@ title("LH2 flow rates over time")
 max_LH2_flow_speed = max(LH2_qdot)/AC_supply_line_port_inner_area;
 disp("Max flow speed for LH2 is "+ max_LH2_flow_speed + "m/s.")
 
-GH2_qdot = simOut.yout{10}.Values.Data;
-GH2_qdot_time = simOut.yout{10}.Values.Time;
+GH2_qdot = normal_flow_rates_simOut.yout{10}.Values.Data;
+GH2_qdot_time = normal_flow_rates_simOut.yout{10}.Values.Time;
 figure(2)
 plot(GH2_qdot_time, GH2_qdot)
 title("GH2 flow rates over time")
@@ -50,15 +62,15 @@ disp("Max flow speed for GH2 is "+ max_GH2_flow_speed + "m/s.")
 
 %return line quality
 figure(3)
-AC_return_line_vapour_frac = simOut.yout{26}.Values.Data;
-AC_return_line_vapour_frac_time = simOut.yout{26}.Values.Time;
+AC_return_line_vapour_frac = normal_flow_rates_simOut.yout{26}.Values.Data;
+AC_return_line_vapour_frac_time = normal_flow_rates_simOut.yout{26}.Values.Time;
 plot(AC_return_line_vapour_frac_time, AC_return_line_vapour_frac)
 title("Volume fraction of GH2 in the return lines")
 
 % find time index of data
 figure(4)
-AC_mode_data = simOut.yout{5}.Values.Data;
-AC_mode_time = simOut.yout{5}.Values.Time;
+AC_mode_data = normal_flow_rates_simOut.yout{5}.Values.Data;
+AC_mode_time = normal_flow_rates_simOut.yout{5}.Values.Time;
 plot(AC_mode_time, AC_mode_data)
 title("AC modes")
 
@@ -69,21 +81,21 @@ for i = 2:length(AC_mode_data)
     end
 end
 
-start_warm_chilldown_index = find(simOut.tout == mode_breakpoint_array(1));
-start_warm_tank_fill_index = find(simOut.tout == mode_breakpoint_array(2));
-start_warm_warmup_index = find(simOut.tout == mode_breakpoint_array(3));
-start_warm_disconnect_index = find(simOut.tout == mode_breakpoint_array(4));
-idle_1_index = find(simOut.tout == mode_breakpoint_array(5));
-start_engine_feed_index = find(simOut.tout == mode_breakpoint_array(6));
-idle_2_index = find(simOut.tout == mode_breakpoint_array(7));
-start_cold_chilldown_index = find(simOut.tout == mode_breakpoint_array(8));
-start_cold_tank_fill_index = find(simOut.tout == mode_breakpoint_array(9));
-start_cold_warmup_index = find(simOut.tout == mode_breakpoint_array(10));
-start_cold_disconnect_index = find(simOut.tout == mode_breakpoint_array(11));
-idle_3_index = find(simOut.tout == mode_breakpoint_array(12));
-start_defuel_chilldown_index = find(simOut.tout == mode_breakpoint_array(13));
-start_defuel_drain_index = find(simOut.tout == mode_breakpoint_array(14));
-start_defuel_disconnect = find(simOut.tout == mode_breakpoint_array(15));
+start_warm_chilldown_index = find(normal_flow_rates_simOut.tout == mode_breakpoint_array(1));
+start_warm_tank_fill_index = find(normal_flow_rates_simOut.tout == mode_breakpoint_array(2));
+start_warm_warmup_index = find(normal_flow_rates_simOut.tout == mode_breakpoint_array(3));
+start_warm_disconnect_index = find(normal_flow_rates_simOut.tout == mode_breakpoint_array(4));
+idle_1_index = find(normal_flow_rates_simOut.tout == mode_breakpoint_array(5));
+start_engine_feed_index = find(normal_flow_rates_simOut.tout == mode_breakpoint_array(6));
+idle_2_index = find(normal_flow_rates_simOut.tout == mode_breakpoint_array(7));
+start_cold_chilldown_index = find(normal_flow_rates_simOut.tout == mode_breakpoint_array(8));
+start_cold_tank_fill_index = find(normal_flow_rates_simOut.tout == mode_breakpoint_array(9));
+start_cold_warmup_index = find(normal_flow_rates_simOut.tout == mode_breakpoint_array(10));
+start_cold_disconnect_index = find(normal_flow_rates_simOut.tout == mode_breakpoint_array(11));
+idle_3_index = find(normal_flow_rates_simOut.tout == mode_breakpoint_array(12));
+start_defuel_chilldown_index = find(normal_flow_rates_simOut.tout == mode_breakpoint_array(13));
+start_defuel_drain_index = find(normal_flow_rates_simOut.tout == mode_breakpoint_array(14));
+start_defuel_disconnect = find(normal_flow_rates_simOut.tout == mode_breakpoint_array(15));
 
 
 
@@ -92,8 +104,8 @@ start_defuel_disconnect = find(simOut.tout == mode_breakpoint_array(15));
 
 % mass flow analysis
 % warm tank warmup
-AC_GH2_mdot_warm_warmup = simOut.yout{32}.Values.AC_supply_line_Mdot.Data(start_warm_warmup_index:start_warm_disconnect_index);
-AC_GH2_mdot_warm_warmup_time = simOut.yout{32}.Values.AC_supply_line_Mdot.Time(start_warm_warmup_index:start_warm_disconnect_index);
+AC_GH2_mdot_warm_warmup = normal_flow_rates_simOut.yout{32}.Values.AC_supply_line_Mdot.Data(start_warm_warmup_index:start_warm_disconnect_index);
+AC_GH2_mdot_warm_warmup_time = normal_flow_rates_simOut.yout{32}.Values.AC_supply_line_Mdot.Time(start_warm_warmup_index:start_warm_disconnect_index);
 figure(10)
 plot(AC_GH2_mdot_warm_warmup_time, AC_GH2_mdot_warm_warmup)
 title("GH2 mass flow rates during warm tank warmup")
@@ -106,8 +118,8 @@ mean_GH2_mass_flow_speed_warm_warmup = mean(abs(AC_GH2_mdot_warm_warmup));
 disp("Mean mass flow rate for GH2 during warm tank warmup is "+ mean_GH2_mass_flow_speed_warm_warmup + "kg/s.")
 
 % cold tank warmup
-AC_GH2_mdot_cold_warmup = simOut.yout{32}.Values.AC_supply_line_Mdot.Data(start_cold_warmup_index:start_cold_disconnect_index);
-AC_GH2_mdot_cold_warmup_time = simOut.yout{32}.Values.AC_supply_line_Mdot.Time(start_cold_warmup_index:start_cold_disconnect_index);
+AC_GH2_mdot_cold_warmup = normal_flow_rates_simOut.yout{32}.Values.AC_supply_line_Mdot.Data(start_cold_warmup_index:start_cold_disconnect_index);
+AC_GH2_mdot_cold_warmup_time = normal_flow_rates_simOut.yout{32}.Values.AC_supply_line_Mdot.Time(start_cold_warmup_index:start_cold_disconnect_index);
 figure(11)
 plot(AC_GH2_mdot_cold_warmup_time, AC_GH2_mdot_cold_warmup)
 title("GH2 mass flow rates during cold tank warmup")
@@ -120,8 +132,8 @@ mean_GH2_mass_flow_speed_cold_warmup = mean(abs(AC_GH2_mdot_cold_warmup));
 disp("Mean mass flow rate for GH2 during cold tank warmup is "+ mean_GH2_mass_flow_speed_cold_warmup + "kg/s.")
 
 % defuel
-AC_GH2_mdot_defuel = simOut.yout{32}.Values.AC_supply_line_Mdot.Data(start_defuel_drain_index:start_defuel_disconnect);
-AC_GH2_mdot_defuel_time = simOut.yout{32}.Values.AC_supply_line_Mdot.Time(start_defuel_drain_index:start_defuel_disconnect);
+AC_GH2_mdot_defuel = normal_flow_rates_simOut.yout{32}.Values.AC_supply_line_Mdot.Data(start_defuel_drain_index:start_defuel_disconnect);
+AC_GH2_mdot_defuel_time = normal_flow_rates_simOut.yout{32}.Values.AC_supply_line_Mdot.Time(start_defuel_drain_index:start_defuel_disconnect);
 figure(12)
 plot(AC_GH2_mdot_defuel_time, AC_GH2_mdot_defuel)
 title("GH2 mass flow rates during defuel tank drain")
@@ -136,8 +148,8 @@ disp("Mean mass flow rate for GH2 during defuel tank drain is "+ mean_GH2_mass_f
 
 % LH2 flow rates
 % warm tank chilldown
-AC_LH2_mdot_warm_chilldown = simOut.yout{32}.Values.AC_supply_line_Mdot.Data(start_warm_chilldown_index:start_warm_tank_fill_index);
-AC_LH2_mdot_warm_chilldown_time = simOut.yout{32}.Values.AC_supply_line_Mdot.Time(start_warm_chilldown_index:start_warm_tank_fill_index);
+AC_LH2_mdot_warm_chilldown = normal_flow_rates_simOut.yout{32}.Values.AC_supply_line_Mdot.Data(start_warm_chilldown_index:start_warm_tank_fill_index);
+AC_LH2_mdot_warm_chilldown_time = normal_flow_rates_simOut.yout{32}.Values.AC_supply_line_Mdot.Time(start_warm_chilldown_index:start_warm_tank_fill_index);
 figure(20)
 plot(AC_LH2_mdot_warm_chilldown_time, AC_LH2_mdot_warm_chilldown)
 title("LH2 mass flow rate during warm tank chilldown")
@@ -150,8 +162,8 @@ mean_LH2_mass_flow_rate_warm_chilldown = mean(abs(AC_LH2_mdot_warm_chilldown));
 disp("Mean mass flow rate for LH2 during warm tank chilldown is "+ mean_LH2_mass_flow_rate_warm_chilldown + "kg/s.")
 
 % warm tank fill
-AC_LH2_mdot_warm_fill = simOut.yout{32}.Values.AC_supply_line_Mdot.Data(start_warm_tank_fill_index:start_warm_warmup_index);
-AC_LH2_mdot_warm_fill_time = simOut.yout{32}.Values.AC_supply_line_Mdot.Time(start_warm_tank_fill_index:start_warm_warmup_index);
+AC_LH2_mdot_warm_fill = normal_flow_rates_simOut.yout{32}.Values.AC_supply_line_Mdot.Data(start_warm_tank_fill_index:start_warm_warmup_index);
+AC_LH2_mdot_warm_fill_time = normal_flow_rates_simOut.yout{32}.Values.AC_supply_line_Mdot.Time(start_warm_tank_fill_index:start_warm_warmup_index);
 figure(21)
 plot(AC_LH2_mdot_warm_fill_time, AC_LH2_mdot_warm_fill)
 title("LH2 mass flow rate during warm tank fill")
@@ -165,8 +177,8 @@ disp("Mean mass flow rate for LH2 during warm tank fill is "+ mean_LH2_mass_flow
 
 
 % cold tank chilldown
-AC_LH2_mdot_cold_chilldown = simOut.yout{32}.Values.AC_supply_line_Mdot.Data(start_cold_chilldown_index:start_cold_tank_fill_index);
-AC_LH2_mdot_cold_chilldown_time = simOut.yout{32}.Values.AC_supply_line_Mdot.Time(start_cold_chilldown_index:start_cold_tank_fill_index);
+AC_LH2_mdot_cold_chilldown = normal_flow_rates_simOut.yout{32}.Values.AC_supply_line_Mdot.Data(start_cold_chilldown_index:start_cold_tank_fill_index);
+AC_LH2_mdot_cold_chilldown_time = normal_flow_rates_simOut.yout{32}.Values.AC_supply_line_Mdot.Time(start_cold_chilldown_index:start_cold_tank_fill_index);
 figure(22)
 plot(AC_LH2_mdot_cold_chilldown_time, AC_LH2_mdot_cold_chilldown)
 title("LH2 mass flow rate during cold tank chilldown")
@@ -179,8 +191,8 @@ mean_LH2_mass_flow_rate_cold_chilldown = mean(abs(AC_LH2_mdot_cold_chilldown));
 disp("Mean mass flow rate for LH2 during cold tank chilldown is "+ mean_LH2_mass_flow_rate_cold_chilldown + "kg/s.")
 
 % cold tank fill
-AC_LH2_mdot_cold_fill = simOut.yout{32}.Values.AC_supply_line_Mdot.Data(start_cold_tank_fill_index:start_cold_warmup_index);
-AC_LH2_mdot_cold_fill_time = simOut.yout{32}.Values.AC_supply_line_Mdot.Time(start_cold_tank_fill_index:start_cold_warmup_index);
+AC_LH2_mdot_cold_fill = normal_flow_rates_simOut.yout{32}.Values.AC_supply_line_Mdot.Data(start_cold_tank_fill_index:start_cold_warmup_index);
+AC_LH2_mdot_cold_fill_time = normal_flow_rates_simOut.yout{32}.Values.AC_supply_line_Mdot.Time(start_cold_tank_fill_index:start_cold_warmup_index);
 figure(23)
 plot(AC_LH2_mdot_cold_fill_time, AC_LH2_mdot_cold_fill)
 title("LH2 mass flow rate during cold tank fill")
@@ -194,8 +206,8 @@ disp("Mean mass flow rate for LH2 during cold tank fill is "+ mean_LH2_mass_flow
 
 
 % defuel chilldown
-AC_LH2_mdot_defuel_chilldown = simOut.yout{32}.Values.AC_supply_line_Mdot.Data(start_defuel_chilldown_index:start_defuel_drain_index);
-AC_LH2_mdot_defuel_chilldown_time = simOut.yout{31}.Values.AC_supply_line_Qdot.Time(start_defuel_chilldown_index:start_defuel_drain_index);
+AC_LH2_mdot_defuel_chilldown = normal_flow_rates_simOut.yout{32}.Values.AC_supply_line_Mdot.Data(start_defuel_chilldown_index:start_defuel_drain_index);
+AC_LH2_mdot_defuel_chilldown_time = normal_flow_rates_simOut.yout{31}.Values.AC_supply_line_Qdot.Time(start_defuel_chilldown_index:start_defuel_drain_index);
 figure(22)
 plot(AC_LH2_mdot_defuel_chilldown_time, AC_LH2_qdot_defuel_chilldown)
 title("LH2 mass flow rate during defuel chilldown")
@@ -232,40 +244,40 @@ writetable(normal_mass_flow_rate_details_table, "Graphs/normal mass flow rate de
 
 % GH2 flow rates
 % warm tank warmup
-AC_GH2_qdot_warm_warmup = simOut.yout{31}.Values.AC_supply_coupling_Qdot.Data(start_warm_warmup_index:start_warm_disconnect_index);
+AC_GH2_qdot_warm_warmup = normal_flow_rates_simOut.yout{31}.Values.AC_supply_coupling_Qdot.Data(start_warm_warmup_index:start_warm_disconnect_index);
 mean_GH2_mass_flow_speed_warm_warmup = mean(abs(AC_GH2_qdot_warm_warmup))/AC_supply_line_port_inner_area;
 
 % cold tank warmup
-AC_GH2_qdot_cold_warmup = simOut.yout{31}.Values.AC_supply_coupling_Qdot.Data(start_cold_warmup_index:start_cold_disconnect_index);
+AC_GH2_qdot_cold_warmup = normal_flow_rates_simOut.yout{31}.Values.AC_supply_coupling_Qdot.Data(start_cold_warmup_index:start_cold_disconnect_index);
 mean_GH2_mass_flow_speed_cold_warmup = mean(abs(AC_GH2_qdot_cold_warmup))/AC_supply_line_port_inner_area;
 
 % defuel
-AC_GH2_qdot_defuel = simOut.yout{31}.Values.AC_supply_coupling_Qdot.Data(start_defuel_drain_index:start_defuel_disconnect);
+AC_GH2_qdot_defuel = normal_flow_rates_simOut.yout{31}.Values.AC_supply_coupling_Qdot.Data(start_defuel_drain_index:start_defuel_disconnect);
 mean_GH2_flow_speed_defuel = mean(abs(AC_GH2_qdot_defuel))/AC_supply_line_port_inner_area;
 
 
 % LH2 flow rates
 % warm tank chilldown
-AC_LH2_qdot_warm_chilldown = simOut.yout{31}.Values.AC_supply_coupling_Qdot.Data(start_warm_chilldown_index:start_warm_tank_fill_index);
+AC_LH2_qdot_warm_chilldown = normal_flow_rates_simOut.yout{31}.Values.AC_supply_coupling_Qdot.Data(start_warm_chilldown_index:start_warm_tank_fill_index);
 mean_LH2_flow_speed_warm_chilldown = mean(abs(AC_LH2_qdot_warm_chilldown))/AC_supply_line_port_inner_area;
 
 % warm tank fill
-AC_LH2_qdot_warm_fill = simOut.yout{31}.Values.AC_supply_coupling_Qdot.Data(start_warm_tank_fill_index:start_warm_warmup_index);
+AC_LH2_qdot_warm_fill = normal_flow_rates_simOut.yout{31}.Values.AC_supply_coupling_Qdot.Data(start_warm_tank_fill_index:start_warm_warmup_index);
 mean_LH2_flow_speed_warm_fill = mean(abs(AC_LH2_qdot_warm_fill))/AC_supply_line_port_inner_area;
 
 % cold tank chilldown
-AC_LH2_qdot_cold_chilldown = simOut.yout{31}.Values.AC_supply_coupling_Qdot.Data(start_cold_chilldown_index:start_cold_tank_fill_index);
+AC_LH2_qdot_cold_chilldown = normal_flow_rates_simOut.yout{31}.Values.AC_supply_coupling_Qdot.Data(start_cold_chilldown_index:start_cold_tank_fill_index);
 mean_LH2_flow_speed_cold_chilldown = mean(abs(AC_LH2_qdot_cold_chilldown))/AC_supply_line_port_inner_area;
 
 % cold tank fill
-AC_LH2_qdot_cold_fill = simOut.yout{31}.Values.AC_supply_coupling_Qdot.Data(start_cold_tank_fill_index:start_cold_warmup_index);
-AC_refuel_quality_check_cold_fill = simOut.yout{1}.Values.Data(start_cold_tank_fill_index:start_cold_warmup_index);
+AC_LH2_qdot_cold_fill = normal_flow_rates_simOut.yout{31}.Values.AC_supply_coupling_Qdot.Data(start_cold_tank_fill_index:start_cold_warmup_index);
+AC_refuel_quality_check_cold_fill = normal_flow_rates_simOut.yout{1}.Values.Data(start_cold_tank_fill_index:start_cold_warmup_index);
 
 mean_LH2_flow_speed_cold_fill = mean(abs(AC_LH2_qdot_cold_fill))/AC_supply_line_port_inner_area;
 mean_LH2_flow_speed_cold_fill_adjusted = mean(abs(AC_LH2_qdot_cold_fill.*(1-AC_refuel_quality_check_cold_fill)))/AC_supply_line_port_inner_area;
 
 % defuel chilldown
-AC_LH2_qdot_defuel_chilldown = simOut.yout{31}.Values.AC_supply_line_Qdot.Data(start_defuel_chilldown_index:start_defuel_drain_index);
+AC_LH2_qdot_defuel_chilldown = normal_flow_rates_simOut.yout{31}.Values.AC_supply_line_Qdot.Data(start_defuel_chilldown_index:start_defuel_drain_index);
 mean_LH2_flow_speed_defuel_chilldown = mean(abs(AC_LH2_qdot_defuel_chilldown))/AC_supply_line_port_inner_area;
 
 normal_flow_rate_details = {"Warm tank refuel chilldown", mean_LH2_flow_speed_warm_chilldown, "m/s";

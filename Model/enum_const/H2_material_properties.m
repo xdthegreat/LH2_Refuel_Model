@@ -11,6 +11,12 @@ short_pressure_vector = 30000:1000:700000;
 load('LH2_conductivity.mat')
 load('GH2_conductivity.mat')
 
+% Reynalds number
+
+
+% Nusselt number
+
+
 % steel data
 steel_density = 8500;  %kg/m^3
 steel_emmissitivity = 0.6;

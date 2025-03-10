@@ -23,6 +23,8 @@ AC_QDOT_elem = {'AC_supply_line_Qdot', 'AC_return_line_Qdot', 'AC_return_couplin
 AC_MDOT_elem = {'AC_supply_line_Mdot', 'AC_bypass_line_Mdot', 'AC_return_line_Mdot', ...
     'AC_Tank_return_line_mdot', 'AC_TANK_SUPPLY_LINE_MDOT', 'AC_Tank_Vent_mdot', 'Engine_feed_mdot'};
 
+VENT_QDOT_elem = {'VENT_PUMP_GS_QDot', 'VENT_VALVE_GS_QDot', 'VENT_HOSE_GS_QDot', ...
+    'VENT_GH2_RETURN_SOV_GS_QDot', 'VENT_GAS_RETURN_GS_QDot', 'VENT_VALVE_RETURN_GS_QDot', 'VENT_PROP_VALVE_RETURN_GS_QDot'};
 
 clear elems
 for i = 1:length(P_DIAGNOSTIC_elem)
@@ -81,3 +83,13 @@ end
 
 AC_MDOT = Simulink.Bus;
 AC_MDOT.Elements = elems;
+
+
+clear elems
+for i = 1:length(VENT_QDOT_elem)
+    elems(i) = Simulink.BusElement;
+    elems(i).Name = cell2mat(VENT_QDOT_elem(i));
+end
+
+VENT_QDOT = Simulink.Bus;
+VENT_QDOT.Elements = elems;
