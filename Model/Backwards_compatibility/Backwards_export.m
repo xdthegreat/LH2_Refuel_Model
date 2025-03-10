@@ -18,16 +18,18 @@ for i = 1:length(model_list)
     model_list_R2024a{i} = "Model/Backwards_compatibility/" + model_list{i} + "_R2024a.slx";
 end
 
-%delete potentially doubled models
+% delete potentially doubled models
 for i = 1:length(model_list)
     delete(model_list_R2024a{i})
 end
 
+%export to R2024a
 for i = 1:length(model_list)
     Simulink.exportToVersion(model_list{i}, model_list_R2024a{i}, 'R2024a', ...
         'BreakUserLinks',false);
     pause(1)
 end
+
 
 % 
 % 
