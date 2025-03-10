@@ -57,11 +57,17 @@ toc;
 
 %save run data
 save('Graphs/valve_discharge_coeff_sweep.mat', 'valve_discharge_coeff_sweep_simOut')
+zip('Graphs/valve_discharge_coeff_sweep.zip', 'Graphs/valve_discharge_coeff_sweep.mat')
 
 
 
 %% ans processing
-load('Graphs/valve_discharge_coeff_sweep.mat')
+
+try
+    load('Graphs/valve_discharge_coeff_sweep.mat')
+catch
+    disp('valve_discharge_coeff_sweep.mat not found')
+end
 
 for i = 1:length(valve_discharge_coeff_vector)
     if isempty(valve_discharge_coeff_sweep_simOut(1, i).ErrorMessage)

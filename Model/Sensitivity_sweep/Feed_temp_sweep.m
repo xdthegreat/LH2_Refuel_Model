@@ -45,10 +45,17 @@ toc;
 %save run data
 save('Graphs/Feed_temp_sweep.mat', 'Feed_temp_sweep_simOut')
 
+zip('Graphs/Feed_temp_sweep.zip', 'Graphs/Feed_temp_sweep.mat')
 
 
 %% plot
-load('Graphs/Feed_temp_sweep.mat')
+
+try
+    load('Graphs/Feed_temp_sweep.mat')
+catch
+    disp('Feed_temp_sweep.mat not found')
+end
+
 
 %plot tank size against LH2 used
 

@@ -46,10 +46,16 @@ toc;
 
 %save run data
 save('Graphs/tank_wall_vapour_heat_transfer_coeff.mat', 'tank_wall_vapour_heat_transfer_coeff_simOut')
+zip('Graphs/tank_wall_vapour_heat_transfer_coeff.zip', 'Graphs/tank_wall_vapour_heat_transfer_coeff.mat')
 
 
 %% plot
-load('Graphs/tank_wall_vapour_heat_transfer_coeff.mat')
+
+try
+    load('Graphs/tank_wall_vapour_heat_transfer_coeff.mat')
+catch
+    disp('tank_wall_vapour_heat_transfer_coeff.mat not found')
+end
 
 time_warm_refuel = zeros([1, length(vapour_heat_transfer_coeff_vector)]);
 time_cold_refuel = zeros([1, length(vapour_heat_transfer_coeff_vector)]);

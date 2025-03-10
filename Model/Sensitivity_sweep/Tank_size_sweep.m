@@ -48,11 +48,17 @@ toc;
 
 %save run data
 save('Graphs/Tank_size_sweep.mat', 'Tank_size_sweep_simOut')
-
+zip('Graphs/Tank_size_sweep.zip', 'Graphs/Tank_size_sweep.mat')
 
 
 %% plot
-load('Graphs/Tank_size_sweep.mat')
+
+try
+    load('Graphs/Tank_size_sweep.mat')
+catch
+    disp('Tank_size_sweep.mat not found')
+end
+
 
 %plot tank size against LH2 used
 
