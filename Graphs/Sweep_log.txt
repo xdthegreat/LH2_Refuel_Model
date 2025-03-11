@@ -1609,3 +1609,523 @@ time_warm_refuel =
 
   302.0000  305.5000  308.0000  310.5000  313.0000
 
+
+ans = 
+
+  <a href="matlab:helpPopup('datetime')" style="font-weight:bold">datetime</a>
+
+   11-Mar-2025 10:48:58 +0000
+
+[11-Mar-2025 10:49:00] Checking for availability of parallel pool...
+Starting parallel pool (parpool) using the 'LocalProfile2' profile ...
+Connected to parallel pool with 3 workers.
+[11-Mar-2025 10:49:21] Starting Simulink on parallel workers...
+[11-Mar-2025 10:49:21] Configuring simulation cache folder on parallel workers...
+[11-Mar-2025 10:49:21] Loading model on parallel workers...
+[11-Mar-2025 10:49:30] Running simulations...
+[11-Mar-2025 10:55:37] Completed 1 of 2 simulation runs
+[11-Mar-2025 10:55:37] Received simulation output (size: 117.23 MB) for run 1 from parallel worker.
+[11-Mar-2025 10:55:38] Completed 2 of 2 simulation runs
+[11-Mar-2025 10:55:38] Received simulation output (size: 117.23 MB) for run 2 from parallel worker.
+[11-Mar-2025 10:55:38] Cleaning up parallel workers...
+Max flow speed for LH2 is 110.8727m/s.
+Max flow speed for GH2 is 185.9537m/s.
+Max mass flow rate for GH2 during warm tank warmup is 0.50144kg/s.
+Mean mass flow rate for GH2 during warm tank warmup is 0.072627kg/s.
+Max mass flow rate  for GH2 during cold tank warmup is 0.61707kg/s.
+Mean mass flow rate for GH2 during cold tank warmup is 0.077034kg/s.
+Max mass flow rate for GH2 during defuel tank drain is 1.5384kg/s.
+Mean mass flow rate for GH2 during defuel tank drain is 0.33261kg/s.
+Max mass flow rate for LH2 during warm tank chilldown is 0.20576kg/s.
+Mean mass flow rate for LH2 during warm tank chilldown is 0.056163kg/s.
+Max mass flow rate for LH2 during warm tank fill is 0.55185kg/s.
+Mean mass flow rate for LH2 during warm tank fill is 0.4858kg/s.
+Max mass flow rate for LH2 during cold tank chilldown is 0.18544kg/s.
+Mean mass flow rate for LH2 during cold tank chilldown is 0.041586kg/s.
+Max mass flow rate for LH2 during cold tank fill is 0.53136kg/s.
+Mean mass flow rate for LH2 during cold tank fill is 0.22069kg/s.
+Max mass flow rate for LH2 during defuel chilldown is 0.18611kg/s.
+Mean mass flow rate for LH2 during defuel chilldown is 0.038972kg/s.
+            <strong>Operation phase</strong>            <strong>Mean flow rate</strong>    <strong>Unit</strong> 
+    <strong>_______________________________</strong>    <strong>______________</strong>    <strong>_____</strong>
+
+    "Warm tank refuel chilldown"           54.951        "m/s"
+    "Warm tank refuel tank filling"         26.31        "m/s"
+    "Warm tank refuel warmup"              18.404        "m/s"
+    "Cold tank refuel chilldown"           45.598        "m/s"
+    "Cold tank refuel tank filling"        35.847        "m/s"
+    "Cold tank refuel warmup"              12.194        "m/s"
+    "Defuel chilldown"                     40.594        "m/s"
+    "Defuel wamrup"                        16.556        "m/s"
+
+Total LH2 supplied by ground station = 65.246kg.
+Total LH2 in the UAM tank = 16.5259kg.
+Total LH2 supplied by ground station = 51.2636kg.
+Total LH2 in the UAM tank = 16.5259kg.
+linspace(1, 10, 10)
+
+ans =
+
+     1     2     3     4     5     6     7     8     9    10
+
+linspace(1, 15, 10)
+
+ans =
+
+    1.0000    2.5556    4.1111    5.6667    7.2222    8.7778   10.3333   11.8889   13.4444   15.0000
+
+RUN_EVERYTHING
+
+ans = 
+
+  <a href="matlab:helpPopup('datetime')" style="font-weight:bold">datetime</a>
+
+   11-Mar-2025 11:21:17 +0000
+
+{Unrecognized function or variable 'max_allowed_stop_time'.
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('RUN_EVERYTHING', 'C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\RUN_EVERYTHING.m', 37)" style="font-weight:bold">RUN_EVERYTHING</a> (<a href="matlab: opentoline('C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\RUN_EVERYTHING.m',37,0)">line 37</a>)
+    valve_diameter_sweep_count, max_allowed_stop_time);
+                                ^^^^^^^^^^^^^^^^^^^^^
+} 
+clc
+
+ans = 
+
+  <a href="matlab:helpPopup('datetime')" style="font-weight:bold">datetime</a>
+
+   11-Mar-2025 11:23:03 +0000
+
+[11-Mar-2025 11:23:06] Checking for availability of parallel pool...
+[11-Mar-2025 11:23:06] Starting Simulink on parallel workers...
+[11-Mar-2025 11:23:06] Configuring simulation cache folder on parallel workers...
+[11-Mar-2025 11:23:06] Loading model on parallel workers...
+[11-Mar-2025 11:23:10] Running simulations...
+[11-Mar-2025 11:23:36] Cleaning up parallel workers...
+
+ans = 
+
+  <a href="matlab:helpPopup('datetime')" style="font-weight:bold">datetime</a>
+
+   11-Mar-2025 11:43:10 +0000
+
+[11-Mar-2025 11:43:12] Checking for availability of parallel pool...
+[11-Mar-2025 11:43:12] Starting Simulink on parallel workers...
+[11-Mar-2025 11:43:12] Configuring simulation cache folder on parallel workers...
+[11-Mar-2025 11:43:12] Loading model on parallel workers...
+[11-Mar-2025 11:43:15] Running simulations...
+[11-Mar-2025 11:46:22] Completed 1 of 5 simulation runs
+[11-Mar-2025 11:46:23] Received simulation output (size: 28.54 MB) for run 2 from parallel worker.
+[11-Mar-2025 11:48:22] Completed 2 of 5 simulation runs
+[11-Mar-2025 11:48:22] Received simulation output (size: 29.24 MB) for run 4 from parallel worker.
+[11-Mar-2025 11:48:39] Completed 3 of 5 simulation runs
+[11-Mar-2025 11:48:39] Received simulation output (size: 72.89 MB) for run 3 from parallel worker.
+[11-Mar-2025 11:51:02] Completed 4 of 5 simulation runs
+[11-Mar-2025 11:51:02] Received simulation output (size: 117.21 MB) for run 1 from parallel worker.
+[11-Mar-2025 11:54:27] Completed 5 of 5 simulation runs
+[11-Mar-2025 11:54:27] Received simulation output (size: 117.21 MB) for run 5 from parallel worker.
+[11-Mar-2025 11:54:27] Cleaning up parallel workers...
+Max flow speed for LH2 is 110.8727m/s.
+Max flow speed for GH2 is 185.9537m/s.
+Max mass flow rate for GH2 during warm tank warmup is 0.50144kg/s.
+Mean mass flow rate for GH2 during warm tank warmup is 0.072627kg/s.
+Max mass flow rate  for GH2 during cold tank warmup is 0.61707kg/s.
+Mean mass flow rate for GH2 during cold tank warmup is 0.077034kg/s.
+Max mass flow rate for GH2 during defuel tank drain is 1.5384kg/s.
+Mean mass flow rate for GH2 during defuel tank drain is 0.33261kg/s.
+Max mass flow rate for LH2 during warm tank chilldown is 0.20576kg/s.
+Mean mass flow rate for LH2 during warm tank chilldown is 0.056163kg/s.
+Max mass flow rate for LH2 during warm tank fill is 0.55185kg/s.
+Mean mass flow rate for LH2 during warm tank fill is 0.4858kg/s.
+Max mass flow rate for LH2 during cold tank chilldown is 0.18544kg/s.
+Mean mass flow rate for LH2 during cold tank chilldown is 0.041586kg/s.
+Max mass flow rate for LH2 during cold tank fill is 0.53136kg/s.
+Mean mass flow rate for LH2 during cold tank fill is 0.22069kg/s.
+Max mass flow rate for LH2 during defuel chilldown is 0.18611kg/s.
+Mean mass flow rate for LH2 during defuel chilldown is 0.038972kg/s.
+            <strong>Operation phase</strong>            <strong>Mean flow rate</strong>    <strong>Unit</strong> 
+    <strong>_______________________________</strong>    <strong>______________</strong>    <strong>_____</strong>
+
+    "Warm tank refuel chilldown"           54.951        "m/s"
+    "Warm tank refuel tank filling"         26.31        "m/s"
+    "Warm tank refuel warmup"              18.404        "m/s"
+    "Cold tank refuel chilldown"           45.598        "m/s"
+    "Cold tank refuel tank filling"        35.847        "m/s"
+    "Cold tank refuel warmup"              12.194        "m/s"
+    "Defuel chilldown"                     40.594        "m/s"
+    "Defuel wamrup"                        16.556        "m/s"
+
+Total LH2 supplied by ground station = 65.246kg.
+Total LH2 in the UAM tank = 16.5259kg.
+Total LH2 supplied by ground station = 51.2636kg.
+Total LH2 in the UAM tank = 16.5259kg.
+Total LH2 supplied by ground station = 68.0775kg.
+Total LH2 in the UAM tank = 16.4482kg.
+Total LH2 supplied by ground station = 66.7869kg.
+Total LH2 in the UAM tank = 16.5325kg.
+Total LH2 supplied by ground station = 65.7894kg.
+Total LH2 in the UAM tank = 16.4985kg.
+Total LH2 supplied by ground station = 65.246kg.
+Total LH2 in the UAM tank = 16.5259kg.
+Running valve diameter sweep
+[11-Mar-2025 11:54:43] Checking for availability of parallel pool...
+[11-Mar-2025 11:54:43] Starting Simulink on parallel workers...
+[11-Mar-2025 11:54:43] Configuring simulation cache folder on parallel workers...
+[11-Mar-2025 11:54:43] Loading model on parallel workers...
+[11-Mar-2025 11:54:46] Running simulations...
+[11-Mar-2025 11:54:48] Cleaning up parallel workers...
+{Operation terminated by user during Simulink.SimulationManager/executeSims
+
+
+In Simulink.SimulationManager/execute
+
+In Simulink.SimulationManager/run
+
+In parsim
+
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('valve_diameter_sweep', 'C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\valve_diameter_sweep.m', 40)" style="font-weight:bold">valve_diameter_sweep</a> (<a href="matlab: opentoline('C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\valve_diameter_sweep.m',40,0)">line 40</a>)
+    simOut = parsim(simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('run', 'C:\Program Files\MATLAB\R2024b\toolbox\matlab\lang\run.m', 112)" style="font-weight:bold">run</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024b\toolbox\matlab\lang\run.m',112,0)">line 112</a>)
+evalin('caller', strcat(scriptStem, ';'));
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('RUN_EVERYTHING', 'C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\RUN_EVERYTHING.m', 72)" style="font-weight:bold">RUN_EVERYTHING</a> (<a href="matlab: opentoline('C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\RUN_EVERYTHING.m',72,0)">line 72</a>)
+
+^
+} 
+clc
+valve_discharge_coeff_sweep
+[11-Mar-2025 12:02:42] Checking for availability of parallel pool...
+[11-Mar-2025 12:02:42] Starting Simulink on parallel workers...
+[11-Mar-2025 12:02:43] Configuring simulation cache folder on parallel workers...
+[11-Mar-2025 12:02:43] Loading model on parallel workers...
+[11-Mar-2025 12:02:44] Running simulations...
+[11-Mar-2025 12:05:31] Completed 1 of 3 simulation runs
+[11-Mar-2025 12:05:31] Received simulation output (size: 29.29 MB) for run 2 from parallel worker.
+[11-Mar-2025 12:05:32] Completed 2 of 3 simulation runs
+[11-Mar-2025 12:05:32] Received simulation output (size: 28.96 MB) for run 3 from parallel worker.
+[11-Mar-2025 12:07:35] Completed 3 of 3 simulation runs
+[11-Mar-2025 12:07:35] Received simulation output (size: 83.04 MB) for run 1 from parallel worker.
+[11-Mar-2025 12:07:35] Cleaning up parallel workers...
+{Unrecognized function or variable 'valve_discharge_coeff_sweep_simOut'.
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('valve_discharge_coeff_sweep', 'C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\valve_discharge_coeff_sweep.m', 39)" style="font-weight:bold">valve_discharge_coeff_sweep</a> (<a href="matlab: opentoline('C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\valve_discharge_coeff_sweep.m',39,0)">line 39</a>)
+valve_discharge_coeff_sweep_graphing(valve_discharge_coeff_sweep_simOut, valve_discharge_coeff_vector);
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+} 
+{Undefined function 'valve_diameter_sweep_simOut' for input arguments of type 'double'.
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('valve_discharge_coeff_sweep_graphing', 'C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\Functions\valve_discharge_coeff_sweep_graphing.m', 23)" style="font-weight:bold">valve_discharge_coeff_sweep_graphing</a> (<a href="matlab: opentoline('C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\Functions\valve_discharge_coeff_sweep_graphing.m',23,0)">line 23</a>)
+        = multiple_sim_phase_parsing(valve_diameter_sweep_simOut(1, i), i);
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('valve_discharge_coeff_sweep', 'C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\valve_discharge_coeff_sweep.m', 39)" style="font-weight:bold">valve_discharge_coeff_sweep</a> (<a href="matlab: opentoline('C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\valve_discharge_coeff_sweep.m',39,0)">line 39</a>)
+valve_discharge_coeff_sweep_graphing(simOut, valve_discharge_coeff_vector);
+}
+Total LH2 supplied by ground station = 65.7873kg.
+Total LH2 in the UAM tank = 16.4845kg.
+Total LH2 supplied by ground station = 65.3882kg.
+Total LH2 in the UAM tank = 16.5748kg.
+Total LH2 supplied by ground station = 65.0841kg.
+Total LH2 in the UAM tank = 16.5266kg.
+Total LH2 supplied by ground station = 65.7873kg.
+Total LH2 in the UAM tank = 16.4845kg.
+Total LH2 supplied by ground station = 65.3882kg.
+Total LH2 in the UAM tank = 16.5748kg.
+Total LH2 supplied by ground station = 65.0841kg.
+Total LH2 in the UAM tank = 16.5266kg.
+tank_wall_vapour_heat_transfer_coeff
+[11-Mar-2025 12:22:04] Checking for availability of parallel pool...
+[11-Mar-2025 12:22:04] Starting Simulink on parallel workers...
+[11-Mar-2025 12:22:04] Configuring simulation cache folder on parallel workers...
+[11-Mar-2025 12:22:04] Loading model on parallel workers...
+[11-Mar-2025 12:22:06] Running simulations...
+[11-Mar-2025 12:25:02] Completed 1 of 3 simulation runs
+[11-Mar-2025 12:25:02] Received simulation output (size: 29.91 MB) for run 2 from parallel worker.
+[11-Mar-2025 12:25:04] Completed 2 of 3 simulation runs
+[11-Mar-2025 12:25:04] Received simulation output (size: 30.78 MB) for run 1 from parallel worker.
+[11-Mar-2025 12:28:38] Completed 3 of 3 simulation runs
+[11-Mar-2025 12:28:38] Received simulation output (size: 103.15 MB) for run 3 from parallel worker.
+[11-Mar-2025 12:28:38] Cleaning up parallel workers...
+{Unrecognized function or variable 'valve_discharge_coeff_sweep_simOut'.
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('tank_wall_vapour_heat_transfer_coeff_graphing', 'C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\Functions\tank_wall_vapour_heat_transfer_coeff_graphing.m', 18)" style="font-weight:bold">tank_wall_vapour_heat_transfer_coeff_graphing</a> (<a href="matlab: opentoline('C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\Functions\tank_wall_vapour_heat_transfer_coeff_graphing.m',18,0)">line 18</a>)
+        = multiple_sim_phase_parsing(valve_discharge_coeff_sweep_simOut(1, i), i);
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('tank_wall_vapour_heat_transfer_coeff', 'C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\tank_wall_vapour_heat_transfer_coeff.m', 37)" style="font-weight:bold">tank_wall_vapour_heat_transfer_coeff</a> (<a href="matlab: opentoline('C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\tank_wall_vapour_heat_transfer_coeff.m',37,0)">line 37</a>)
+tank_wall_vapour_heat_transfer_coeff_graphing(simOut, vapour_heat_transfer_coeff_vector);
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+} 
+{Undefined function 'valve_discharge_coeff_sweep_simOut' for input arguments of type 'double'.
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('tank_wall_vapour_heat_transfer_coeff_graphing', 'C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\Functions\tank_wall_vapour_heat_transfer_coeff_graphing.m', 18)" style="font-weight:bold">tank_wall_vapour_heat_transfer_coeff_graphing</a> (<a href="matlab: opentoline('C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\Functions\tank_wall_vapour_heat_transfer_coeff_graphing.m',18,0)">line 18</a>)
+        = multiple_sim_phase_parsing(valve_discharge_coeff_sweep_simOut(1, i), i);
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('tank_wall_vapour_heat_transfer_coeff', 'C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\tank_wall_vapour_heat_transfer_coeff.m', 37)" style="font-weight:bold">tank_wall_vapour_heat_transfer_coeff</a> (<a href="matlab: opentoline('C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\tank_wall_vapour_heat_transfer_coeff.m',37,0)">line 37</a>)
+tank_wall_vapour_heat_transfer_coeff_graphing(simOut, vapour_heat_transfer_coeff_vector);
+}
+Total LH2 supplied by ground station = 76.3198kg.
+Total LH2 in the UAM tank = 15.6925kg.
+Total LH2 supplied by ground station = 74.5078kg.
+Total LH2 in the UAM tank = 15.8484kg.
+Total LH2 supplied by ground station = 62.3251kg.
+Total LH2 in the UAM tank = 16.8178kg.
+toc
+Elapsed time is 715.294160 seconds.
+toc
+Elapsed time is 717.370818 seconds.
+toc
+Elapsed time is 718.756940 seconds.
+toc
+Elapsed time is 719.699287 seconds.
+clc
+tank_wall_liquid_heat_transfer_coeff
+{Unrecognized function or variable 'tank_wall_liquid_heat_transfer_coeff_count'.
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('tank_wall_liquid_heat_transfer_coeff', 'C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\tank_wall_liquid_heat_transfer_coeff.m', 23)" style="font-weight:bold">tank_wall_liquid_heat_transfer_coeff</a> (<a href="matlab: opentoline('C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\tank_wall_liquid_heat_transfer_coeff.m',23,0)">line 23</a>)
+    tank_wall_liquid_heat_transfer_coeff_count, max_allowed_stop_time);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+} 
+open('tank_wall_liquid_heat_transfer_coeff_setup')
+tank_wall_liquid_heat_transfer_coeff
+[11-Mar-2025 12:42:04] Checking for availability of parallel pool...
+[11-Mar-2025 12:42:04] Starting Simulink on parallel workers...
+[11-Mar-2025 12:42:05] Configuring simulation cache folder on parallel workers...
+[11-Mar-2025 12:42:05] Loading model on parallel workers...
+[11-Mar-2025 12:42:07] Running simulations...
+[11-Mar-2025 12:43:02] Cleaning up parallel workers...
+{Operation terminated by user during Simulink.SimulationManager/executeSims
+
+
+In Simulink.SimulationManager/execute
+
+In Simulink.SimulationManager/run
+
+In parsim
+
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('tank_wall_liquid_heat_transfer_coeff', 'C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\tank_wall_liquid_heat_transfer_coeff.m', 30)" style="font-weight:bold">tank_wall_liquid_heat_transfer_coeff</a> (<a href="matlab: opentoline('C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\tank_wall_liquid_heat_transfer_coeff.m',30,0)">line 30</a>)
+    simOut = parsim(simIn, 'ShowSimulationManager', 'on', 'UseFastRestart', 'off');
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+} 
+tank_wall_liquid_heat_transfer_coeff
+[11-Mar-2025 12:43:53] Checking for availability of parallel pool...
+[11-Mar-2025 12:43:53] Starting Simulink on parallel workers...
+[11-Mar-2025 12:43:54] Configuring simulation cache folder on parallel workers...
+[11-Mar-2025 12:43:54] Loading model on parallel workers...
+[11-Mar-2025 12:43:56] Running simulations...
+[11-Mar-2025 12:46:48] Completed 1 of 3 simulation runs
+[11-Mar-2025 12:46:48] Received simulation output (size: 30.43 MB) for run 1 from parallel worker.
+[11-Mar-2025 12:49:02] Completed 2 of 3 simulation runs
+[11-Mar-2025 12:49:02] Received simulation output (size: 84.11 MB) for run 2 from parallel worker.
+[11-Mar-2025 12:56:35] Completed 3 of 3 simulation runs
+[11-Mar-2025 12:56:35] Received simulation output (size: 263.04 MB) for run 3 from parallel worker.
+[11-Mar-2025 12:56:35] Cleaning up parallel workers...
+Total LH2 supplied by ground station = 61.9834kg.
+Total LH2 in the UAM tank = 16.1222kg.
+Total LH2 supplied by ground station = 63.3362kg.
+Total LH2 in the UAM tank = 16.3732kg.
+Total LH2 supplied by ground station = 65.534kg.
+Total LH2 in the UAM tank = 16.6208kg.
+a = [1, 2, ,3, 4, 5]
+ a = [1, 2, ,3, 4, 5]
+            ↑
+{Invalid expression. When calling a function or indexing a variable, use parentheses. Otherwise, check for mismatched delimiters.
+} 
+a = [1, 2, 3, 4, 5]
+
+a =
+
+     1     2     3     4     5
+
+a(2:4)
+
+ans =
+
+     2     3     4
+
+
+ans = 
+
+  <a href="matlab:helpPopup('datetime')" style="font-weight:bold">datetime</a>
+
+   11-Mar-2025 12:59:13 +0000
+
+a=1:1:100
+
+a =
+
+  Columns 1 through 22
+
+     1     2     3     4     5     6     7     8     9    10    11    12    13    14    15    16    17    18    19    20    21    22
+
+  Columns 23 through 44
+
+    23    24    25    26    27    28    29    30    31    32    33    34    35    36    37    38    39    40    41    42    43    44
+
+  Columns 45 through 66
+
+    45    46    47    48    49    50    51    52    53    54    55    56    57    58    59    60    61    62    63    64    65    66
+
+  Columns 67 through 88
+
+    67    68    69    70    71    72    73    74    75    76    77    78    79    80    81    82    83    84    85    86    87    88
+
+  Columns 89 through 100
+
+    89    90    91    92    93    94    95    96    97    98    99   100
+
+a(1, valve_diameter_sweep_pos+1:valve_discharge_coeff_sweep_pos)
+
+ans =
+
+     6     7     8     9    10    11    12    13    14    15    16    17    18    19    20    21    22    23    24    25
+
+asimOut(1, LH2_usage_sweep_pos)
+{Unrecognized function or variable 'asimOut'.
+} 
+a(1, LH2_usage_sweep_pos)
+
+ans =
+
+     1
+
+a(1, LH2_usage_sweep_pos+1:valve_diameter_sweep_pos)
+
+ans =
+
+     2     3     4     5
+
+a(1, valve_diameter_sweep_pos+1:valve_discharge_coeff_sweep_pos)
+
+ans =
+
+     6     7     8     9    10    11    12    13    14    15    16    17    18    19    20    21    22    23    24    25
+
+a(1, valve_discharge_coeff_sweep_pos+1:tank_wall_vapour_heat_transfer_coeff_pos)
+
+ans =
+
+    26    27    28    29    30    31    32    33    34    35    36    37    38    39    40
+
+IdleTimeout has been reached.
+Parallel pool using the 'LocalProfile2' profile is shutting down.
+{Operation terminated by user during <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('parallel.internal.cluster.wait', 'C:\Program Files\MATLAB\R2024b\toolbox\parallel\cluster\+parallel\+internal\+cluster\wait.m', 15)" style="font-weight:bold">parallel.internal.cluster.wait</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024b\toolbox\parallel\cluster\+parallel\+internal\+cluster\wait.m',15,0)">line 15</a>)
+
+
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('parallel.Job/doWait', 'C:\Program Files\MATLAB\R2024b\toolbox\parallel\cluster\+parallel\@Job\Job.m', 678)" style="font-weight:bold">parallel.Job/doWait</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024b\toolbox\parallel\cluster\+parallel\@Job\Job.m',678,0)">line 678</a>)
+            ok = parallel.internal.cluster.wait( job, varargin{:} );
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('parallel.Job/wait', 'C:\Program Files\MATLAB\R2024b\toolbox\parallel\cluster\+parallel\@Job\Job.m', 1332)" style="font-weight:bold">parallel.Job/wait</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024b\toolbox\parallel\cluster\+parallel\@Job\Job.m',1332,0)">line 1332</a>)
+                ok = job.doWait( state, timeout );
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('parallel.internal.pool.AbstractInteractiveClient/pStopWorkersAndDisconnect', 'C:\Program Files\MATLAB\R2024b\toolbox\parallel\cluster\+parallel\+internal\+pool\AbstractInteractiveClient.m', 216)" style="font-weight:bold">parallel.internal.pool.AbstractInteractiveClient/pStopWorkersAndDisconnect</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024b\toolbox\parallel\cluster\+parallel\+internal\+pool\AbstractInteractiveClient.m',216,0)">line 216</a>)
+                        obj.ParallelJob.wait(parallel.internal.types.States.Finished.Name, timeToWait);
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('parallel.internal.pool.AbstractInteractiveClient/stopLabsAndDisconnect', 'C:\Program Files\MATLAB\R2024b\toolbox\parallel\cluster\+parallel\+internal\+pool\AbstractInteractiveClient.m', 158)" style="font-weight:bold">parallel.internal.pool.AbstractInteractiveClient/stopLabsAndDisconnect</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024b\toolbox\parallel\cluster\+parallel\+internal\+pool\AbstractInteractiveClient.m',158,0)">line 158</a>)
+            obj.pStopWorkersAndDisconnect();
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('parallel.internal.pool.AbstractClusterPool/delete', 'C:\Program Files\MATLAB\R2024b\toolbox\parallel\cluster\+parallel\+internal\+pool\@AbstractClusterPool\delete.m', 55)" style="font-weight:bold">parallel.internal.pool.AbstractClusterPool/delete</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024b\toolbox\parallel\cluster\+parallel\+internal\+pool\@AbstractClusterPool\delete.m',55,0)">line 55</a>)
+            aPool.Client.stopLabsAndDisconnect();
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('parallel.internal.pool.AbstractClusterPool/hDeleteLeaveHandleValid', 'C:\Program Files\MATLAB\R2024b\toolbox\parallel\cluster\+parallel\+internal\+pool\@AbstractClusterPool\AbstractClusterPool.m', 553)" style="font-weight:bold">parallel.internal.pool.AbstractClusterPool/hDeleteLeaveHandleValid</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024b\toolbox\parallel\cluster\+parallel\+internal\+pool\@AbstractClusterPool\AbstractClusterPool.m',553,0)">line 553</a>)
+            delete(aPool, 'leaveHandleValid');
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('parallel.internal.pool.PoolManager/cleanupStalePools', 'C:\Program Files\MATLAB\R2024b\toolbox\matlab\parallel\+parallel\+internal\+pool\PoolManager.m', 145)" style="font-weight:bold">parallel.internal.pool.PoolManager/cleanupStalePools</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024b\toolbox\matlab\parallel\+parallel\+internal\+pool\PoolManager.m',145,0)">line 145</a>)
+            arrayfun(@hDeleteLeaveHandleValid, invalidPools);
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('parallel.internal.pool.PoolArrayManager.cleanupStalePools', 'C:\Program Files\MATLAB\R2024b\toolbox\parallel\cluster\+parallel\+internal\+pool\PoolArrayManager.m', 32)" style="font-weight:bold">parallel.internal.pool.PoolArrayManager.cleanupStalePools</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024b\toolbox\parallel\cluster\+parallel\+internal\+pool\PoolArrayManager.m',32,0)">line 32</a>)
+            cleanupStalePools(parallel.internal.pool.PoolManager.getInstance());
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+} 
+hose_length_sweep
+[11-Mar-2025 13:30:54] Checking for availability of parallel pool...
+Starting parallel pool (parpool) using the 'LocalProfile2' profile ...
+Connected to parallel pool with 3 workers.
+[11-Mar-2025 13:31:15] Starting Simulink on parallel workers...
+[11-Mar-2025 13:31:16] Configuring simulation cache folder on parallel workers...
+[11-Mar-2025 13:31:16] Loading model on parallel workers...
+[11-Mar-2025 13:31:26] Running simulations...
+[11-Mar-2025 13:34:36] Completed 1 of 3 simulation runs
+[11-Mar-2025 13:34:37] Received simulation output (size: 32.21 MB) for run 1 from parallel worker.
+[11-Mar-2025 13:38:12] Completed 2 of 3 simulation runs
+[11-Mar-2025 13:38:12] Received simulation output (size: 117.23 MB) for run 3 from parallel worker.
+[11-Mar-2025 13:43:53] Completed 3 of 3 simulation runs
+[11-Mar-2025 13:43:53] Received simulation output (size: 225.68 MB) for run 2 from parallel worker.
+[11-Mar-2025 13:43:53] Cleaning up parallel workers...
+tank_conductivity_sweep
+[11-Mar-2025 13:58:47] Checking for availability of parallel pool...
+[11-Mar-2025 13:58:47] Starting Simulink on parallel workers...
+[11-Mar-2025 13:58:47] Configuring simulation cache folder on parallel workers...
+[11-Mar-2025 13:58:47] Loading model on parallel workers...
+[11-Mar-2025 13:58:50] Running simulations...
+[11-Mar-2025 14:01:40] Completed 1 of 3 simulation runs
+[11-Mar-2025 14:01:40] Received simulation output (size: 29.62 MB) for run 1 from parallel worker.
+[11-Mar-2025 14:04:59] Completed 2 of 3 simulation runs
+[11-Mar-2025 14:05:00] Received simulation output (size: 102.47 MB) for run 2 from parallel worker.
+[11-Mar-2025 14:06:16] Completed 3 of 3 simulation runs
+[11-Mar-2025 14:06:16] Received simulation output (size: 130.62 MB) for run 3 from parallel worker.
+[11-Mar-2025 14:06:16] Cleaning up parallel workers...
+Total LH2 supplied by ground station = 65.2564kg.
+Total LH2 in the UAM tank = 16.5329kg.
+Total LH2 supplied by ground station = 65.2515kg.
+Total LH2 in the UAM tank = 16.5289kg.
+Total LH2 supplied by ground station = 66.3318kg.
+Total LH2 in the UAM tank = 16.463kg.
+Tank_size_sweep
+[11-Mar-2025 14:14:13] Checking for availability of parallel pool...
+[11-Mar-2025 14:14:13] Starting Simulink on parallel workers...
+[11-Mar-2025 14:14:13] Configuring simulation cache folder on parallel workers...
+[11-Mar-2025 14:14:13] Loading model on parallel workers...
+[11-Mar-2025 14:14:16] Running simulations...
+[11-Mar-2025 14:17:08] Completed 1 of 3 simulation runs
+[11-Mar-2025 14:17:08] Received simulation output (size: 32.94 MB) for run 2 from parallel worker.
+[11-Mar-2025 14:20:46] Completed 2 of 3 simulation runs
+[11-Mar-2025 14:20:46] Received simulation output (size: 113.54 MB) for run 1 from parallel worker.
+[11-Mar-2025 14:33:48] Cleaning up parallel workers...
+{Output argument "start_warm_chilldown_index" (and possibly others) not assigned a value in the execution with
+"multiple_sim_phase_parsing" function.
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('Tank_size_sweep_graphing', 'C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\Functions\Tank_size_sweep_graphing.m', 25)" style="font-weight:bold">Tank_size_sweep_graphing</a> (<a href="matlab: opentoline('C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\Functions\Tank_size_sweep_graphing.m',25,0)">line 25</a>)
+        = multiple_sim_phase_parsing(Tank_size_sweep_simOut(1, i), i);
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('Tank_size_sweep', 'C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\Tank_size_sweep.m', 42)" style="font-weight:bold">Tank_size_sweep</a> (<a href="matlab: opentoline('C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\Tank_size_sweep.m',42,0)">line 42</a>)
+Tank_size_sweep_graphing(simOut, m_LH2_vector)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+} 
+m_LH2_vector = linspace(16, 70, tank_size_count);
+tank_volume_vector = m_LH2_vector./(70*AC_tank_vol_limit);
+AC_tank_surface_area_vector = AC_tank_cross_sectional_area*2 + AC_tank_radius*2*pi.*tank_volume_vector/AC_tank_cross_sectional_area;
+m_LH2_vector
+
+m_LH2_vector =
+
+    16    43    70
+
+tank_volume_vector
+
+tank_volume_vector =
+
+    0.2857    0.7679    1.2500
+
+AC_tank_surface_area_vector
+
+AC_tank_surface_area_vector =
+
+    2.7137    4.6422    6.5708
+
+Tank_size_sweep_graphing(simOut, m_LH2_vector)
+{Output argument "start_warm_chilldown_index" (and possibly others) not assigned a value in the execution with
+"multiple_sim_phase_parsing" function.
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('Tank_size_sweep_graphing', 'C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\Functions\Tank_size_sweep_graphing.m', 25)" style="font-weight:bold">Tank_size_sweep_graphing</a> (<a href="matlab: opentoline('C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\Functions\Tank_size_sweep_graphing.m',25,0)">line 25</a>)
+        = multiple_sim_phase_parsing(Tank_size_sweep_simOut(1, i), i);
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+} 
+open("multiple_sim_phase_parsing")
+open("feed_temp_sweep"
+ open("feed_temp_sweep"
+                       ↑
+{Invalid expression. When calling a function or indexing a variable, use parentheses. Otherwise, check for mismatched delimiters.
+} 
+open("feed_temp_sweep")
+IdleTimeout has been reached.
+Parallel pool using the 'LocalProfile2' profile is shutting down.
