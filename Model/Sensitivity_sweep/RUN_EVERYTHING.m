@@ -108,8 +108,8 @@ end
 toc;
 
 % save results
-save('Graphs/run_everything_simOut.mat', 'simOut')
-zip('Graphs/run_everything_simOut.zip', 'Graphs/run_everything_simOut.mat')
+save('Graphs/simOut.mat', 'simOut')
+zip('Graphs/simOut.zip', 'Graphs/simOut.mat')
 
 %% graphing
 
