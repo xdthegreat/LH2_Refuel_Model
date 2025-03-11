@@ -33,7 +33,8 @@ LH2_in_AC_tank = zeros([1, length(hose_length_vector)]);
     plot(hose_length_vector, LH2_consumed)
     xlabel("Length of flexible hoses (m)")
     ylabel('LH2 consumed (kg)')
-    title("Total amount of LH2 consumed for warm tank \n refuel with different lengths of hoses")
+    title({"Total amount of LH2 consumed for warm tank", ...
+        "refuel with different lengths of hoses"})
     saveas(gcf, 'Graphs/LH2 consumption for warm tank refuel sweep with 5-20m hoses.png')
 
 

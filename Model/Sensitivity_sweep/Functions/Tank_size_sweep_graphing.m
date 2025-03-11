@@ -48,15 +48,15 @@ time_warm_refuel = zeros([1, length(Tank_size_sweep_simOut)]);
 figure(101)
 plot(m_LH2_vector, frac_useful_LH2_warm_fill)
 xlabel("Tank maximum (kg)")
-ylabel('Fraction of LH2 in the tank/ fraction of LH2 in consumed')
-title("Fraction of useful LH2 for warm tank refuel with different tank sizes")
+ylabel('Fraction of LH2 in the tank/fraction of LH2 consumed')
+title({"Fraction of useful LH2 for warm tank", "refuel with different tank sizes"})
 saveas(gcf, 'Graphs/Fraction of useful LH2 vs tank size warm tank refuel.png')
 
 figure(102)
 plot(m_LH2_vector, frac_useful_LH2_cold_fill)
 xlabel("Tank maximum (kg)")
 ylabel('Fraction of LH2 in the tank/ fraction of LH2 in consumed')
-title("Fraction of useful LH2 for cold tank \n refuel with different tank sizes")
+title({"Fraction of useful LH2 for cold tank", "refuel with different tank sizes"})
 saveas(gcf, 'Graphs/Fraction of useful LH2 vs tank size cold tank refuel.png')
 
 

@@ -46,7 +46,7 @@ figure(101)
 plot(LH2_FEED_PRES_VEC*10, time_warm_refuel)
 xlabel("LH2 feed pressure (bar)")
 ylabel('Time taken per warm tank refuel (s)')
-title("Time taken for for warm tank refuel \n with different LH2 feed pressure")
+title({"Time taken for for warm tank refuel", "with different LH2 feed pressure"})
 saveas(gcf, 'Graphs/Time taken for warm tank refuel vs LH2 feed pres.png')
 
 

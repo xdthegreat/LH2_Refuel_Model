@@ -35,7 +35,8 @@ figure(101)
 plot(liquid_heat_transfer_coeff_vector, LH2_consumption_vec)
 xlabel("Liquid heat transfer coefficient (W/K m^2)")
 ylabel('LH2 consumed (kg)')
-title("Total LH2 consumed for warm tank refuel with \n different UAM tank wall liquid heat transfer coefficient")
+title({"Total LH2 consumed for warm tank refuel with", ...
+    "different UAM tank wall liquid heat transfer coefficient"})
 set(gca, 'XScale', 'log')
 saveas(gcf, 'Graphs/LH2 consumed for warm tank filling vs UAM tank wall liquid heat transfer coefficient.png')
 
