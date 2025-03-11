@@ -26,6 +26,7 @@ LH2_usage_sweep_count = 1;
 valve_diameter_sweep_count = 4;
 valve_discharge_coeff_sweep_count = 20;
 tank_wall_vapour_heat_transfer_coeff_count = 20;
+tank_wall_liquid_heat_transfer_coeff_count = 20;
 hose_length_sweep_count = 15;
 AC_tank_equivalent_conductivity_count = 10;
 tank_size_count = 15;
@@ -40,7 +41,8 @@ LH2_usage_sweep_pos = normal_flow_rate_sweep_pos;
 valve_diameter_sweep_pos = LH2_usage_sweep_pos + valve_diameter_sweep_count;
 valve_discharge_coeff_sweep_pos = valve_diameter_sweep_pos+ valve_discharge_coeff_sweep_count;
 tank_wall_vapour_heat_transfer_coeff_pos = valve_discharge_coeff_sweep_pos+ tank_wall_vapour_heat_transfer_coeff_count;
-hose_length_sweep_pos = tank_wall_vapour_heat_transfer_coeff_pos + hose_length_sweep_count;
+tank_wall_liquid_heat_transfer_coeff_pos = tank_wall_vapour_heat_transfer_coeff_pos + tank_wall_liquid_heat_transfer_coeff_count;
+hose_length_sweep_pos = tank_wall_liquid_heat_transfer_coeff_pos + hose_length_sweep_count;
 AC_tank_equivalent_conductivity_pos = hose_length_sweep_pos + AC_tank_equivalent_conductivity_count;
 tank_size_pos =  AC_tank_equivalent_conductivity_pos + tank_size_count;
 LH2_FEED_PRES_POS = tank_size_pos + LH2_FEED_PRES_COUNT;
@@ -52,6 +54,7 @@ hose_thermal_conductivity_pos = LH2_FEED_TEMP_POS + hose_thermal_conductivity_co
 % setup simIn
 clear simIn simOut
 normal_flow_rate_simIn = normal_flow_rate_setup(rapid_flag, accel_flag, mdl);
+
 [valve_diameter_sweep_simIn, valve_diameter_vector] = valve_diameter_sweep_setup(rapid_flag, accel_flag, ...
     mdl, valve_diameter_sweep_count, max_allowed_stop_time);
 
@@ -61,6 +64,10 @@ normal_flow_rate_simIn = normal_flow_rate_setup(rapid_flag, accel_flag, mdl);
 [tank_wall_vapour_heat_transfer_coeff_simIn, vapour_heat_transfer_coeff_vector] = ...
     tank_wall_vapour_heat_transfer_coeff_setup(rapid_flag, accel_flag, mdl,...
     tank_wall_vapour_heat_transfer_coeff_count, max_allowed_stop_time);
+
+[tank_wall_liquid_heat_transfer_coeff_simIn, liquid_heat_transfer_coeff_vector] = ...
+    tank_wall_liquid_heat_transfer_coeff_setup(rapid_flag, accel_flag, mdl,...
+    tank_wall_liquid_heat_transfer_coeff_count, max_allowed_stop_time);
 
 [hose_length_sweep_simIn, hose_length_vector] = hose_length_sweep_setup(rapid_flag, accel_flag, ...
     mdl, hose_length_sweep_count, max_allowed_stop_time);
@@ -86,7 +93,9 @@ normal_flow_rate_simIn = normal_flow_rate_setup(rapid_flag, accel_flag, mdl);
 % shove everything in one simIn
 
 simIn = [normal_flow_rate_simIn, valve_diameter_sweep_simIn, valve_discharge_coeff_sweep_simIn, ...
-    tank_wall_vapour_heat_transfer_coeff_simIn, hose_length_sweep_simIn];
+    tank_wall_vapour_heat_transfer_coeff_simIn, tank_wall_liquid_heat_transfer_coeff_simIn, ...
+    hose_length_sweep_simIn, tank_conductivity_sweep_simIn, Tank_size_sweep_simIn, ...
+    Feed_pressure_sweep_simIn, Feed_temp_sweep_simIn, hose_insulation_sweep_simIn];
 
 
 %% actual simulation
