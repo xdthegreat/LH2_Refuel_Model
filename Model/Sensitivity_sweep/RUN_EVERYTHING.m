@@ -8,7 +8,7 @@ datetime('now','TimeZone','local','Format','d-MMM-y HH:mm:ss Z')
 
 rapid_flag = false;
 accel_flag = false;
-fast_restart_flag = false;
+fast_restart_flag = true;
 max_allowed_stop_time = 10000;
 
 %check matlab version
@@ -27,7 +27,7 @@ valve_diameter_sweep_count = 4;
 valve_discharge_coeff_sweep_count = 20;
 tank_wall_vapour_heat_transfer_coeff_count = 20;
 tank_wall_liquid_heat_transfer_coeff_count = 20;
-hose_length_sweep_count = 15;
+hose_length_sweep_count = 10;
 AC_tank_equivalent_conductivity_count = 10;
 tank_size_count = 15;
 LH2_FEED_PRES_COUNT = 3;
@@ -108,8 +108,8 @@ end
 toc;
 
 % save results
-% save('Graphs/run_everything_simOut.mat', 'simOut')
-% zip('Graphs/run_everything_simOut.zip', 'Graphs/run_everything_simOut.mat')
+save('Graphs/run_everything_simOut.mat', 'simOut')
+zip('Graphs/run_everything_simOut.zip', 'Graphs/run_everything_simOut.mat')
 
 %% graphing
 
