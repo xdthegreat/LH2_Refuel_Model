@@ -56,7 +56,7 @@ figure(102)
 plot(m_LH2_vector, frac_useful_LH2_cold_fill)
 xlabel("Tank maximum (kg)")
 ylabel('Fraction of LH2 in the tank/ fraction of LH2 in consumed')
-title("Fraction of useful LH2 for cold tank refuel with different tank sizes")
+title("Fraction of useful LH2 for cold tank \n refuel with different tank sizes")
 saveas(gcf, 'Graphs/Fraction of useful LH2 vs tank size cold tank refuel.png')
 
 
@@ -64,7 +64,7 @@ figure(103)
 plot(m_LH2_vector, time_warm_refuel)
 xlabel("Tank maximum (kg)")
 ylabel('Time taken per warm tank refuel (s)')
-title("Time taken for for warm tank refuel with different tank sizes")
+title("Time taken for for warm tank refuel \n with different tank sizes")
 saveas(gcf, 'Graphs/Time taken for warm tank refuel vs tank size warm tank refuel.png')
 
 
