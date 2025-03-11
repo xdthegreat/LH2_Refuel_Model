@@ -39,7 +39,7 @@ function valve_discharge_coeff_sweep_graphing(valve_discharge_coeff_sweep_simOut
     plot(valve_discharge_coeff_vector, time_warm_refuel)
     xlabel("Valve discahrge coefficient")
     ylabel('Time taken per warm tank refuel (s)')
-    title("Time taken for for warm tank refuel with different valve discharge coefficient")
+    title("Time taken for for warm tank refuel \n with different valve discharge coefficient")
     saveas(gcf, 'Graphs/Time taken for warm tank refuel vs valve diameter.png')
 
 end
