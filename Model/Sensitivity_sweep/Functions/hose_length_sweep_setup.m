@@ -3,7 +3,7 @@
 function [hose_length_sweep_simIn, hose_length_vector] = hose_length_sweep_setup(rapid_flag, accel_flag, ...
     mdl, hose_length_sweep_count, max_allowed_stop_time)
 
-    hose_length_vector = linspace(5, 20, hose_length_sweep_count);
+    hose_length_vector = linspace(10, 20, hose_length_sweep_count);
 
     hose_length_sweep_simIn(1:length(hose_length_vector)) = Simulink.SimulationInput(mdl); 
     for i = 1:length(hose_length_vector) 
