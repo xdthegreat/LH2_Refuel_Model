@@ -64,7 +64,8 @@ figure(103)
 plot(m_LH2_vector, time_warm_refuel)
 xlabel("Tank maximum (kg)")
 ylabel('Time taken per warm tank refuel (s)')
-title("Time taken for for warm tank refuel \n with different tank sizes")
+title({"Time taken for for warm tank refuel", ...
+    "with different tank sizes"})
 saveas(gcf, 'Graphs/Time taken for warm tank refuel vs tank size warm tank refuel.png')
 
 

@@ -5,7 +5,7 @@ function [hose_insulation_sweep_simIn, hose_thermal_conductivity_vec] = hose_ins
     mdl, hose_thermal_conductivity_count, max_allowed_stop_time)
 
 
-hose_thermal_conductivity_vec = logspace(log10(0.001), log10(100), hose_thermal_conductivity_count);
+hose_thermal_conductivity_vec = logspace(log10(0.0001), log10(0.1), hose_thermal_conductivity_count);
 
 hose_insulation_sweep_simIn(1:length(hose_thermal_conductivity_vec)) = Simulink.SimulationInput(mdl); 
 for i = 1:length(hose_thermal_conductivity_vec) 

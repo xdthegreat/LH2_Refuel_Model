@@ -4569,3 +4569,1113 @@ Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('Fe
 Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('RUN_EVERYTHING', 'C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\RUN_EVERYTHING.m', 144)" style="font-weight:bold">RUN_EVERYTHING</a> (<a href="matlab: opentoline('C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\RUN_EVERYTHING.m',144,0)">line 144</a>)
 Feed_temp_sweep_graphing(simOut(1, LH2_FEED_PRES_POS+1:LH2_FEED_TEMP_POS), LH2_Feed_Temp_vec)
 } 
+close all
+render process terminated: TS_PROCESS_WAS_KILLED
+
+ans = 
+
+  <a href="matlab:helpPopup('datetime')" style="font-weight:bold">datetime</a>
+
+   12-Mar-2025 15:06:03 +0000
+
+Model 'GH2_prop_valve_controller_R2024a' was exported from R2024b to R2024a. To find blocks that were removed during the export operation, <a href="matlab:slexportprevious.utils.displayReplacedBlocks('GH2_prop_valve_controller_R2024a')">click here</a>. Save the model to remove this notification.
+[12-Mar-2025 15:06:27] Checking for availability of parallel pool...
+Starting parallel pool (parpool) using the 'LocalProfile2' profile ...
+12-Mar-2025 15:07:49: Job Queued. Waiting for parallel pool job with ID 1 to start ...
+Connected to parallel pool with 14 workers.
+[12-Mar-2025 15:08:17] Starting Simulink on parallel workers...
+[12-Mar-2025 15:08:18] Configuring simulation cache folder on parallel workers...
+[12-Mar-2025 15:08:19] Loading model on parallel workers...
+[12-Mar-2025 15:08:39] Running simulations...
+[Warning: Graphics timeout occurred. To share details of this issue with MathWorks technical
+support, please include that this is an unresponsive graphics client with your service request.] 
+[> In Simulink.Simulation/Future/fetchSingleOutputCaptureError
+In Simulink.Simulation.Future>@(F)F.fetchSingleOutputCaptureError()
+In Simulink.Simulation/Future/Simulink.SimulationOutput
+In Simulink.Simulation/Future/fetchSingleOutput
+In Simulink.Simulation.Future>@(F)F.fetchSingleOutput()
+In Simulink.Simulation/Future/fetchOutputs
+In MultiSim.internal/MultiSimJob/fetchSimOutput
+In MultiSim.internal.MultiSimJob>@(~,eventData)obj.fetchSimOutput(eventData.Data)
+In MultiSim/JobStatusDB/updateRun
+In MultiSim/JobStatusDB/ReceiveUpdatesCB
+In MultiSim.JobStatusDB>@(varargin)obj.ReceiveUpdatesCB(varargin{:})
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('parallel.pool.DataQueue>iDispatchDataReceived', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+pool\DataQueue.m', 252)" style="font-weight:bold">parallel.pool.DataQueue>iDispatchDataReceived</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+pool\DataQueue.m',252,0)">line 252</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('parallel.pool.DataQueue>@(src,event)iDispatchDataReceived(func,src,event)', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+pool\DataQueue.m', 232)" style="font-weight:bold">parallel.pool.DataQueue>@(src,event)iDispatchDataReceived(func,src,event)</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+pool\DataQueue.m',232,0)">line 232</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('parallel.pool/DataQueue/dispatchContinuation', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+pool\DataQueue.m', 245)" style="font-weight:bold">parallel.pool/DataQueue/dispatchContinuation</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+pool\DataQueue.m',245,0)">line 245</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('parallel.pool/DataQueue/maybeDrainAndDispatchAllDataOnQueue', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+pool\DataQueue.m', 201)" style="font-weight:bold">parallel.pool/DataQueue/maybeDrainAndDispatchAllDataOnQueue</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+pool\DataQueue.m',201,0)">line 201</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('parallel.internal.pool/DataQueue/maybeDrainAndDispatchAllDataOnQueue', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+internal\+pool\DataQueue.m', 166)" style="font-weight:bold">parallel.internal.pool/DataQueue/maybeDrainAndDispatchAllDataOnQueue</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+internal\+pool\DataQueue.m',166,0)">line 166</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('parallel.internal.dataqueue.AbstractDataQueue.notifyQueue', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+internal\+dataqueue\AbstractDataQueue.m', 164)" style="font-weight:bold">parallel.internal.dataqueue.AbstractDataQueue.notifyQueue</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+internal\+dataqueue\AbstractDataQueue.m',164,0)">line 164</a>)
+In Simulink/SimulationManager/executeSims
+In Simulink/SimulationManager/execute
+In Simulink/SimulationManager/run
+In parsim
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('RUN_EVERYTHING', 'C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\RUN_EVERYTHING.m', 104)" style="font-weight:bold">RUN_EVERYTHING</a> (<a href="matlab: opentoline('C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\RUN_EVERYTHING.m',104,0)">line 104</a>)] 
+[12-Mar-2025 15:27:45] Completed 1 of 130 simulation runs
+[12-Mar-2025 15:35:27] Completed 2 of 130 simulation runs
+[12-Mar-2025 15:35:29] Completed 3 of 130 simulation runs
+[12-Mar-2025 15:35:30] Completed 4 of 130 simulation runs
+[12-Mar-2025 15:35:32] Completed 5 of 130 simulation runs
+[12-Mar-2025 15:35:35] Completed 6 of 130 simulation runs
+[12-Mar-2025 15:35:37] Completed 7 of 130 simulation runs
+[12-Mar-2025 15:35:40] Completed 8 of 130 simulation runs
+[12-Mar-2025 15:35:43] Completed 9 of 130 simulation runs
+[12-Mar-2025 15:35:46] Completed 10 of 130 simulation runs
+[12-Mar-2025 15:35:48] Completed 11 of 130 simulation runs
+[12-Mar-2025 15:35:51] Completed 12 of 130 simulation runs
+[12-Mar-2025 15:35:54] Completed 13 of 130 simulation runs
+[12-Mar-2025 15:35:56] Completed 14 of 130 simulation runs
+[12-Mar-2025 15:36:05] Completed 15 of 130 simulation runs
+[12-Mar-2025 15:36:14] Completed 16 of 130 simulation runs
+[12-Mar-2025 15:36:15] Completed 17 of 130 simulation runs
+[12-Mar-2025 15:36:16] Completed 18 of 130 simulation runs
+[12-Mar-2025 15:36:16] Completed 19 of 130 simulation runs
+[12-Mar-2025 15:36:16] Completed 20 of 130 simulation runs
+[12-Mar-2025 15:36:17] Completed 21 of 130 simulation runs
+[12-Mar-2025 15:36:21] Completed 22 of 130 simulation runs
+[12-Mar-2025 15:36:24] Completed 23 of 130 simulation runs
+[12-Mar-2025 15:36:28] Completed 24 of 130 simulation runs
+[12-Mar-2025 15:36:31] Completed 25 of 130 simulation runs
+[12-Mar-2025 15:36:35] Completed 26 of 130 simulation runs
+[12-Mar-2025 15:36:38] Completed 27 of 130 simulation runs
+[12-Mar-2025 15:36:41] Completed 28 of 130 simulation runs
+[12-Mar-2025 15:36:46] Completed 29 of 130 simulation runs
+[12-Mar-2025 15:36:49] Completed 30 of 130 simulation runs
+[12-Mar-2025 15:36:52] Completed 31 of 130 simulation runs
+[12-Mar-2025 15:36:55] Completed 32 of 130 simulation runs
+[12-Mar-2025 15:36:57] Completed 33 of 130 simulation runs
+[12-Mar-2025 15:37:01] Completed 34 of 130 simulation runs
+[12-Mar-2025 15:37:04] Completed 35 of 130 simulation runs
+[12-Mar-2025 15:37:07] Completed 36 of 130 simulation runs
+[12-Mar-2025 15:37:10] Completed 37 of 130 simulation runs
+[12-Mar-2025 15:37:13] Completed 38 of 130 simulation runs
+[12-Mar-2025 15:37:16] Completed 39 of 130 simulation runs
+[12-Mar-2025 15:37:22] Completed 40 of 130 simulation runs
+[12-Mar-2025 15:37:27] Completed 41 of 130 simulation runs
+[12-Mar-2025 15:37:32] Completed 42 of 130 simulation runs
+[12-Mar-2025 15:37:35] Completed 43 of 130 simulation runs
+[12-Mar-2025 15:37:38] Completed 44 of 130 simulation runs
+[12-Mar-2025 15:37:42] Completed 45 of 130 simulation runs
+[12-Mar-2025 15:37:44] Completed 46 of 130 simulation runs
+[12-Mar-2025 15:37:46] Completed 47 of 130 simulation runs
+[12-Mar-2025 15:37:49] Completed 48 of 130 simulation runs
+[12-Mar-2025 15:37:51] Completed 49 of 130 simulation runs
+[12-Mar-2025 15:37:52] Completed 50 of 130 simulation runs
+[12-Mar-2025 15:37:54] Completed 51 of 130 simulation runs
+[12-Mar-2025 15:37:57] Completed 52 of 130 simulation runs
+[12-Mar-2025 15:38:01] Completed 53 of 130 simulation runs
+[12-Mar-2025 15:38:03] Completed 54 of 130 simulation runs
+[12-Mar-2025 15:38:05] Completed 55 of 130 simulation runs
+[12-Mar-2025 15:38:07] Completed 56 of 130 simulation runs
+[12-Mar-2025 15:38:10] Completed 57 of 130 simulation runs
+[12-Mar-2025 15:38:13] Completed 58 of 130 simulation runs
+[12-Mar-2025 15:38:15] Completed 59 of 130 simulation runs
+[12-Mar-2025 15:38:18] Completed 60 of 130 simulation runs
+[12-Mar-2025 15:38:20] Completed 61 of 130 simulation runs
+[12-Mar-2025 15:38:23] Completed 62 of 130 simulation runs
+[12-Mar-2025 15:38:25] Completed 63 of 130 simulation runs
+[12-Mar-2025 15:38:28] Completed 64 of 130 simulation runs
+[12-Mar-2025 15:38:31] Completed 65 of 130 simulation runs
+[12-Mar-2025 15:38:38] Completed 66 of 130 simulation runs
+[12-Mar-2025 15:38:43] Completed 67 of 130 simulation runs
+[12-Mar-2025 15:38:46] Completed 68 of 130 simulation runs
+[12-Mar-2025 15:38:49] Completed 69 of 130 simulation runs
+[12-Mar-2025 15:38:52] Completed 70 of 130 simulation runs
+[12-Mar-2025 15:38:55] Completed 71 of 130 simulation runs
+[12-Mar-2025 15:38:57] Completed 72 of 130 simulation runs
+[12-Mar-2025 15:39:00] Completed 73 of 130 simulation runs
+[12-Mar-2025 15:39:02] Completed 74 of 130 simulation runs
+[12-Mar-2025 15:39:07] Completed 75 of 130 simulation runs
+[12-Mar-2025 15:39:13] Completed 76 of 130 simulation runs
+[12-Mar-2025 15:39:18] Completed 77 of 130 simulation runs
+[12-Mar-2025 15:39:23] Completed 78 of 130 simulation runs
+[12-Mar-2025 15:39:30] Completed 79 of 130 simulation runs
+[12-Mar-2025 15:39:39] Completed 80 of 130 simulation runs
+[12-Mar-2025 15:41:18] Completed 81 of 130 simulation runs
+[12-Mar-2025 15:41:20] Completed 82 of 130 simulation runs
+[12-Mar-2025 15:41:24] Completed 83 of 130 simulation runs
+[12-Mar-2025 15:41:28] Completed 84 of 130 simulation runs
+[12-Mar-2025 15:41:32] Completed 85 of 130 simulation runs
+[12-Mar-2025 15:41:35] Completed 86 of 130 simulation runs
+[12-Mar-2025 15:41:38] Completed 87 of 130 simulation runs
+[12-Mar-2025 15:42:20] Completed 88 of 130 simulation runs
+[12-Mar-2025 15:42:24] Completed 89 of 130 simulation runs
+[12-Mar-2025 15:42:29] Completed 90 of 130 simulation runs
+[12-Mar-2025 15:42:31] Completed 91 of 130 simulation runs
+[12-Mar-2025 15:43:59] Completed 92 of 130 simulation runs
+[12-Mar-2025 15:44:03] Completed 93 of 130 simulation runs
+[12-Mar-2025 15:45:32] Completed 94 of 130 simulation runs
+[12-Mar-2025 15:45:34] Completed 95 of 130 simulation runs
+[12-Mar-2025 15:45:41] Completed 96 of 130 simulation runs
+[12-Mar-2025 15:47:07] Completed 97 of 130 simulation runs
+[12-Mar-2025 15:47:11] Completed 98 of 130 simulation runs
+[12-Mar-2025 15:47:14] Completed 99 of 130 simulation runs
+[12-Mar-2025 15:47:17] Completed 100 of 130 simulation runs
+[12-Mar-2025 15:47:22] Completed 101 of 130 simulation runs
+[12-Mar-2025 15:47:25] Completed 102 of 130 simulation runs
+[12-Mar-2025 15:47:27] Completed 103 of 130 simulation runs
+[12-Mar-2025 15:47:30] Completed 104 of 130 simulation runs
+[12-Mar-2025 15:47:33] Completed 105 of 130 simulation runs
+[12-Mar-2025 15:47:37] Completed 106 of 130 simulation runs
+[12-Mar-2025 15:50:28] Completed 107 of 130 simulation runs
+[12-Mar-2025 15:50:30] Completed 108 of 130 simulation runs
+[12-Mar-2025 15:50:32] Completed 109 of 130 simulation runs
+[12-Mar-2025 15:50:35] Completed 110 of 130 simulation runs
+[12-Mar-2025 15:50:39] Completed 111 of 130 simulation runs
+[12-Mar-2025 15:50:40] Completed 112 of 130 simulation runs
+[12-Mar-2025 15:50:44] Completed 113 of 130 simulation runs
+[12-Mar-2025 15:50:47] Completed 114 of 130 simulation runs
+[12-Mar-2025 15:50:50] Completed 115 of 130 simulation runs
+[12-Mar-2025 15:52:13] Completed 116 of 130 simulation runs
+[12-Mar-2025 15:52:14] Completed 117 of 130 simulation runs
+[12-Mar-2025 15:52:14] Completed 118 of 130 simulation runs
+[12-Mar-2025 15:52:14] Completed 119 of 130 simulation runs
+[12-Mar-2025 15:52:15] Completed 120 of 130 simulation runs
+[12-Mar-2025 15:52:15] Completed 121 of 130 simulation runs
+[12-Mar-2025 15:52:33] Completed 122 of 130 simulation runs
+[12-Mar-2025 15:52:55] Completed 123 of 130 simulation runs
+[12-Mar-2025 15:53:28] Completed 124 of 130 simulation runs
+[12-Mar-2025 15:53:54] Completed 125 of 130 simulation runs
+[12-Mar-2025 15:54:01] Completed 126 of 130 simulation runs
+[12-Mar-2025 15:54:33] Completed 127 of 130 simulation runs
+[12-Mar-2025 15:54:39] Completed 128 of 130 simulation runs
+[12-Mar-2025 15:54:39] Completed 129 of 130 simulation runs
+[12-Mar-2025 15:54:41] Completed 130 of 130 simulation runs
+[12-Mar-2025 15:54:41] Cleaning up parallel workers...
+Elapsed time is 2925.372944 seconds.
+[Warning: Variable 'simOut' was not saved. For variables larger than 2GB use MAT-file version 7.3
+or later.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('RUN_EVERYTHING', 'C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\RUN_EVERYTHING.m', 111)" style="font-weight:bold">RUN_EVERYTHING</a> (<a href="matlab: opentoline('C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\RUN_EVERYTHING.m',111,0)">line 111</a>)] 
+Max flow speed for LH2 is 110.778m/s.
+Max flow speed for GH2 is 186.9995m/s.
+Max mass flow rate for GH2 during warm tank warmup is 0.53287kg/s.
+Mean mass flow rate for GH2 during warm tank warmup is 0.089181kg/s.
+Max mass flow rate  for GH2 during cold tank warmup is 0.57374kg/s.
+Mean mass flow rate for GH2 during cold tank warmup is 0.078765kg/s.
+Max mass flow rate for GH2 during defuel tank drain is 1.5342kg/s.
+Mean mass flow rate for GH2 during defuel tank drain is 0.31866kg/s.
+Max mass flow rate for LH2 during warm tank chilldown is 0.20697kg/s.
+Mean mass flow rate for LH2 during warm tank chilldown is 0.056277kg/s.
+Max mass flow rate for LH2 during warm tank fill is 1.852kg/s.
+Mean mass flow rate for LH2 during warm tank fill is 0.39324kg/s.
+Max mass flow rate for LH2 during cold tank chilldown is 0.1865kg/s.
+Mean mass flow rate for LH2 during cold tank chilldown is 0.040169kg/s.
+Max mass flow rate for LH2 during cold tank fill is 0.57374kg/s.
+Mean mass flow rate for LH2 during cold tank fill is 0.22797kg/s.
+Max mass flow rate for LH2 during defuel chilldown is 0.18752kg/s.
+Mean mass flow rate for LH2 during defuel chilldown is 0.039446kg/s.
+            <strong>Operation phase</strong>            <strong>Mean flow rate</strong>    <strong>Unit</strong> 
+    <strong>_______________________________</strong>    <strong>______________</strong>    <strong>_____</strong>
+
+    "Warm tank refuel chilldown"            54.26        "m/s"
+    "Warm tank refuel tank filling"        32.561        "m/s"
+    "Warm tank refuel warmup"              15.685        "m/s"
+    "Cold tank refuel chilldown"           45.083        "m/s"
+    "Cold tank refuel tank filling"        33.713        "m/s"
+    "Cold tank refuel warmup"              12.868        "m/s"
+    "Defuel chilldown"                     40.493        "m/s"
+    "Defuel wamrup"                        15.186        "m/s"
+
+Total LH2 supplied by ground station = 41.0553kg.
+Total LH2 in the UAM tank = 16.3432kg.
+Total LH2 supplied by ground station = 47.1709kg.
+Total LH2 in the UAM tank = 16.3432kg.
+Total LH2 supplied by ground station = 43.7455kg.
+Total LH2 in the UAM tank = 16.2874kg.
+Total LH2 supplied by ground station = 42.3133kg.
+Total LH2 in the UAM tank = 16.255kg.
+Total LH2 supplied by ground station = 41.4999kg.
+Total LH2 in the UAM tank = 16.2607kg.
+Total LH2 supplied by ground station = 41.0553kg.
+Total LH2 in the UAM tank = 16.3432kg.
+Total LH2 supplied by ground station = 41.6074kg.
+Total LH2 in the UAM tank = 16.3027kg.
+Total LH2 supplied by ground station = 41.5076kg.
+Total LH2 in the UAM tank = 16.3364kg.
+Total LH2 supplied by ground station = 41.3813kg.
+Total LH2 in the UAM tank = 16.3191kg.
+Total LH2 supplied by ground station = 41.2354kg.
+Total LH2 in the UAM tank = 16.2705kg.
+Total LH2 supplied by ground station = 41.3539kg.
+Total LH2 in the UAM tank = 16.3696kg.
+Total LH2 supplied by ground station = 41.1946kg.
+Total LH2 in the UAM tank = 16.3103kg.
+Total LH2 supplied by ground station = 41.2787kg.
+Total LH2 in the UAM tank = 16.383kg.
+Total LH2 supplied by ground station = 41.0792kg.
+Total LH2 in the UAM tank = 16.2883kg.
+Total LH2 supplied by ground station = 41.1459kg.
+Total LH2 in the UAM tank = 16.3454kg.
+Total LH2 supplied by ground station = 41.2104kg.
+Total LH2 in the UAM tank = 16.4004kg.
+Total LH2 supplied by ground station = 40.9937kg.
+Total LH2 in the UAM tank = 16.2909kg.
+Total LH2 supplied by ground station = 41.0379kg.
+Total LH2 in the UAM tank = 16.3281kg.
+Total LH2 supplied by ground station = 41.0848kg.
+Total LH2 in the UAM tank = 16.3688kg.
+Total LH2 supplied by ground station = 40.8733kg.
+Total LH2 in the UAM tank = 16.2613kg.
+Total LH2 supplied by ground station = 40.9118kg.
+Total LH2 in the UAM tank = 16.2939kg.
+Total LH2 supplied by ground station = 40.9411kg.
+Total LH2 in the UAM tank = 16.3185kg.
+Total LH2 supplied by ground station = 40.9715kg.
+Total LH2 in the UAM tank = 16.3442kg.
+Total LH2 supplied by ground station = 40.993kg.
+Total LH2 in the UAM tank = 16.3629kg.
+Total LH2 supplied by ground station = 41.0257kg.
+Total LH2 in the UAM tank = 16.389kg.
+Total LH2 supplied by ground station = 41.045kg.
+Total LH2 in the UAM tank = 16.3973kg.
+Total LH2 supplied by ground station = 42.4581kg.
+Total LH2 in the UAM tank = 15.507kg.
+Total LH2 supplied by ground station = 42.4569kg.
+Total LH2 in the UAM tank = 15.5074kg.
+Total LH2 supplied by ground station = 42.4467kg.
+Total LH2 in the UAM tank = 15.498kg.
+Total LH2 supplied by ground station = 42.4582kg.
+Total LH2 in the UAM tank = 15.5111kg.
+Total LH2 supplied by ground station = 42.4591kg.
+Total LH2 in the UAM tank = 15.5155kg.
+Total LH2 supplied by ground station = 42.4582kg.
+Total LH2 in the UAM tank = 15.52kg.
+Total LH2 supplied by ground station = 42.4599kg.
+Total LH2 in the UAM tank = 15.5289kg.
+Total LH2 supplied by ground station = 42.459kg.
+Total LH2 in the UAM tank = 15.5427kg.
+Total LH2 supplied by ground station = 42.4614kg.
+Total LH2 in the UAM tank = 15.5643kg.
+Total LH2 supplied by ground station = 42.1857kg.
+Total LH2 in the UAM tank = 15.4418kg.
+Total LH2 supplied by ground station = 42.181kg.
+Total LH2 in the UAM tank = 15.4846kg.
+Total LH2 supplied by ground station = 42.179kg.
+Total LH2 in the UAM tank = 15.5567kg.
+Total LH2 supplied by ground station = 42.1858kg.
+Total LH2 in the UAM tank = 15.6541kg.
+Total LH2 supplied by ground station = 41.9025kg.
+Total LH2 in the UAM tank = 15.6293kg.
+Total LH2 supplied by ground station = 41.6205kg.
+Total LH2 in the UAM tank = 15.6409kg.
+Total LH2 supplied by ground station = 41.337kg.
+Total LH2 in the UAM tank = 16.0938kg.
+Total LH2 supplied by ground station = 40.7801kg.
+Total LH2 in the UAM tank = 16.3667kg.
+Total LH2 supplied by ground station = 40.2285kg.
+Total LH2 in the UAM tank = 16.5746kg.
+Total LH2 supplied by ground station = 39.9334kg.
+Total LH2 in the UAM tank = 16.8359kg.
+Total LH2 supplied by ground station = 39.4052kg.
+Total LH2 in the UAM tank = 16.922kg.
+Total LH2 supplied by ground station = 34.5512kg.
+Total LH2 in the UAM tank = 15.2936kg.
+Total LH2 supplied by ground station = 34.5297kg.
+Total LH2 in the UAM tank = 15.211kg.
+Total LH2 supplied by ground station = 34.9986kg.
+Total LH2 in the UAM tank = 15.318kg.
+Total LH2 supplied by ground station = 35.2113kg.
+Total LH2 in the UAM tank = 15.2756kg.
+Total LH2 supplied by ground station = 35.8731kg.
+Total LH2 in the UAM tank = 15.2912kg.
+Total LH2 supplied by ground station = 36.7968kg.
+Total LH2 in the UAM tank = 15.3756kg.
+Total LH2 supplied by ground station = 37.3703kg.
+Total LH2 in the UAM tank = 15.4148kg.
+Total LH2 supplied by ground station = 37.0319kg.
+Total LH2 in the UAM tank = 15.4953kg.
+Total LH2 supplied by ground station = 37.0456kg.
+Total LH2 in the UAM tank = 15.4795kg.
+Total LH2 supplied by ground station = 37.4568kg.
+Total LH2 in the UAM tank = 15.5979kg.
+Total LH2 supplied by ground station = 38.0714kg.
+Total LH2 in the UAM tank = 15.8407kg.
+Total LH2 supplied by ground station = 38.8929kg.
+Total LH2 in the UAM tank = 16.0396kg.
+Total LH2 supplied by ground station = 39.4366kg.
+Total LH2 in the UAM tank = 16.0867kg.
+Total LH2 supplied by ground station = 40.2423kg.
+Total LH2 in the UAM tank = 16.2482kg.
+Total LH2 supplied by ground station = 40.782kg.
+Total LH2 in the UAM tank = 16.2616kg.
+Total LH2 supplied by ground station = 41.3309kg.
+Total LH2 in the UAM tank = 16.3469kg.
+Total LH2 supplied by ground station = 41.8819kg.
+Total LH2 in the UAM tank = 16.443kg.
+Total LH2 supplied by ground station = 42.1581kg.
+Total LH2 in the UAM tank = 16.4451kg.
+Total LH2 supplied by ground station = 42.1557kg.
+Total LH2 in the UAM tank = 16.3637kg.
+Total LH2 supplied by ground station = 42.4307kg.
+Total LH2 in the UAM tank = 16.435kg.
+Total LH2 supplied by ground station = 40.8024kg.
+Total LH2 in the UAM tank = 16.298kg.
+Total LH2 supplied by ground station = 40.7982kg.
+Total LH2 in the UAM tank = 16.2929kg.
+Total LH2 supplied by ground station = 40.8024kg.
+Total LH2 in the UAM tank = 16.2954kg.
+Total LH2 supplied by ground station = 40.7982kg.
+Total LH2 in the UAM tank = 16.2885kg.
+Total LH2 supplied by ground station = 41.0677kg.
+Total LH2 in the UAM tank = 16.3876kg.
+Total LH2 supplied by ground station = 41.0574kg.
+Total LH2 in the UAM tank = 16.3567kg.
+Total LH2 supplied by ground station = 41.0484kg.
+Total LH2 in the UAM tank = 16.3103kg.
+Total LH2 supplied by ground station = 41.2933kg.
+Total LH2 in the UAM tank = 16.2992kg.
+Total LH2 supplied by ground station = 42.0567kg.
+Total LH2 in the UAM tank = 16.3452kg.
+Total LH2 supplied by ground station = 43.3021kg.
+Total LH2 in the UAM tank = 16.1447kg.
+[Warning: Error updating Text.
+
+ String scalar or character vector must have valid interpreter syntax:
+Time taken for for warm tank refuel \n with different tank sizes
+] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('defaulterrorcallback', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\graphics\objectsystem\defaulterrorcallback.m', 12)" style="font-weight:bold">defaulterrorcallback</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\graphics\objectsystem\defaulterrorcallback.m',12,0)">line 12</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('print', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\graphics\printing\print.m', 36)" style="font-weight:bold">print</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\graphics\printing\print.m',36,0)">line 36</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('saveas', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\general\saveas.m', 181)" style="font-weight:bold">saveas</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\general\saveas.m',181,0)">line 181</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('Tank_size_sweep_graphing', 'C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\Functions\Tank_size_sweep_graphing.m', 68)" style="font-weight:bold">Tank_size_sweep_graphing</a> (<a href="matlab: opentoline('C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\Functions\Tank_size_sweep_graphing.m',68,0)">line 68</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('RUN_EVERYTHING', 'C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\RUN_EVERYTHING.m', 138)" style="font-weight:bold">RUN_EVERYTHING</a> (<a href="matlab: opentoline('C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\RUN_EVERYTHING.m',138,0)">line 138</a>)] 
+[Warning: Error updating Text.
+
+ String scalar or character vector must have valid interpreter syntax:
+Total LH2 consumed for for cold tank refuel \n with different LH2 feed pressure
+] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('defaulterrorcallback', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\graphics\objectsystem\defaulterrorcallback.m', 12)" style="font-weight:bold">defaulterrorcallback</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\graphics\objectsystem\defaulterrorcallback.m',12,0)">line 12</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('print', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\graphics\printing\print.m', 36)" style="font-weight:bold">print</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\graphics\printing\print.m',36,0)">line 36</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('saveas', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\general\saveas.m', 181)" style="font-weight:bold">saveas</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\general\saveas.m',181,0)">line 181</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('Feed_pressure_sweep_graphing', 'C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\Functions\Feed_pressure_sweep_graphing.m', 59)" style="font-weight:bold">Feed_pressure_sweep_graphing</a> (<a href="matlab: opentoline('C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\Functions\Feed_pressure_sweep_graphing.m',59,0)">line 59</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('RUN_EVERYTHING', 'C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\RUN_EVERYTHING.m', 141)" style="font-weight:bold">RUN_EVERYTHING</a> (<a href="matlab: opentoline('C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\RUN_EVERYTHING.m',141,0)">line 141</a>)] 
+Full run failed, check error messages and aborts
+{Array indices must be positive integers or logical values.
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('hose_insulation_sweep_graphing', 'C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\Functions\hose_insulation_sweep_graphing.m', 33)" style="font-weight:bold">hose_insulation_sweep_graphing</a> (<a href="matlab: opentoline('C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\Functions\hose_insulation_sweep_graphing.m',33,0)">line 33</a>)
+        LH2_consumed_warm_fill(i) = Ground_LH2_total(idle_1_index);
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('RUN_EVERYTHING', 'C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\RUN_EVERYTHING.m', 146)" style="font-weight:bold">RUN_EVERYTHING</a> (<a href="matlab: opentoline('C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\RUN_EVERYTHING.m',146,0)">line 146</a>)
+hose_insulation_sweep_graphing(simOut(1, LH2_FEED_TEMP_POS+1:hose_thermal_conductivity_pos), hose_thermal_conductivity_vec)
+} 
+open("hose_insulation_sweep_graphing")
+open("hose_insulation_sweep_setup")
+startup
+Starting up LH2 Refuel Model, please read README.md and run startup.m
+RUN_EVERYTHING
+
+ans = 
+
+  <a href="matlab:helpPopup('datetime')" style="font-weight:bold">datetime</a>
+
+   12-Mar-2025 16:09:16 +0000
+
+[12-Mar-2025 16:09:21] Checking for availability of parallel pool...
+[12-Mar-2025 16:09:21] Starting Simulink on parallel workers...
+[12-Mar-2025 16:09:22] Configuring simulation cache folder on parallel workers...
+[12-Mar-2025 16:09:23] Loading model on parallel workers...
+[12-Mar-2025 16:09:29] Running simulations...
+[12-Mar-2025 16:21:18] Completed 1 of 130 simulation runs
+[12-Mar-2025 16:21:23] Completed 2 of 130 simulation runs
+[12-Mar-2025 16:21:25] Completed 3 of 130 simulation runs
+[12-Mar-2025 16:21:26] Completed 4 of 130 simulation runs
+[12-Mar-2025 16:21:27] Completed 5 of 130 simulation runs
+[12-Mar-2025 16:21:27] Completed 6 of 130 simulation runs
+[12-Mar-2025 16:21:28] Completed 7 of 130 simulation runs
+[12-Mar-2025 16:21:29] Completed 8 of 130 simulation runs
+[12-Mar-2025 16:21:29] Completed 9 of 130 simulation runs
+[12-Mar-2025 16:21:30] Completed 10 of 130 simulation runs
+[12-Mar-2025 16:21:30] Completed 11 of 130 simulation runs
+[12-Mar-2025 16:21:30] Completed 12 of 130 simulation runs
+[12-Mar-2025 16:21:34] Completed 13 of 130 simulation runs
+[12-Mar-2025 16:21:34] Completed 14 of 130 simulation runs
+[12-Mar-2025 16:21:40] Completed 15 of 130 simulation runs
+[12-Mar-2025 16:21:45] Completed 16 of 130 simulation runs
+[12-Mar-2025 16:21:45] Completed 17 of 130 simulation runs
+[12-Mar-2025 16:21:46] Completed 18 of 130 simulation runs
+[12-Mar-2025 16:21:48] Completed 19 of 130 simulation runs
+[12-Mar-2025 16:21:50] Completed 20 of 130 simulation runs
+[12-Mar-2025 16:21:51] Completed 21 of 130 simulation runs
+[12-Mar-2025 16:21:51] Completed 22 of 130 simulation runs
+[12-Mar-2025 16:21:52] Completed 23 of 130 simulation runs
+[12-Mar-2025 16:21:53] Completed 24 of 130 simulation runs
+[12-Mar-2025 16:21:54] Completed 25 of 130 simulation runs
+[12-Mar-2025 16:21:59] Completed 26 of 130 simulation runs
+[12-Mar-2025 16:22:01] Completed 27 of 130 simulation runs
+[12-Mar-2025 16:23:42] Completed 28 of 130 simulation runs
+[12-Mar-2025 16:23:44] Completed 29 of 130 simulation runs
+[12-Mar-2025 16:23:47] Completed 30 of 130 simulation runs
+[12-Mar-2025 16:23:48] Completed 31 of 130 simulation runs
+[12-Mar-2025 16:23:51] Completed 32 of 130 simulation runs
+[12-Mar-2025 16:23:53] Completed 33 of 130 simulation runs
+[12-Mar-2025 16:23:54] Completed 34 of 130 simulation runs
+[12-Mar-2025 16:23:55] Completed 35 of 130 simulation runs
+[12-Mar-2025 16:23:56] Completed 36 of 130 simulation runs
+[12-Mar-2025 16:23:57] Completed 37 of 130 simulation runs
+[12-Mar-2025 16:23:59] Completed 38 of 130 simulation runs
+[12-Mar-2025 16:24:00] Completed 39 of 130 simulation runs
+[12-Mar-2025 16:27:36] Completed 40 of 130 simulation runs
+[12-Mar-2025 16:27:38] Completed 41 of 130 simulation runs
+[12-Mar-2025 16:27:40] Completed 42 of 130 simulation runs
+[12-Mar-2025 16:28:20] Completed 43 of 130 simulation runs
+[12-Mar-2025 16:28:23] Completed 44 of 130 simulation runs
+[12-Mar-2025 16:28:47] Completed 45 of 130 simulation runs
+[12-Mar-2025 16:28:50] Completed 46 of 130 simulation runs
+[12-Mar-2025 16:28:52] Completed 47 of 130 simulation runs
+[12-Mar-2025 16:29:00] Completed 48 of 130 simulation runs
+[12-Mar-2025 16:29:06] Completed 49 of 130 simulation runs
+[12-Mar-2025 16:29:10] Completed 50 of 130 simulation runs
+[12-Mar-2025 16:29:17] Completed 51 of 130 simulation runs
+[12-Mar-2025 16:29:19] Completed 52 of 130 simulation runs
+[12-Mar-2025 16:34:04] Completed 53 of 130 simulation runs
+[12-Mar-2025 16:34:07] Completed 54 of 130 simulation runs
+[12-Mar-2025 16:34:08] Completed 55 of 130 simulation runs
+[12-Mar-2025 16:34:08] Completed 56 of 130 simulation runs
+[12-Mar-2025 16:34:11] Completed 57 of 130 simulation runs
+[12-Mar-2025 16:34:14] Completed 58 of 130 simulation runs
+[12-Mar-2025 16:34:17] Completed 59 of 130 simulation runs
+[12-Mar-2025 16:34:20] Completed 60 of 130 simulation runs
+[12-Mar-2025 16:34:23] Completed 61 of 130 simulation runs
+[12-Mar-2025 16:34:24] Completed 62 of 130 simulation runs
+[12-Mar-2025 16:34:26] Completed 63 of 130 simulation runs
+[12-Mar-2025 16:34:27] Completed 64 of 130 simulation runs
+[12-Mar-2025 16:34:30] Completed 65 of 130 simulation runs
+[12-Mar-2025 16:39:51] Completed 66 of 130 simulation runs
+[12-Mar-2025 16:39:52] Completed 67 of 130 simulation runs
+[12-Mar-2025 16:39:54] Completed 68 of 130 simulation runs
+[12-Mar-2025 16:39:55] Completed 69 of 130 simulation runs
+[12-Mar-2025 16:39:56] Completed 70 of 130 simulation runs
+[12-Mar-2025 16:39:56] Completed 71 of 130 simulation runs
+[12-Mar-2025 16:39:57] Completed 72 of 130 simulation runs
+[12-Mar-2025 16:39:57] Completed 73 of 130 simulation runs
+[12-Mar-2025 16:39:58] Completed 74 of 130 simulation runs
+[12-Mar-2025 16:39:59] Completed 75 of 130 simulation runs
+[12-Mar-2025 16:39:59] Completed 76 of 130 simulation runs
+[12-Mar-2025 16:40:00] Completed 77 of 130 simulation runs
+[12-Mar-2025 16:40:00] Completed 78 of 130 simulation runs
+[12-Mar-2025 16:40:04] Completed 79 of 130 simulation runs
+[12-Mar-2025 16:40:08] Completed 80 of 130 simulation runs
+[12-Mar-2025 16:41:43] Completed 81 of 130 simulation runs
+[12-Mar-2025 16:41:45] Completed 82 of 130 simulation runs
+[12-Mar-2025 16:41:48] Completed 83 of 130 simulation runs
+[12-Mar-2025 16:41:49] Completed 84 of 130 simulation runs
+[12-Mar-2025 16:41:50] Completed 85 of 130 simulation runs
+[12-Mar-2025 16:41:52] Completed 86 of 130 simulation runs
+[12-Mar-2025 16:41:53] Completed 87 of 130 simulation runs
+[12-Mar-2025 16:41:53] Completed 88 of 130 simulation runs
+[12-Mar-2025 16:41:53] Completed 89 of 130 simulation runs
+[12-Mar-2025 16:41:55] Completed 90 of 130 simulation runs
+[12-Mar-2025 16:41:56] Completed 91 of 130 simulation runs
+[12-Mar-2025 16:42:03] Completed 92 of 130 simulation runs
+[12-Mar-2025 16:46:04] Completed 93 of 130 simulation runs
+[12-Mar-2025 16:46:05] Completed 94 of 130 simulation runs
+[12-Mar-2025 16:46:06] Completed 95 of 130 simulation runs
+[12-Mar-2025 16:46:11] Completed 96 of 130 simulation runs
+[12-Mar-2025 16:46:14] Completed 97 of 130 simulation runs
+[12-Mar-2025 16:46:17] Completed 98 of 130 simulation runs
+[12-Mar-2025 16:46:18] Completed 99 of 130 simulation runs
+[12-Mar-2025 16:46:18] Completed 100 of 130 simulation runs
+[12-Mar-2025 16:46:19] Completed 101 of 130 simulation runs
+[12-Mar-2025 16:46:20] Completed 102 of 130 simulation runs
+[12-Mar-2025 16:46:21] Completed 103 of 130 simulation runs
+[12-Mar-2025 16:46:21] Completed 104 of 130 simulation runs
+[12-Mar-2025 16:46:21] Completed 105 of 130 simulation runs
+[12-Mar-2025 16:46:23] Completed 106 of 130 simulation runs
+[12-Mar-2025 16:48:14] Completed 107 of 130 simulation runs
+[12-Mar-2025 16:48:17] Completed 108 of 130 simulation runs
+[12-Mar-2025 16:48:21] Completed 109 of 130 simulation runs
+[12-Mar-2025 16:49:09] Completed 110 of 130 simulation runs
+[12-Mar-2025 16:49:14] Completed 111 of 130 simulation runs
+[12-Mar-2025 16:49:17] Completed 112 of 130 simulation runs
+[12-Mar-2025 16:49:19] Completed 113 of 130 simulation runs
+[12-Mar-2025 16:49:20] Completed 114 of 130 simulation runs
+[12-Mar-2025 16:49:21] Completed 115 of 130 simulation runs
+[12-Mar-2025 16:50:42] Completed 116 of 130 simulation runs
+[12-Mar-2025 16:50:43] Completed 117 of 130 simulation runs
+[12-Mar-2025 16:50:43] Completed 118 of 130 simulation runs
+[12-Mar-2025 16:50:44] Completed 119 of 130 simulation runs
+[12-Mar-2025 16:50:44] Completed 120 of 130 simulation runs
+[12-Mar-2025 16:51:11] Completed 121 of 130 simulation runs
+[12-Mar-2025 16:51:24] Completed 122 of 130 simulation runs
+[12-Mar-2025 16:51:29] Completed 123 of 130 simulation runs
+[12-Mar-2025 16:51:39] Completed 124 of 130 simulation runs
+[12-Mar-2025 16:51:56] Completed 125 of 130 simulation runs
+[12-Mar-2025 16:52:21] Completed 126 of 130 simulation runs
+[12-Mar-2025 16:52:29] Completed 127 of 130 simulation runs
+[12-Mar-2025 16:52:46] Completed 128 of 130 simulation runs
+[12-Mar-2025 16:52:59] Completed 129 of 130 simulation runs
+[12-Mar-2025 16:53:12] Completed 130 of 130 simulation runs
+[12-Mar-2025 16:53:12] Cleaning up parallel workers...
+Elapsed time is 2643.570957 seconds.
+[Warning: Variable 'simOut' was not saved. For variables larger than 2GB use MAT-file version 7.3
+or later.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('RUN_EVERYTHING', 'C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\RUN_EVERYTHING.m', 111)" style="font-weight:bold">RUN_EVERYTHING</a> (<a href="matlab: opentoline('C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\RUN_EVERYTHING.m',111,0)">line 111</a>)] 
+Max flow speed for LH2 is 110.778m/s.
+Max flow speed for GH2 is 186.9995m/s.
+Max mass flow rate for GH2 during warm tank warmup is 0.53287kg/s.
+Mean mass flow rate for GH2 during warm tank warmup is 0.089181kg/s.
+Max mass flow rate  for GH2 during cold tank warmup is 0.57374kg/s.
+Mean mass flow rate for GH2 during cold tank warmup is 0.078765kg/s.
+Max mass flow rate for GH2 during defuel tank drain is 1.5342kg/s.
+Mean mass flow rate for GH2 during defuel tank drain is 0.31866kg/s.
+Max mass flow rate for LH2 during warm tank chilldown is 0.20697kg/s.
+Mean mass flow rate for LH2 during warm tank chilldown is 0.056277kg/s.
+Max mass flow rate for LH2 during warm tank fill is 1.852kg/s.
+Mean mass flow rate for LH2 during warm tank fill is 0.39324kg/s.
+Max mass flow rate for LH2 during cold tank chilldown is 0.1865kg/s.
+Mean mass flow rate for LH2 during cold tank chilldown is 0.040169kg/s.
+Max mass flow rate for LH2 during cold tank fill is 0.57374kg/s.
+Mean mass flow rate for LH2 during cold tank fill is 0.22797kg/s.
+Max mass flow rate for LH2 during defuel chilldown is 0.18752kg/s.
+Mean mass flow rate for LH2 during defuel chilldown is 0.039446kg/s.
+            <strong>Operation phase</strong>            <strong>Mean flow rate</strong>    <strong>Unit</strong> 
+    <strong>_______________________________</strong>    <strong>______________</strong>    <strong>_____</strong>
+
+    "Warm tank refuel chilldown"            54.26        "m/s"
+    "Warm tank refuel tank filling"        32.561        "m/s"
+    "Warm tank refuel warmup"              15.685        "m/s"
+    "Cold tank refuel chilldown"           45.083        "m/s"
+    "Cold tank refuel tank filling"        33.713        "m/s"
+    "Cold tank refuel warmup"              12.868        "m/s"
+    "Defuel chilldown"                     40.493        "m/s"
+    "Defuel wamrup"                        15.186        "m/s"
+
+Total LH2 supplied by ground station = 41.0553kg.
+Total LH2 in the UAM tank = 16.3432kg.
+Total LH2 supplied by ground station = 47.1709kg.
+Total LH2 in the UAM tank = 16.3432kg.
+Total LH2 supplied by ground station = 43.7455kg.
+Total LH2 in the UAM tank = 16.2874kg.
+Total LH2 supplied by ground station = 42.3133kg.
+Total LH2 in the UAM tank = 16.255kg.
+Total LH2 supplied by ground station = 41.4999kg.
+Total LH2 in the UAM tank = 16.2607kg.
+Total LH2 supplied by ground station = 41.0553kg.
+Total LH2 in the UAM tank = 16.3432kg.
+Total LH2 supplied by ground station = 41.6074kg.
+Total LH2 in the UAM tank = 16.3027kg.
+Total LH2 supplied by ground station = 41.5076kg.
+Total LH2 in the UAM tank = 16.3364kg.
+Total LH2 supplied by ground station = 41.3813kg.
+Total LH2 in the UAM tank = 16.3191kg.
+Total LH2 supplied by ground station = 41.2354kg.
+Total LH2 in the UAM tank = 16.2705kg.
+Total LH2 supplied by ground station = 41.3539kg.
+Total LH2 in the UAM tank = 16.3696kg.
+Total LH2 supplied by ground station = 41.1946kg.
+Total LH2 in the UAM tank = 16.3103kg.
+Total LH2 supplied by ground station = 41.2787kg.
+Total LH2 in the UAM tank = 16.383kg.
+Total LH2 supplied by ground station = 41.0792kg.
+Total LH2 in the UAM tank = 16.2883kg.
+Total LH2 supplied by ground station = 41.1459kg.
+Total LH2 in the UAM tank = 16.3454kg.
+Total LH2 supplied by ground station = 41.2104kg.
+Total LH2 in the UAM tank = 16.4004kg.
+Total LH2 supplied by ground station = 40.9937kg.
+Total LH2 in the UAM tank = 16.2909kg.
+Total LH2 supplied by ground station = 41.0379kg.
+Total LH2 in the UAM tank = 16.3281kg.
+Total LH2 supplied by ground station = 41.0848kg.
+Total LH2 in the UAM tank = 16.3688kg.
+Total LH2 supplied by ground station = 40.8733kg.
+Total LH2 in the UAM tank = 16.2613kg.
+Total LH2 supplied by ground station = 40.9118kg.
+Total LH2 in the UAM tank = 16.2939kg.
+Total LH2 supplied by ground station = 40.9411kg.
+Total LH2 in the UAM tank = 16.3185kg.
+Total LH2 supplied by ground station = 40.9715kg.
+Total LH2 in the UAM tank = 16.3442kg.
+Total LH2 supplied by ground station = 40.993kg.
+Total LH2 in the UAM tank = 16.3629kg.
+Total LH2 supplied by ground station = 41.0257kg.
+Total LH2 in the UAM tank = 16.389kg.
+Total LH2 supplied by ground station = 41.045kg.
+Total LH2 in the UAM tank = 16.3973kg.
+Total LH2 supplied by ground station = 42.4581kg.
+Total LH2 in the UAM tank = 15.507kg.
+Total LH2 supplied by ground station = 42.4569kg.
+Total LH2 in the UAM tank = 15.5074kg.
+Total LH2 supplied by ground station = 42.4467kg.
+Total LH2 in the UAM tank = 15.498kg.
+Total LH2 supplied by ground station = 42.4582kg.
+Total LH2 in the UAM tank = 15.5111kg.
+Total LH2 supplied by ground station = 42.4591kg.
+Total LH2 in the UAM tank = 15.5155kg.
+Total LH2 supplied by ground station = 42.4582kg.
+Total LH2 in the UAM tank = 15.52kg.
+Total LH2 supplied by ground station = 42.4599kg.
+Total LH2 in the UAM tank = 15.5289kg.
+Total LH2 supplied by ground station = 42.459kg.
+Total LH2 in the UAM tank = 15.5427kg.
+Total LH2 supplied by ground station = 42.4614kg.
+Total LH2 in the UAM tank = 15.5643kg.
+Total LH2 supplied by ground station = 42.1857kg.
+Total LH2 in the UAM tank = 15.4418kg.
+Total LH2 supplied by ground station = 42.181kg.
+Total LH2 in the UAM tank = 15.4846kg.
+Total LH2 supplied by ground station = 42.179kg.
+Total LH2 in the UAM tank = 15.5567kg.
+Total LH2 supplied by ground station = 42.1858kg.
+Total LH2 in the UAM tank = 15.6541kg.
+Total LH2 supplied by ground station = 41.9025kg.
+Total LH2 in the UAM tank = 15.6293kg.
+Total LH2 supplied by ground station = 41.6205kg.
+Total LH2 in the UAM tank = 15.6409kg.
+Total LH2 supplied by ground station = 41.337kg.
+Total LH2 in the UAM tank = 16.0938kg.
+Total LH2 supplied by ground station = 40.7801kg.
+Total LH2 in the UAM tank = 16.3667kg.
+Total LH2 supplied by ground station = 40.2285kg.
+Total LH2 in the UAM tank = 16.5746kg.
+Total LH2 supplied by ground station = 39.9334kg.
+Total LH2 in the UAM tank = 16.8359kg.
+Total LH2 supplied by ground station = 39.4052kg.
+Total LH2 in the UAM tank = 16.922kg.
+Total LH2 supplied by ground station = 34.5512kg.
+Total LH2 in the UAM tank = 15.2936kg.
+Total LH2 supplied by ground station = 34.5297kg.
+Total LH2 in the UAM tank = 15.211kg.
+Total LH2 supplied by ground station = 34.9986kg.
+Total LH2 in the UAM tank = 15.318kg.
+Total LH2 supplied by ground station = 35.2113kg.
+Total LH2 in the UAM tank = 15.2756kg.
+Total LH2 supplied by ground station = 35.8731kg.
+Total LH2 in the UAM tank = 15.2912kg.
+Total LH2 supplied by ground station = 36.7968kg.
+Total LH2 in the UAM tank = 15.3756kg.
+Total LH2 supplied by ground station = 37.3703kg.
+Total LH2 in the UAM tank = 15.4148kg.
+Total LH2 supplied by ground station = 37.0319kg.
+Total LH2 in the UAM tank = 15.4953kg.
+Total LH2 supplied by ground station = 37.0456kg.
+Total LH2 in the UAM tank = 15.4795kg.
+Total LH2 supplied by ground station = 37.4568kg.
+Total LH2 in the UAM tank = 15.5979kg.
+Total LH2 supplied by ground station = 38.0714kg.
+Total LH2 in the UAM tank = 15.8407kg.
+Total LH2 supplied by ground station = 38.8929kg.
+Total LH2 in the UAM tank = 16.0396kg.
+Total LH2 supplied by ground station = 39.4366kg.
+Total LH2 in the UAM tank = 16.0867kg.
+Total LH2 supplied by ground station = 40.2423kg.
+Total LH2 in the UAM tank = 16.2482kg.
+Total LH2 supplied by ground station = 40.782kg.
+Total LH2 in the UAM tank = 16.2616kg.
+Total LH2 supplied by ground station = 41.3309kg.
+Total LH2 in the UAM tank = 16.3469kg.
+Total LH2 supplied by ground station = 41.8819kg.
+Total LH2 in the UAM tank = 16.443kg.
+Total LH2 supplied by ground station = 42.1581kg.
+Total LH2 in the UAM tank = 16.4451kg.
+Total LH2 supplied by ground station = 42.1557kg.
+Total LH2 in the UAM tank = 16.3637kg.
+Total LH2 supplied by ground station = 42.4307kg.
+Total LH2 in the UAM tank = 16.435kg.
+Total LH2 supplied by ground station = 40.8024kg.
+Total LH2 in the UAM tank = 16.298kg.
+Total LH2 supplied by ground station = 40.7982kg.
+Total LH2 in the UAM tank = 16.2929kg.
+Total LH2 supplied by ground station = 40.8024kg.
+Total LH2 in the UAM tank = 16.2954kg.
+Total LH2 supplied by ground station = 40.7982kg.
+Total LH2 in the UAM tank = 16.2885kg.
+Total LH2 supplied by ground station = 41.0677kg.
+Total LH2 in the UAM tank = 16.3876kg.
+Total LH2 supplied by ground station = 41.0574kg.
+Total LH2 in the UAM tank = 16.3567kg.
+Total LH2 supplied by ground station = 41.0484kg.
+Total LH2 in the UAM tank = 16.3103kg.
+Total LH2 supplied by ground station = 41.2933kg.
+Total LH2 in the UAM tank = 16.2992kg.
+Total LH2 supplied by ground station = 42.0567kg.
+Total LH2 in the UAM tank = 16.3452kg.
+Total LH2 supplied by ground station = 43.3021kg.
+Total LH2 in the UAM tank = 16.1447kg.
+[Warning: Error updating Text.
+
+ String scalar or character vector must have valid interpreter syntax:
+Time taken for for warm tank refuel \n with different tank sizes
+] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('defaulterrorcallback', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\graphics\objectsystem\defaulterrorcallback.m', 12)" style="font-weight:bold">defaulterrorcallback</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\graphics\objectsystem\defaulterrorcallback.m',12,0)">line 12</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('print', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\graphics\printing\print.m', 36)" style="font-weight:bold">print</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\graphics\printing\print.m',36,0)">line 36</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('saveas', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\general\saveas.m', 181)" style="font-weight:bold">saveas</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\general\saveas.m',181,0)">line 181</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('Tank_size_sweep_graphing', 'C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\Functions\Tank_size_sweep_graphing.m', 68)" style="font-weight:bold">Tank_size_sweep_graphing</a> (<a href="matlab: opentoline('C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\Functions\Tank_size_sweep_graphing.m',68,0)">line 68</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('RUN_EVERYTHING', 'C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\RUN_EVERYTHING.m', 138)" style="font-weight:bold">RUN_EVERYTHING</a> (<a href="matlab: opentoline('C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\RUN_EVERYTHING.m',138,0)">line 138</a>)] 
+[Warning: Error updating Text.
+
+ String scalar or character vector must have valid interpreter syntax:
+Total LH2 consumed for for cold tank refuel \n with different LH2 feed pressure
+] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('defaulterrorcallback', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\graphics\objectsystem\defaulterrorcallback.m', 12)" style="font-weight:bold">defaulterrorcallback</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\graphics\objectsystem\defaulterrorcallback.m',12,0)">line 12</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('print', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\graphics\printing\print.m', 36)" style="font-weight:bold">print</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\graphics\printing\print.m',36,0)">line 36</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('saveas', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\general\saveas.m', 181)" style="font-weight:bold">saveas</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\general\saveas.m',181,0)">line 181</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('Feed_pressure_sweep_graphing', 'C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\Functions\Feed_pressure_sweep_graphing.m', 59)" style="font-weight:bold">Feed_pressure_sweep_graphing</a> (<a href="matlab: opentoline('C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\Functions\Feed_pressure_sweep_graphing.m',59,0)">line 59</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('RUN_EVERYTHING', 'C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\RUN_EVERYTHING.m', 141)" style="font-weight:bold">RUN_EVERYTHING</a> (<a href="matlab: opentoline('C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\RUN_EVERYTHING.m',141,0)">line 141</a>)] 
+Full run failed, check error messages and aborts
+{Array indices must be positive integers or logical values.
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('hose_insulation_sweep_graphing', 'C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\Functions\hose_insulation_sweep_graphing.m', 33)" style="font-weight:bold">hose_insulation_sweep_graphing</a> (<a href="matlab: opentoline('C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\Functions\hose_insulation_sweep_graphing.m',33,0)">line 33</a>)
+        LH2_consumed_warm_fill(i) = Ground_LH2_total(idle_1_index);
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('RUN_EVERYTHING', 'C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\RUN_EVERYTHING.m', 146)" style="font-weight:bold">RUN_EVERYTHING</a> (<a href="matlab: opentoline('C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\RUN_EVERYTHING.m',146,0)">line 146</a>)
+hose_insulation_sweep_graphing(simOut(1, LH2_FEED_TEMP_POS+1:hose_thermal_conductivity_pos), hose_thermal_conductivity_vec)
+} 
+hose_thermal_conductivity_vec(10)
+
+ans =
+
+    0.3728
+
+close all
+startup
+Starting up LH2 Refuel Model, please read README.md and run startup.m
+RUN_EVERYTHING
+
+ans = 
+
+  <a href="matlab:helpPopup('datetime')" style="font-weight:bold">datetime</a>
+
+   12-Mar-2025 16:58:33 +0000
+
+[12-Mar-2025 16:58:40] Checking for availability of parallel pool...
+[12-Mar-2025 16:58:41] Starting Simulink on parallel workers...
+[12-Mar-2025 16:58:42] Configuring simulation cache folder on parallel workers...
+[12-Mar-2025 16:58:43] Loading model on parallel workers...
+[12-Mar-2025 16:58:52] Running simulations...
+[12-Mar-2025 17:07:42] Completed 1 of 130 simulation runs
+[12-Mar-2025 17:07:45] Completed 2 of 130 simulation runs
+[12-Mar-2025 17:07:45] Completed 3 of 130 simulation runs
+[12-Mar-2025 17:07:46] Completed 4 of 130 simulation runs
+[12-Mar-2025 17:07:47] Completed 5 of 130 simulation runs
+[12-Mar-2025 17:07:52] Completed 6 of 130 simulation runs
+[12-Mar-2025 17:07:54] Completed 7 of 130 simulation runs
+[12-Mar-2025 17:07:56] Completed 8 of 130 simulation runs
+[12-Mar-2025 17:07:56] Completed 9 of 130 simulation runs
+[12-Mar-2025 17:07:56] Completed 10 of 130 simulation runs
+[12-Mar-2025 17:07:58] Completed 11 of 130 simulation runs
+[12-Mar-2025 17:08:00] Completed 12 of 130 simulation runs
+[12-Mar-2025 17:08:00] Completed 13 of 130 simulation runs
+[12-Mar-2025 17:08:03] Completed 14 of 130 simulation runs
+[12-Mar-2025 17:11:16] Completed 15 of 130 simulation runs
+[12-Mar-2025 17:11:19] Completed 16 of 130 simulation runs
+[12-Mar-2025 17:11:21] Completed 17 of 130 simulation runs
+[12-Mar-2025 17:11:23] Completed 18 of 130 simulation runs
+[12-Mar-2025 17:11:26] Completed 19 of 130 simulation runs
+[12-Mar-2025 17:11:31] Completed 20 of 130 simulation runs
+[12-Mar-2025 17:11:34] Completed 21 of 130 simulation runs
+[12-Mar-2025 17:11:34] Completed 22 of 130 simulation runs
+[12-Mar-2025 17:11:42] Completed 23 of 130 simulation runs
+[12-Mar-2025 17:11:48] Completed 24 of 130 simulation runs
+[12-Mar-2025 17:11:56] Completed 25 of 130 simulation runs
+[12-Mar-2025 17:13:15] Completed 26 of 130 simulation runs
+[12-Mar-2025 17:13:34] Completed 27 of 130 simulation runs
+[12-Mar-2025 17:14:26] Completed 28 of 130 simulation runs
+[12-Mar-2025 17:15:08] Completed 29 of 130 simulation runs
+[12-Mar-2025 17:15:10] Completed 30 of 130 simulation runs
+[12-Mar-2025 17:15:13] Completed 31 of 130 simulation runs
+[12-Mar-2025 17:15:15] Completed 32 of 130 simulation runs
+[12-Mar-2025 17:15:17] Completed 33 of 130 simulation runs
+[12-Mar-2025 17:15:18] Completed 34 of 130 simulation runs
+[12-Mar-2025 17:15:18] Completed 35 of 130 simulation runs
+[12-Mar-2025 17:15:21] Completed 36 of 130 simulation runs
+[12-Mar-2025 17:15:27] Completed 37 of 130 simulation runs
+[12-Mar-2025 17:15:33] Completed 38 of 130 simulation runs
+[12-Mar-2025 17:15:54] Completed 39 of 130 simulation runs
+[12-Mar-2025 17:16:53] Completed 40 of 130 simulation runs
+[12-Mar-2025 17:17:09] Completed 41 of 130 simulation runs
+[12-Mar-2025 17:18:22] Completed 42 of 130 simulation runs
+[12-Mar-2025 17:18:48] Completed 43 of 130 simulation runs
+[12-Mar-2025 17:18:55] Completed 44 of 130 simulation runs
+[12-Mar-2025 17:19:02] Completed 45 of 130 simulation runs
+[12-Mar-2025 17:19:07] Completed 46 of 130 simulation runs
+[12-Mar-2025 17:19:09] Completed 47 of 130 simulation runs
+[12-Mar-2025 17:19:11] Completed 48 of 130 simulation runs
+[12-Mar-2025 17:19:12] Completed 49 of 130 simulation runs
+[12-Mar-2025 17:19:23] Completed 50 of 130 simulation runs
+[12-Mar-2025 17:19:26] Completed 51 of 130 simulation runs
+[12-Mar-2025 17:19:39] Completed 52 of 130 simulation runs
+[12-Mar-2025 17:20:44] Completed 53 of 130 simulation runs
+[12-Mar-2025 17:20:46] Completed 54 of 130 simulation runs
+[12-Mar-2025 17:20:58] Completed 55 of 130 simulation runs
+[12-Mar-2025 17:22:12] Completed 56 of 130 simulation runs
+[12-Mar-2025 17:22:27] Completed 57 of 130 simulation runs
+[12-Mar-2025 17:22:29] Completed 58 of 130 simulation runs
+[12-Mar-2025 17:22:36] Completed 59 of 130 simulation runs
+[12-Mar-2025 17:22:41] Completed 60 of 130 simulation runs
+[12-Mar-2025 17:22:47] Completed 61 of 130 simulation runs
+[12-Mar-2025 17:22:49] Completed 62 of 130 simulation runs
+[12-Mar-2025 17:22:50] Completed 63 of 130 simulation runs
+[12-Mar-2025 17:22:55] Completed 64 of 130 simulation runs
+[12-Mar-2025 17:24:53] Completed 65 of 130 simulation runs
+[12-Mar-2025 17:24:54] Completed 66 of 130 simulation runs
+[12-Mar-2025 17:24:56] Completed 67 of 130 simulation runs
+[12-Mar-2025 17:26:03] Completed 68 of 130 simulation runs
+[12-Mar-2025 17:26:05] Completed 69 of 130 simulation runs
+[12-Mar-2025 17:26:07] Completed 70 of 130 simulation runs
+[12-Mar-2025 17:26:09] Completed 71 of 130 simulation runs
+[12-Mar-2025 17:26:11] Completed 72 of 130 simulation runs
+[12-Mar-2025 17:26:13] Completed 73 of 130 simulation runs
+[12-Mar-2025 17:26:15] Completed 74 of 130 simulation runs
+[12-Mar-2025 17:26:18] Completed 75 of 130 simulation runs
+[12-Mar-2025 17:26:20] Completed 76 of 130 simulation runs
+[12-Mar-2025 17:29:10] Completed 77 of 130 simulation runs
+[12-Mar-2025 17:29:12] Completed 78 of 130 simulation runs
+[12-Mar-2025 17:29:13] Completed 79 of 130 simulation runs
+[12-Mar-2025 17:29:15] Completed 80 of 130 simulation runs
+[12-Mar-2025 17:29:18] Completed 81 of 130 simulation runs
+[12-Mar-2025 17:29:20] Completed 82 of 130 simulation runs
+[12-Mar-2025 17:29:21] Completed 83 of 130 simulation runs
+[12-Mar-2025 17:29:21] Completed 84 of 130 simulation runs
+[12-Mar-2025 17:29:22] Completed 85 of 130 simulation runs
+[12-Mar-2025 17:29:22] Completed 86 of 130 simulation runs
+[12-Mar-2025 17:29:23] Completed 87 of 130 simulation runs
+[12-Mar-2025 17:29:39] Completed 88 of 130 simulation runs
+[12-Mar-2025 17:29:40] Completed 89 of 130 simulation runs
+[12-Mar-2025 17:29:48] Completed 90 of 130 simulation runs
+[12-Mar-2025 17:31:30] Completed 91 of 130 simulation runs
+[12-Mar-2025 17:31:33] Completed 92 of 130 simulation runs
+[12-Mar-2025 17:31:37] Completed 93 of 130 simulation runs
+[12-Mar-2025 17:31:38] Completed 94 of 130 simulation runs
+[12-Mar-2025 17:31:43] Completed 95 of 130 simulation runs
+[12-Mar-2025 17:32:26] Completed 96 of 130 simulation runs
+[12-Mar-2025 17:32:38] Completed 97 of 130 simulation runs
+[12-Mar-2025 17:32:46] Completed 98 of 130 simulation runs
+[12-Mar-2025 17:32:55] Completed 99 of 130 simulation runs
+[12-Mar-2025 17:32:56] Completed 100 of 130 simulation runs
+[12-Mar-2025 17:32:59] Completed 101 of 130 simulation runs
+[12-Mar-2025 17:33:04] Completed 102 of 130 simulation runs
+[12-Mar-2025 17:33:08] Completed 103 of 130 simulation runs
+[12-Mar-2025 17:33:21] Completed 104 of 130 simulation runs
+[12-Mar-2025 17:33:31] Completed 105 of 130 simulation runs
+[12-Mar-2025 17:34:14] Completed 106 of 130 simulation runs
+[12-Mar-2025 17:34:15] Completed 107 of 130 simulation runs
+[12-Mar-2025 17:34:16] Completed 108 of 130 simulation runs
+[12-Mar-2025 17:36:07] Completed 109 of 130 simulation runs
+[12-Mar-2025 17:36:10] Completed 110 of 130 simulation runs
+[12-Mar-2025 17:36:11] Completed 111 of 130 simulation runs
+[12-Mar-2025 17:36:14] Completed 112 of 130 simulation runs
+[12-Mar-2025 17:36:16] Completed 113 of 130 simulation runs
+[12-Mar-2025 17:36:19] Completed 114 of 130 simulation runs
+[12-Mar-2025 17:36:22] Completed 115 of 130 simulation runs
+[12-Mar-2025 17:38:15] Completed 116 of 130 simulation runs
+[12-Mar-2025 17:38:16] Completed 117 of 130 simulation runs
+[12-Mar-2025 17:38:16] Completed 118 of 130 simulation runs
+[12-Mar-2025 17:38:17] Completed 119 of 130 simulation runs
+[12-Mar-2025 17:38:22] Completed 120 of 130 simulation runs
+[12-Mar-2025 17:38:28] Completed 121 of 130 simulation runs
+[12-Mar-2025 17:38:44] Completed 122 of 130 simulation runs
+[12-Mar-2025 17:39:05] Completed 123 of 130 simulation runs
+[12-Mar-2025 17:39:17] Completed 124 of 130 simulation runs
+[12-Mar-2025 17:39:27] Completed 125 of 130 simulation runs
+[12-Mar-2025 17:39:29] Completed 126 of 130 simulation runs
+[12-Mar-2025 17:39:31] Completed 127 of 130 simulation runs
+[12-Mar-2025 17:39:37] Completed 128 of 130 simulation runs
+[12-Mar-2025 17:39:48] Completed 129 of 130 simulation runs
+[12-Mar-2025 17:39:57] Completed 130 of 130 simulation runs
+[12-Mar-2025 17:39:57] Cleaning up parallel workers...
+Elapsed time is 2490.825334 seconds.
+[Warning: Variable 'simOut' was not saved. For variables larger than 2GB use MAT-file version 7.3
+or later.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('RUN_EVERYTHING', 'C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\RUN_EVERYTHING.m', 111)" style="font-weight:bold">RUN_EVERYTHING</a> (<a href="matlab: opentoline('C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\RUN_EVERYTHING.m',111,0)">line 111</a>)] 
+Max flow speed for LH2 is 110.778m/s.
+Max flow speed for GH2 is 186.9995m/s.
+Max mass flow rate for GH2 during warm tank warmup is 0.53287kg/s.
+Mean mass flow rate for GH2 during warm tank warmup is 0.089181kg/s.
+Max mass flow rate  for GH2 during cold tank warmup is 0.57374kg/s.
+Mean mass flow rate for GH2 during cold tank warmup is 0.078765kg/s.
+Max mass flow rate for GH2 during defuel tank drain is 1.5342kg/s.
+Mean mass flow rate for GH2 during defuel tank drain is 0.31866kg/s.
+Max mass flow rate for LH2 during warm tank chilldown is 0.20697kg/s.
+Mean mass flow rate for LH2 during warm tank chilldown is 0.056277kg/s.
+Max mass flow rate for LH2 during warm tank fill is 1.852kg/s.
+Mean mass flow rate for LH2 during warm tank fill is 0.39324kg/s.
+Max mass flow rate for LH2 during cold tank chilldown is 0.1865kg/s.
+Mean mass flow rate for LH2 during cold tank chilldown is 0.040169kg/s.
+Max mass flow rate for LH2 during cold tank fill is 0.57374kg/s.
+Mean mass flow rate for LH2 during cold tank fill is 0.22797kg/s.
+Max mass flow rate for LH2 during defuel chilldown is 0.18752kg/s.
+Mean mass flow rate for LH2 during defuel chilldown is 0.039446kg/s.
+            <strong>Operation phase</strong>            <strong>Mean flow rate</strong>    <strong>Unit</strong> 
+    <strong>_______________________________</strong>    <strong>______________</strong>    <strong>_____</strong>
+
+    "Warm tank refuel chilldown"            54.26        "m/s"
+    "Warm tank refuel tank filling"        32.561        "m/s"
+    "Warm tank refuel warmup"              15.685        "m/s"
+    "Cold tank refuel chilldown"           45.083        "m/s"
+    "Cold tank refuel tank filling"        33.713        "m/s"
+    "Cold tank refuel warmup"              12.868        "m/s"
+    "Defuel chilldown"                     40.493        "m/s"
+    "Defuel wamrup"                        15.186        "m/s"
+
+Total LH2 supplied by ground station = 41.0553kg.
+Total LH2 in the UAM tank = 16.3432kg.
+Total LH2 supplied by ground station = 47.1709kg.
+Total LH2 in the UAM tank = 16.3432kg.
+Total LH2 supplied by ground station = 43.7455kg.
+Total LH2 in the UAM tank = 16.2874kg.
+Total LH2 supplied by ground station = 42.3133kg.
+Total LH2 in the UAM tank = 16.255kg.
+Total LH2 supplied by ground station = 41.4999kg.
+Total LH2 in the UAM tank = 16.2607kg.
+Total LH2 supplied by ground station = 41.0553kg.
+Total LH2 in the UAM tank = 16.3432kg.
+Total LH2 supplied by ground station = 41.6074kg.
+Total LH2 in the UAM tank = 16.3027kg.
+Total LH2 supplied by ground station = 41.5076kg.
+Total LH2 in the UAM tank = 16.3364kg.
+Total LH2 supplied by ground station = 41.3813kg.
+Total LH2 in the UAM tank = 16.3191kg.
+Total LH2 supplied by ground station = 41.2354kg.
+Total LH2 in the UAM tank = 16.2705kg.
+Total LH2 supplied by ground station = 41.3539kg.
+Total LH2 in the UAM tank = 16.3696kg.
+Total LH2 supplied by ground station = 41.1946kg.
+Total LH2 in the UAM tank = 16.3103kg.
+Total LH2 supplied by ground station = 41.2787kg.
+Total LH2 in the UAM tank = 16.383kg.
+Total LH2 supplied by ground station = 41.0792kg.
+Total LH2 in the UAM tank = 16.2883kg.
+Total LH2 supplied by ground station = 41.1459kg.
+Total LH2 in the UAM tank = 16.3454kg.
+Total LH2 supplied by ground station = 41.2104kg.
+Total LH2 in the UAM tank = 16.4004kg.
+Total LH2 supplied by ground station = 40.9937kg.
+Total LH2 in the UAM tank = 16.2909kg.
+Total LH2 supplied by ground station = 41.0379kg.
+Total LH2 in the UAM tank = 16.3281kg.
+Total LH2 supplied by ground station = 41.0848kg.
+Total LH2 in the UAM tank = 16.3688kg.
+Total LH2 supplied by ground station = 40.8733kg.
+Total LH2 in the UAM tank = 16.2613kg.
+Total LH2 supplied by ground station = 40.9118kg.
+Total LH2 in the UAM tank = 16.2939kg.
+Total LH2 supplied by ground station = 40.9411kg.
+Total LH2 in the UAM tank = 16.3185kg.
+Total LH2 supplied by ground station = 40.9715kg.
+Total LH2 in the UAM tank = 16.3442kg.
+Total LH2 supplied by ground station = 40.993kg.
+Total LH2 in the UAM tank = 16.3629kg.
+Total LH2 supplied by ground station = 41.0257kg.
+Total LH2 in the UAM tank = 16.389kg.
+Total LH2 supplied by ground station = 41.045kg.
+Total LH2 in the UAM tank = 16.3973kg.
+Total LH2 supplied by ground station = 42.4581kg.
+Total LH2 in the UAM tank = 15.507kg.
+Total LH2 supplied by ground station = 42.4569kg.
+Total LH2 in the UAM tank = 15.5074kg.
+Total LH2 supplied by ground station = 42.4467kg.
+Total LH2 in the UAM tank = 15.498kg.
+Total LH2 supplied by ground station = 42.4582kg.
+Total LH2 in the UAM tank = 15.5111kg.
+Total LH2 supplied by ground station = 42.4591kg.
+Total LH2 in the UAM tank = 15.5155kg.
+Total LH2 supplied by ground station = 42.4582kg.
+Total LH2 in the UAM tank = 15.52kg.
+Total LH2 supplied by ground station = 42.4599kg.
+Total LH2 in the UAM tank = 15.5289kg.
+Total LH2 supplied by ground station = 42.459kg.
+Total LH2 in the UAM tank = 15.5427kg.
+Total LH2 supplied by ground station = 42.4614kg.
+Total LH2 in the UAM tank = 15.5643kg.
+Total LH2 supplied by ground station = 42.1857kg.
+Total LH2 in the UAM tank = 15.4418kg.
+Total LH2 supplied by ground station = 42.181kg.
+Total LH2 in the UAM tank = 15.4846kg.
+Total LH2 supplied by ground station = 42.179kg.
+Total LH2 in the UAM tank = 15.5567kg.
+Total LH2 supplied by ground station = 42.1858kg.
+Total LH2 in the UAM tank = 15.6541kg.
+Total LH2 supplied by ground station = 41.9025kg.
+Total LH2 in the UAM tank = 15.6293kg.
+Total LH2 supplied by ground station = 41.6205kg.
+Total LH2 in the UAM tank = 15.6409kg.
+Total LH2 supplied by ground station = 41.337kg.
+Total LH2 in the UAM tank = 16.0938kg.
+Total LH2 supplied by ground station = 40.7801kg.
+Total LH2 in the UAM tank = 16.3667kg.
+Total LH2 supplied by ground station = 40.2285kg.
+Total LH2 in the UAM tank = 16.5746kg.
+Total LH2 supplied by ground station = 39.9334kg.
+Total LH2 in the UAM tank = 16.8359kg.
+Total LH2 supplied by ground station = 39.4052kg.
+Total LH2 in the UAM tank = 16.922kg.
+Total LH2 supplied by ground station = 34.5512kg.
+Total LH2 in the UAM tank = 15.2936kg.
+Total LH2 supplied by ground station = 34.5297kg.
+Total LH2 in the UAM tank = 15.211kg.
+Total LH2 supplied by ground station = 34.9986kg.
+Total LH2 in the UAM tank = 15.318kg.
+Total LH2 supplied by ground station = 35.2113kg.
+Total LH2 in the UAM tank = 15.2756kg.
+Total LH2 supplied by ground station = 35.8731kg.
+Total LH2 in the UAM tank = 15.2912kg.
+Total LH2 supplied by ground station = 36.7968kg.
+Total LH2 in the UAM tank = 15.3756kg.
+Total LH2 supplied by ground station = 37.3703kg.
+Total LH2 in the UAM tank = 15.4148kg.
+Total LH2 supplied by ground station = 37.0319kg.
+Total LH2 in the UAM tank = 15.4953kg.
+Total LH2 supplied by ground station = 37.0456kg.
+Total LH2 in the UAM tank = 15.4795kg.
+Total LH2 supplied by ground station = 37.4568kg.
+Total LH2 in the UAM tank = 15.5979kg.
+Total LH2 supplied by ground station = 38.0714kg.
+Total LH2 in the UAM tank = 15.8407kg.
+Total LH2 supplied by ground station = 38.8929kg.
+Total LH2 in the UAM tank = 16.0396kg.
+Total LH2 supplied by ground station = 39.4366kg.
+Total LH2 in the UAM tank = 16.0867kg.
+Total LH2 supplied by ground station = 40.2423kg.
+Total LH2 in the UAM tank = 16.2482kg.
+Total LH2 supplied by ground station = 40.782kg.
+Total LH2 in the UAM tank = 16.2616kg.
+Total LH2 supplied by ground station = 41.3309kg.
+Total LH2 in the UAM tank = 16.3469kg.
+Total LH2 supplied by ground station = 41.8819kg.
+Total LH2 in the UAM tank = 16.443kg.
+Total LH2 supplied by ground station = 42.1581kg.
+Total LH2 in the UAM tank = 16.4451kg.
+Total LH2 supplied by ground station = 42.1557kg.
+Total LH2 in the UAM tank = 16.3637kg.
+Total LH2 supplied by ground station = 42.4307kg.
+Total LH2 in the UAM tank = 16.435kg.
+Total LH2 supplied by ground station = 40.8024kg.
+Total LH2 in the UAM tank = 16.298kg.
+Total LH2 supplied by ground station = 40.7982kg.
+Total LH2 in the UAM tank = 16.2929kg.
+Total LH2 supplied by ground station = 40.8024kg.
+Total LH2 in the UAM tank = 16.2954kg.
+Total LH2 supplied by ground station = 40.7982kg.
+Total LH2 in the UAM tank = 16.2885kg.
+Total LH2 supplied by ground station = 41.0677kg.
+Total LH2 in the UAM tank = 16.3876kg.
+Total LH2 supplied by ground station = 41.0574kg.
+Total LH2 in the UAM tank = 16.3567kg.
+Total LH2 supplied by ground station = 41.0484kg.
+Total LH2 in the UAM tank = 16.3103kg.
+Total LH2 supplied by ground station = 41.2933kg.
+Total LH2 in the UAM tank = 16.2992kg.
+Total LH2 supplied by ground station = 42.0567kg.
+Total LH2 in the UAM tank = 16.3452kg.
+Total LH2 supplied by ground station = 43.3021kg.
+Total LH2 in the UAM tank = 16.1447kg.
+[Warning: Error updating Text.
+
+ String scalar or character vector must have valid interpreter syntax:
+Time taken for for warm tank refuel \n with different tank sizes
+] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('defaulterrorcallback', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\graphics\objectsystem\defaulterrorcallback.m', 12)" style="font-weight:bold">defaulterrorcallback</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\graphics\objectsystem\defaulterrorcallback.m',12,0)">line 12</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('print', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\graphics\printing\print.m', 36)" style="font-weight:bold">print</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\graphics\printing\print.m',36,0)">line 36</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('saveas', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\general\saveas.m', 181)" style="font-weight:bold">saveas</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\general\saveas.m',181,0)">line 181</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('Tank_size_sweep_graphing', 'C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\Functions\Tank_size_sweep_graphing.m', 68)" style="font-weight:bold">Tank_size_sweep_graphing</a> (<a href="matlab: opentoline('C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\Functions\Tank_size_sweep_graphing.m',68,0)">line 68</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('RUN_EVERYTHING', 'C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\RUN_EVERYTHING.m', 138)" style="font-weight:bold">RUN_EVERYTHING</a> (<a href="matlab: opentoline('C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\RUN_EVERYTHING.m',138,0)">line 138</a>)] 
+[Warning: Error updating Text.
+
+ String scalar or character vector must have valid interpreter syntax:
+Total LH2 consumed for for cold tank refuel \n with different LH2 feed pressure
+] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('defaulterrorcallback', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\graphics\objectsystem\defaulterrorcallback.m', 12)" style="font-weight:bold">defaulterrorcallback</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\graphics\objectsystem\defaulterrorcallback.m',12,0)">line 12</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('print', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\graphics\printing\print.m', 36)" style="font-weight:bold">print</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\graphics\printing\print.m',36,0)">line 36</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('saveas', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\general\saveas.m', 181)" style="font-weight:bold">saveas</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\general\saveas.m',181,0)">line 181</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('Feed_pressure_sweep_graphing', 'C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\Functions\Feed_pressure_sweep_graphing.m', 59)" style="font-weight:bold">Feed_pressure_sweep_graphing</a> (<a href="matlab: opentoline('C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\Functions\Feed_pressure_sweep_graphing.m',59,0)">line 59</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('RUN_EVERYTHING', 'C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\RUN_EVERYTHING.m', 141)" style="font-weight:bold">RUN_EVERYTHING</a> (<a href="matlab: opentoline('C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\RUN_EVERYTHING.m',141,0)">line 141</a>)] 

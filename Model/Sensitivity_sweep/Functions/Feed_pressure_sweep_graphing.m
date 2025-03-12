@@ -55,7 +55,8 @@ figure(102)
 plot(LH2_FEED_PRES_VEC*10, LH2_consumed_warm_fill)
 xlabel("LH2 feed pressure (bar)")
 ylabel('LH2 consumed (kg)')
-title("Total LH2 consumed for for cold tank refuel \n with different LH2 feed pressure")
+title({"Total LH2 consumed for for cold tank refuel", ...
+    "with different LH2 feed pressure"})
 saveas(gcf, 'Graphs/LH2 consumed for warm tank filling vs LH2 feed pressure.png')
 
 
