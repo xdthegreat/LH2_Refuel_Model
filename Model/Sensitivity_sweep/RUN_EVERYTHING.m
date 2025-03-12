@@ -27,12 +27,12 @@ valve_diameter_sweep_count = 4;
 valve_discharge_coeff_sweep_count = 20;
 tank_wall_vapour_heat_transfer_coeff_count = 20;
 tank_wall_liquid_heat_transfer_coeff_count = 20;
-hose_length_sweep_count = 10;
-AC_tank_equivalent_conductivity_count = 10;
-tank_size_count = 15;
-LH2_FEED_PRES_COUNT = 10;
-LH2_FEED_TEMP_COUNT = 5;
-hose_thermal_conductivity_count = 15;
+hose_length_sweep_count = 20;
+AC_tank_equivalent_conductivity_count = 20;
+tank_size_count = 20;
+LH2_FEED_PRES_COUNT = 20;
+LH2_FEED_TEMP_COUNT = 20;
+hose_thermal_conductivity_count = 20;
 
 
 %sweep pos calc
