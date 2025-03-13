@@ -32,7 +32,8 @@ function valve_diameter_sweep_graphing(valve_diameter_sweep_simOut, valve_diamet
     plot(valve_diameter_vector, time_warm_refuel)
     xlabel("Reference valve orifice diameter (m)")
     ylabel('Time taken per warm tank refuel (s)')
-    title("Time taken for for warm tank refuel \n with different valve orifice diameter")
+    title({"Time taken for for warm tank refuel", ...
+        "with different valve orifice diameter"})
     saveas(gcf, 'Graphs/Time taken for warm tank refuel vs valve diameter.png')
 
 

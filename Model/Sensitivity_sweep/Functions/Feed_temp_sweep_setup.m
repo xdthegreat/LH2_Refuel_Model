@@ -5,6 +5,7 @@ function [Feed_temp_sweep_simIn, LH2_Feed_Temp_vec] = Feed_temp_sweep_setup(rapi
 
 LH2_Feed_Temp_vec = linspace(19, 26, LH2_FEED_TEMP_COUNT);
 
+
 Feed_temp_sweep_simIn(1:length(LH2_Feed_Temp_vec)) = Simulink.SimulationInput(mdl); 
 for i = 1:length(LH2_Feed_Temp_vec) 
     if rapid_flag
