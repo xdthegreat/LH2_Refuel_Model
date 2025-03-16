@@ -6,7 +6,7 @@ function [tank_wall_liquid_heat_transfer_coeff_simIn, liquid_heat_transfer_coeff
     tank_wall_liquid_heat_transfer_coeff_count, max_allowed_stop_time)
 
 
-    liquid_heat_transfer_coeff_vector = logspace(log10(1), log10(10000), tank_wall_liquid_heat_transfer_coeff_count); % to be changed
+    liquid_heat_transfer_coeff_vector = logspace(log10(5), log10(10000), tank_wall_liquid_heat_transfer_coeff_count); % to be changed
     
     tank_wall_liquid_heat_transfer_coeff_simIn(1:length(liquid_heat_transfer_coeff_vector)) = Simulink.SimulationInput(mdl); 
     
