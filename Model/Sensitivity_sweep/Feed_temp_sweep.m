@@ -4,7 +4,7 @@ close all
 
 
 LH2_FEED_TEMP_COUNT = 3; 
-max_allowed_stop_time = 10000;
+max_allowed_stop_time = 4000;
 rapid_flag = false;
 accel_flag = false; 
 fast_restart_flag = false;

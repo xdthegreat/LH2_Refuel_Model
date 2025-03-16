@@ -4,8 +4,8 @@ close all
 %% hose_insulation_sweep.m
 
 
-hose_thermal_conductivity_vec = logspace(log10(0.001), log10(1000), 20); % W/mK
- 
+hose_thermal_conductivity_count = 3;
+max_allowed_stop_time = 4000;
 rapid_flag = false;
 accel_flag = false; 
 fast_restart_flag = false;

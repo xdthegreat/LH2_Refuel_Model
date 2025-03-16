@@ -15,6 +15,7 @@ function valve_discharge_coeff_sweep_graphing(valve_discharge_coeff_sweep_simOut
     time_cold_refuel = zeros([1, length(valve_discharge_coeff_sweep_simOut)]);
     
     for i = 1:length(valve_discharge_coeff_sweep_simOut)
+        if isempty(valve_discharge_coeff_sweep_simOut(1, i).ErrorMessage)
         [start_warm_chilldown_index, start_warm_tank_fill_index, ...
         start_warm_warmup_index, start_warm_disconnect_index, idle_1_index, ...
         start_engine_feed_index, idle_2_index, start_cold_chilldown_index, start_cold_tank_fill_index, ...
@@ -32,7 +33,57 @@ function valve_discharge_coeff_sweep_graphing(valve_discharge_coeff_sweep_simOut
         time_warm_refuel(i) = Ground_LH2_total_time(idle_1_index);
         time_cold_refuel(i) = Ground_LH2_total_time(idle_3_index) - Ground_LH2_total_time(idle_2_index);
 
+     else
+            disp("Error spotted, handling in graphing")
+            valve_discharge_coeff_vector(i) = [0];
+        end
+
     end
+
+    valve_discharge_coeff_vector_copy = [];
+    LH2_consumed_warm_fill_copy = [];
+    LH2_in_AC_tank_warm_fill_copy = [];
+    frac_useful_LH2_warm_fill_copy = [];
+    LH2_consumed_cold_fill_copy = [];
+    LH2_in_AC_tank_cold_fill_copy = [];
+    frac_useful_LH2_cold_fill_copy = [];
+    time_warm_refuel_copy = [];
+    LH2_consumption_vec_copy = [];
+
+    for i = 1:length(valve_discharge_coeff_sweep_simOut)
+        if valve_discharge_coeff_vector(i) ~= [0]
+            valve_discharge_coeff_vector_copy = [valve_discharge_coeff_vector_copy, 
+                valve_discharge_coeff_vector(i)];
+            LH2_consumed_warm_fill_copy = [LH2_consumed_warm_fill_copy, 
+                LH2_consumed_warm_fill(i)];
+            LH2_in_AC_tank_warm_fill_copy = [LH2_in_AC_tank_warm_fill, ...
+                LH2_in_AC_tank_warm_fill(i)];
+            frac_useful_LH2_warm_fill_copy = [frac_useful_LH2_warm_fill(i), ...
+                frac_useful_LH2_warm_fill(i)];
+
+            LH2_consumed_cold_fill_copy = [LH2_consumed_cold_fill_copy, ...
+                LH2_consumed_cold_fill(i)];
+            LH2_in_AC_tank_cold_fill_copy = [LH2_in_AC_tank_cold_fill_copy, ...
+                LH2_in_AC_tank_cold_fill(i)];
+            frac_useful_LH2_cold_fill_copy = [frac_useful_LH2_cold_fill_copy, ...
+                frac_useful_LH2_cold_fill(i)];
+
+
+            time_warm_refuel_copy = [time_warm_refuel_copy, time_warm_refuel(i)];
+            LH2_consumption_vec_copy = [LH2_consumption_vec_copy, LH2_consumption_vec(i)];
+
+        end
+    end
+  valve_discharge_coeff_vector = valve_discharge_coeff_vector_copy;
+    LH2_consumed_warm_fill = LH2_consumed_warm_fill_copy;
+    LH2_in_AC_tank_warm_fill = LH2_in_AC_tank_warm_fill_copy;
+    LH2_in_AC_tank_warm_fill = LH2_in_AC_tank_warm_fill_copy;
+    frac_useful_LH2_warm_fill = frac_useful_LH2_warm_fill_copy;
+    LH2_consumed_cold_fill = LH2_consumed_cold_fill_copy;
+    LH2_in_AC_tank_cold_fill = LH2_in_AC_tank_cold_fill_copy;
+    frac_useful_LH2_cold_fill = frac_useful_LH2_cold_fill_copy;
+    time_warm_refuel = time_warm_refuel_copy;
+    LH2_consumption_vec = LH2_consumption_vec_copy;
     
     
     figure(101)
@@ -41,6 +92,6 @@ function valve_discharge_coeff_sweep_graphing(valve_discharge_coeff_sweep_simOut
     ylabel('Time taken per warm tank refuel (s)')
     title({"Time taken for for warm tank refuel", ...
         "with different valve discharge coefficient"})
-    saveas(gcf, 'Graphs/Time taken for warm tank refuel vs valve diameter.png')
+    saveas(gcf, 'Graphs/Time taken for warm tank refuel vs valve coeff.png')
 
 end

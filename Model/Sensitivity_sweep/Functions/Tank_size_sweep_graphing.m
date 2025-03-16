@@ -17,6 +17,8 @@ frac_useful_LH2_cold_fill = zeros([1, length(Tank_size_sweep_simOut)]);
 time_warm_refuel = zeros([1, length(Tank_size_sweep_simOut)]);
 
     for i = 1:length(Tank_size_sweep_simOut)
+        if isempty(Tank_size_sweep_simOut(1, i).ErrorMessage)
+
         [start_warm_chilldown_index, start_warm_tank_fill_index, ...
         start_warm_warmup_index, start_warm_disconnect_index, idle_1_index, ...
         start_engine_feed_index, idle_2_index, start_cold_chilldown_index, start_cold_tank_fill_index, ...
@@ -41,8 +43,57 @@ time_warm_refuel = zeros([1, length(Tank_size_sweep_simOut)]);
         frac_useful_LH2_cold_fill(i) = LH2_in_AC_tank_cold_fill(i)/LH2_consumed_cold_fill(i);
 
         time_warm_refuel(i) = Ground_LH2_total_time(idle_1_index);
+        else
+            disp("Error spotted, handling in graphing")
+            m_LH2_vector(i) = [0];
+        end
 
     end
+
+    m_LH2_vector_copy = [];
+    LH2_consumed_warm_fill_copy = [];
+    LH2_in_AC_tank_warm_fill_copy = [];
+    frac_useful_LH2_warm_fill_copy = [];
+    LH2_consumed_cold_fill_copy = [];
+    LH2_in_AC_tank_cold_fill_copy = [];
+    frac_useful_LH2_cold_fill_copy = [];
+    time_warm_refuel_copy = [];
+
+    for i = 1:length(hose_insulation_sweep_simOut)
+        if m_LH2_vector(i) ~= [0]
+            m_LH2_vector_copy = [m_LH2_vector_copy, 
+                m_LH2_vector(i)];
+            LH2_consumed_warm_fill_copy = [LH2_consumed_warm_fill_copy, 
+                LH2_consumed_warm_fill(i)];
+            LH2_in_AC_tank_warm_fill_copy = [LH2_in_AC_tank_warm_fill, ...
+                LH2_in_AC_tank_warm_fill(i)];
+            frac_useful_LH2_warm_fill_copy = [frac_useful_LH2_warm_fill(i), ...
+                frac_useful_LH2_warm_fill(i)];
+
+            LH2_consumed_cold_fill_copy = [LH2_consumed_cold_fill_copy, ...
+                LH2_consumed_cold_fill(i)];
+            LH2_in_AC_tank_cold_fill_copy = [LH2_in_AC_tank_cold_fill_copy, ...
+                LH2_in_AC_tank_cold_fill(i)];
+            frac_useful_LH2_cold_fill_copy = [frac_useful_LH2_cold_fill_copy, ...
+                frac_useful_LH2_cold_fill(i)];
+
+
+            time_warm_refuel_copy = [time_warm_refuel_copy, time_warm_refuel(i)];
+
+        end
+    end
+
+    m_LH2_vector = m_LH2_vector_copy;
+    LH2_consumed_warm_fill = LH2_consumed_warm_fill_copy;
+    LH2_in_AC_tank_warm_fill = LH2_in_AC_tank_warm_fill_copy;
+    LH2_in_AC_tank_warm_fill = LH2_in_AC_tank_warm_fill_copy;
+    frac_useful_LH2_warm_fill = frac_useful_LH2_warm_fill_copy;
+    LH2_consumed_cold_fill = LH2_consumed_cold_fill_copy;
+    LH2_in_AC_tank_cold_fill = LH2_in_AC_tank_cold_fill_copy;
+    frac_useful_LH2_cold_fill = frac_useful_LH2_cold_fill_copy;
+    time_warm_refuel = time_warm_refuel_copy;
+
+
 
 
 figure(101)

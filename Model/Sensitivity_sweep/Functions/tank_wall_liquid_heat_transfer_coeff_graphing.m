@@ -10,6 +10,7 @@ function tank_wall_liquid_heat_transfer_coeff_graphing(tank_wall_liquid_heat_tra
     LH2_consumption_vec = zeros([1, length(liquid_heat_transfer_coeff_vector)]);
 
     for i = 1:length(tank_wall_liquid_heat_transfer_coeff_simOut)
+        if isempty(tank_wall_liquid_heat_transfer_coeff_simOut(1, i).ErrorMessage)
         [start_warm_chilldown_index, start_warm_tank_fill_index, ...
         start_warm_warmup_index, start_warm_disconnect_index, idle_1_index, ...
         start_engine_feed_index, idle_2_index, start_cold_chilldown_index, start_cold_tank_fill_index, ...
@@ -28,7 +29,58 @@ function tank_wall_liquid_heat_transfer_coeff_graphing(tank_wall_liquid_heat_tra
         time_cold_refuel(i) = Ground_LH2_total_time(idle_3_index) - Ground_LH2_total_time(idle_2_index);
 
         LH2_consumption_vec(i) = Ground_LH2_total(idle_1_index);
+        else
+            disp("Error spotted, handling in graphing")
+            liquid_heat_transfer_coeff_vector(i) = [0];
+        end
+
     end
+
+    liquid_heat_transfer_coeff_vector_copy = [];
+    LH2_consumed_warm_fill_copy = [];
+    LH2_in_AC_tank_warm_fill_copy = [];
+    frac_useful_LH2_warm_fill_copy = [];
+    LH2_consumed_cold_fill_copy = [];
+    LH2_in_AC_tank_cold_fill_copy = [];
+    frac_useful_LH2_cold_fill_copy = [];
+    time_warm_refuel_copy = [];            
+    LH2_consumption_vec_copy = [];
+
+    for i = 1:length(hose_insulation_sweep_simOut)
+        if liquid_heat_transfer_coeff_vector(i) ~= [0]
+            liquid_heat_transfer_coeff_vector_copy = [liquid_heat_transfer_coeff_vector_copy, 
+                liquid_heat_transfer_coeff_vector(i)];
+            LH2_consumed_warm_fill_copy = [LH2_consumed_warm_fill_copy, 
+                LH2_consumed_warm_fill(i)];
+            LH2_in_AC_tank_warm_fill_copy = [LH2_in_AC_tank_warm_fill, ...
+                LH2_in_AC_tank_warm_fill(i)];
+            frac_useful_LH2_warm_fill_copy = [frac_useful_LH2_warm_fill(i), ...
+                frac_useful_LH2_warm_fill(i)];
+
+            LH2_consumed_cold_fill_copy = [LH2_consumed_cold_fill_copy, ...
+                LH2_consumed_cold_fill(i)];
+            LH2_in_AC_tank_cold_fill_copy = [LH2_in_AC_tank_cold_fill_copy, ...
+                LH2_in_AC_tank_cold_fill(i)];
+            frac_useful_LH2_cold_fill_copy = [frac_useful_LH2_cold_fill_copy, ...
+                frac_useful_LH2_cold_fill(i)];
+
+
+            time_warm_refuel_copy = [time_warm_refuel_copy, time_warm_refuel(i)];
+            LH2_consumption_vec_copy = [LH2_consumption_vec_copy, LH2_consumption_vec(i)];
+
+        end
+    end
+
+    liquid_heat_transfer_coeff_vector = liquid_heat_transfer_coeff_vector_copy;
+    LH2_consumed_warm_fill = LH2_consumed_warm_fill_copy;
+    LH2_in_AC_tank_warm_fill = LH2_in_AC_tank_warm_fill_copy;
+    LH2_in_AC_tank_warm_fill = LH2_in_AC_tank_warm_fill_copy;
+    frac_useful_LH2_warm_fill = frac_useful_LH2_warm_fill_copy;
+    LH2_consumed_cold_fill = LH2_consumed_cold_fill_copy;
+    LH2_in_AC_tank_cold_fill = LH2_in_AC_tank_cold_fill_copy;
+    frac_useful_LH2_cold_fill = frac_useful_LH2_cold_fill_copy;
+    time_warm_refuel = time_warm_refuel_copy;
+    LH2_consumption_vec = LH2_consumption_vec_copy;
 
 
 figure(101)
