@@ -2,44 +2,26 @@
 function valve_discharge_coeff_sweep_graphing(valve_discharge_coeff_sweep_simOut, valve_discharge_coeff_vector)
 
 
-    for i = 1:length(valve_discharge_coeff_vector)
-        if isempty(valve_discharge_coeff_sweep_simOut(1, i).ErrorMessage)
-            figure(i)
-            AC_mode_data = valve_discharge_coeff_sweep_simOut(1, i).yout{5}.Values.Data;
-            time_array = valve_discharge_coeff_sweep_simOut(1, i).yout{5}.Values.Time;
-            plot(time_array, AC_mode_data)
-        end
-    end
-    
-    time_warm_refuel = zeros([1, length(valve_discharge_coeff_sweep_simOut)]);
-    time_cold_refuel = zeros([1, length(valve_discharge_coeff_sweep_simOut)]);
-    
-    for i = 1:length(valve_discharge_coeff_sweep_simOut)
-        [start_warm_chilldown_index, start_warm_tank_fill_index, ...
-        start_warm_warmup_index, start_warm_disconnect_index, idle_1_index, ...
-        start_engine_feed_index, idle_2_index, start_cold_chilldown_index, start_cold_tank_fill_index, ...
-        start_cold_warmup_index, start_cold_disconnect_index, idle_3_index, ...
-        start_defuel_chilldown_index, start_defuel_drain_index, start_defuel_disconnect]...
-        = multiple_sim_phase_parsing(valve_discharge_coeff_sweep_simOut(1, i), i);
-        
-        Ground_LH2_total = valve_discharge_coeff_sweep_simOut(1, i).yout{4}.Values.Data;
-        AC_LH2_total = valve_discharge_coeff_sweep_simOut(1, i).yout{3}.Values.Data;
-        Ground_LH2_total_time = valve_discharge_coeff_sweep_simOut(1, i).yout{4}.Values.Time;
-    
-        disp("Total LH2 supplied by ground station = " + Ground_LH2_total(idle_1_index) + "kg.")
-        disp("Total LH2 in the UAM tank = " + AC_LH2_total(idle_1_index) + "kg.")
+[valve_discharge_coeff_vector_output, LH2_consumed_warm_fill_output, ...
+    LH2_in_AC_tank_warm_fill_output, frac_useful_LH2_warm_fill_output, ...
+    LH2_consumed_cold_fill_output, LH2_in_AC_tank_cold_fill_output, ...
+    frac_useful_LH2_cold_fill_output, time_warm_refuel_output, time_cold_refuel_output] = ...
+    turn_simOut_into_graphing_data(valve_discharge_coeff_sweep_simOut, valve_discharge_coeff_vector);
 
-        time_warm_refuel(i) = Ground_LH2_total_time(idle_1_index);
-        time_cold_refuel(i) = Ground_LH2_total_time(idle_3_index) - Ground_LH2_total_time(idle_2_index);
-
-    end
-    
     
     figure(101)
-    plot(valve_discharge_coeff_vector, time_warm_refuel)
+    plot(valve_discharge_coeff_vector_output, time_warm_refuel_output)
     xlabel("Valve discahrge coefficient")
     ylabel('Time taken per warm tank refuel (s)')
-    title("Time taken for for warm tank refuel \n with different valve discharge coefficient")
-    saveas(gcf, 'Graphs/Time taken for warm tank refuel vs valve diameter.png')
+    title({"Time taken for for warm tank refuel", ...
+        "with different valve discharge coefficient"})
+    saveas(gcf, 'Graphs/Time taken for warm tank refuel vs valve coeff.png')
+
+
+            valve_discharge_coeff_sweep_results = {valve_discharge_coeff_vector_output, time_warm_refuel_output, LH2_consumed_warm_fill_output};
+    
+valve_discharge_coeff_results_table = cell2table(valve_discharge_coeff_sweep_results, ...
+    'VariableNames', {'Lh2 Feed pressure (bar)' 'Time taken for warm tank refuel (s)' 'LH2 consumed(kg)'});
+    writetable(valve_discharge_coeff_results_table, "Graphs/vaalve_discharge_coeff_sweep_results.xlsx")
 
 end

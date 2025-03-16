@@ -28,9 +28,9 @@ max_stress = 300;  %MPa
 GS_vent_cracking_delta_P = 4.4;
 GS_vent_open_delta_P = 5;
 GS_vent_discharge_coeff = 0.8;
-GS_vent_orifice_diameter = 0.1;
+GS_vent_orifice_diameter = 0.12;
 GS_vent_orifice_area = GS_vent_orifice_diameter^2*pi/4;
-GS_vent_inner_diameter = 0.15;
+GS_vent_inner_diameter = 0.14;
 GS_vent_inner_area = GS_vent_inner_diameter^2*pi/4;
 
 
@@ -55,8 +55,8 @@ mass_per_length_return = steel_density*wall_thickness*(return_pipe_inner_area + 
 
 hose_length = 20;  %m
 
-hose_thermal_conductivity = 0.1;  %W/(m*K)
-pipe_thermal_conductivity = 0.075;  %W/(m*K)
+hose_thermal_conductivity = 0.0002;  %W/m*K
+pipe_thermal_conductivity = 0.0001;  %W/m*K
 liquid_supply_SOV_leak_frac = 1e-9;
 
 %Controller info
@@ -80,6 +80,6 @@ Initial_AC_tank_pressure = 1.1;
 Initial_AC_Tank_Liquid_Temp = 20;
 Initial_AC_Tank_Gas_Temp = 300;
 initial_hose_p = 1.1;
-stopTime = 10000;
+stopTime = 4000;
 
 valve_laminar_p_ratio = 0.999;
