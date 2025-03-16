@@ -18,4 +18,10 @@ function valve_diameter_sweep_graphing(valve_diameter_sweep_simOut, valve_diamet
     saveas(gcf, 'Graphs/Time taken for warm tank refuel vs valve diameter.png')
 
 
+        valve_diameter_sweep_results = {valve_diameter_vector_output, time_warm_refuel_output, LH2_consumed_warm_fill_output};
+    
+valve_diameter_results_table = cell2table(valve_diameter_sweep_results, ...
+    'VariableNames', {'Lh2 Feed pressure (bar)' 'Time taken for warm tank refuel (s)' 'LH2 consumed(kg)'});
+    writetable(valve_diameter_results_table, "Graphs/vaalve_diameter_sweep_results.xlsx")
+
 end

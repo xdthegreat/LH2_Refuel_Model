@@ -54,5 +54,10 @@ title({"Total LH2 consumed for for cold tank refuel", ...
 set(gca, 'XScale', 'log')
 saveas(gcf, 'Graphs/Lh2 consumed for warm tank filling vs UAM tank insulation conductivity.png')
 
+AC_tank_conductivity_sweep_results = {AC_tank_equivalent_conductivity_vector_output, time_warm_refuel_output, LH2_consumed_warm_fill_output};
+    
+AC_tank_conductivity_results_table = cell2table(AC_tank_conductivity_sweep_results, ...
+    'VariableNames', {'LH2 Feed pressure (bar)' 'Time taken for warm tank refuel (s)' 'LH2 consumed(kg)'});
+    writetable(AC_tank_conductivity_results_table, "Graphs/AC_tank_conductivity_sweep_results.xlsx")
 
 end

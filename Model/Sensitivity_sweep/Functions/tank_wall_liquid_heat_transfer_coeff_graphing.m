@@ -21,4 +21,10 @@ set(gca, 'XScale', 'log')
 saveas(gcf, 'Graphs/LH2 consumed for warm tank filling vs UAM tank wall liquid heat transfer coefficient.png')
 
 
+liquid_heat_sweep_results = {liquid_heat_transfer_coeff_vector_output, time_warm_refuel_output, LH2_consumed_warm_fill_output};
+    
+liquid_heat_results_table = cell2table(liquid_heat_sweep_results, ...
+    'VariableNames', {'Lh2 Feed pressure (bar)' 'Time taken for warm tank refuel (s)' 'LH2 consumed(kg)'});
+    writetable(liquid_heat_results_table, "Graphs/liqudi_heat_sweep_results.xlsx")
+
 end

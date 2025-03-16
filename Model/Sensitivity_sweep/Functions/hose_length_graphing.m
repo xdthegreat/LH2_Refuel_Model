@@ -19,4 +19,10 @@ function hose_length_graphing(hose_length_sweep_simOut, hose_length_vector)
     saveas(gcf, 'Graphs/LH2 consumption for warm tank refuel sweep with 5-20m hoses.png')
 
 
+hose_length_sweep_results = {hose_length_vector_output, time_warm_refuel_output, LH2_consumed_warm_fill_output};
+    
+hose_length_results_table = cell2table(hose_length_sweep_results, ...
+    'VariableNames', {'LH2 Feed pressure (bar)' 'Time taken for warm tank refuel (s)' 'LH2 consumed(kg)'});
+    writetable(hose_length_results_table, "Graphs/hose_length_sweep_results.xlsx")
+
 end

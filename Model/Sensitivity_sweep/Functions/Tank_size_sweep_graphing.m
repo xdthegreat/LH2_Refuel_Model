@@ -35,4 +35,12 @@ title({"Time taken for for warm tank refuel", ...
 saveas(gcf, 'Graphs/Time taken for warm tank refuel vs tank size warm tank refuel.png')
 
 
+M_LH2_sweep_results = {m_LH2_vector_output, frac_useful_LH2_warm_fill_output, ...
+    frac_useful_LH2_cold_fill_output, LH2_consumed_warm_fill_output};
+    
+M_LH2_table = cell2table(M_LH2_sweep_results, ...
+    'VariableNames', {'Lh2 Feed pressure (bar)' '% warm' '% cold', 'LH2 used'});
+    writetable(M_LH2_table, "Graphs/M_LH2_sweep_results.xlsx")
+
+
 end

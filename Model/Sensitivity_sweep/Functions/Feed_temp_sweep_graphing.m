@@ -28,4 +28,11 @@ title({"Total LH2 consumed for for cold tank refuel", "with different LH2 feed t
 saveas(gcf, 'Graphs/LH2 consumed for warm tank filling vs LH2 feed temp.png')
 
 
+
+feed_temp_sweep_results = {LH2_FEED_TEMP_VEC_output, time_warm_refuel_output, LH2_consumed_warm_fill_output};
+    
+feed_temp_sweep_results_table = cell2table(feed_temp_sweep_results, ...
+    'VariableNames', {'Lh2 Feed pressure (bar)' 'Time taken for warm tank refuel (s)' 'LH2 consumed(kg)'});
+    writetable(feed_temp_sweep_results_table, "Graphs/feed_temp_sweep_results.xlsx")
+
 end

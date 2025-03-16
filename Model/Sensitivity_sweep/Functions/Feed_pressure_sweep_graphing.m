@@ -18,7 +18,6 @@ title({"Time taken for for warm tank refuel", "with different LH2 feed pressure"
 saveas(gcf, 'Graphs/Time taken for warm tank refuel vs LH2 feed pres.png')
 
 
-
 figure(102)
 plot(LH2_FEED_PRES_VEC_output*10, LH2_consumed_warm_fill_output)
 xlabel("LH2 feed pressure (bar)")
@@ -26,6 +25,13 @@ ylabel('LH2 consumed (kg)')
 title({"Total LH2 consumed for for cold tank refuel", ...
     "with different LH2 feed pressure"})
 saveas(gcf, 'Graphs/LH2 consumed for warm tank filling vs LH2 feed pressure.png')
+
+
+feed_pressure_sweep_results = {LH2_FEED_PRES_VEC_output, time_warm_refuel_output, LH2_consumed_warm_fill_output};
+    
+feed_pressure_sweep_results_table = cell2table(feed_pressure_sweep_results, ...
+    'VariableNames', {'Lh2 Feed pressure (bar)' 'Time taken for warm tank refuel (s)' 'LH2 consumed(kg)'});
+    writetable(feed_pressure_sweep_results_table, "Graphs/feed_pressure_sweep_results.xlsx")
 
 
 end

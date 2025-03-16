@@ -18,4 +18,12 @@ function tank_wall_vapour_heat_transfer_coeff_graphing(tank_wall_vapour_heat_tra
     set(gca, 'XScale', 'log')
     saveas(gcf, 'Graphs/LH2 consumed for warm tank filling vs UAM tank wall vapour heat transfer coefficient.png')
    
+
+    vapour_heat_sweep_results = {vapour_heat_transfer_coeff_vector_output, time_warm_refuel_output, LH2_consumed_warm_fill_output};
+    
+vapour_heat_results_table = cell2table(vapour_heat_sweep_results, ...
+    'VariableNames', {'Lh2 Feed pressure (bar)' 'Time taken for warm tank refuel (s)' 'LH2 consumed(kg)'});
+    writetable(vapour_heat_results_table, "Graphs/vapour_heat_sweep_results.xlsx")
+
+
 end
