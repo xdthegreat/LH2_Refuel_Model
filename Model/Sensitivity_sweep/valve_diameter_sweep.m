@@ -33,6 +33,8 @@ clear simIn simOut
 
 simIn = [valve_diameter_sweep_simIn];
 
+% simIn = setPostSimFcn(simIn, @(x) simplify_data(x));
+
 
 if rapid_flag == false && accel_flag == false && fast_restart_flag
     simOut = parsim(simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
@@ -45,7 +47,7 @@ end
 % save('Graphs/run_everything_simOut.mat', 'simOut')
 % zip('Graphs/run_everything_simOut.zip', 'Graphs/run_everything_simOut.mat')
 
-% plotting
+%% plotting
 
 close all
 valve_diameter_sweep_graphing(simOut(1, 1:valve_diameter_sweep_count), valve_diameter_vector)

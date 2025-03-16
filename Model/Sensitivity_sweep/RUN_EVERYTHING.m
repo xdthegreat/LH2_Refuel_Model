@@ -3,13 +3,17 @@
 %% RUN_EVERYTHING.m
 % This script runs all of the parameter sweeps. Good luck
 
+clc
+delete('Graphs\Sweep_log.txt')
 diary('Graphs\Sweep_log.txt')
 datetime('now','TimeZone','local','Format','d-MMM-y HH:mm:ss Z')
+
+%% start setting up
 
 rapid_flag = false;
 accel_flag = false;
 fast_restart_flag = true;
-max_allowed_stop_time = 10000;
+max_allowed_stop_time = 4000;
 
 %check matlab version
 v = matlabRelease;
@@ -23,16 +27,16 @@ end
 % select number of cases
 normal_flow_rate_sweep_count = 1;
 LH2_usage_sweep_count = 1;
-valve_diameter_sweep_count = 4;
-valve_discharge_coeff_sweep_count = 20;
-tank_wall_vapour_heat_transfer_coeff_count = 20;
-tank_wall_liquid_heat_transfer_coeff_count = 20;
-hose_length_sweep_count = 20;
-AC_tank_equivalent_conductivity_count = 20;
-tank_size_count = 20;
-LH2_FEED_PRES_COUNT = 20;
-LH2_FEED_TEMP_COUNT = 20;
-hose_thermal_conductivity_count = 20;
+valve_diameter_sweep_count = 10;
+valve_discharge_coeff_sweep_count = 10;
+tank_wall_vapour_heat_transfer_coeff_count = 10;
+tank_wall_liquid_heat_transfer_coeff_count = 10;
+hose_length_sweep_count = 10;
+AC_tank_equivalent_conductivity_count = 10;
+tank_size_count = 10;
+LH2_FEED_PRES_COUNT = 10;
+LH2_FEED_TEMP_COUNT = 10;
+hose_thermal_conductivity_count = 10;
 
 
 %sweep pos calc
@@ -107,9 +111,10 @@ else
 end
 toc;
 
-% save results
-save('Graphs/simOut.mat', 'simOut')
-zip('Graphs/simOut.zip', 'Graphs/simOut.mat')
+%% save results
+
+% save("Graphs/simOut.mat", "simOut", '-v7.3')
+% zip('Graphs/simOut.zip', 'Graphs/simOut.mat')
 
 %% graphing
 
