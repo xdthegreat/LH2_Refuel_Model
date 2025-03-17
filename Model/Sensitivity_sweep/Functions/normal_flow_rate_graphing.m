@@ -258,14 +258,6 @@ function normal_flow_rate_graphing(normal_flow_rates_simOut, AC_supply_line_port
 
 
 
-tank_filling_time_info = {Ground_LH2_total_time(idle_1_index), ...
-    Ground_LH2_total_time(start_cold_chilldown_index:idle_3_index)};
-
-
-tank_filling_time_info_table = cell2table(tank_filling_time_info, ...
-    'VariableNames', {'Warm tank fill time (s)', 'Cold tank fill time (s)'});
-    
-writetable(tank_filling_time_info_table, "Graphs/normal_tank_filling_time_results.xlsx")
 
 
 end
