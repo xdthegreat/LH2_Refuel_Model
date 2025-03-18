@@ -111,11 +111,6 @@ else
 end
 toc;
 
-%% save results
-
-% save("Graphs/simOut.mat", "simOut", '-v7.3')
-% zip('Graphs/simOut.zip', 'Graphs/simOut.mat')
-
 %% graphing
 
 close all
@@ -151,3 +146,11 @@ close all
 hose_insulation_sweep_graphing(simOut(1, LH2_FEED_TEMP_POS+1:hose_thermal_conductivity_pos), hose_thermal_conductivity_vec)
 
 diary off
+%% run nice graphing function
+run("Nice_graph")
+
+
+%% save results
+
+% save("Graphs/simOut.mat", "simOut", '-v7.3')
+% zip('Graphs/simOut.zip', 'Graphs/simOut.mat')
