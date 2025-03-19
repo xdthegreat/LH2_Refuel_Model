@@ -12,7 +12,8 @@ load('LH2_conductivity.mat')
 load('GH2_conductivity.mat')
 
 % Reynalds number
-
+Re_laminar_max = 2000;
+Re_turbulent_min = 4000;
 
 % Nusselt number
 

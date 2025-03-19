@@ -120,7 +120,7 @@ ylabel('Time taken per warm tank refuel (s)')
 title({"Time taken for warm tank refuel", ...
     "with different valve orifice diameter"})
 ylim([300, 310])
-saveas(gcf, 'Nicer_graphs/Time taken for warm tank refuel vs' + result_arrangement{target_dataset} +'.png')
+saveas(gcf, 'Nicer_graphs/Time taken for warm tank refuel vs ' + result_arrangement{target_dataset} +'.png')
 
 figure(2)
 hold on
@@ -133,7 +133,7 @@ title({"LH2 consumption for warm tank refuel", ...
     "with different valve orifice diameter"})
 ylim([0, 40])
 hold off
-saveas(gcf, 'Nicer_graphs/Time taken for warm tank consumption vs' + result_arrangement{8} +'.png')
+saveas(gcf, 'Nicer_graphs/Warm tank refuel LH2 consumption vs ' + result_arrangement{8} +'.png')
 
 
 target_dataset = find(strcmp([result_arrangement{:}], "Valve discharge coefficient"));
@@ -145,7 +145,7 @@ ylabel('Time taken per warm tank refuel (s)')
 title({"Time taken for warm tank refuel", ...
     "with different valve discharge coefficient"})
 ylim([300, 310])
-saveas(gcf, 'Nicer_graphs/Time taken for warm tank refuel vs' + result_arrangement{9} +'.png')
+saveas(gcf, 'Nicer_graphs/Time taken for warm tank refuel vs ' + result_arrangement{9} +'.png')
 
 figure(4)
 hold on
@@ -158,7 +158,7 @@ title({"LH2 consumption for warm tank refuel", ...
     "with different UAM valve discharge coefficient"})
 ylim([0, 40])
 hold off
-saveas(gcf, 'Nicer_graphs/Time taken for warm tank consumption vs' + result_arrangement{9} +'.png')
+saveas(gcf, 'Nicer_graphs/Warm tank refuel LH2 consumption vs ' + result_arrangement{9} +'.png')
 
 
 %% SENS-003, SENS-004 liquid/vapour heat transfer coefficients
@@ -172,21 +172,20 @@ ylabel('Time taken per warm tank refuel (s)')
 title({"Time taken for warm tank refuel with", ...
     "different UAM tank wall liquid heat transfer coefficient"})
 set(gca, 'XScale', 'log')
-saveas(gcf, 'Nicer_graphs/Time taken for warm tank refuel vs' + result_arrangement{target_dataset} +'.png')
+saveas(gcf, 'Nicer_graphs/Time taken for warm tank refuel vs ' + result_arrangement{target_dataset} +'.png')
 
 figure(2)
 hold on
 plot(input_vector{target_dataset}, LH2_consumed_warm_fill_output{target_dataset})
-plot(input_vector{target_dataset}, LH2_in_AC_tank_warm_fill_output{target_dataset})
 legend(["Supplied by ground station", "Stored in UAM tank"])
 xlabel("Liquid heat transfer coefficient (W/K m^2)")
 ylabel('LH2 consumed (kg)')
 title({"LH2 consumption for warm tank refuel", ...
     "with different UAM tank wall liquid heat transfer coefficient"})
-ylim([0, 40])
+ylim([25, 40])
 set(gca, 'XScale', 'log')
 hold off
-saveas(gcf, 'Nicer_graphs/Time taken for warm tank consumption vs' + result_arrangement{target_dataset} +'.png')
+saveas(gcf, 'Nicer_graphs/Warm tank refuel LH2 consumption vs ' + result_arrangement{target_dataset} +'.png')
 
 
 target_dataset = find(strcmp([result_arrangement{:}], "UAM vapour heat transfer coefficient"));
@@ -197,21 +196,33 @@ ylabel('Time taken per warm tank refuel (s)')
 title({"Time taken for warm tank refuel with", ...
     "different UAM tank wall vapour heat transfer coefficient"})
 set(gca, 'XScale', 'log')
-saveas(gcf, 'Nicer_graphs/Time taken for warm tank refuel vs' + result_arrangement{target_dataset} +'.png')
+saveas(gcf, 'Nicer_graphs/Time taken for warm tank refuel vs ' + result_arrangement{target_dataset} +'.png')
 
 figure(4)
 hold on
 plot(input_vector{target_dataset}, LH2_consumed_warm_fill_output{target_dataset})
-plot(input_vector{target_dataset}, LH2_in_AC_tank_warm_fill_output{target_dataset})
 legend(["Supplied by ground station", "Stored in UAM tank"])
 xlabel("Liquid heat transfer coefficient (W/K m^2)")
 ylabel('LH2 consumed (kg)')
 title({"LH2 consumption for warm tank refuel", ...
     "with different UAM tank wall vapour heat transfer coefficient"})
-ylim([0, 40])
+ylim([25, 40])
 set(gca, 'XScale', 'log')
 hold off
-saveas(gcf, 'Nicer_graphs/Time taken for warm tank consumption vs' + result_arrangement{target_dataset} +'.png')
+saveas(gcf, 'Nicer_graphs/Warm tank refuel LH2 consumption vs ' + result_arrangement{target_dataset} +'.png')
+
+%% SENS-005 hose length
+close all
+
+target_dataset = find(strcmp([result_arrangement{:}], "Hose length"));
+figure(1)
+plot(input_vector{target_dataset}, time_warm_refuel_output{target_dataset})
+xlabel("Length of flexible hoses (m)")
+ylabel('Time taken per warm tank refuel (s)')
+title({"Time taken for warm tank refuel with", ...
+    "different UAM tank wall heat transfer coefficient"})
+saveas(gcf, 'Nicer_graphs/Time taken for warm tank refuel vs ' + result_arrangement{target_dataset} +'.png')
+
 
 %% SENS-006 UAM tank wall heat transfer coefficient
 close all
@@ -219,27 +230,26 @@ close all
 target_dataset = find(strcmp([result_arrangement{:}], "UAM tank conductivity"));
 figure(1)
 plot(input_vector{target_dataset}, time_warm_refuel_output{target_dataset})
-xlabel("UAM tank wall heat transfer coefficient (W/K m^2)")
+xlabel("UAM tank wall heat transfer coefficient (W/K m)")
 ylabel('Time taken per warm tank refuel (s)')
 title({"Time taken for warm tank refuel with", ...
     "different UAM tank wall heat transfer coefficient"})
 set(gca, 'XScale', 'log')
-ylim([300, 305])
-saveas(gcf, 'Nicer_graphs/Time taken for warm tank refuel vs' + result_arrangement{target_dataset} +'.png')
+ylim([290, 320])
+saveas(gcf, 'Nicer_graphs/Time taken for warm tank refuel vs ' + result_arrangement{target_dataset} +'.png')
 
 figure(2)
 hold on
 plot(input_vector{target_dataset}, LH2_consumed_warm_fill_output{target_dataset})
-plot(input_vector{target_dataset}, LH2_in_AC_tank_warm_fill_output{target_dataset})
 legend(["Supplied by ground station", "Stored in UAM tank"])
-xlabel("UAM tank wall heat transfer coefficient (W/K m^2)")
+xlabel("UAM tank wall heat transfer coefficient (W/K m)")
 ylabel('LH2 consumed (kg)')
 title({"LH2 consumption for warm tank refuel", ...
     "with different UAM tank wall heat transfer coefficient"})
-ylim([0, 40])
+ylim([30, 35])
 set(gca, 'XScale', 'log')
 hold off
-saveas(gcf, 'Nicer_graphs/Time taken for warm tank consumption vs' + result_arrangement{target_dataset} +'.png')
+saveas(gcf, 'Nicer_graphs/Warm tank refuel LH2 consumption vs ' + result_arrangement{target_dataset} +'.png')
 
 
 %% SENS-008, SENS-009 feed pressure and temperature
@@ -247,28 +257,27 @@ close all
 
 target_dataset = find(strcmp([result_arrangement{:}], "Feed pressure"));
 figure(1)
-plot(input_vector{target_dataset}, time_warm_refuel_output{target_dataset})
+plot(input_vector{target_dataset}*10, time_warm_refuel_output{target_dataset})
 xlabel("Target feed pressure (bar)")
 ylabel('Time taken per warm tank refuel (s)')
 title({"Time taken for warm tank refuel with", ...
     "different target feed pressure"})
 ylim([290, 320])
 set(gca, 'XScale', 'log')
-saveas(gcf, 'Nicer_graphs/Time taken for warm tank refuel vs' + result_arrangement{target_dataset} +'.png')
+saveas(gcf, 'Nicer_graphs/Time taken for warm tank refuel vs ' + result_arrangement{target_dataset} +'.png')
 
 figure(2)
 hold on
-plot(input_vector{target_dataset}, LH2_consumed_warm_fill_output{target_dataset})
-plot(input_vector{target_dataset}, LH2_in_AC_tank_warm_fill_output{target_dataset})
+plot(input_vector{target_dataset}*10, LH2_consumed_warm_fill_output{target_dataset})
 legend(["Supplied by ground station", "Stored in UAM tank"])
 xlabel("Target feed pressure (bar)")
 ylabel('LH2 consumed (kg)')
 title({"LH2 consumption for warm tank refuel", ...
     "with different target feed pressure"})
-ylim([0, 40])
+ylim([30, 40])
 set(gca, 'XScale', 'log')
 hold off
-saveas(gcf, 'Nicer_graphs/Time taken for warm tank consumption vs' + result_arrangement{target_dataset} +'.png')
+saveas(gcf, 'Nicer_graphs/Warm tank refuel LH2 consumption vs  ' + result_arrangement{target_dataset} +'.png')
 
 
 target_dataset = find(strcmp([result_arrangement{:}], "Feed temperature"));
@@ -280,21 +289,20 @@ title({"Time taken for warm tank refuel with", ...
     "different target feed pressure"})
 set(gca, 'XScale', 'log')
 ylim([290, 320])
-saveas(gcf, 'Nicer_graphs/Time taken for warm tank refuel vs' + result_arrangement{target_dataset} +'.png')
+saveas(gcf, 'Nicer_graphs/Time taken for warm tank refuel vs ' + result_arrangement{target_dataset} +'.png')
 
 figure(4)
 hold on
 plot(input_vector{target_dataset}, LH2_consumed_warm_fill_output{target_dataset})
-plot(input_vector{target_dataset}, LH2_in_AC_tank_warm_fill_output{target_dataset})
 legend(["Supplied by ground station", "Stored in UAM tank"])
 xlabel("LH2 feed temperature (K)")
 ylabel('LH2 consumed (kg)')
 title({"LH2 consumption for warm tank refuel", ...
     "with different target feed temperature"})
-ylim([0, 40])
+ylim([25, 40])
 set(gca, 'XScale', 'log')
 hold off
-saveas(gcf, 'Nicer_graphs/Time taken for warm tank consumption vs' + result_arrangement{target_dataset} +'.png')
+saveas(gcf, 'Nicer_graphs/Warm tank refuel LH2 consumption vs ' + result_arrangement{target_dataset} +'.png')
 
 
 %% SENS-010 hose insulation
@@ -302,25 +310,29 @@ close all
 
 target_dataset = find(strcmp([result_arrangement{:}], "Hose conductivity"));
 figure(1)
+hold on
 plot(input_vector{target_dataset}, time_warm_refuel_output{target_dataset})
-xlabel("Target feed pressure (bar)")
+plot([0.38, 0.38], [0, 400],  "r--")
+hold off
+legend(["Refuel time", "Current technology"])
+xlabel("Hose conductivity (W/m)")
 ylabel('Time taken per warm tank refuel (s)')
 title({"Time taken for warm tank refuel with", ...
-    "different target feed pressure"})
+    "different hose conductivity"})
 set(gca, 'XScale', 'log')
 ylim([290, 320])
-saveas(gcf, 'Nicer_graphs/Time taken for warm tank refuel vs' + result_arrangement{target_dataset} +'.png')
+saveas(gcf, 'Nicer_graphs/Time taken for warm tank refuel vs ' + result_arrangement{target_dataset} +'.png')
 
 figure(2)
 hold on
 plot(input_vector{target_dataset}, LH2_consumed_warm_fill_output{target_dataset})
-plot(input_vector{target_dataset}, LH2_in_AC_tank_warm_fill_output{target_dataset})
-legend(["Supplied by ground station", "Stored in UAM tank"])
-xlabel("Target feed pressure (bar)")
+plot([0.38, 0.38], [0, 40],  "r--")
+legend(["Supplied by ground station", "Current technology"])
+xlabel("Hose conductivity (W/m)")
 ylabel('LH2 consumed (kg)')
 title({"LH2 consumption for warm tank refuel", ...
-    "with different target feed pressure"})
-ylim([0, 40])
+    "with different hose conductivity"})
+ylim([25, 40])
 set(gca, 'XScale', 'log')
 hold off
-saveas(gcf, 'Nicer_graphs/Time taken for warm tank consumption vs' + result_arrangement{target_dataset} +'.png')
+saveas(gcf, 'Nicer_graphs/Warm tank refuel LH2 consumption vs ' + result_arrangement{target_dataset} +'.png')
