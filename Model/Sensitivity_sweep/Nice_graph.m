@@ -229,8 +229,8 @@ close all
 
 target_dataset = find(strcmp([result_arrangement{:}], "UAM tank conductivity"));
 figure(1)
-plot(input_vector{target_dataset}, time_warm_refuel_output{target_dataset})
-xlabel("UAM tank wall heat transfer coefficient (W/K m)")
+plot(input_vector{target_dataset}*(Ambient_temp-20)/AC_wall_thickness, time_warm_refuel_output{target_dataset})
+xlabel("UAM tank wall heat transfer coefficient (W/m^2)")
 ylabel('Time taken per warm tank refuel (s)')
 title({"Time taken for warm tank refuel with", ...
     "different UAM tank wall heat transfer coefficient"})
@@ -240,9 +240,9 @@ saveas(gcf, 'Nicer_graphs/Time taken for warm tank refuel vs ' + result_arrangem
 
 figure(2)
 hold on
-plot(input_vector{target_dataset}, LH2_consumed_warm_fill_output{target_dataset})
+plot(input_vector{target_dataset}*(Ambient_temp-20)/AC_wall_thickness, LH2_consumed_warm_fill_output{target_dataset})
 legend(["Supplied by ground station", "Stored in UAM tank"])
-xlabel("UAM tank wall heat transfer coefficient (W/K m)")
+xlabel("UAM tank wall heat transfer coefficient (W/m^2)")
 ylabel('LH2 consumed (kg)')
 title({"LH2 consumption for warm tank refuel", ...
     "with different UAM tank wall heat transfer coefficient"})
