@@ -4,7 +4,7 @@ close all
 % Reads processed data from spreadsheets instead of simOut
 
 AC_tank_conductivity_results = readmatrix('Graphs\AC_tank_conductivity_sweep_results.xlsx');
-feed_pressure_sweep_results = readmatrix('Graphs\feed_pressure_sweep_results.xlsx');
+
 feed_temp_sweep_results = readmatrix('Graphs\feed_temp_sweep_results.xlsx');
 hose_insulation_sweep_results = readmatrix('Graphs\hose_insulation_sweep_results.xlsx');
 hose_length_sweep_results = readmatrix('Graphs\hose_length_sweep_results.xlsx');
@@ -13,13 +13,14 @@ m_LH2_sweep_results = readmatrix('Graphs\M_LH2_sweep_results.xlsx');
 valve_diameter_sweep_results = readmatrix('Graphs\vaalve_diameter_sweep_results.xlsx');
 valve_discharge_coeff_sweep_results = readmatrix('Graphs\vaalve_discharge_coeff_sweep_results.xlsx');
 vapour_heat_sweep_results = readmatrix('Graphs\vapour_heat_sweep_results.xlsx');
+target_tank_pressure_sweep_results = readmatrix('Graphs\target_tank_pressure_sweep_results.xlsx');
 
 
 normal_flow_rate_results = readmatrix('Graphs\normal flow rate details.xlsx');
 normal_mass_flow_rate_results = readmatrix('Graphs\normal mass flow rate details.xlsx');
 
 all_results = {AC_tank_conductivity_results, ...
-feed_pressure_sweep_results, ...
+target_tank_pressure_sweep_results, ...
 feed_temp_sweep_results, ...
 hose_insulation_sweep_results, ...
 hose_length_sweep_results, ...
@@ -29,7 +30,8 @@ valve_diameter_sweep_results, ...
 valve_discharge_coeff_sweep_results, ...
 vapour_heat_sweep_results, ...
 normal_flow_rate_results, ...
-normal_mass_flow_rate_results};
+normal_mass_flow_rate_results, ...
+target_tank_pressure_sweep_results};
 
 % cell array for results attangement
 result_arrangement = {"UAM tank conductivity", ...
@@ -41,7 +43,8 @@ result_arrangement = {"UAM tank conductivity", ...
     "Tank size", ...
     "Valve diameter", ...
     "Valve discharge coefficient", ...
-    "UAM vapour heat transfer coefficient"};
+    "UAM vapour heat transfer coefficient", 
+    "Target tank pressure"};
 
 % check dimensions
 for i = 1:length(all_results)-2
@@ -114,26 +117,24 @@ close all
 
 target_dataset = find(strcmp([result_arrangement{:}], "Valve diameter"));
 figure(1)
+yyaxis left
 plot(input_vector{target_dataset}./0.01, time_warm_refuel_output{target_dataset})
 xlabel("Fraction of valve that is unblocked")
 ylabel('Time taken per warm tank refuel (s)')
-title({"Time taken for warm tank refuel", ...
-    "with different valve orifice diameter"})
 ylim([300, 310])
-saveas(gcf, 'Nicer_graphs/Time taken for warm tank refuel vs ' + result_arrangement{target_dataset} +'.png')
 
-figure(2)
+yyaxis right
 hold on
 plot(input_vector{target_dataset}./0.01, LH2_consumed_warm_fill_output{target_dataset})
 plot(input_vector{target_dataset}./0.01, LH2_in_AC_tank_warm_fill_output{target_dataset})
-legend(["Supplied by ground station", "Stored in UAM tank"])
-xlabel("Fraction of valve that is unblocked")
-ylabel('LH2 consumed (kg)')
-title({"LH2 consumption for warm tank refuel", ...
-    "with different valve orifice diameter"})
-ylim([0, 40])
 hold off
-saveas(gcf, 'Nicer_graphs/Warm tank refuel LH2 consumption vs ' + result_arrangement{8} +'.png')
+ylabel('LH2 consumed (kg)')
+ylim([0, 40])
+legend(["Supplied by ground station", "Stored in UAM tank"])
+
+title({"Time taken for warm tank refuel and LH2", ...
+    "consumption with different valve orifice diameter"})
+saveas(gcf, 'Nicer_graphs/' + result_arrangement{target_dataset} +'.png')
 
 
 target_dataset = find(strcmp([result_arrangement{:}], "Valve discharge coefficient"));
@@ -229,8 +230,8 @@ close all
 
 target_dataset = find(strcmp([result_arrangement{:}], "UAM tank conductivity"));
 figure(1)
-plot(input_vector{target_dataset}, time_warm_refuel_output{target_dataset})
-xlabel("UAM tank wall heat transfer coefficient (W/K m)")
+plot(input_vector{target_dataset}*(Ambient_temp-20)/AC_wall_thickness, time_warm_refuel_output{target_dataset})
+xlabel("UAM tank wall heat transfer coefficient (W/m^2)")
 ylabel('Time taken per warm tank refuel (s)')
 title({"Time taken for warm tank refuel with", ...
     "different UAM tank wall heat transfer coefficient"})
@@ -240,9 +241,9 @@ saveas(gcf, 'Nicer_graphs/Time taken for warm tank refuel vs ' + result_arrangem
 
 figure(2)
 hold on
-plot(input_vector{target_dataset}, LH2_consumed_warm_fill_output{target_dataset})
+plot(input_vector{target_dataset}*(Ambient_temp-20)/AC_wall_thickness, LH2_consumed_warm_fill_output{target_dataset})
 legend(["Supplied by ground station", "Stored in UAM tank"])
-xlabel("UAM tank wall heat transfer coefficient (W/K m)")
+xlabel("UAM tank wall heat transfer coefficient (W/m^2)")
 ylabel('LH2 consumed (kg)')
 title({"LH2 consumption for warm tank refuel", ...
     "with different UAM tank wall heat transfer coefficient"})
@@ -336,3 +337,31 @@ ylim([25, 40])
 set(gca, 'XScale', 'log')
 hold off
 saveas(gcf, 'Nicer_graphs/Warm tank refuel LH2 consumption vs ' + result_arrangement{target_dataset} +'.png')
+
+%% SENS-011 UAM target pressure
+
+
+target_dataset = find(strcmp([result_arrangement{:}], "Target tank pressure"));
+figure(1)
+plot(input_vector{target_dataset}*10, time_warm_refuel_output{target_dataset})
+xlabel("UAM Target tank pressure (bar)")
+ylabel('Time taken per warm tank refuel (s)')
+title({"Time taken for warm tank refuel with", ...
+    "different target feed pressure"})
+ylim([290, 320])
+set(gca, 'XScale', 'log')
+saveas(gcf, 'Nicer_graphs/Time taken for warm tank refuel vs ' + result_arrangement{target_dataset} +'.png')
+
+figure(2)
+hold on
+plot(input_vector{target_dataset}*10, LH2_consumed_warm_fill_output{target_dataset})
+legend(["Supplied by ground station", "Stored in UAM tank"])
+xlabel("UAM Target feed pressure (bar)")
+ylabel('LH2 consumed (kg)')
+title({"LH2 consumption for warm tank refuel", ...
+    "with different target feed pressure"})
+ylim([30, 40])
+set(gca, 'XScale', 'log')
+hold off
+saveas(gcf, 'Nicer_graphs/Warm tank refuel LH2 consumption vs  ' + result_arrangement{target_dataset} +'.png')
+

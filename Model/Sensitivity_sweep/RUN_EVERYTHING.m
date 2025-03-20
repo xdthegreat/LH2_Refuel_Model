@@ -37,6 +37,7 @@ tank_size_count = 10;
 LH2_FEED_PRES_COUNT = 10;
 LH2_FEED_TEMP_COUNT = 10;
 hose_thermal_conductivity_count = 10;
+UAM_TANK_PRES_COUNT = 10;
 
 
 %sweep pos calc
@@ -52,6 +53,7 @@ tank_size_pos =  AC_tank_equivalent_conductivity_pos + tank_size_count;
 LH2_FEED_PRES_POS = tank_size_pos + LH2_FEED_PRES_COUNT;
 LH2_FEED_TEMP_POS = LH2_FEED_PRES_POS + LH2_FEED_TEMP_COUNT;
 hose_thermal_conductivity_pos = LH2_FEED_TEMP_POS + hose_thermal_conductivity_count;
+UAM_TANK_PRES_POS = hose_thermal_conductivity_pos + UAM_TANK_PRES_COUNT;
 
 
 
@@ -84,7 +86,7 @@ normal_flow_rate_simIn = normal_flow_rate_setup(rapid_flag, accel_flag, mdl);
     Tank_size_sweep_setup(rapid_flag, accel_flag, mdl, tank_size_count, max_allowed_stop_time, ...
     AC_tank_vol_limit, AC_tank_cross_sectional_area, AC_tank_radius);
 
-[Feed_pressure_sweep_simIn, LH2_FEED_PRES_VEC] = Feed_pressure_sweep_setup(rapid_flag, accel_flag, ...
+[Feed_pres_sweep_simIn, FEED_PRES_VEC] = Feed_pres_sweep_setup(rapid_flag, accel_flag, ...
     mdl, LH2_FEED_PRES_COUNT, max_allowed_stop_time);
 
 [Feed_temp_sweep_simIn, LH2_Feed_Temp_vec] = Feed_temp_sweep_setup(rapid_flag, accel_flag, ...
@@ -93,13 +95,16 @@ normal_flow_rate_simIn = normal_flow_rate_setup(rapid_flag, accel_flag, mdl);
 [hose_insulation_sweep_simIn, hose_thermal_conductivity_vec] = hose_insulation_sweep_setup(rapid_flag, accel_flag, ...
     mdl, hose_thermal_conductivity_count, max_allowed_stop_time);
 
+[UAM_tank_pressure_sweep_simIn, UAM_TANK_PRES_VEC] = UAM_tank_pressure_sweep_setup(rapid_flag, accel_flag, ...
+    mdl, UAM_TANK_PRES_COUNT, max_allowed_stop_time);
+
 
 % shove everything in one simIn
 
 simIn = [normal_flow_rate_simIn, valve_diameter_sweep_simIn, valve_discharge_coeff_sweep_simIn, ...
     tank_wall_vapour_heat_transfer_coeff_simIn, tank_wall_liquid_heat_transfer_coeff_simIn, ...
     hose_length_sweep_simIn, tank_conductivity_sweep_simIn, Tank_size_sweep_simIn, ...
-    Feed_pressure_sweep_simIn, Feed_temp_sweep_simIn, hose_insulation_sweep_simIn];
+    Feed_pres_sweep_simIn, Feed_temp_sweep_simIn, hose_insulation_sweep_simIn, UAM_tank_pressure_sweep_simIn];
 
 
 %% actual simulation
@@ -135,15 +140,18 @@ close all
 tank_conductivity_sweep_graphing(simOut(1, hose_length_sweep_pos+1:AC_tank_equivalent_conductivity_pos), ...
     AC_tank_equivalent_conductivity_vector)
 close all
-Tank_size_sweep_graphing(simOut(1, AC_tank_equivalent_conductivity_pos+1:tank_size_pos), ...
-    m_LH2_vector)
-close all
-Feed_pressure_sweep_graphing(simOut(1, tank_size_pos+1:LH2_FEED_PRES_POS), ...
-    LH2_FEED_PRES_VEC)
+Feed_pressure_sweep_graphing(simOut(1, AC_tank_equivalent_conductivity_pos+1:LH2_FEED_PRES_POS), ...
+    FEED_PRES_VEC)
 close all
 Feed_temp_sweep_graphing(simOut(1, LH2_FEED_PRES_POS+1:LH2_FEED_TEMP_POS), LH2_Feed_Temp_vec)
 close all
 hose_insulation_sweep_graphing(simOut(1, LH2_FEED_TEMP_POS+1:hose_thermal_conductivity_pos), hose_thermal_conductivity_vec)
+close all
+Tank_size_sweep_graphing(simOut(1, hose_thermal_conductivity_pos+1:tank_size_pos), ...
+    m_LH2_vector)
+close all
+UAM_tank_pressure_sweep_graphing(simOut(1, tank_size_pos+1:UAM_TANK_PRES_POS), ...
+    UAM_TANK_PRES_VEC)
 
 diary off
 %% run nice graphing function

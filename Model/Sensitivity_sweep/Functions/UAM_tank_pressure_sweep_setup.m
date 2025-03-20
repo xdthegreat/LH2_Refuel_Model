@@ -1,6 +1,6 @@
 
 
-function [Feed_pressure_sweep_simIn, LH2_FEED_PRES_VEC] = Feed_pressure_sweep_setup(rapid_flag, accel_flag, ...
+function [Feed_pressure_sweep_simIn, LH2_FEED_PRES_VEC] = UAM_tank_pressure_sweep_setup(rapid_flag, accel_flag, ...
     mdl, LH2_FEED_PRES_COUNT, max_allowed_stop_time)
 
 LH2_FEED_PRES_VEC = linspace(0.2, 0.4, LH2_FEED_PRES_COUNT);
