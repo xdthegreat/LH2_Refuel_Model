@@ -3,350 +3,65 @@ ans =
 
   <a href="matlab:helpPopup('datetime')" style="font-weight:bold">datetime</a>
 
-   18-Mar-2025 10:58:14 +0000
+   21-Mar-2025 17:07:28 +0000
 
-[18-Mar-2025 10:58:51] Checking for availability of parallel pool...
-Starting parallel pool (parpool) using the 'LocalProfile2' profile ...
-Connected to parallel pool with 10 workers.
-[18-Mar-2025 11:00:02] Starting Simulink on parallel workers...
-[18-Mar-2025 11:00:03] Configuring simulation cache folder on parallel workers...
-[18-Mar-2025 11:00:03] Loading model on parallel workers...
-[18-Mar-2025 11:00:19] Running simulations...
-[18-Mar-2025 11:08:47] Completed 1 of 101 simulation runs
-[18-Mar-2025 11:08:50] Completed 2 of 101 simulation runs
-[18-Mar-2025 11:08:53] Completed 3 of 101 simulation runs
-[18-Mar-2025 11:08:54] Completed 4 of 101 simulation runs
-[18-Mar-2025 11:08:54] Completed 5 of 101 simulation runs
-[18-Mar-2025 11:08:55] Completed 6 of 101 simulation runs
-[18-Mar-2025 11:09:03] Completed 7 of 101 simulation runs
-[18-Mar-2025 11:09:29] Completed 8 of 101 simulation runs
-[18-Mar-2025 11:10:52] Completed 9 of 101 simulation runs
-[18-Mar-2025 11:12:50] Completed 10 of 101 simulation runs
-[18-Mar-2025 11:12:55] Completed 11 of 101 simulation runs
-[18-Mar-2025 11:12:57] Completed 12 of 101 simulation runs
-[18-Mar-2025 11:13:02] Completed 13 of 101 simulation runs
-[18-Mar-2025 11:13:04] Completed 14 of 101 simulation runs
-[18-Mar-2025 11:13:13] Completed 15 of 101 simulation runs
-[18-Mar-2025 11:13:28] Completed 16 of 101 simulation runs
-[18-Mar-2025 11:13:34] Completed 17 of 101 simulation runs
-[18-Mar-2025 11:13:38] Completed 18 of 101 simulation runs
-[18-Mar-2025 11:15:01] Completed 19 of 101 simulation runs
-[18-Mar-2025 11:17:00] Completed 20 of 101 simulation runs
-[18-Mar-2025 11:17:23] Completed 21 of 101 simulation runs
-[18-Mar-2025 11:17:46] Completed 22 of 101 simulation runs
-[18-Mar-2025 11:18:52] Completed 23 of 101 simulation runs
-[18-Mar-2025 11:18:54] Completed 24 of 101 simulation runs
-[18-Mar-2025 11:19:03] Completed 25 of 101 simulation runs
-[18-Mar-2025 11:19:09] Completed 26 of 101 simulation runs
-[18-Mar-2025 11:19:16] Completed 27 of 101 simulation runs
-[18-Mar-2025 11:21:24] Completed 28 of 101 simulation runs
-[18-Mar-2025 11:21:46] Completed 29 of 101 simulation runs
-[18-Mar-2025 11:21:57] Completed 30 of 101 simulation runs
-[18-Mar-2025 11:22:24] Completed 31 of 101 simulation runs
-[18-Mar-2025 11:22:37] Completed 32 of 101 simulation runs
-[18-Mar-2025 11:22:45] Completed 33 of 101 simulation runs
-[18-Mar-2025 11:23:25] Completed 34 of 101 simulation runs
-[18-Mar-2025 11:24:32] Completed 35 of 101 simulation runs
-[18-Mar-2025 11:24:43] Completed 36 of 101 simulation runs
-[18-Mar-2025 11:26:49] Completed 37 of 101 simulation runs
-[18-Mar-2025 11:27:42] Completed 38 of 101 simulation runs
-[18-Mar-2025 11:27:56] Completed 39 of 101 simulation runs
-[18-Mar-2025 11:28:03] Completed 40 of 101 simulation runs
-[18-Mar-2025 11:29:27] Completed 41 of 101 simulation runs
-[18-Mar-2025 11:29:35] Completed 42 of 101 simulation runs
-[18-Mar-2025 11:30:11] Completed 43 of 101 simulation runs
-[18-Mar-2025 11:30:29] Completed 44 of 101 simulation runs
-[18-Mar-2025 11:31:17] Completed 45 of 101 simulation runs
-[18-Mar-2025 11:32:33] Completed 46 of 101 simulation runs
-[18-Mar-2025 11:33:01] Completed 47 of 101 simulation runs
-[18-Mar-2025 11:33:17] Completed 48 of 101 simulation runs
-[18-Mar-2025 11:33:28] Completed 49 of 101 simulation runs
-[18-Mar-2025 11:34:16] Completed 50 of 101 simulation runs
-[18-Mar-2025 11:34:22] Completed 51 of 101 simulation runs
-[18-Mar-2025 11:34:38] Completed 52 of 101 simulation runs
-[18-Mar-2025 11:35:02] Completed 53 of 101 simulation runs
-[18-Mar-2025 11:35:59] Completed 54 of 101 simulation runs
-[18-Mar-2025 11:36:58] Completed 55 of 101 simulation runs
-[18-Mar-2025 11:37:30] Completed 56 of 101 simulation runs
-[18-Mar-2025 11:37:49] Completed 57 of 101 simulation runs
-[18-Mar-2025 11:38:17] Completed 58 of 101 simulation runs
-[18-Mar-2025 11:38:47] Completed 59 of 101 simulation runs
-[18-Mar-2025 11:38:53] Completed 60 of 101 simulation runs
-[18-Mar-2025 11:39:50] Completed 61 of 101 simulation runs
-[18-Mar-2025 11:41:00] Completed 62 of 101 simulation runs
-[18-Mar-2025 11:41:19] Completed 63 of 101 simulation runs
-[18-Mar-2025 11:42:31] Completed 64 of 101 simulation runs
-[18-Mar-2025 11:43:16] Completed 65 of 101 simulation runs
-[18-Mar-2025 11:43:53] Completed 66 of 101 simulation runs
-[18-Mar-2025 11:44:21] Completed 67 of 101 simulation runs
-[18-Mar-2025 11:44:28] Completed 68 of 101 simulation runs
-[18-Mar-2025 11:46:13] Completed 69 of 101 simulation runs
-[18-Mar-2025 11:46:19] Completed 70 of 101 simulation runs
-[18-Mar-2025 11:47:18] Completed 71 of 101 simulation runs
-[18-Mar-2025 11:47:20] Completed 72 of 101 simulation runs
-[18-Mar-2025 11:48:09] Completed 73 of 101 simulation runs
-[18-Mar-2025 11:48:21] Completed 74 of 101 simulation runs
-[18-Mar-2025 11:49:21] Completed 75 of 101 simulation runs
-[18-Mar-2025 11:50:11] Completed 76 of 101 simulation runs
-[18-Mar-2025 11:53:37] Completed 77 of 101 simulation runs
-[18-Mar-2025 11:53:46] Completed 78 of 101 simulation runs
-[18-Mar-2025 11:55:13] Completed 79 of 101 simulation runs
-[18-Mar-2025 11:55:59] Completed 80 of 101 simulation runs
-[18-Mar-2025 11:58:11] Completed 81 of 101 simulation runs
-[18-Mar-2025 11:58:52] Completed 82 of 101 simulation runs
-[18-Mar-2025 11:59:23] Completed 83 of 101 simulation runs
-[18-Mar-2025 11:59:58] Completed 84 of 101 simulation runs
-[18-Mar-2025 12:01:54] Completed 85 of 101 simulation runs
-[18-Mar-2025 12:02:53] Completed 86 of 101 simulation runs
-[18-Mar-2025 12:03:20] Completed 87 of 101 simulation runs
-[18-Mar-2025 12:03:46] Completed 88 of 101 simulation runs
-[18-Mar-2025 12:05:46] Completed 89 of 101 simulation runs
-[18-Mar-2025 12:06:49] Completed 90 of 101 simulation runs
-[18-Mar-2025 12:07:24] Completed 91 of 101 simulation runs
-[18-Mar-2025 12:07:40] Completed 92 of 101 simulation runs
-[18-Mar-2025 12:09:51] Completed 93 of 101 simulation runs
-[18-Mar-2025 12:10:54] Completed 94 of 101 simulation runs
-[18-Mar-2025 12:11:06] Completed 95 of 101 simulation runs
-[18-Mar-2025 12:12:04] Completed 96 of 101 simulation runs
-[18-Mar-2025 12:16:30] Cleaning up parallel workers...
-Elapsed time is 4700.647206 seconds.
-Max flow speed for LH2 is 56.5231m/s.
-Max flow speed for GH2 is 182.9013m/s.
-Max mass flow rate for GH2 during warm tank warmup is 0.29821kg/s.
-Mean mass flow rate for GH2 during warm tank warmup is 0.029671kg/s.
-Max mass flow rate  for GH2 during cold tank warmup is 0.73724kg/s.
-Mean mass flow rate for GH2 during cold tank warmup is 0.085393kg/s.
-Max mass flow rate for GH2 during defuel tank drain is 1.7793kg/s.
-Mean mass flow rate for GH2 during defuel tank drain is 0.32146kg/s.
-Max mass flow rate for LH2 during warm tank chilldown is 0.040122kg/s.
-Mean mass flow rate for LH2 during warm tank chilldown is 0.013315kg/s.
-Max mass flow rate for LH2 during warm tank fill is 0.54053kg/s.
-Mean mass flow rate for LH2 during warm tank fill is 0.073819kg/s.
-Max mass flow rate for LH2 during cold tank chilldown is 0.16773kg/s.
-Mean mass flow rate for LH2 during cold tank chilldown is 0.018931kg/s.
-Max mass flow rate for LH2 during cold tank fill is 1.5752kg/s.
-Mean mass flow rate for LH2 during cold tank fill is 0.26404kg/s.
-Max mass flow rate for LH2 during defuel chilldown is 0.17198kg/s.
-Mean mass flow rate for LH2 during defuel chilldown is 0.023448kg/s.
-            <strong>Operation phase</strong>            <strong>Mean flow rate</strong>    <strong>Unit</strong> 
-    <strong>_______________________________</strong>    <strong>______________</strong>    <strong>_____</strong>
-
-    "Warm tank refuel chilldown"            21.51        "m/s"
-    "Warm tank refuel tank filling"        5.4887        "m/s"
-    "Warm tank refuel warmup"              16.181        "m/s"
-    "Cold tank refuel chilldown"           22.372        "m/s"
-    "Cold tank refuel tank filling"        4.9962        "m/s"
-    "Cold tank refuel warmup"              27.436        "m/s"
-    "Defuel chilldown"                     30.452        "m/s"
-    "Defuel wamrup"                        15.822        "m/s"
-
-Total LH2 supplied by ground station = 33.0981kg.
-Total LH2 in the UAM tank = 16.488kg.
-Total LH2 supplied by ground station = 29.944kg.
-Total LH2 in the UAM tank = 16.488kg.
-Total LH2 supplied by ground station = 32.9604kg.
-Total LH2 in the UAM tank = 16.3596kg.
-Total LH2 supplied by ground station = 33.0404kg.
-Total LH2 in the UAM tank = 16.3831kg.
-Total LH2 supplied by ground station = 33.1089kg.
-Total LH2 in the UAM tank = 16.4458kg.
-Total LH2 supplied by ground station = 33.1623kg.
-Total LH2 in the UAM tank = 16.4995kg.
-Total LH2 supplied by ground station = 33.208kg.
-Total LH2 in the UAM tank = 16.5439kg.
-Total LH2 supplied by ground station = 32.992kg.
-Total LH2 in the UAM tank = 16.3913kg.
-Total LH2 supplied by ground station = 33.021kg.
-Total LH2 in the UAM tank = 16.4143kg.
-Total LH2 supplied by ground station = 33.0508kg.
-Total LH2 in the UAM tank = 16.4427kg.
-Total LH2 supplied by ground station = 33.0741kg.
-Total LH2 in the UAM tank = 16.4651kg.
-Total LH2 supplied by ground station = 33.0981kg.
-Total LH2 in the UAM tank = 16.488kg.
-Total LH2 supplied by ground station = 33.0428kg.
-Total LH2 in the UAM tank = 16.4294kg.
-Total LH2 supplied by ground station = 33.0572kg.
-Total LH2 in the UAM tank = 16.444kg.
-Total LH2 supplied by ground station = 33.0665kg.
-Total LH2 in the UAM tank = 16.4568kg.
-Total LH2 supplied by ground station = 33.0787kg.
-Total LH2 in the UAM tank = 16.4671kg.
-Total LH2 supplied by ground station = 33.0872kg.
-Total LH2 in the UAM tank = 16.4764kg.
-Total LH2 supplied by ground station = 33.09kg.
-Total LH2 in the UAM tank = 16.4793kg.
-Total LH2 supplied by ground station = 33.1011kg.
-Total LH2 in the UAM tank = 16.4901kg.
-Total LH2 supplied by ground station = 33.1042kg.
-Total LH2 in the UAM tank = 16.4923kg.
-Total LH2 supplied by ground station = 33.1072kg.
-Total LH2 in the UAM tank = 16.4953kg.
-Total LH2 supplied by ground station = 33.1142kg.
-Total LH2 in the UAM tank = 16.5019kg.
-    0.4000   33.0428   16.4294    0.4972   29.7950   14.6996    0.4934  302.0000  269.0000
-    0.4444   33.0572   16.4440    0.4974   29.7552   14.5875    0.4903  302.0000  269.0000
-    0.4889   33.0665   16.4568    0.4977   29.9490   14.7813    0.4936  302.5000  269.5000
-    0.5333   33.0787   16.4671    0.4978   29.9166   14.8234    0.4955  302.5000  269.0000
-    0.5778   33.0872   16.4764    0.4980   29.9194   14.8461    0.4962  302.5000  269.0000
-    0.6222   33.0900   16.4793    0.4980   29.7066   14.6666    0.4937  302.5000  268.5000
-    0.6667   33.1011   16.4901    0.4982   29.7306   14.7013    0.4945  302.5000  268.5000
-    0.7111   33.1042   16.4923    0.4982   29.7553   14.7294    0.4950  302.5000  268.5000
-    0.7556   33.1072   16.4953    0.4982   29.7820   14.7697    0.4959  302.5000  268.0000
-    0.8000   33.1142   16.5019    0.4983   29.7807   14.8398    0.4983  302.5000  268.5000
-
-Total LH2 supplied by ground station = 37.8864kg.
-Total LH2 in the UAM tank = 15.2309kg.
-Total LH2 supplied by ground station = 37.7965kg.
-Total LH2 in the UAM tank = 15.4382kg.
-Total LH2 supplied by ground station = 37.1496kg.
-Total LH2 in the UAM tank = 15.3433kg.
-Total LH2 supplied by ground station = 36.6247kg.
-Total LH2 in the UAM tank = 15.6119kg.
-Total LH2 supplied by ground station = 35.5758kg.
-Total LH2 in the UAM tank = 15.5653kg.
-Total LH2 supplied by ground station = 34.7657kg.
-Total LH2 in the UAM tank = 15.7231kg.
-Total LH2 supplied by ground station = 33.7501kg.
-Total LH2 in the UAM tank = 16.1418kg.
-Total LH2 supplied by ground station = 33.1351kg.
-Total LH2 in the UAM tank = 16.5749kg.
-Total LH2 supplied by ground station = 32.6943kg.
-Total LH2 in the UAM tank = 16.7087kg.
-Total LH2 supplied by ground station = 32.3508kg.
-Total LH2 in the UAM tank = 16.7305kg.
-Error spotted, handling in graphing
-Total LH2 supplied by ground station = 30.079kg.
-Total LH2 in the UAM tank = 17.0099kg.
-Total LH2 supplied by ground station = 30.4221kg.
-Total LH2 in the UAM tank = 16.9968kg.
-Total LH2 supplied by ground station = 31.0436kg.
-Total LH2 in the UAM tank = 16.9518kg.
-Total LH2 supplied by ground station = 31.7552kg.
-Total LH2 in the UAM tank = 16.7288kg.
-Total LH2 supplied by ground station = 32.4286kg.
-Total LH2 in the UAM tank = 16.4462kg.
-Total LH2 supplied by ground station = 32.9033kg.
-Total LH2 in the UAM tank = 16.5275kg.
-Total LH2 supplied by ground station = 33.3818kg.
-Total LH2 in the UAM tank = 16.2556kg.
-Total LH2 supplied by ground station = 33.581kg.
-Total LH2 in the UAM tank = 16.1489kg.
-Total LH2 supplied by ground station = 33.7341kg.
-Total LH2 in the UAM tank = 16.1731kg.
-Total LH2 supplied by ground station = 23.6952kg.
-Total LH2 in the UAM tank = 16.4475kg.
-Total LH2 supplied by ground station = 24.7941kg.
-Total LH2 in the UAM tank = 16.3282kg.
-Total LH2 supplied by ground station = 26.0332kg.
-Total LH2 in the UAM tank = 16.2583kg.
-Total LH2 supplied by ground station = 27.132kg.
-Total LH2 in the UAM tank = 16.2303kg.
-Total LH2 supplied by ground station = 28.238kg.
-Total LH2 in the UAM tank = 16.1905kg.
-Total LH2 supplied by ground station = 29.1403kg.
-Total LH2 in the UAM tank = 16.1002kg.
-Total LH2 supplied by ground station = 30.2473kg.
-Total LH2 in the UAM tank = 16.2325kg.
-Total LH2 supplied by ground station = 31.1529kg.
-Total LH2 in the UAM tank = 16.2593kg.
-Total LH2 supplied by ground station = 32.1023kg.
-Total LH2 in the UAM tank = 16.3613kg.
-Total LH2 supplied by ground station = 33.0981kg.
-Total LH2 in the UAM tank = 16.488kg.
-Total LH2 supplied by ground station = 33.1129kg.
-Total LH2 in the UAM tank = 16.4775kg.
-Total LH2 supplied by ground station = 33.1157kg.
-Total LH2 in the UAM tank = 16.4855kg.
-Total LH2 supplied by ground station = 33.1115kg.
-Total LH2 in the UAM tank = 16.4686kg.
-Total LH2 supplied by ground station = 33.1102kg.
-Total LH2 in the UAM tank = 16.5123kg.
-Total LH2 supplied by ground station = 33.1071kg.
-Total LH2 in the UAM tank = 16.4731kg.
-Total LH2 supplied by ground station = 33.0993kg.
-Total LH2 in the UAM tank = 16.4787kg.
-Total LH2 supplied by ground station = 33.0852kg.
-Total LH2 in the UAM tank = 16.4941kg.
-Total LH2 supplied by ground station = 33.0528kg.
-Total LH2 in the UAM tank = 16.4936kg.
-Total LH2 supplied by ground station = 33.2373kg.
-Total LH2 in the UAM tank = 16.6494kg.
-Total LH2 supplied by ground station = 33.3125kg.
-Total LH2 in the UAM tank = 16.3948kg.
-Total LH2 supplied by ground station = 32.3007kg.
-Total LH2 in the UAM tank = 15.7396kg.
-Total LH2 supplied by ground station = 38.2127kg.
-Total LH2 in the UAM tank = 21.0202kg.
-Total LH2 supplied by ground station = 44.1645kg.
-Total LH2 in the UAM tank = 27.371kg.
-Total LH2 supplied by ground station = 49.6922kg.
-Total LH2 in the UAM tank = 32.7629kg.
-Total LH2 supplied by ground station = 55.7156kg.
-Total LH2 in the UAM tank = 38.5349kg.
-Total LH2 supplied by ground station = 61.7113kg.
-Total LH2 in the UAM tank = 45.2146kg.
-Total LH2 supplied by ground station = 67.4817kg.
-Total LH2 in the UAM tank = 50.9852kg.
-Total LH2 supplied by ground station = 73.2176kg.
-Total LH2 in the UAM tank = 56.7411kg.
-Total LH2 supplied by ground station = 78.8628kg.
-Total LH2 in the UAM tank = 62.4696kg.
-Total LH2 supplied by ground station = 84.2337kg.
-Total LH2 in the UAM tank = 67.8331kg.
-Total LH2 supplied by ground station = 34.0931kg.
-Total LH2 in the UAM tank = 16.0481kg.
-Total LH2 supplied by ground station = 33.7252kg.
-Total LH2 in the UAM tank = 16.0549kg.
-Total LH2 supplied by ground station = 33.529kg.
-Total LH2 in the UAM tank = 16.0584kg.
-Total LH2 supplied by ground station = 33.439kg.
-Total LH2 in the UAM tank = 16.341kg.
-Total LH2 supplied by ground station = 33.1876kg.
-Total LH2 in the UAM tank = 16.492kg.
-Total LH2 supplied by ground station = 33.0349kg.
-Total LH2 in the UAM tank = 16.1716kg.
-Total LH2 supplied by ground station = 33.0651kg.
-Total LH2 in the UAM tank = 15.858kg.
-Total LH2 supplied by ground station = 32.9972kg.
-Total LH2 in the UAM tank = 15.8821kg.
-Error spotted, handling in graphing
-Error spotted, handling in graphing
-Error spotted, handling in graphing
-Total LH2 supplied by ground station = 33.2369kg.
-Total LH2 in the UAM tank = 16.2665kg.
-Total LH2 supplied by ground station = 33.2955kg.
-Total LH2 in the UAM tank = 16.3715kg.
-Total LH2 supplied by ground station = 33.1878kg.
-Total LH2 in the UAM tank = 16.3619kg.
-Error spotted, handling in graphing
-Total LH2 supplied by ground station = 33.0883kg.
-Total LH2 in the UAM tank = 16.3977kg.
-Total LH2 supplied by ground station = 33.0981kg.
-Total LH2 in the UAM tank = 16.488kg.
-Total LH2 supplied by ground station = 33.2203kg.
-Total LH2 in the UAM tank = 16.5043kg.
-Total LH2 supplied by ground station = 33.4059kg.
-Total LH2 in the UAM tank = 16.4602kg.
-Total LH2 supplied by ground station = 33.4083kg.
-Total LH2 in the UAM tank = 16.3446kg.
-Total LH2 supplied by ground station = 33.142kg.
-Total LH2 in the UAM tank = 16.4789kg.
-Total LH2 supplied by ground station = 33.1361kg.
-Total LH2 in the UAM tank = 16.4908kg.
-Total LH2 supplied by ground station = 33.135kg.
-Total LH2 in the UAM tank = 16.5206kg.
-Total LH2 supplied by ground station = 33.1294kg.
-Total LH2 in the UAM tank = 16.5155kg.
-Total LH2 supplied by ground station = 33.1086kg.
-Total LH2 in the UAM tank = 16.4969kg.
-Total LH2 supplied by ground station = 33.0636kg.
-Total LH2 in the UAM tank = 16.5062kg.
-Total LH2 supplied by ground station = 33.2138kg.
-Total LH2 in the UAM tank = 16.6379kg.
-Total LH2 supplied by ground station = 33.0663kg.
-Total LH2 in the UAM tank = 16.5602kg.
-Total LH2 supplied by ground station = 33.9306kg.
-Total LH2 in the UAM tank = 16.4256kg.
-Total LH2 supplied by ground station = 36.472kg.
-Total LH2 in the UAM tank = 16.0851kg.
+[21-Mar-2025 17:08:29] Checking for availability of parallel pool...
+Starting parallel pool (parpool) using the 'LocalProfile1' profile ...
+21-Mar-2025 17:09:58: Job Queued. Waiting for parallel pool job with ID 4 to start ...
+21-Mar-2025 17:10:59: Job Queued. Waiting for parallel pool job with ID 4 to start ...
+Connected to parallel pool with 24 workers.
+[21-Mar-2025 17:11:59] Starting Simulink on parallel workers...
+[21-Mar-2025 17:12:02] Configuring simulation cache folder on parallel workers...
+[21-Mar-2025 17:12:04] Loading model on parallel workers...
+[21-Mar-2025 17:12:42] Running simulations...
+[21-Mar-2025 17:26:52] Completed 1 of 111 simulation runs. Run 2 has errors.
+[Warning: Graphics timeout occurred. To share details of this issue with MathWorks technical
+support, please include that this is an unresponsive graphics client with your service request.] 
+[> In MultiSim.internal/FunctionCallThrottler/call
+In MultiSim/JobStatusDB/updateRun
+In MultiSim/JobStatusDB/ReceiveUpdatesCB
+In MultiSim.JobStatusDB>@(varargin)obj.ReceiveUpdatesCB(varargin{:})
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('parallel.pool.DataQueue>iDispatchDataReceived', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+pool\DataQueue.m', 252)" style="font-weight:bold">parallel.pool.DataQueue>iDispatchDataReceived</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+pool\DataQueue.m',252,0)">line 252</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('parallel.pool.DataQueue>@(src,event)iDispatchDataReceived(func,src,event)', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+pool\DataQueue.m', 232)" style="font-weight:bold">parallel.pool.DataQueue>@(src,event)iDispatchDataReceived(func,src,event)</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+pool\DataQueue.m',232,0)">line 232</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('parallel.pool/DataQueue/dispatchContinuation', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+pool\DataQueue.m', 245)" style="font-weight:bold">parallel.pool/DataQueue/dispatchContinuation</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+pool\DataQueue.m',245,0)">line 245</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('parallel.pool/DataQueue/maybeDrainAndDispatchAllDataOnQueue', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+pool\DataQueue.m', 201)" style="font-weight:bold">parallel.pool/DataQueue/maybeDrainAndDispatchAllDataOnQueue</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+pool\DataQueue.m',201,0)">line 201</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('parallel.internal.pool/DataQueue/maybeDrainAndDispatchAllDataOnQueue', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+internal\+pool\DataQueue.m', 166)" style="font-weight:bold">parallel.internal.pool/DataQueue/maybeDrainAndDispatchAllDataOnQueue</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+internal\+pool\DataQueue.m',166,0)">line 166</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('parallel.internal.dataqueue.AbstractDataQueue.notifyQueue', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+internal\+dataqueue\AbstractDataQueue.m', 164)" style="font-weight:bold">parallel.internal.dataqueue.AbstractDataQueue.notifyQueue</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+internal\+dataqueue\AbstractDataQueue.m',164,0)">line 164</a>)
+In Simulink/SimulationManager/executeSims
+In Simulink/SimulationManager/execute
+In Simulink/SimulationManager/run
+In parsim
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('RUN_EVERYTHING', 'C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\RUN_EVERYTHING.m', 113)" style="font-weight:bold">RUN_EVERYTHING</a> (<a href="matlab: opentoline('C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\RUN_EVERYTHING.m',113,0)">line 113</a>)] 
+[21-Mar-2025 17:37:39] Completed 2 of 111 simulation runs
+[21-Mar-2025 17:47:42] Completed 3 of 111 simulation runs
+[21-Mar-2025 17:47:47] Completed 4 of 111 simulation runs
+[21-Mar-2025 17:48:00] Completed 5 of 111 simulation runs
+[21-Mar-2025 17:48:05] Completed 6 of 111 simulation runs
+[21-Mar-2025 17:48:11] Completed 7 of 111 simulation runs
+[21-Mar-2025 17:48:16] Completed 8 of 111 simulation runs
+[21-Mar-2025 17:48:20] Completed 9 of 111 simulation runs
+[21-Mar-2025 17:48:28] Completed 10 of 111 simulation runs
+[21-Mar-2025 17:48:36] Completed 11 of 111 simulation runs
+[Warning: Graphics timeout occurred. To share details of this issue with MathWorks technical
+support, please include that this is an unresponsive graphics client with your service request.] 
+[> In MultiSim.internal/FunctionCallThrottler/call
+In MultiSim/JobStatusDB/updateRun
+In MultiSim/JobStatusDB/ReceiveUpdatesCB
+In MultiSim.JobStatusDB>@(varargin)obj.ReceiveUpdatesCB(varargin{:})
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('parallel.pool.DataQueue>iDispatchDataReceived', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+pool\DataQueue.m', 252)" style="font-weight:bold">parallel.pool.DataQueue>iDispatchDataReceived</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+pool\DataQueue.m',252,0)">line 252</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('parallel.pool.DataQueue>@(src,event)iDispatchDataReceived(func,src,event)', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+pool\DataQueue.m', 232)" style="font-weight:bold">parallel.pool.DataQueue>@(src,event)iDispatchDataReceived(func,src,event)</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+pool\DataQueue.m',232,0)">line 232</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('parallel.pool/DataQueue/dispatchContinuation', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+pool\DataQueue.m', 245)" style="font-weight:bold">parallel.pool/DataQueue/dispatchContinuation</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+pool\DataQueue.m',245,0)">line 245</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('parallel.pool/DataQueue/maybeDrainAndDispatchAllDataOnQueue', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+pool\DataQueue.m', 201)" style="font-weight:bold">parallel.pool/DataQueue/maybeDrainAndDispatchAllDataOnQueue</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+pool\DataQueue.m',201,0)">line 201</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('parallel.internal.pool/DataQueue/maybeDrainAndDispatchAllDataOnQueue', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+internal\+pool\DataQueue.m', 166)" style="font-weight:bold">parallel.internal.pool/DataQueue/maybeDrainAndDispatchAllDataOnQueue</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+internal\+pool\DataQueue.m',166,0)">line 166</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('parallel.internal.dataqueue.AbstractDataQueue.notifyQueue', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+internal\+dataqueue\AbstractDataQueue.m', 164)" style="font-weight:bold">parallel.internal.dataqueue.AbstractDataQueue.notifyQueue</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+internal\+dataqueue\AbstractDataQueue.m',164,0)">line 164</a>)
+In Simulink/SimulationManager/executeSims
+In Simulink/SimulationManager/execute
+In Simulink/SimulationManager/run
+In parsim
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('RUN_EVERYTHING', 'C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\RUN_EVERYTHING.m', 113)" style="font-weight:bold">RUN_EVERYTHING</a> (<a href="matlab: opentoline('C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\RUN_EVERYTHING.m',113,0)">line 113</a>)] 
+[21-Mar-2025 18:05:59] Completed 12 of 111 simulation runs
+[21-Mar-2025 18:06:00] Completed 13 of 111 simulation runs
+render process terminated: TS_PROCESS_WAS_KILLED
+render process terminated: TS_PROCESS_WAS_KILLED
+render process terminated: TS_PROCESS_WAS_KILLED
+Parallel pool using the 'LocalProfile1' profile is shutting down.

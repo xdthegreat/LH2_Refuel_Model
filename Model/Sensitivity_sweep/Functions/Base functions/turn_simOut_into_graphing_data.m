@@ -20,7 +20,8 @@ function [input_vector_output, LH2_consumed_warm_fill_output, ...
         Ground_LH2_total = simOut(1, i).yout{4}.Values.Data;
         AC_LH2_total = simOut(1, i).yout{3}.Values.Data;
         Ground_LH2_total_time = simOut(1, i).yout{4}.Values.Time;
-    
+   
+
         disp("Total LH2 supplied by ground station = " + Ground_LH2_total(idle_1_index) + "kg.")
         disp("Total LH2 in the UAM tank = " + AC_LH2_total(idle_1_index) + "kg.")
 
