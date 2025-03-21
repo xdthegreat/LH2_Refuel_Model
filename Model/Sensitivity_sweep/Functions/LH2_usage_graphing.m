@@ -14,23 +14,22 @@ function LH2_usage_graphing(LH2_usage_simOut)
             mode_breakpoint_array = [mode_breakpoint_array, AC_mode_time(i+1)];
         end
     end
-    
-    start_warm_chilldown_index = find(LH2_usage_simOut.tout == mode_breakpoint_array(1));
-    start_warm_tank_fill_index = find(LH2_usage_simOut.tout == mode_breakpoint_array(2));
-    start_warm_warmup_index = find(LH2_usage_simOut.tout == mode_breakpoint_array(3));
-    start_warm_disconnect_index = find(LH2_usage_simOut.tout == mode_breakpoint_array(4));
-    idle_1_index = find(LH2_usage_simOut.tout == mode_breakpoint_array(5));
-    start_engine_feed_index = find(LH2_usage_simOut.tout == mode_breakpoint_array(6));
-    idle_2_index = find(LH2_usage_simOut.tout == mode_breakpoint_array(7));
-    start_cold_chilldown_index = find(LH2_usage_simOut.tout == mode_breakpoint_array(8));
-    start_cold_tank_fill_index = find(LH2_usage_simOut.tout == mode_breakpoint_array(9));
-    start_cold_warmup_index = find(LH2_usage_simOut.tout == mode_breakpoint_array(10));
-    start_cold_disconnect_index = find(LH2_usage_simOut.tout == mode_breakpoint_array(11));
-    idle_3_index = find(LH2_usage_simOut.tout == mode_breakpoint_array(12));
-    start_defuel_chilldown_index = find(LH2_usage_simOut.tout == mode_breakpoint_array(13));
-    start_defuel_drain_index = find(LH2_usage_simOut.tout == mode_breakpoint_array(14));
-    start_defuel_disconnect = find(LH2_usage_simOut.tout == mode_breakpoint_array(15));
-    
+        start_warm_chilldown_index = find_nearest(mode_breakpoint_array(1), LH2_usage_simOut.tout);
+    start_warm_tank_fill_index = find_nearest(mode_breakpoint_array(2), LH2_usage_simOut.tout);
+    start_warm_warmup_index = find_nearest(mode_breakpoint_array(3), LH2_usage_simOut.tout);
+    start_warm_disconnect_index = find_nearest(mode_breakpoint_array(4), LH2_usage_simOut.tout);
+    idle_1_index = find_nearest(mode_breakpoint_array(5), LH2_usage_simOut.tout);
+    start_engine_feed_index = find_nearest(mode_breakpoint_array(6), LH2_usage_simOut.tout);
+    idle_2_index = find_nearest(mode_breakpoint_array(7), LH2_usage_simOut.tout);
+    start_cold_chilldown_index = find_nearest(mode_breakpoint_array(8), LH2_usage_simOut.tout);
+    start_cold_tank_fill_index = find_nearest(mode_breakpoint_array(9), LH2_usage_simOut.tout);
+    start_cold_warmup_index = find_nearest(mode_breakpoint_array(10), LH2_usage_simOut.tout);
+    start_cold_disconnect_index = find_nearest(mode_breakpoint_array(11), LH2_usage_simOut.tout);
+    idle_3_index = find_nearest(mode_breakpoint_array(12), LH2_usage_simOut.tout);
+    start_defuel_chilldown_index = find_nearest(mode_breakpoint_array(13), LH2_usage_simOut.tout);
+    start_defuel_drain_index = find_nearest(mode_breakpoint_array(14), LH2_usage_simOut.tout);
+    start_defuel_disconnect = find_nearest(mode_breakpoint_array(15), LH2_usage_simOut.tout);
+
     % LH2 usage for 
     Ground_LH2_total = LH2_usage_simOut.yout{4}.Values.Data;
     AC_LH2_total = LH2_usage_simOut.yout{3}.Values.Data;
