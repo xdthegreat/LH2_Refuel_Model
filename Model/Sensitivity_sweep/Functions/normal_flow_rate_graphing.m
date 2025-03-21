@@ -42,21 +42,21 @@ function normal_flow_rate_graphing(normal_flow_rates_simOut, AC_supply_line_port
         end
     end
     
-    start_warm_chilldown_index = find(normal_flow_rates_simOut.tout == mode_breakpoint_array(1));
-    start_warm_tank_fill_index = find(normal_flow_rates_simOut.tout == mode_breakpoint_array(2));
-    start_warm_warmup_index = find(normal_flow_rates_simOut.tout == mode_breakpoint_array(3));
-    start_warm_disconnect_index = find(normal_flow_rates_simOut.tout == mode_breakpoint_array(4));
-    idle_1_index = find(normal_flow_rates_simOut.tout == mode_breakpoint_array(5));
-    start_engine_feed_index = find(normal_flow_rates_simOut.tout == mode_breakpoint_array(6));
-    idle_2_index = find(normal_flow_rates_simOut.tout == mode_breakpoint_array(7));
-    start_cold_chilldown_index = find(normal_flow_rates_simOut.tout == mode_breakpoint_array(8));
-    start_cold_tank_fill_index = find(normal_flow_rates_simOut.tout == mode_breakpoint_array(9));
-    start_cold_warmup_index = find(normal_flow_rates_simOut.tout == mode_breakpoint_array(10));
-    start_cold_disconnect_index = find(normal_flow_rates_simOut.tout == mode_breakpoint_array(11));
-    idle_3_index = find(normal_flow_rates_simOut.tout == mode_breakpoint_array(12));
-    start_defuel_chilldown_index = find(normal_flow_rates_simOut.tout == mode_breakpoint_array(13));
-    start_defuel_drain_index = find(normal_flow_rates_simOut.tout == mode_breakpoint_array(14));
-    start_defuel_disconnect = find(normal_flow_rates_simOut.tout == mode_breakpoint_array(15));
+    start_warm_chilldown_index = find_nearest(mode_breakpoint_array(1), normal_flow_rates_simOut.tout);
+    start_warm_tank_fill_index = find_nearest(mode_breakpoint_array(2), normal_flow_rates_simOut.tout);
+    start_warm_warmup_index = find_nearest(mode_breakpoint_array(3), normal_flow_rates_simOut.tout);
+    start_warm_disconnect_index = find_nearest(mode_breakpoint_array(4), normal_flow_rates_simOut.tout);
+    idle_1_index = find_nearest(mode_breakpoint_array(5), normal_flow_rates_simOut.tout);
+    start_engine_feed_index = find_nearest(mode_breakpoint_array(6), normal_flow_rates_simOut.tout);
+    idle_2_index = find_nearest(mode_breakpoint_array(7), normal_flow_rates_simOut.tout);
+    start_cold_chilldown_index = find_nearest(mode_breakpoint_array(8), normal_flow_rates_simOut.tout);
+    start_cold_tank_fill_index = find_nearest(mode_breakpoint_array(9), normal_flow_rates_simOut.tout);
+    start_cold_warmup_index = find_nearest(mode_breakpoint_array(10), normal_flow_rates_simOut.tout);
+    start_cold_disconnect_index = find_nearest(mode_breakpoint_array(11), normal_flow_rates_simOut.tout);
+    idle_3_index = find_nearest(mode_breakpoint_array(12), normal_flow_rates_simOut.tout);
+    start_defuel_chilldown_index = find_nearest(mode_breakpoint_array(13), normal_flow_rates_simOut.tout);
+    start_defuel_drain_index = find_nearest(mode_breakpoint_array(14), normal_flow_rates_simOut.tout);
+    start_defuel_disconnect = find_nearest(mode_breakpoint_array(15), normal_flow_rates_simOut.tout);
     
     
     

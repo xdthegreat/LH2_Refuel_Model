@@ -13,7 +13,7 @@ datetime('now','TimeZone','local','Format','d-MMM-y HH:mm:ss Z')
 rapid_flag = false;
 accel_flag = false;
 fast_restart_flag = true;
-max_allowed_stop_time = 4000;
+max_allowed_stop_time = 3000;
 
 %check matlab version
 v = matlabRelease;
@@ -140,18 +140,21 @@ close all
 tank_conductivity_sweep_graphing(simOut(1, hose_length_sweep_pos+1:AC_tank_equivalent_conductivity_pos), ...
     AC_tank_equivalent_conductivity_vector)
 close all
-Feed_pressure_sweep_graphing(simOut(1, AC_tank_equivalent_conductivity_pos+1:LH2_FEED_PRES_POS), ...
+Tank_size_sweep_graphing(simOut(1, AC_tank_equivalent_conductivity_pos+1:tank_size_pos), ...
+    m_LH2_vector)
+close all
+Feed_pressure_sweep_graphing(simOut(1, tank_size_pos+1:LH2_FEED_PRES_POS), ...
     FEED_PRES_VEC)
 close all
 Feed_temp_sweep_graphing(simOut(1, LH2_FEED_PRES_POS+1:LH2_FEED_TEMP_POS), LH2_Feed_Temp_vec)
 close all
 hose_insulation_sweep_graphing(simOut(1, LH2_FEED_TEMP_POS+1:hose_thermal_conductivity_pos), hose_thermal_conductivity_vec)
 close all
-Tank_size_sweep_graphing(simOut(1, hose_thermal_conductivity_pos+1:tank_size_pos), ...
-    m_LH2_vector)
-close all
-UAM_tank_pressure_sweep_graphing(simOut(1, tank_size_pos+1:UAM_TANK_PRES_POS), ...
+UAM_tank_pressure_sweep_graphing(simOut(1, hose_thermal_conductivity_pos+1:UAM_TANK_PRES_POS), ...
     UAM_TANK_PRES_VEC)
+
+
+
 
 diary off
 %% run nice graphing function
