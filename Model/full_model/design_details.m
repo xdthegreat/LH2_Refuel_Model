@@ -61,8 +61,8 @@ liquid_supply_SOV_leak_frac = 1e-9;
 
 %Controller info
 timestep = 0.1;
-PID_timestep = 0.01;
-tf_delay = 1e-6;
+PID_timestep = 0.1;
+tf_delay = 1e-3;
 vent_tf_delay = 1e-4;
 AC_LH2_TARGET_DELTA_P = 0.04;
 AC_GH2_TARGET_DELTA_P = 0.045;
@@ -80,6 +80,6 @@ Initial_AC_tank_pressure = 1.1;
 Initial_AC_Tank_Liquid_Temp = 20;
 Initial_AC_Tank_Gas_Temp = 300;
 initial_hose_p = 1.1;
-stopTime = 4000;
+stopTime = 2000;
 
 valve_laminar_p_ratio = 0.999;
