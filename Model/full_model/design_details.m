@@ -61,7 +61,7 @@ liquid_supply_SOV_leak_frac = 1e-9;
 
 %Controller info
 timestep = 0.1;
-PID_timestep = 0.01;
+PID_timestep = 0.1;
 tf_delay = 1e-3;
 vent_tf_delay = 1e-4;
 AC_LH2_TARGET_DELTA_P = 0.04;
