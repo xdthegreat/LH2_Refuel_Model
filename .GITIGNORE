@@ -6,9 +6,17 @@ Graphs/run_everything_simOut.mat
 Graphs/simOut.zip
 Graphs/simOut.mat
 
-
-
-
-Graphs/simOut.mat
 Graphs/Sweep_log.txt
-Graphs/simOut.mat
+Graphs\Simple_Sweep_log.txt
+Graphs/Feed_pres_sweep_simOut.mat
+Graphs/Feed_temp_sweep_simOut.mat
+Graphs/hose_length_sweep_simOut.mat
+Graphs/normal_flow_rate_simOut.mat
+Graphs/tank_conductivity_sweep_simOut.mat
+Graphs/Tank_size_sweep_simOut.mat
+Graphs/tank_wall_liquid_heat_transfer_coeff_simOut.mat
+Graphs/tank_wall_vapour_heat_transfer_coeff_simOut.mat
+Graphs/valve_diameter_simOut.mat
+Graphs/valve_discharge_coeff_sweep_simOut.mat
+Graphs/hose_insulation_sweep_simOut.mat
+Graphs/UAM_tank_pressure_sweep_simOut.mat
