@@ -43,6 +43,7 @@ LH2_usage_graphing(normal_flow_rate_simOut)
 
 % save results
 save("Graphs/normal_flow_rate_simOut.mat", "normal_flow_rate_simOut", '-v7.3')
+clear normal_flow_rate_simOut
 
 %% valve diameter sweep
 
@@ -51,9 +52,9 @@ save("Graphs/normal_flow_rate_simOut.mat", "normal_flow_rate_simOut", '-v7.3')
 
 tic;
 if rapid_flag == false && accel_flag == false && fast_restart_flag
-    valve_diameter_simOut = parsim(valve_diameter_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
+    valve_diameter_simOut = sim(valve_diameter_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
 else
-    valve_diameter_simOut = parsim(valve_diameter_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
+    valve_diameter_simOut = sim(valve_diameter_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
 end
 toc;
 
@@ -62,7 +63,7 @@ valve_diameter_sweep_graphing(valve_diameter_simOut, valve_diameter_vector)
 
 % save results
 save("Graphs/valve_diameter_simOut.mat", "valve_diameter_simOut", '-v7.3')
-
+clear valve_diameter_simOut
 %% valve discahrge coeff
 
 [valve_discharge_coeff_sweep_simIn, valve_discharge_coeff_vector] = ...
@@ -70,9 +71,9 @@ save("Graphs/valve_diameter_simOut.mat", "valve_diameter_simOut", '-v7.3')
 
 tic;
 if rapid_flag == false && accel_flag == false && fast_restart_flag
-    valve_discharge_coeff_sweep_simOut = parsim(valve_discharge_coeff_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
+    valve_discharge_coeff_sweep_simOut = sim(valve_discharge_coeff_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
 else
-    valve_discharge_coeff_sweep_simOut = parsim(valve_discharge_coeff_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
+    valve_discharge_coeff_sweep_simOut = sim(valve_discharge_coeff_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
 end
 toc;
 
@@ -81,6 +82,8 @@ valve_discharge_coeff_sweep_graphing(valve_discharge_coeff_sweep_simOut, valve_d
 
 % save results
 save("Graphs/valve_discharge_coeff_sweep_simOut.mat", "valve_discharge_coeff_sweep_simOut", '-v7.3')
+clear valve_discharge_coeff_sweep_simOut
+
 
 %% Tank wall vapour heat transfer coefficient
 [tank_wall_vapour_heat_transfer_coeff_simIn, vapour_heat_transfer_coeff_vector] = ...
@@ -89,9 +92,9 @@ save("Graphs/valve_discharge_coeff_sweep_simOut.mat", "valve_discharge_coeff_swe
 
 tic;
 if rapid_flag == false && accel_flag == false && fast_restart_flag
-    tank_wall_vapour_heat_transfer_coeff_simOut = parsim(tank_wall_vapour_heat_transfer_coeff_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
+    tank_wall_vapour_heat_transfer_coeff_simOut = sim(tank_wall_vapour_heat_transfer_coeff_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
 else
-    tank_wall_vapour_heat_transfer_coeff_simOut = parsim(valve_discharge_coeff_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
+    tank_wall_vapour_heat_transfer_coeff_simOut = sim(valve_discharge_coeff_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
 end
 toc;
 
@@ -101,6 +104,7 @@ tank_wall_vapour_heat_transfer_coeff_graphing(tank_wall_vapour_heat_transfer_coe
 
 % save results
 save("Graphs/tank_wall_vapour_heat_transfer_coeff_simOut.mat", "tank_wall_vapour_heat_transfer_coeff_simOut", '-v7.3')
+clear tank_wall_vapour_heat_transfer_coeff_simOut
 
 %% tank wall liquid heat transfer coefficient sweep
 [tank_wall_liquid_heat_transfer_coeff_simIn, liquid_heat_transfer_coeff_vector] = ...
@@ -109,9 +113,9 @@ save("Graphs/tank_wall_vapour_heat_transfer_coeff_simOut.mat", "tank_wall_vapour
 
 tic;
 if rapid_flag == false && accel_flag == false && fast_restart_flag
-    tank_wall_liquid_heat_transfer_coeff_simOut = parsim(tank_wall_liquid_heat_transfer_coeff_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
+    tank_wall_liquid_heat_transfer_coeff_simOut = sim(tank_wall_liquid_heat_transfer_coeff_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
 else
-    tank_wall_liquid_heat_transfer_coeff_simOut = parsim(tank_wall_liquid_heat_transfer_coeff_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
+    tank_wall_liquid_heat_transfer_coeff_simOut = sim(tank_wall_liquid_heat_transfer_coeff_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
 end
 toc;
 
@@ -121,6 +125,7 @@ tank_wall_liquid_heat_transfer_coeff_graphing(tank_wall_liquid_heat_transfer_coe
 
 % save results
 save("Graphs/tank_wall_liquid_heat_transfer_coeff_simOut.mat", "tank_wall_liquid_heat_transfer_coeff_simOut", '-v7.3')
+clear tank_wall_liquid_heat_transfer_coeff_simOut
 
 %% hose length sweep
 
@@ -129,9 +134,9 @@ save("Graphs/tank_wall_liquid_heat_transfer_coeff_simOut.mat", "tank_wall_liquid
 
 tic;
 if rapid_flag == false && accel_flag == false && fast_restart_flag
-    hose_length_sweep_simOut = parsim(hose_length_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
+    hose_length_sweep_simOut = sim(hose_length_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
 else
-    hose_length_sweep_simOut = parsim(hose_length_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
+    hose_length_sweep_simOut = sim(hose_length_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
 end
 toc;
 
@@ -140,6 +145,7 @@ hose_length_graphing(hose_length_sweep_simOut, hose_length_vector)
 
 % save results
 save("Graphs/hose_length_sweep_simOut.mat", "hose_length_sweep_simOut", '-v7.3')
+clear hose_length_sweep_simOut
 
 %% tank conductivity
 [tank_conductivity_sweep_simIn, AC_tank_equivalent_conductivity_vector] = ...
@@ -148,9 +154,9 @@ save("Graphs/hose_length_sweep_simOut.mat", "hose_length_sweep_simOut", '-v7.3')
 
 tic;
 if rapid_flag == false && accel_flag == false && fast_restart_flag
-    tank_conductivity_sweep_simOut = parsim(tank_conductivity_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
+    tank_conductivity_sweep_simOut = sim(tank_conductivity_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
 else
-    tank_conductivity_sweep_simOut = parsim(tank_conductivity_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
+    tank_conductivity_sweep_simOut = sim(tank_conductivity_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
 end
 toc;
 
@@ -160,6 +166,8 @@ tank_conductivity_sweep_graphing(tank_conductivity_sweep_simOut, ...
 
 % save results
 save("Graphs/tank_conductivity_sweep_simOut.mat", "tank_conductivity_sweep_simOut", '-v7.3')
+clear tank_conductivity_sweep_simOut
+
 
 %% tank size sweep
 [Tank_size_sweep_simIn, m_LH2_vector] = ...
@@ -168,9 +176,9 @@ save("Graphs/tank_conductivity_sweep_simOut.mat", "tank_conductivity_sweep_simOu
 
 tic;
 if rapid_flag == false && accel_flag == false && fast_restart_flag
-    Tank_size_sweep_simOut = parsim(Tank_size_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
+    Tank_size_sweep_simOut = sim(Tank_size_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
 else
-    Tank_size_sweep_simOut = parsim(Tank_size_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
+    Tank_size_sweep_simOut = sim(Tank_size_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
 end
 toc;
 
@@ -179,7 +187,7 @@ Tank_size_sweep_graphing(Tank_size_sweep_simOut, m_LH2_vector)
 
 % save results
 save("Graphs/Tank_size_sweep_simOut.mat", "Tank_size_sweep_simOut", '-v7.3')
-
+clear Tank_size_sweep_simOut
 
 %% feed pressure
 
@@ -188,9 +196,9 @@ save("Graphs/Tank_size_sweep_simOut.mat", "Tank_size_sweep_simOut", '-v7.3')
 
 tic;
 if rapid_flag == false && accel_flag == false && fast_restart_flag
-    Feed_pres_sweep_simOut = parsim(Feed_pres_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
+    Feed_pres_sweep_simOut = sim(Feed_pres_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
 else
-    Feed_pres_sweep_simOut = parsim(Feed_pres_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
+    Feed_pres_sweep_simOut = sim(Feed_pres_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
 end
 toc;
 
@@ -199,6 +207,7 @@ Feed_pressure_sweep_graphing(Feed_pres_sweep_simOut, FEED_PRES_VEC)
 
 % save results
 save("Graphs/Feed_pres_sweep_simOut.mat", "Feed_pres_sweep_simOut", '-v7.3')
+clear Feed_pres_sweep_simOut
 
 %% feed temperature
 
@@ -207,9 +216,9 @@ save("Graphs/Feed_pres_sweep_simOut.mat", "Feed_pres_sweep_simOut", '-v7.3')
 
 tic;
 if rapid_flag == false && accel_flag == false && fast_restart_flag
-    Feed_temp_sweep_simOut = parsim(Feed_temp_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
+    Feed_temp_sweep_simOut = sim(Feed_temp_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
 else
-    Feed_temp_sweep_simOut = parsim(Feed_temp_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
+    Feed_temp_sweep_simOut = sim(Feed_temp_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
 end
 toc;
 
@@ -218,6 +227,7 @@ Feed_temp_sweep_graphing(Feed_temp_sweep_simOut, LH2_Feed_Temp_vec)
 
 % save results
 save("Graphs/Feed_temp_sweep_simOut.mat", "Feed_temp_sweep_simOut", '-v7.3')
+clear Feed_temp_sweep_simOut
 
 %% hose insulation sweep
 
@@ -226,9 +236,9 @@ save("Graphs/Feed_temp_sweep_simOut.mat", "Feed_temp_sweep_simOut", '-v7.3')
 
 tic;
 if rapid_flag == false && accel_flag == false && fast_restart_flag
-    hose_insulation_sweep_simOut = parsim(hose_insulation_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
+    hose_insulation_sweep_simOut = sim(hose_insulation_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
 else
-    hose_insulation_sweep_simOut = parsim(hose_insulation_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
+    hose_insulation_sweep_simOut = sim(hose_insulation_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
 end
 toc;
 
@@ -237,7 +247,7 @@ hose_insulation_sweep_graphing(hose_insulation_sweep_simOut, hose_thermal_conduc
 
 % save results
 save("Graphs/hose_insulation_sweep_simOut.mat", "hose_insulation_sweep_simOut", '-v7.3')
-
+clear hose_insulation_sweep_simOut
 
 %% target tank pressure
 [UAM_tank_pressure_sweep_simIn, UAM_TANK_PRES_VEC] = UAM_tank_pressure_sweep_setup(rapid_flag, accel_flag, ...
@@ -245,9 +255,9 @@ save("Graphs/hose_insulation_sweep_simOut.mat", "hose_insulation_sweep_simOut", 
 
 tic;
 if rapid_flag == false && accel_flag == false && fast_restart_flag
-    UAM_tank_pressure_sweep_simOut = parsim(UAM_tank_pressure_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
+    UAM_tank_pressure_sweep_simOut = sim(UAM_tank_pressure_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
 else
-    UAM_tank_pressure_sweep_simOut = parsim(UAM_tank_pressure_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
+    UAM_tank_pressure_sweep_simOut = sim(UAM_tank_pressure_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
 end
 toc;
 
@@ -257,7 +267,7 @@ UAM_tank_pressure_sweep_graphing(UAM_tank_pressure_sweep_simOut, ...
 
 % save results
 save("Graphs/UAM_tank_pressure_sweep_simOut.mat", "UAM_tank_pressure_sweep_simOut", '-v7.3')
-
+clear UAM_tank_pressure_sweep_simOut
 
 
 diary off
