@@ -34,7 +34,9 @@ vapour_heat_results_table = array2table(vapour_heat_sweep_results, ...
     'Time taken for cold tank refuel (s)'});
     
 
-writetable(vapour_heat_results_table, "Graphs/vapour_heat_sweep_results.xlsx")
+    writetable(vapour_heat_results_table, "Graphs/vapour_heat_sweep_results.xlsx")
+    delete('Graphs\vapour_heat_sweep_results.xlsx')
+    writetable(vapour_heat_results_table, "Graphs/vapour_heat_sweep_results.xlsx")
 
 
 end

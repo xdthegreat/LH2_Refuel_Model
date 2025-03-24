@@ -31,6 +31,8 @@ hose_length_results_table = array2table(hose_length_sweep_results, ...
     'Fraction of useful LH2 for cold tank refuel' 'Time taken for warm tank refuel (s)'...
     'Time taken for cold tank refuel (s)'});
 
-writetable(hose_length_results_table, "Graphs/hose_length_sweep_results.xlsx")
+    writetable(hose_length_results_table, "Graphs/hose_length_sweep_results.xlsx")
+    delete('Graphs\hose_length_sweep_results.xlsx')
+    writetable(hose_length_results_table, "Graphs/hose_length_sweep_results.xlsx")
 
 end

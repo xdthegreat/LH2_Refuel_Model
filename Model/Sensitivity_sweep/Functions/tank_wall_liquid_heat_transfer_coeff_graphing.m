@@ -34,6 +34,9 @@ liquid_heat_results_table = array2table(liquid_heat_sweep_results, ...
     'LH2 consumed cold tank refuel (kg)' 'LH2 received cold tank refuel (kg)' ...
     'Fraction of useful LH2 for cold tank refuel' 'Time taken for warm tank refuel (s)'...
     'Time taken for cold tank refuel (s)'});
+
+    writetable(liquid_heat_results_table, "Graphs/liqudi_heat_sweep_results.xlsx")
+    delete('Graphs\liqudi_heat_sweep_results.xlsx')
     writetable(liquid_heat_results_table, "Graphs/liqudi_heat_sweep_results.xlsx")
 
 end

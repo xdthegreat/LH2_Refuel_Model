@@ -32,6 +32,9 @@ valve_diameter_results_table = array2table(valve_diameter_sweep_results, ...
     'LH2 consumed cold tank refuel (kg)' 'LH2 received cold tank refuel (kg)' ...
     'Fraction of useful LH2 for cold tank refuel' 'Time taken for warm tank refuel (s)'...
     'Time taken for cold tank refuel (s)'});
+
+    writetable(valve_diameter_results_table, "Graphs/vaalve_diameter_sweep_results.xlsx")
+    delete('Graphs\vaalve_diameter_sweep_results.xlsx')
     writetable(valve_diameter_results_table, "Graphs/vaalve_diameter_sweep_results.xlsx")
 
 end

@@ -101,3 +101,14 @@ disp("GS supply coupling orifice diameter is " + supply_coupling_valve_inner_dia
 
 disp("GS return coupling discharge coefficient is " + return_coupling_discharge_coeff)
 disp("GS return coupling orifice diameter is " + return_coupling_valve_inner_diameter + "m.")
+
+
+%% Export everything as .csv
+a = who;
+name_list = cell(2, 50);
+for i = 1:length(a)
+    name_list{1, i} = a{i};
+    name_list{2, i} = eval(a{i});
+end
+
+writecell(name_list, "Graph/dimensions.csv")

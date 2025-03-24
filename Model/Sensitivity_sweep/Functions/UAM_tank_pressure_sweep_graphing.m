@@ -42,7 +42,8 @@ feed_pressure_sweep_results_table = array2table(feed_pressure_sweep_results, ...
     'Time taken for cold tank refuel (s)'});
 
 
-
+    writetable(feed_pressure_sweep_results_table, "Graphs/target_tank_pressure_sweep_results.xlsx")
+    delete('Graphs\target_tank_pressure_sweep_results.xlsx')
     writetable(feed_pressure_sweep_results_table, "Graphs/target_tank_pressure_sweep_results.xlsx")
 
 
