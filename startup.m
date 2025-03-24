@@ -1,6 +1,6 @@
 
 
-clc
+
 clear all
 
 disp('Starting up LH2 Refuel Model, please read README.md and run startup.m')

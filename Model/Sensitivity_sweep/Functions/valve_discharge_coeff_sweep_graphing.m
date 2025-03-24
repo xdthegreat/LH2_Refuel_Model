@@ -36,5 +36,7 @@ valve_discharge_coeff_results_table = array2table(valve_discharge_coeff_sweep_re
 
 
     writetable(valve_discharge_coeff_results_table, "Graphs/vaalve_discharge_coeff_sweep_results.xlsx")
+    delete('Graphs\vaalve_discharge_coeff_sweep_results.xlsx')
+    writetable(valve_discharge_coeff_results_table, "Graphs/vaalve_discharge_coeff_sweep_results.xlsx")
 
 end

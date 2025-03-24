@@ -3,65 +3,32 @@ ans =
 
   <a href="matlab:helpPopup('datetime')" style="font-weight:bold">datetime</a>
 
-   21-Mar-2025 17:07:28 +0000
+   24-Mar-2025 10:38:04 +0000
 
-[21-Mar-2025 17:08:29] Checking for availability of parallel pool...
-Starting parallel pool (parpool) using the 'LocalProfile1' profile ...
-21-Mar-2025 17:09:58: Job Queued. Waiting for parallel pool job with ID 4 to start ...
-21-Mar-2025 17:10:59: Job Queued. Waiting for parallel pool job with ID 4 to start ...
-Connected to parallel pool with 24 workers.
-[21-Mar-2025 17:11:59] Starting Simulink on parallel workers...
-[21-Mar-2025 17:12:02] Configuring simulation cache folder on parallel workers...
-[21-Mar-2025 17:12:04] Loading model on parallel workers...
-[21-Mar-2025 17:12:42] Running simulations...
-[21-Mar-2025 17:26:52] Completed 1 of 111 simulation runs. Run 2 has errors.
-[Warning: Graphics timeout occurred. To share details of this issue with MathWorks technical
-support, please include that this is an unresponsive graphics client with your service request.] 
-[> In MultiSim.internal/FunctionCallThrottler/call
-In MultiSim/JobStatusDB/updateRun
-In MultiSim/JobStatusDB/ReceiveUpdatesCB
-In MultiSim.JobStatusDB>@(varargin)obj.ReceiveUpdatesCB(varargin{:})
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('parallel.pool.DataQueue>iDispatchDataReceived', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+pool\DataQueue.m', 252)" style="font-weight:bold">parallel.pool.DataQueue>iDispatchDataReceived</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+pool\DataQueue.m',252,0)">line 252</a>)
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('parallel.pool.DataQueue>@(src,event)iDispatchDataReceived(func,src,event)', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+pool\DataQueue.m', 232)" style="font-weight:bold">parallel.pool.DataQueue>@(src,event)iDispatchDataReceived(func,src,event)</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+pool\DataQueue.m',232,0)">line 232</a>)
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('parallel.pool/DataQueue/dispatchContinuation', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+pool\DataQueue.m', 245)" style="font-weight:bold">parallel.pool/DataQueue/dispatchContinuation</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+pool\DataQueue.m',245,0)">line 245</a>)
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('parallel.pool/DataQueue/maybeDrainAndDispatchAllDataOnQueue', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+pool\DataQueue.m', 201)" style="font-weight:bold">parallel.pool/DataQueue/maybeDrainAndDispatchAllDataOnQueue</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+pool\DataQueue.m',201,0)">line 201</a>)
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('parallel.internal.pool/DataQueue/maybeDrainAndDispatchAllDataOnQueue', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+internal\+pool\DataQueue.m', 166)" style="font-weight:bold">parallel.internal.pool/DataQueue/maybeDrainAndDispatchAllDataOnQueue</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+internal\+pool\DataQueue.m',166,0)">line 166</a>)
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('parallel.internal.dataqueue.AbstractDataQueue.notifyQueue', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+internal\+dataqueue\AbstractDataQueue.m', 164)" style="font-weight:bold">parallel.internal.dataqueue.AbstractDataQueue.notifyQueue</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+internal\+dataqueue\AbstractDataQueue.m',164,0)">line 164</a>)
-In Simulink/SimulationManager/executeSims
-In Simulink/SimulationManager/execute
-In Simulink/SimulationManager/run
-In parsim
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('RUN_EVERYTHING', 'C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\RUN_EVERYTHING.m', 113)" style="font-weight:bold">RUN_EVERYTHING</a> (<a href="matlab: opentoline('C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\RUN_EVERYTHING.m',113,0)">line 113</a>)] 
-[21-Mar-2025 17:37:39] Completed 2 of 111 simulation runs
-[21-Mar-2025 17:47:42] Completed 3 of 111 simulation runs
-[21-Mar-2025 17:47:47] Completed 4 of 111 simulation runs
-[21-Mar-2025 17:48:00] Completed 5 of 111 simulation runs
-[21-Mar-2025 17:48:05] Completed 6 of 111 simulation runs
-[21-Mar-2025 17:48:11] Completed 7 of 111 simulation runs
-[21-Mar-2025 17:48:16] Completed 8 of 111 simulation runs
-[21-Mar-2025 17:48:20] Completed 9 of 111 simulation runs
-[21-Mar-2025 17:48:28] Completed 10 of 111 simulation runs
-[21-Mar-2025 17:48:36] Completed 11 of 111 simulation runs
-[Warning: Graphics timeout occurred. To share details of this issue with MathWorks technical
-support, please include that this is an unresponsive graphics client with your service request.] 
-[> In MultiSim.internal/FunctionCallThrottler/call
-In MultiSim/JobStatusDB/updateRun
-In MultiSim/JobStatusDB/ReceiveUpdatesCB
-In MultiSim.JobStatusDB>@(varargin)obj.ReceiveUpdatesCB(varargin{:})
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('parallel.pool.DataQueue>iDispatchDataReceived', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+pool\DataQueue.m', 252)" style="font-weight:bold">parallel.pool.DataQueue>iDispatchDataReceived</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+pool\DataQueue.m',252,0)">line 252</a>)
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('parallel.pool.DataQueue>@(src,event)iDispatchDataReceived(func,src,event)', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+pool\DataQueue.m', 232)" style="font-weight:bold">parallel.pool.DataQueue>@(src,event)iDispatchDataReceived(func,src,event)</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+pool\DataQueue.m',232,0)">line 232</a>)
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('parallel.pool/DataQueue/dispatchContinuation', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+pool\DataQueue.m', 245)" style="font-weight:bold">parallel.pool/DataQueue/dispatchContinuation</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+pool\DataQueue.m',245,0)">line 245</a>)
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('parallel.pool/DataQueue/maybeDrainAndDispatchAllDataOnQueue', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+pool\DataQueue.m', 201)" style="font-weight:bold">parallel.pool/DataQueue/maybeDrainAndDispatchAllDataOnQueue</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+pool\DataQueue.m',201,0)">line 201</a>)
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('parallel.internal.pool/DataQueue/maybeDrainAndDispatchAllDataOnQueue', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+internal\+pool\DataQueue.m', 166)" style="font-weight:bold">parallel.internal.pool/DataQueue/maybeDrainAndDispatchAllDataOnQueue</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+internal\+pool\DataQueue.m',166,0)">line 166</a>)
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('parallel.internal.dataqueue.AbstractDataQueue.notifyQueue', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+internal\+dataqueue\AbstractDataQueue.m', 164)" style="font-weight:bold">parallel.internal.dataqueue.AbstractDataQueue.notifyQueue</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\parallel\+parallel\+internal\+dataqueue\AbstractDataQueue.m',164,0)">line 164</a>)
-In Simulink/SimulationManager/executeSims
-In Simulink/SimulationManager/execute
-In Simulink/SimulationManager/run
-In parsim
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('RUN_EVERYTHING', 'C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\RUN_EVERYTHING.m', 113)" style="font-weight:bold">RUN_EVERYTHING</a> (<a href="matlab: opentoline('C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\RUN_EVERYTHING.m',113,0)">line 113</a>)] 
-[21-Mar-2025 18:05:59] Completed 12 of 111 simulation runs
-[21-Mar-2025 18:06:00] Completed 13 of 111 simulation runs
-render process terminated: TS_PROCESS_WAS_KILLED
-render process terminated: TS_PROCESS_WAS_KILLED
-render process terminated: TS_PROCESS_WAS_KILLED
-Parallel pool using the 'LocalProfile1' profile is shutting down.
+[24-Mar-2025 10:38:35] Checking for availability of parallel pool...
+Starting parallel pool (parpool) using the 'LocalProfile3' profile ...
+Connected to parallel pool with 14 workers.
+[24-Mar-2025 10:39:53] Starting Simulink on parallel workers...
+[24-Mar-2025 10:39:54] Configuring simulation cache folder on parallel workers...
+[24-Mar-2025 10:39:55] Loading model on parallel workers...
+[24-Mar-2025 10:40:13] Running simulations...
+[24-Mar-2025 10:49:17] Completed 1 of 111 simulation runs
+[24-Mar-2025 10:52:37] Completed 2 of 111 simulation runs
+[24-Mar-2025 10:52:40] Completed 3 of 111 simulation runs
+[24-Mar-2025 10:52:43] Completed 4 of 111 simulation runs
+[24-Mar-2025 10:52:46] Completed 5 of 111 simulation runs
+[24-Mar-2025 10:53:07] Completed 6 of 111 simulation runs
+[24-Mar-2025 10:56:45] Completed 7 of 111 simulation runs
+[24-Mar-2025 10:56:54] Completed 8 of 111 simulation runs
+[24-Mar-2025 10:57:13] Completed 9 of 111 simulation runs
+[24-Mar-2025 10:57:41] Completed 10 of 111 simulation runs
+[24-Mar-2025 11:02:23] Completed 11 of 111 simulation runs
+[24-Mar-2025 11:03:29] Cleaning up parallel workers...
+Elapsed time is 1530.867125 seconds.
+{Error using <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('normal_flow_rate_graphing', 'C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\Functions\normal_flow_rate_graphing.m', 5)" style="font-weight:bold">normal_flow_rate_graphing</a> (<a href="matlab: opentoline('C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\Functions\normal_flow_rate_graphing.m',5,0)">line 5</a>)
+Unrecognized field name "yout".
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('RUN_EVERYTHING', 'C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\RUN_EVERYTHING.m', 122)" style="font-weight:bold">RUN_EVERYTHING</a> (<a href="matlab: opentoline('C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\RUN_EVERYTHING.m',122,0)">line 122</a>)
+normal_flow_rate_graphing(simOut(1, normal_flow_rate_sweep_pos), AC_supply_line_port_inner_area)
+} 
+run_everything_slowly

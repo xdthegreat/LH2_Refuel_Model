@@ -107,7 +107,9 @@ tank_filling_time_info_table = cell2table(tank_filling_time_info, ...
     'Warm tank UAM total', 'Warm tank GS consumed', ...
     'Cold tank UAM total', 'Cold tank GS consumed'});
     
-writetable(tank_filling_time_info_table, "Graphs/normal_tank_filling_time_total_consumption_results.xlsx")
+    writetable(tank_filling_time_info_table, "Graphs/normal_tank_filling_time_total_consumption_results.xlsx")
+    delete('Graphs\normal_tank_filling_time_total_consumption_results.xlsx')
+    writetable(tank_filling_time_info_table, "Graphs/normal_tank_filling_time_total_consumption_results.xlsx")
 
 
 

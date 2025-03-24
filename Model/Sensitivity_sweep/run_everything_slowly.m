@@ -14,7 +14,7 @@ datetime('now','TimeZone','local','Format','d-MMM-y HH:mm:ss Z')
 %% setup
 rapid_flag = false;
 accel_flag = false;
-fast_restart_flag = true;
+fast_restart_flag = false;
 max_allowed_stop_time = 3000;
 
 %check matlab version
