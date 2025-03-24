@@ -191,6 +191,9 @@ function normal_flow_rate_graphing(normal_flow_rates_simOut, AC_supply_line_port
     
     normal_mass_flow_rate_details_table = cell2table(normal_mass_flow_rate_details, ...
         'VariableNames', {'Operation phase' 'Mean mass flow rate' 'Unit'});
+
+    writetable(normal_mass_flow_rate_details_table, "Graphs/normal mass flow rate details.xlsx")
+    delete('Graphs\normal mass flow rate details.xlsx')
     writetable(normal_mass_flow_rate_details_table, "Graphs/normal mass flow rate details.xlsx")
     
     
@@ -252,6 +255,9 @@ function normal_flow_rate_graphing(normal_flow_rates_simOut, AC_supply_line_port
     
     normal_flow_rate_details_table = cell2table(normal_flow_rate_details, ...
         'VariableNames', {'Operation phase' 'Mean flow rate' 'Unit'});
+
+    writetable(normal_flow_rate_details_table, "Graphs/normal flow rate details.xlsx")
+    delete('Graphs\normal flow rate details.xlsx')
     writetable(normal_flow_rate_details_table, "Graphs/normal flow rate details.xlsx")
     
     disp(normal_flow_rate_details_table)
