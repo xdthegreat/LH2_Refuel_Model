@@ -3,15 +3,29 @@ ans =
 
   <a href="matlab:helpPopup('datetime')" style="font-weight:bold">datetime</a>
 
-   25-Mar-2025 08:43:13 +0000
+   25-Mar-2025 17:58:02 +0000
 
-{Operation terminated by user during <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('scatter>matrixScatter', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\graphics\scatter.m', 168)" style="font-weight:bold">scatter>matrixScatter</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\graphics\scatter.m',168,0)">line 168</a>)
+General Error occurred in WebControllerFactory::create()
+{Operation terminated by user during matlab.graphics.chart.primitive.internal.AbstractScatter/set.CurrentIconColorInfoMode
 
+
+In matlab.graphics.chart.primitive.internal.AbstractScatter/set.CurrentIconColorInfo
+
+In matlab.graphics.chart.primitive.Scatter/doSetup
+
+In matlab.graphics.chart.primitive.internal.AbstractScatter
+
+In matlab.graphics.chart.primitive.Scatter
+
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('scatter>matrixScatter', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\graphics\scatter.m', 257)" style="font-weight:bold">scatter>matrixScatter</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\graphics\scatter.m',257,0)">line 257</a>)
+    h(n) = matlab.graphics.chart.primitive.Scatter('Parent', parent, ...
 
 In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('scatter', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\graphics\scatter.m', 65)" style="font-weight:bold">scatter</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\graphics\scatter.m',65,0)">line 65</a>)
         h = matrixScatter(parent, args);
 
-In simmanager.designview.internal.ScatterPlotMainLayer
+In simmanager.designview.internal.ScatterPlotOverlayLayer
+
+In simmanager.designview.internal.ScatterPlotBlackLayer
 
 In simmanager.designview.ScatterPlot/createScatters
 
@@ -33,47 +47,8 @@ In Simulink.SimulationInput/runSingleSimWithOptions
 
 In Simulink.SimulationInput/sim
 
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('run_everything_slowly', 'C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m', 35)" style="font-weight:bold">run_everything_slowly</a> (<a href="matlab: opentoline('C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m',35,0)">line 35</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('run_everything_slowly', 'C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m', 36)" style="font-weight:bold">run_everything_slowly</a> (<a href="matlab: opentoline('C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m',36,0)">line 36</a>)
     normal_flow_rate_simOut = sim(normal_flow_rate_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
-} 
-{Operation terminated by user during matlab.graphics.controls.AxesToolbar
-
-
-In matlab.ui.controls.AxesToolbar
-
-In matlab.graphics.controls.ToolbarController.getDefaultToolbar
-
-In matlab.graphics.controls.WebToolbarController.createToolbar
-
-In matlab.graphics.controls.WebToolbarController/cleanupStrandedToolbars
-
-In matlab.graphics.controls.WebToolbarController>localCleanupStrandedToolbars
-
-In matlab.graphics.controls.WebToolbarController>@()localCleanupStrandedToolbars(obj,allAx(1))
-} 
-{Operation terminated by user during matlab.graphics.controls.AxesToolbar
-
-
-In matlab.ui.controls.AxesToolbar
-
-In matlab.graphics.controls.ToolbarController.getDefaultToolbar
-
-In matlab.graphics.controls.WebToolbarController.createToolbar
-
-In matlab.graphics.controls.WebToolbarController/cleanupStrandedToolbars
-
-In matlab.graphics.controls.WebToolbarController>localCleanupStrandedToolbars
-
-In matlab.graphics.controls.WebToolbarController>@()localCleanupStrandedToolbars(obj,allAx(1))
-} 
-{Operation terminated by user during matlab.graphics.interaction.interactioncontainers.BaseAxesInteractionContainer/setupInteractions
-
-
-In matlab.graphics.interaction.internal.UnifiedAxesInteractions.createDefaultInteractionsOnAxes
-
-In matlab.graphics.interaction.internal.UnifiedAxesInteractions.createDefaultInteractionsInSync
-
-In matlab.graphics.interaction.internal.UnifiedAxesInteractions.createDefaultInteractions>@()matlab.graphics.interaction.internal.UnifiedAxesInteractions.createDefaultInteractionsInSync(ax,is2dim,numDataSpaces)
 } 
 [Warning: Error occurred while executing the listener callback for event MarkedClean defined for
 class matlab.graphics.axis.Axes:
@@ -84,28 +59,53 @@ Error in simmanager.designview.ScatterPlot/updateColorbar
 Error in simmanager.designview.ScatterPlot/markedCleanCB
 
 Error in simmanager.designview.FigureObject>@(varargin)obj.markedCleanCB(varargin{:})] 
-{Operation terminated by user during matlab.graphics.interaction.graphicscontrol.InteractionObjects.InteractionBase/set.Object
+{Operation terminated by user during matlab.graphics.shape.internal.Button
 
 
-In matlab.graphics.interaction.graphicscontrol.InteractionObjects.PanInteraction
+In matlab.graphics.controls.AxesToolbarButton
 
-In matlab.graphics.interaction.interactions.PanInteraction/createWebInteraction
+In matlab.ui.controls.ToolbarStateButton
 
-In matlab.graphics.interaction.interactioncontainers.StandardAxesInteractionContainer/createWebInteraction
+In matlab.graphics.controls.internal.ToolbarButtonRegistry/getButton
 
-In matlab.graphics.interaction.interactioncontainers.BaseAxesInteractionContainer/createDefaultWebAxesInteractions
+In matlab.graphics.controls.ToolbarController.createToolbarButton
 
-In matlab.graphics.interaction.interactioncontainers.CartesianAxesInteractionContainer/createDefaultWebAxesInteractions
+In matlab.graphics.controls.ToolbarController.createToolbarButton
 
-In matlab.graphics.interaction.interactioncontainers.BaseAxesInteractionContainer/setupInteractions
+In matlab.graphics.controls.ToolbarController.getDefaultToolbar
 
-In matlab.graphics.interaction.internal.UnifiedAxesInteractions.createDefaultInteractionsOnAxes
+In matlab.graphics.controls.WebToolbarController.createToolbar
 
-In matlab.graphics.interaction.internal.UnifiedAxesInteractions.createDefaultInteractionsInSync
+In matlab.graphics.controls.WebToolbarController/cleanupStrandedToolbars
 
-In matlab.graphics.interaction.internal.UnifiedAxesInteractions.createDefaultInteractions>@()matlab.graphics.interaction.internal.UnifiedAxesInteractions.createDefaultInteractionsInSync(ax,is2dim,numDataSpaces)
+In matlab.graphics.controls.WebToolbarController>localCleanupStrandedToolbars
+
+In matlab.graphics.controls.WebToolbarController>@()localCleanupStrandedToolbars(obj,allAx(1))
 } 
-{Operation terminated by user during matlab.graphics.interaction.graphicscontrol.Enumerations.Action/toString
+{Operation terminated by user during matlab.graphics.shape.internal.Button
+
+
+In matlab.graphics.controls.AxesToolbarButton
+
+In matlab.ui.controls.ToolbarStateButton
+
+In matlab.graphics.controls.internal.ToolbarButtonRegistry/getButton
+
+In matlab.graphics.controls.ToolbarController.createToolbarButton
+
+In matlab.graphics.controls.ToolbarController.createToolbarButton
+
+In matlab.graphics.controls.ToolbarController.getDefaultToolbar
+
+In matlab.graphics.controls.WebToolbarController.createToolbar
+
+In matlab.graphics.controls.WebToolbarController/cleanupStrandedToolbars
+
+In matlab.graphics.controls.WebToolbarController>localCleanupStrandedToolbars
+
+In matlab.graphics.controls.WebToolbarController>@()localCleanupStrandedToolbars(obj,allAx(1))
+} 
+{Operation terminated by user during matlab.graphics.interaction.graphicscontrol.Enumerations.Actions/toString
 
 
 In matlab.graphics.interaction.graphicscontrol.InteractionsManager/createRegistrationMessage
@@ -124,5 +124,20 @@ In matlab.graphics.interaction.internal.UnifiedAxesInteractions.createDefaultInt
 
 In matlab.graphics.interaction.internal.UnifiedAxesInteractions.createDefaultInteractions>@()matlab.graphics.interaction.internal.UnifiedAxesInteractions.createDefaultInteractionsInSync(ax,is2dim,numDataSpaces)
 } 
-startup
-Starting up LH2 Refuel Model, please read README.md and run startup.m
+{Operation terminated by user during matlab.graphics.interaction.interactions.DataTipInteraction/createWebInteraction
+
+
+In matlab.graphics.interaction.interactioncontainers.StandardAxesInteractionContainer/createWebInteraction
+
+In matlab.graphics.interaction.interactioncontainers.BaseAxesInteractionContainer/createDefaultWebAxesInteractions
+
+In matlab.graphics.interaction.interactioncontainers.CartesianAxesInteractionContainer/createDefaultWebAxesInteractions
+
+In matlab.graphics.interaction.interactioncontainers.BaseAxesInteractionContainer/setupInteractions
+
+In matlab.graphics.interaction.internal.UnifiedAxesInteractions.createDefaultInteractionsOnAxes
+
+In matlab.graphics.interaction.internal.UnifiedAxesInteractions.createDefaultInteractionsInSync
+
+In matlab.graphics.interaction.internal.UnifiedAxesInteractions.createDefaultInteractions>@()matlab.graphics.interaction.internal.UnifiedAxesInteractions.createDefaultInteractionsInSync(ax,is2dim,numDataSpaces)
+} 
