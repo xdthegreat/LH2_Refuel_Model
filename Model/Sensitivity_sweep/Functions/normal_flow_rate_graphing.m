@@ -235,10 +235,8 @@ function normal_flow_rate_graphing(normal_flow_rates_simOut, AC_supply_line_port
     
     % cold tank fill
     AC_LH2_qdot_cold_fill = normal_flow_rates_simOut.yout{31}.Values.AC_supply_coupling_Qdot.Data(start_cold_tank_fill_index:start_cold_warmup_index);
-    AC_refuel_quality_check_cold_fill = normal_flow_rates_simOut.yout{1}.Values.Data(start_cold_tank_fill_index:start_cold_warmup_index);
     
     mean_LH2_flow_speed_cold_fill = mean(abs(AC_LH2_qdot_cold_fill))/AC_supply_line_port_inner_area;
-    mean_LH2_flow_speed_cold_fill_adjusted = mean(abs(AC_LH2_qdot_cold_fill.*(1-AC_refuel_quality_check_cold_fill)))/AC_supply_line_port_inner_area;
     
     % defuel chilldown
     AC_LH2_qdot_defuel_chilldown = normal_flow_rates_simOut.yout{31}.Values.AC_supply_line_Qdot.Data(start_defuel_chilldown_index:start_defuel_drain_index);
