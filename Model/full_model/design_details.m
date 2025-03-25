@@ -50,8 +50,8 @@ return_valve_orifice_area = return_valve_orifice_diameter^2*pi/4;
 
 wall_thickness = 2/1000;
 
-mass_per_length_supply = steel_density*wall_thickness*(supply_pipe_inner_area + supply_pipe_outer_area);
-mass_per_length_return = steel_density*wall_thickness*(return_pipe_inner_area + return_pipe_outer_area);
+mass_per_length_supply = steel_density*wall_thickness*(supply_pipe_inner_area + supply_pipe_outer_area)*pi;
+mass_per_length_return = steel_density*wall_thickness*(return_pipe_inner_area + return_pipe_outer_area)*pi;
 
 hose_length = 20;  %m
 
