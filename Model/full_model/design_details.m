@@ -50,8 +50,8 @@ return_valve_orifice_area = return_valve_orifice_diameter^2*pi/4;
 
 wall_thickness = 2/1000;
 
-mass_per_length_supply = steel_density*wall_thickness*(supply_pipe_inner_area + supply_pipe_outer_area);
-mass_per_length_return = steel_density*wall_thickness*(return_pipe_inner_area + return_pipe_outer_area);
+mass_per_length_supply = steel_density*wall_thickness*(supply_pipe_inner_area + supply_pipe_outer_area)*pi;
+mass_per_length_return = steel_density*wall_thickness*(return_pipe_inner_area + return_pipe_outer_area)*pi;
 
 hose_length = 20;  %m
 
@@ -60,7 +60,7 @@ pipe_thermal_conductivity = 0.0001;  %W/m*K
 liquid_supply_SOV_leak_frac = 1e-9;
 
 %Controller info
-timestep = 0.5;
+timestep = 0.1;
 PID_timestep = 0.1;
 tf_delay = 1e-3;
 vent_tf_delay = 1e-4;
