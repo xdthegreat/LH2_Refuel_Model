@@ -3,540 +3,126 @@ ans =
 
   <a href="matlab:helpPopup('datetime')" style="font-weight:bold">datetime</a>
 
-   24-Mar-2025 21:16:45 +0000
+   25-Mar-2025 08:43:13 +0000
 
-Model 'AC_gauge_R2024a' was exported from R2024b to R2024a. To find blocks that were removed during the export operation, <a href="matlab:slexportprevious.utils.displayReplacedBlocks('AC_gauge_R2024a')">click here</a>. Save the model to remove this notification.
-Model 'GS_refuel_control_R2024a' was exported from R2024b to R2024a. To find blocks that were removed during the export operation, <a href="matlab:slexportprevious.utils.displayReplacedBlocks('GS_refuel_control_R2024a')">click here</a>. Save the model to remove this notification.
-Model 'AC_Engine_SOV_R2024a' was exported from R2024b to R2024a. To find blocks that were removed during the export operation, <a href="matlab:slexportprevious.utils.displayReplacedBlocks('AC_Engine_SOV_R2024a')">click here</a>. Save the model to remove this notification.
-Model 'Return_coupling_R2024a' was exported from R2024b to R2024a. To find blocks that were removed during the export operation, <a href="matlab:slexportprevious.utils.displayReplacedBlocks('Return_coupling_R2024a')">click here</a>. Save the model to remove this notification.
-Model 'AC_return_SOV_R2024a' was exported from R2024b to R2024a. To find blocks that were removed during the export operation, <a href="matlab:slexportprevious.utils.displayReplacedBlocks('AC_return_SOV_R2024a')">click here</a>. Save the model to remove this notification.
-Model 'Supply_coupling_R2024a' was exported from R2024b to R2024a. To find blocks that were removed during the export operation, <a href="matlab:slexportprevious.utils.displayReplacedBlocks('Supply_coupling_R2024a')">click here</a>. Save the model to remove this notification.
-Model 'AC_supply_SOV_R2024a' was exported from R2024b to R2024a. To find blocks that were removed during the export operation, <a href="matlab:slexportprevious.utils.displayReplacedBlocks('AC_supply_SOV_R2024a')">click here</a>. Save the model to remove this notification.
-Model 'GS_return_SOV_R2024a' was exported from R2024b to R2024a. To find blocks that were removed during the export operation, <a href="matlab:slexportprevious.utils.displayReplacedBlocks('GS_return_SOV_R2024a')">click here</a>. Save the model to remove this notification.
-Model 'GS_supply_SOV_R2024a' was exported from R2024b to R2024a. To find blocks that were removed during the export operation, <a href="matlab:slexportprevious.utils.displayReplacedBlocks('GS_supply_SOV_R2024a')">click here</a>. Save the model to remove this notification.
-[Warning: <a href="matlab:sfprivate('sfOpenObjectBySId','aircraft_refuel_control_R2024a:1:::83')">'AC_VALVE_FEEDBACK'</a> is defined, but is not used in the Stateflow chart. <a href= "matlab: internal.stateflow.dialogs.UnusedObjectDeleter.createDeleter('aircraft_refuel_control_R2024a:1:::83')">Delete this
-object</a> or <a href= "matlab: sfprivate('openConfigParamsSFDiagnostics',21)">configure the diagnostic</a>.
+{Operation terminated by user during <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('scatter>matrixScatter', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\graphics\scatter.m', 168)" style="font-weight:bold">scatter>matrixScatter</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\graphics\scatter.m',168,0)">line 168</a>)
 
-] 
-[> In sldiagviewer.reportWarning
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('construct_error', 'C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\private\construct_error.m', 130)" style="font-weight:bold">construct_error</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\private\construct_error.m',130,0)">line 130</a>)
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('sfprivate', 'C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\sfprivate.m', 13)" style="font-weight:bold">sfprivate</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\sfprivate.m',13,0)">line 13</a>)
-In Simulink.Simulation.internal.DesktopSimHelper
-In Simulink.Simulation.internal.DesktopSimHelper.sim
-In Simulink/SimulationInput/sim
-In MultiSim.internal.runSingleSim
-In MultiSim.internal/SimulationRunnerSerial/executeImplSingle
-In MultiSim.internal/SimulationRunnerSerial/executeImpl
-In Simulink/SimulationManager/executeSims
-In Simulink/SimulationManager/execute
-In Simulink/SimulationManager/run
+
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('scatter', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\graphics\scatter.m', 65)" style="font-weight:bold">scatter</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\graphics\scatter.m',65,0)">line 65</a>)
+        h = matrixScatter(parent, args);
+
+In simmanager.designview.internal.ScatterPlotMainLayer
+
+In simmanager.designview.ScatterPlot/createScatters
+
+In simmanager.designview.ScatterPlot
+
+In simmanager.designview.FigureManager/createScatterPlot
+
+In simmanager.designview.FigureManager/createFigure
+
+In MultiSim.internal.MultiSimJob/initializeUIData
+
+In MultiSim.internal.MultiSimJob
+
+In MultiSim.internal.MultiSimManager/addJob
+
 In Simulink.Simulation.internal.DesktopSimHelper.runUsingManager
-In Simulink/SimulationInput/runSingleSimWithOptions
-In Simulink/SimulationInput/sim
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('run_everything_slowly', 'C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m', 35)" style="font-weight:bold">run_everything_slowly</a> (<a href="matlab: opentoline('C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m',35,0)">line 35</a>)] 
-[Warning: <a href="matlab:sfprivate('sfOpenObjectBySId','aircraft_refuel_control_R2024a:1:::85')">'P_COUPLING_AC'</a> is defined, but is not used in the Stateflow chart. <a href= "matlab: internal.stateflow.dialogs.UnusedObjectDeleter.createDeleter('aircraft_refuel_control_R2024a:1:::85')">Delete this object</a>
-or <a href= "matlab: sfprivate('openConfigParamsSFDiagnostics',21)">configure the diagnostic</a>.
 
-] 
-[> In sldiagviewer.reportWarning
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('construct_error', 'C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\private\construct_error.m', 130)" style="font-weight:bold">construct_error</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\private\construct_error.m',130,0)">line 130</a>)
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('sfprivate', 'C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\sfprivate.m', 13)" style="font-weight:bold">sfprivate</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\sfprivate.m',13,0)">line 13</a>)
-In Simulink.Simulation.internal.DesktopSimHelper
-In Simulink.Simulation.internal.DesktopSimHelper.sim
-In Simulink/SimulationInput/sim
-In MultiSim.internal.runSingleSim
-In MultiSim.internal/SimulationRunnerSerial/executeImplSingle
-In MultiSim.internal/SimulationRunnerSerial/executeImpl
-In Simulink/SimulationManager/executeSims
-In Simulink/SimulationManager/execute
-In Simulink/SimulationManager/run
-In Simulink.Simulation.internal.DesktopSimHelper.runUsingManager
-In Simulink/SimulationInput/runSingleSimWithOptions
-In Simulink/SimulationInput/sim
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('run_everything_slowly', 'C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m', 35)" style="font-weight:bold">run_everything_slowly</a> (<a href="matlab: opentoline('C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m',35,0)">line 35</a>)] 
-[Warning: <a href="matlab:sfprivate('sfOpenObjectBySId','aircraft_refuel_control_R2024a:1:::86')">'P_COUPLING_AC_RETURN'</a> is defined, but is not used in the Stateflow chart. <a href= "matlab: internal.stateflow.dialogs.UnusedObjectDeleter.createDeleter('aircraft_refuel_control_R2024a:1:::86')">Delete this
-object</a> or <a href= "matlab: sfprivate('openConfigParamsSFDiagnostics',21)">configure the diagnostic</a>.
+In Simulink.SimulationInput/runSingleSimWithOptions
 
-] 
-[> In sldiagviewer.reportWarning
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('construct_error', 'C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\private\construct_error.m', 130)" style="font-weight:bold">construct_error</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\private\construct_error.m',130,0)">line 130</a>)
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('sfprivate', 'C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\sfprivate.m', 13)" style="font-weight:bold">sfprivate</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\sfprivate.m',13,0)">line 13</a>)
-In Simulink.Simulation.internal.DesktopSimHelper
-In Simulink.Simulation.internal.DesktopSimHelper.sim
-In Simulink/SimulationInput/sim
-In MultiSim.internal.runSingleSim
-In MultiSim.internal/SimulationRunnerSerial/executeImplSingle
-In MultiSim.internal/SimulationRunnerSerial/executeImpl
-In Simulink/SimulationManager/executeSims
-In Simulink/SimulationManager/execute
-In Simulink/SimulationManager/run
-In Simulink.Simulation.internal.DesktopSimHelper.runUsingManager
-In Simulink/SimulationInput/runSingleSimWithOptions
-In Simulink/SimulationInput/sim
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('run_everything_slowly', 'C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m', 35)" style="font-weight:bold">run_everything_slowly</a> (<a href="matlab: opentoline('C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m',35,0)">line 35</a>)] 
-[Warning: <a href="matlab:sfprivate('sfOpenObjectBySId','GS_refuel_control_R2024a:1:::58')">'GS_VALVE_FEEDBACK'</a> is defined, but is not used in the Stateflow chart. <a href= "matlab: internal.stateflow.dialogs.UnusedObjectDeleter.createDeleter('GS_refuel_control_R2024a:1:::58')">Delete this
-object</a> or <a href= "matlab: sfprivate('openConfigParamsSFDiagnostics',21)">configure the diagnostic</a>.
+In Simulink.SimulationInput/sim
 
-] 
-[> In sldiagviewer.reportWarning
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('construct_error', 'C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\private\construct_error.m', 130)" style="font-weight:bold">construct_error</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\private\construct_error.m',130,0)">line 130</a>)
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('sfprivate', 'C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\sfprivate.m', 13)" style="font-weight:bold">sfprivate</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\sfprivate.m',13,0)">line 13</a>)
-In Simulink.Simulation.internal.DesktopSimHelper
-In Simulink.Simulation.internal.DesktopSimHelper.sim
-In Simulink/SimulationInput/sim
-In MultiSim.internal.runSingleSim
-In MultiSim.internal/SimulationRunnerSerial/executeImplSingle
-In MultiSim.internal/SimulationRunnerSerial/executeImpl
-In Simulink/SimulationManager/executeSims
-In Simulink/SimulationManager/execute
-In Simulink/SimulationManager/run
-In Simulink.Simulation.internal.DesktopSimHelper.runUsingManager
-In Simulink/SimulationInput/runSingleSimWithOptions
-In Simulink/SimulationInput/sim
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('run_everything_slowly', 'C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m', 35)" style="font-weight:bold">run_everything_slowly</a> (<a href="matlab: opentoline('C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m',35,0)">line 35</a>)] 
-Elapsed time is 313.942427 seconds.
-Max flow speed for LH2 is 66.9375m/s.
-Max flow speed for GH2 is 149.9443m/s.
-Max mass flow rate for GH2 during warm tank warmup is 1.0668kg/s.
-Mean mass flow rate for GH2 during warm tank warmup is 0.097735kg/s.
-Max mass flow rate  for GH2 during cold tank warmup is 1.7266kg/s.
-Mean mass flow rate for GH2 during cold tank warmup is 0.19901kg/s.
-Max mass flow rate for GH2 during defuel tank drain is 2.5313kg/s.
-Mean mass flow rate for GH2 during defuel tank drain is 0.44773kg/s.
-Max mass flow rate for LH2 during warm tank chilldown is 0.087579kg/s.
-Mean mass flow rate for LH2 during warm tank chilldown is 0.027866kg/s.
-Max mass flow rate for LH2 during warm tank fill is 0.77227kg/s.
-Mean mass flow rate for LH2 during warm tank fill is 0.11524kg/s.
-Max mass flow rate for LH2 during cold tank chilldown is 0.2532kg/s.
-Mean mass flow rate for LH2 during cold tank chilldown is 0.041751kg/s.
-Max mass flow rate for LH2 during cold tank fill is 0.93022kg/s.
-Mean mass flow rate for LH2 during cold tank fill is 0.21086kg/s.
-Max mass flow rate for LH2 during defuel chilldown is 0.2351kg/s.
-Mean mass flow rate for LH2 during defuel chilldown is 0.06991kg/s.
-            <strong>Operation phase</strong>            <strong>Mean flow rate</strong>    <strong>Unit</strong> 
-    <strong>_______________________________</strong>    <strong>______________</strong>    <strong>_____</strong>
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('run_everything_slowly', 'C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m', 35)" style="font-weight:bold">run_everything_slowly</a> (<a href="matlab: opentoline('C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m',35,0)">line 35</a>)
+    normal_flow_rate_simOut = sim(normal_flow_rate_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
+} 
+{Operation terminated by user during matlab.graphics.controls.AxesToolbar
 
-    "Warm tank refuel chilldown"           42.284        "m/s"
-    "Warm tank refuel tank filling"         9.075        "m/s"
-    "Warm tank refuel warmup"              24.379        "m/s"
-    "Cold tank refuel chilldown"           68.429        "m/s"
-    "Cold tank refuel tank filling"        8.7167        "m/s"
-    "Cold tank refuel warmup"              18.037        "m/s"
-    "Defuel chilldown"                     97.778        "m/s"
-    "Defuel wamrup"                        20.204        "m/s"
 
-Total LH2 supplied by ground station = 33.396kg.
-Total LH2 in the UAM tank = 16.3158kg.
-Total LH2 supplied by ground station = 30.5889kg.
-Total LH2 in the UAM tank = 16.3158kg.
-[24-Mar-2025 21:22:20] Checking for availability of parallel pool...
-Starting parallel pool (parpool) using the 'LocalProfile2' profile ...
-Connected to parallel pool with 10 workers.
-[24-Mar-2025 21:23:29] Starting Simulink on parallel workers...
-[24-Mar-2025 21:23:30] Configuring simulation cache folder on parallel workers...
-[24-Mar-2025 21:23:31] Loading model on parallel workers...
-[24-Mar-2025 21:23:46] Running simulations...
-[24-Mar-2025 21:29:37] Completed 1 of 10 simulation runs
-[24-Mar-2025 21:29:38] Completed 2 of 10 simulation runs
-[24-Mar-2025 21:29:39] Completed 3 of 10 simulation runs
-[24-Mar-2025 21:29:39] Completed 4 of 10 simulation runs
-[24-Mar-2025 21:29:42] Completed 5 of 10 simulation runs
-[24-Mar-2025 21:30:53] Completed 6 of 10 simulation runs
-[24-Mar-2025 21:30:55] Completed 7 of 10 simulation runs
-[24-Mar-2025 21:30:59] Completed 8 of 10 simulation runs
-[24-Mar-2025 21:34:25] Completed 9 of 10 simulation runs
-[24-Mar-2025 21:34:30] Completed 10 of 10 simulation runs
-[24-Mar-2025 21:34:30] Cleaning up parallel workers...
-Elapsed time is 737.463493 seconds.
-Total LH2 supplied by ground station = 33.2072kg.
-Total LH2 in the UAM tank = 16.2701kg.
-Total LH2 supplied by ground station = 33.0285kg.
-Total LH2 in the UAM tank = 16.1567kg.
-Total LH2 supplied by ground station = 33.1895kg.
-Total LH2 in the UAM tank = 16.2483kg.
-Total LH2 supplied by ground station = 33.3281kg.
-Total LH2 in the UAM tank = 16.3226kg.
-Total LH2 supplied by ground station = 33.0514kg.
-Total LH2 in the UAM tank = 16.1727kg.
-Total LH2 supplied by ground station = 33.1444kg.
-Total LH2 in the UAM tank = 16.2068kg.
-Total LH2 supplied by ground station = 33.2226kg.
-Total LH2 in the UAM tank = 16.2803kg.
-Total LH2 supplied by ground station = 33.2902kg.
-Total LH2 in the UAM tank = 16.2803kg.
-Total LH2 supplied by ground station = 33.3483kg.
-Total LH2 in the UAM tank = 16.3356kg.
-Total LH2 supplied by ground station = 33.3946kg.
-Total LH2 in the UAM tank = 16.3174kg.
-[24-Mar-2025 21:34:51] Checking for availability of parallel pool...
-[24-Mar-2025 21:34:51] Starting Simulink on parallel workers...
-[24-Mar-2025 21:34:51] Configuring simulation cache folder on parallel workers...
-[24-Mar-2025 21:34:51] Loading model on parallel workers...
-[24-Mar-2025 21:34:54] Running simulations...
-[24-Mar-2025 21:40:36] Completed 1 of 10 simulation runs
-[24-Mar-2025 21:40:38] Completed 2 of 10 simulation runs
-[24-Mar-2025 21:40:38] Completed 3 of 10 simulation runs
-[24-Mar-2025 21:40:38] Completed 4 of 10 simulation runs
-[24-Mar-2025 21:40:41] Completed 5 of 10 simulation runs
-[24-Mar-2025 21:40:42] Completed 6 of 10 simulation runs
-[24-Mar-2025 21:40:42] Completed 7 of 10 simulation runs
-[24-Mar-2025 21:40:43] Completed 8 of 10 simulation runs
-[24-Mar-2025 21:40:44] Completed 9 of 10 simulation runs
-[24-Mar-2025 21:40:48] Completed 10 of 10 simulation runs
-[24-Mar-2025 21:40:48] Cleaning up parallel workers...
-Elapsed time is 363.070687 seconds.
-Total LH2 supplied by ground station = 33.2859kg.
-Total LH2 in the UAM tank = 16.2752kg.
-Total LH2 supplied by ground station = 33.3161kg.
-Total LH2 in the UAM tank = 16.3034kg.
-Total LH2 supplied by ground station = 33.3411kg.
-Total LH2 in the UAM tank = 16.3286kg.
-Total LH2 supplied by ground station = 33.3616kg.
-Total LH2 in the UAM tank = 16.3482kg.
-Total LH2 supplied by ground station = 33.376kg.
-Total LH2 in the UAM tank = 16.3079kg.
-Total LH2 supplied by ground station = 33.3897kg.
-Total LH2 in the UAM tank = 16.3115kg.
-Total LH2 supplied by ground station = 33.3995kg.
-Total LH2 in the UAM tank = 16.3227kg.
-Total LH2 supplied by ground station = 33.4097kg.
-Total LH2 in the UAM tank = 16.3296kg.
-Total LH2 supplied by ground station = 33.4191kg.
-Total LH2 in the UAM tank = 16.3429kg.
-Total LH2 supplied by ground station = 33.428kg.
-Total LH2 in the UAM tank = 16.3489kg.
-[24-Mar-2025 21:41:28] Checking for availability of parallel pool...
-[24-Mar-2025 21:41:28] Starting Simulink on parallel workers...
-[24-Mar-2025 21:41:28] Configuring simulation cache folder on parallel workers...
-[24-Mar-2025 21:41:28] Loading model on parallel workers...
-[24-Mar-2025 21:41:31] Running simulations...
-[24-Mar-2025 21:47:49] Completed 1 of 10 simulation runs
-[24-Mar-2025 21:47:51] Completed 2 of 10 simulation runs
-[24-Mar-2025 21:47:51] Completed 3 of 10 simulation runs
-[24-Mar-2025 21:47:51] Completed 4 of 10 simulation runs
-[24-Mar-2025 21:47:52] Completed 5 of 10 simulation runs
-[24-Mar-2025 21:47:53] Completed 6 of 10 simulation runs
-[24-Mar-2025 21:47:55] Completed 7 of 10 simulation runs
-[24-Mar-2025 21:47:57] Completed 8 of 10 simulation runs
-[24-Mar-2025 21:47:58] Completed 9 of 10 simulation runs
-[24-Mar-2025 21:47:59] Completed 10 of 10 simulation runs
-[24-Mar-2025 21:47:59] Cleaning up parallel workers...
-Elapsed time is 398.364284 seconds.
-Total LH2 supplied by ground station = 33.2859kg.
-Total LH2 in the UAM tank = 16.2752kg.
-Total LH2 supplied by ground station = 33.3161kg.
-Total LH2 in the UAM tank = 16.3034kg.
-Total LH2 supplied by ground station = 33.3411kg.
-Total LH2 in the UAM tank = 16.3286kg.
-Total LH2 supplied by ground station = 33.3616kg.
-Total LH2 in the UAM tank = 16.3482kg.
-Total LH2 supplied by ground station = 33.376kg.
-Total LH2 in the UAM tank = 16.3079kg.
-Total LH2 supplied by ground station = 33.3897kg.
-Total LH2 in the UAM tank = 16.3115kg.
-Total LH2 supplied by ground station = 33.3995kg.
-Total LH2 in the UAM tank = 16.3227kg.
-Total LH2 supplied by ground station = 33.4097kg.
-Total LH2 in the UAM tank = 16.3296kg.
-Total LH2 supplied by ground station = 33.4191kg.
-Total LH2 in the UAM tank = 16.3429kg.
-Total LH2 supplied by ground station = 33.428kg.
-Total LH2 in the UAM tank = 16.3489kg.
-[24-Mar-2025 21:48:52] Checking for availability of parallel pool...
-[24-Mar-2025 21:48:52] Starting Simulink on parallel workers...
-[24-Mar-2025 21:48:53] Configuring simulation cache folder on parallel workers...
-[24-Mar-2025 21:48:53] Loading model on parallel workers...
-[24-Mar-2025 21:48:55] Running simulations...
-[24-Mar-2025 21:55:47] Completed 1 of 10 simulation runs
-[24-Mar-2025 21:55:53] Completed 2 of 10 simulation runs
-[24-Mar-2025 21:55:55] Completed 3 of 10 simulation runs
-[24-Mar-2025 21:55:57] Completed 4 of 10 simulation runs
-[24-Mar-2025 21:55:58] Completed 5 of 10 simulation runs
-[24-Mar-2025 21:56:01] Completed 6 of 10 simulation runs
-[24-Mar-2025 21:56:03] Completed 7 of 10 simulation runs
-[24-Mar-2025 21:56:07] Completed 8 of 10 simulation runs
-[24-Mar-2025 21:56:29] Completed 9 of 10 simulation runs
-[24-Mar-2025 21:57:10] Completed 10 of 10 simulation runs
-[24-Mar-2025 21:57:10] Cleaning up parallel workers...
-Elapsed time is 505.920854 seconds.
-Total LH2 supplied by ground station = 30.1797kg.
-Total LH2 in the UAM tank = 17.2155kg.
-Total LH2 supplied by ground station = 30.0212kg.
-Total LH2 in the UAM tank = 16.5793kg.
-Total LH2 supplied by ground station = 30.0691kg.
-Total LH2 in the UAM tank = 16.7401kg.
-Total LH2 supplied by ground station = 30.6667kg.
-Total LH2 in the UAM tank = 16.6009kg.
-Total LH2 supplied by ground station = 31.1235kg.
-Total LH2 in the UAM tank = 16.4301kg.
-Total LH2 supplied by ground station = 32.1967kg.
-Total LH2 in the UAM tank = 15.9793kg.
-Total LH2 supplied by ground station = 33.0316kg.
-Total LH2 in the UAM tank = 16.1145kg.
-Total LH2 supplied by ground station = 33.705kg.
-Total LH2 in the UAM tank = 16.5945kg.
-Total LH2 supplied by ground station = 34.6056kg.
-Total LH2 in the UAM tank = 17.0898kg.
-Total LH2 supplied by ground station = 34.6841kg.
-Total LH2 in the UAM tank = 17.1361kg.
-[24-Mar-2025 21:57:37] Checking for availability of parallel pool...
-[24-Mar-2025 21:57:37] Starting Simulink on parallel workers...
-[24-Mar-2025 21:57:37] Configuring simulation cache folder on parallel workers...
-[24-Mar-2025 21:57:37] Loading model on parallel workers...
-[24-Mar-2025 21:57:40] Running simulations...
-[24-Mar-2025 22:04:59] Completed 1 of 10 simulation runs
-[24-Mar-2025 22:05:02] Completed 2 of 10 simulation runs
-[24-Mar-2025 22:05:03] Completed 3 of 10 simulation runs
-[24-Mar-2025 22:05:06] Completed 4 of 10 simulation runs
-[24-Mar-2025 22:05:11] Completed 5 of 10 simulation runs
-[24-Mar-2025 22:05:24] Completed 6 of 10 simulation runs
-[24-Mar-2025 22:05:25] Completed 7 of 10 simulation runs
-[24-Mar-2025 22:05:49] Completed 8 of 10 simulation runs
-[24-Mar-2025 22:06:52] Completed 9 of 10 simulation runs
-[24-Mar-2025 22:11:31] Completed 10 of 10 simulation runs
-[24-Mar-2025 22:11:31] Cleaning up parallel workers...
-Elapsed time is 841.434870 seconds.
-Total LH2 supplied by ground station = 23.7191kg.
-Total LH2 in the UAM tank = 16.4007kg.
-Total LH2 supplied by ground station = 25.0096kg.
-Total LH2 in the UAM tank = 16.4574kg.
-Total LH2 supplied by ground station = 26.0064kg.
-Total LH2 in the UAM tank = 16.39kg.
-Total LH2 supplied by ground station = 27.0316kg.
-Total LH2 in the UAM tank = 16.3414kg.
-Total LH2 supplied by ground station = 28.0887kg.
-Total LH2 in the UAM tank = 16.3537kg.
-Total LH2 supplied by ground station = 29.1811kg.
-Total LH2 in the UAM tank = 16.3389kg.
-Total LH2 supplied by ground station = 30.2628kg.
-Total LH2 in the UAM tank = 16.3761kg.
-Total LH2 supplied by ground station = 31.0238kg.
-Total LH2 in the UAM tank = 16.2097kg.
-Total LH2 supplied by ground station = 32.192kg.
-Total LH2 in the UAM tank = 16.2887kg.
-Total LH2 supplied by ground station = 33.3946kg.
-Total LH2 in the UAM tank = 16.3174kg.
-[24-Mar-2025 22:12:15] Checking for availability of parallel pool...
-[24-Mar-2025 22:12:15] Starting Simulink on parallel workers...
-[24-Mar-2025 22:12:15] Configuring simulation cache folder on parallel workers...
-[24-Mar-2025 22:12:15] Loading model on parallel workers...
-[24-Mar-2025 22:12:20] Running simulations...
-[24-Mar-2025 22:20:12] Completed 1 of 10 simulation runs
-[24-Mar-2025 22:20:20] Completed 2 of 10 simulation runs
-[24-Mar-2025 22:20:21] Completed 3 of 10 simulation runs
-[24-Mar-2025 22:20:22] Completed 4 of 10 simulation runs
-[24-Mar-2025 22:20:24] Completed 5 of 10 simulation runs
-[24-Mar-2025 22:20:24] Completed 6 of 10 simulation runs
-[24-Mar-2025 22:20:27] Completed 7 of 10 simulation runs
-[24-Mar-2025 22:20:27] Completed 8 of 10 simulation runs
-[24-Mar-2025 22:20:30] Completed 9 of 10 simulation runs
-[24-Mar-2025 22:20:31] Completed 10 of 10 simulation runs
-[24-Mar-2025 22:20:31] Cleaning up parallel workers...
-Elapsed time is 504.490713 seconds.
-Total LH2 supplied by ground station = 33.3983kg.
-Total LH2 in the UAM tank = 16.3873kg.
-Total LH2 supplied by ground station = 33.393kg.
-Total LH2 in the UAM tank = 16.3762kg.
-Total LH2 supplied by ground station = 33.3942kg.
-Total LH2 in the UAM tank = 16.3813kg.
-Total LH2 supplied by ground station = 33.3986kg.
-Total LH2 in the UAM tank = 16.3903kg.
-Total LH2 supplied by ground station = 33.3953kg.
-Total LH2 in the UAM tank = 16.3985kg.
-Total LH2 supplied by ground station = 33.3962kg.
-Total LH2 in the UAM tank = 16.3621kg.
-Total LH2 supplied by ground station = 33.3939kg.
-Total LH2 in the UAM tank = 16.2927kg.
-Total LH2 supplied by ground station = 33.3928kg.
-Total LH2 in the UAM tank = 16.3913kg.
-Total LH2 supplied by ground station = 33.3796kg.
-Total LH2 in the UAM tank = 16.5868kg.
-Total LH2 supplied by ground station = 33.3663kg.
-Total LH2 in the UAM tank = 17.0466kg.
-[24-Mar-2025 22:21:02] Checking for availability of parallel pool...
-[24-Mar-2025 22:21:02] Starting Simulink on parallel workers...
-[24-Mar-2025 22:21:02] Configuring simulation cache folder on parallel workers...
-[24-Mar-2025 22:21:02] Loading model on parallel workers...
-[24-Mar-2025 22:21:06] Running simulations...
-[24-Mar-2025 22:29:23] Completed 1 of 10 simulation runs
-[24-Mar-2025 22:29:29] Completed 2 of 10 simulation runs
-[24-Mar-2025 22:29:30] Completed 3 of 10 simulation runs
-[24-Mar-2025 22:30:00] Completed 4 of 10 simulation runs
-[24-Mar-2025 22:30:09] Completed 5 of 10 simulation runs
-[24-Mar-2025 22:30:10] Completed 6 of 10 simulation runs
-[24-Mar-2025 22:30:28] Completed 7 of 10 simulation runs
-[24-Mar-2025 22:30:44] Completed 8 of 10 simulation runs
-[24-Mar-2025 22:31:03] Completed 9 of 10 simulation runs
-[24-Mar-2025 22:32:22] Completed 10 of 10 simulation runs
-[24-Mar-2025 22:32:22] Cleaning up parallel workers...
-Elapsed time is 687.777412 seconds.
-Total LH2 supplied by ground station = 32.5974kg.
-Total LH2 in the UAM tank = 15.5016kg.
-Total LH2 supplied by ground station = 38.3529kg.
-Total LH2 in the UAM tank = 21.7016kg.
-Total LH2 supplied by ground station = 44.0847kg.
-Total LH2 in the UAM tank = 27.6201kg.
-Total LH2 supplied by ground station = 49.8429kg.
-Total LH2 in the UAM tank = 33.2958kg.
-Total LH2 supplied by ground station = 55.5105kg.
-Total LH2 in the UAM tank = 39.0074kg.
-Total LH2 supplied by ground station = 61.4582kg.
-Total LH2 in the UAM tank = 44.8257kg.
-Total LH2 supplied by ground station = 67.5085kg.
-Total LH2 in the UAM tank = 50.825kg.
-Total LH2 supplied by ground station = 73.3005kg.
-Total LH2 in the UAM tank = 56.4898kg.
-Total LH2 supplied by ground station = 79.4007kg.
-Total LH2 in the UAM tank = 62.6377kg.
-Total LH2 supplied by ground station = 85.4861kg.
-Total LH2 in the UAM tank = 68.5114kg.
-[24-Mar-2025 22:33:05] Checking for availability of parallel pool...
-[24-Mar-2025 22:33:05] Starting Simulink on parallel workers...
-[24-Mar-2025 22:33:06] Configuring simulation cache folder on parallel workers...
-[24-Mar-2025 22:33:06] Loading model on parallel workers...
-[24-Mar-2025 22:33:09] Running simulations...
-[24-Mar-2025 22:39:48] Completed 1 of 10 simulation runs
-[24-Mar-2025 22:39:59] Completed 2 of 10 simulation runs
-[24-Mar-2025 22:40:13] Completed 3 of 10 simulation runs
-[24-Mar-2025 22:40:42] Completed 4 of 10 simulation runs
-[24-Mar-2025 22:40:45] Completed 5 of 10 simulation runs
-[24-Mar-2025 22:40:48] Completed 6 of 10 simulation runs
-[24-Mar-2025 22:40:58] Completed 7 of 10 simulation runs
-[24-Mar-2025 22:41:08] Completed 8 of 10 simulation runs
-[24-Mar-2025 22:42:53] Completed 9 of 10 simulation runs
-[24-Mar-2025 22:49:54] Completed 10 of 10 simulation runs
-[24-Mar-2025 22:49:54] Cleaning up parallel workers...
-Elapsed time is 1015.970675 seconds.
-Total LH2 supplied by ground station = 32.5926kg.
-Total LH2 in the UAM tank = 15.9905kg.
-Total LH2 supplied by ground station = 32.9324kg.
-Total LH2 in the UAM tank = 16.0784kg.
-Total LH2 supplied by ground station = 33.1797kg.
-Total LH2 in the UAM tank = 16.2173kg.
-Total LH2 supplied by ground station = 33.3946kg.
-Total LH2 in the UAM tank = 16.3174kg.
-Total LH2 supplied by ground station = 33.5886kg.
-Total LH2 in the UAM tank = 16.5424kg.
-Total LH2 supplied by ground station = 34.0382kg.
-Total LH2 in the UAM tank = 16.7761kg.
-Total LH2 supplied by ground station = 34.506kg.
-Total LH2 in the UAM tank = 16.9669kg.
-Total LH2 supplied by ground station = 34.5425kg.
-Total LH2 in the UAM tank = 16.8367kg.
-Total LH2 supplied by ground station = 35.2183kg.
-Total LH2 in the UAM tank = 17.312kg.
-Total LH2 supplied by ground station = 35.0456kg.
-Total LH2 in the UAM tank = 17.2345kg.
-[24-Mar-2025 22:50:27] Checking for availability of parallel pool...
-[24-Mar-2025 22:50:27] Starting Simulink on parallel workers...
-[24-Mar-2025 22:50:27] Configuring simulation cache folder on parallel workers...
-[24-Mar-2025 22:50:27] Loading model on parallel workers...
-[24-Mar-2025 22:50:30] Running simulations...
-[24-Mar-2025 22:56:28] Completed 1 of 10 simulation runs. Run 1 has errors.
-[24-Mar-2025 22:56:36] Completed 2 of 10 simulation runs. Run 2 has errors.
-[24-Mar-2025 22:56:52] Completed 3 of 10 simulation runs. Run 3 has errors.
-[24-Mar-2025 22:56:59] Completed 4 of 10 simulation runs
-[24-Mar-2025 22:57:03] Completed 5 of 10 simulation runs
-[24-Mar-2025 22:57:04] Completed 6 of 10 simulation runs
-[24-Mar-2025 22:57:05] Completed 7 of 10 simulation runs
-[24-Mar-2025 22:57:07] Completed 8 of 10 simulation runs
-[24-Mar-2025 22:57:36] Completed 9 of 10 simulation runs
-[24-Mar-2025 22:58:06] Completed 10 of 10 simulation runs
-[Warning: One or more simulations completed with errors. For more information, inspect the
-SimulationOutput objects at these indices:
-[1 2 3]] 
-[24-Mar-2025 22:58:07] Cleaning up parallel workers...
-Elapsed time is 468.181713 seconds.
-Error spotted, handling in graphing
-Error spotted, handling in graphing
-Error spotted, handling in graphing
-Total LH2 supplied by ground station = 33.0956kg.
-Total LH2 in the UAM tank = 16.3558kg.
-Total LH2 supplied by ground station = 33.3625kg.
-Total LH2 in the UAM tank = 16.3923kg.
-Total LH2 supplied by ground station = 33.1684kg.
-Total LH2 in the UAM tank = 16.2705kg.
-Total LH2 supplied by ground station = 33.3946kg.
-Total LH2 in the UAM tank = 16.3174kg.
-Total LH2 supplied by ground station = 33.2678kg.
-Total LH2 in the UAM tank = 16.2276kg.
-Total LH2 supplied by ground station = 33.5915kg.
-Total LH2 in the UAM tank = 16.267kg.
-Total LH2 supplied by ground station = 33.9747kg.
-Total LH2 in the UAM tank = 16.3825kg.
-[24-Mar-2025 22:58:31] Checking for availability of parallel pool...
-[24-Mar-2025 22:58:31] Starting Simulink on parallel workers...
-[24-Mar-2025 22:58:31] Configuring simulation cache folder on parallel workers...
-[24-Mar-2025 22:58:31] Loading model on parallel workers...
-[24-Mar-2025 22:58:34] Running simulations...
-[24-Mar-2025 23:02:20] Completed 1 of 10 simulation runs. Run 10 has errors.
-[24-Mar-2025 23:04:59] Completed 2 of 10 simulation runs
-[24-Mar-2025 23:05:01] Completed 3 of 10 simulation runs
-[24-Mar-2025 23:05:01] Completed 4 of 10 simulation runs
-[24-Mar-2025 23:05:02] Completed 5 of 10 simulation runs
-[24-Mar-2025 23:05:02] Completed 6 of 10 simulation runs
-[24-Mar-2025 23:05:03] Completed 7 of 10 simulation runs
-[24-Mar-2025 23:05:06] Completed 8 of 10 simulation runs
-[24-Mar-2025 23:05:08] Completed 9 of 10 simulation runs
-[24-Mar-2025 23:06:31] Completed 10 of 10 simulation runs
-[Warning: One or more simulations completed with errors. For more information, inspect the
-SimulationOutput objects at these indices:
-[10]] 
-[24-Mar-2025 23:06:31] Cleaning up parallel workers...
-Elapsed time is 487.010224 seconds.
-Total LH2 supplied by ground station = 33.0213kg.
-Total LH2 in the UAM tank = 16.1549kg.
-Total LH2 supplied by ground station = 33.4138kg.
-Total LH2 in the UAM tank = 16.3429kg.
-Total LH2 supplied by ground station = 33.4133kg.
-Total LH2 in the UAM tank = 16.3427kg.
-Total LH2 supplied by ground station = 33.4099kg.
-Total LH2 in the UAM tank = 16.3384kg.
-Total LH2 supplied by ground station = 33.3996kg.
-Total LH2 in the UAM tank = 16.3244kg.
-Total LH2 supplied by ground station = 33.3725kg.
-Total LH2 in the UAM tank = 16.328kg.
-Total LH2 supplied by ground station = 33.3027kg.
-Total LH2 in the UAM tank = 16.2517kg.
-Total LH2 supplied by ground station = 33.5507kg.
-Total LH2 in the UAM tank = 16.3387kg.
-Total LH2 supplied by ground station = 33.3132kg.
-Total LH2 in the UAM tank = 16.2925kg.
-Error spotted, handling in graphing
-[24-Mar-2025 23:07:25] Checking for availability of parallel pool...
-[24-Mar-2025 23:07:25] Starting Simulink on parallel workers...
-[24-Mar-2025 23:07:25] Configuring simulation cache folder on parallel workers...
-[24-Mar-2025 23:07:25] Loading model on parallel workers...
-[24-Mar-2025 23:07:28] Running simulations...
-[24-Mar-2025 23:15:08] Completed 1 of 10 simulation runs. Run 2 has errors.
-[24-Mar-2025 23:15:09] Completed 2 of 10 simulation runs. Run 1 has errors.
-[24-Mar-2025 23:15:35] Completed 3 of 10 simulation runs. Run 3 has errors.
-[24-Mar-2025 23:15:47] Completed 4 of 10 simulation runs
-[24-Mar-2025 23:15:48] Completed 5 of 10 simulation runs
-[24-Mar-2025 23:15:49] Completed 6 of 10 simulation runs
-[24-Mar-2025 23:15:49] Completed 7 of 10 simulation runs
-[24-Mar-2025 23:15:50] Completed 8 of 10 simulation runs
-[24-Mar-2025 23:15:57] Completed 9 of 10 simulation runs
-[24-Mar-2025 23:16:51] Completed 10 of 10 simulation runs
-[Warning: One or more simulations completed with errors. For more information, inspect the
-SimulationOutput objects at these indices:
-[1 2 3]] 
-[24-Mar-2025 23:16:51] Cleaning up parallel workers...
-Elapsed time is 577.603931 seconds.
-Error spotted, handling in graphing
-Error spotted, handling in graphing
-Error spotted, handling in graphing
-Total LH2 supplied by ground station = 33.7166kg.
-Total LH2 in the UAM tank = 16.6251kg.
-Total LH2 supplied by ground station = 33.38kg.
-Total LH2 in the UAM tank = 16.405kg.
-Total LH2 supplied by ground station = 32.9376kg.
-Total LH2 in the UAM tank = 16.0202kg.
-Total LH2 supplied by ground station = 32.8948kg.
-Total LH2 in the UAM tank = 16.0766kg.
-Total LH2 supplied by ground station = 33.1012kg.
-Total LH2 in the UAM tank = 16.4985kg.
-Total LH2 supplied by ground station = 32.9777kg.
-Total LH2 in the UAM tank = 16.5057kg.
-Total LH2 supplied by ground station = 33.0885kg.
-Total LH2 in the UAM tank = 16.7697kg.
+In matlab.ui.controls.AxesToolbar
+
+In matlab.graphics.controls.ToolbarController.getDefaultToolbar
+
+In matlab.graphics.controls.WebToolbarController.createToolbar
+
+In matlab.graphics.controls.WebToolbarController/cleanupStrandedToolbars
+
+In matlab.graphics.controls.WebToolbarController>localCleanupStrandedToolbars
+
+In matlab.graphics.controls.WebToolbarController>@()localCleanupStrandedToolbars(obj,allAx(1))
+} 
+{Operation terminated by user during matlab.graphics.controls.AxesToolbar
+
+
+In matlab.ui.controls.AxesToolbar
+
+In matlab.graphics.controls.ToolbarController.getDefaultToolbar
+
+In matlab.graphics.controls.WebToolbarController.createToolbar
+
+In matlab.graphics.controls.WebToolbarController/cleanupStrandedToolbars
+
+In matlab.graphics.controls.WebToolbarController>localCleanupStrandedToolbars
+
+In matlab.graphics.controls.WebToolbarController>@()localCleanupStrandedToolbars(obj,allAx(1))
+} 
+{Operation terminated by user during matlab.graphics.interaction.interactioncontainers.BaseAxesInteractionContainer/setupInteractions
+
+
+In matlab.graphics.interaction.internal.UnifiedAxesInteractions.createDefaultInteractionsOnAxes
+
+In matlab.graphics.interaction.internal.UnifiedAxesInteractions.createDefaultInteractionsInSync
+
+In matlab.graphics.interaction.internal.UnifiedAxesInteractions.createDefaultInteractions>@()matlab.graphics.interaction.internal.UnifiedAxesInteractions.createDefaultInteractionsInSync(ax,is2dim,numDataSpaces)
+} 
+[Warning: Error occurred while executing the listener callback for event MarkedClean defined for
+class matlab.graphics.axis.Axes:
+Unrecognized field name "Colorbar".
+
+Error in simmanager.designview.ScatterPlot/updateColorbar
+
+Error in simmanager.designview.ScatterPlot/markedCleanCB
+
+Error in simmanager.designview.FigureObject>@(varargin)obj.markedCleanCB(varargin{:})] 
+{Operation terminated by user during matlab.graphics.interaction.graphicscontrol.InteractionObjects.InteractionBase/set.Object
+
+
+In matlab.graphics.interaction.graphicscontrol.InteractionObjects.PanInteraction
+
+In matlab.graphics.interaction.interactions.PanInteraction/createWebInteraction
+
+In matlab.graphics.interaction.interactioncontainers.StandardAxesInteractionContainer/createWebInteraction
+
+In matlab.graphics.interaction.interactioncontainers.BaseAxesInteractionContainer/createDefaultWebAxesInteractions
+
+In matlab.graphics.interaction.interactioncontainers.CartesianAxesInteractionContainer/createDefaultWebAxesInteractions
+
+In matlab.graphics.interaction.interactioncontainers.BaseAxesInteractionContainer/setupInteractions
+
+In matlab.graphics.interaction.internal.UnifiedAxesInteractions.createDefaultInteractionsOnAxes
+
+In matlab.graphics.interaction.internal.UnifiedAxesInteractions.createDefaultInteractionsInSync
+
+In matlab.graphics.interaction.internal.UnifiedAxesInteractions.createDefaultInteractions>@()matlab.graphics.interaction.internal.UnifiedAxesInteractions.createDefaultInteractionsInSync(ax,is2dim,numDataSpaces)
+} 
+{Operation terminated by user during matlab.graphics.interaction.graphicscontrol.Enumerations.Action/toString
+
+
+In matlab.graphics.interaction.graphicscontrol.InteractionsManager/createRegistrationMessage
+
+In matlab.graphics.interaction.graphicscontrol.InteractionsManager/registerInteraction
+
+In matlab.graphics.interaction.interactioncontainers.BaseAxesInteractionContainer/createDefaultWebAxesInteractions
+
+In matlab.graphics.interaction.interactioncontainers.CartesianAxesInteractionContainer/createDefaultWebAxesInteractions
+
+In matlab.graphics.interaction.interactioncontainers.BaseAxesInteractionContainer/setupInteractions
+
+In matlab.graphics.interaction.internal.UnifiedAxesInteractions.createDefaultInteractionsOnAxes
+
+In matlab.graphics.interaction.internal.UnifiedAxesInteractions.createDefaultInteractionsInSync
+
+In matlab.graphics.interaction.internal.UnifiedAxesInteractions.createDefaultInteractions>@()matlab.graphics.interaction.internal.UnifiedAxesInteractions.createDefaultInteractionsInSync(ax,is2dim,numDataSpaces)
+} 
+startup
+Starting up LH2 Refuel Model, please read README.md and run startup.m

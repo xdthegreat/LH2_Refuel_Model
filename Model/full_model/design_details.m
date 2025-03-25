@@ -60,7 +60,7 @@ pipe_thermal_conductivity = 0.0001;  %W/m*K
 liquid_supply_SOV_leak_frac = 1e-9;
 
 %Controller info
-timestep = 0.1;
+timestep = 0.2;
 PID_timestep = 0.1;
 tf_delay = 1e-3;
 vent_tf_delay = 1e-4;
