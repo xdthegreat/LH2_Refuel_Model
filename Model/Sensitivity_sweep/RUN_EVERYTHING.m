@@ -17,6 +17,7 @@ max_allowed_stop_time = 2000;
 parsim_flag = false;
 save_simout_flag = true;
 simplify_output_func_flag = true;
+Log_to_file_flag = false;
 
 %check matlab version
 v = matlabRelease;
@@ -62,13 +63,14 @@ UAM_TANK_PRES_POS = hose_thermal_conductivity_pos + UAM_TANK_PRES_COUNT;
 
 % setup simIn
 clear simIn simOut
-normal_flow_rate_simIn = normal_flow_rate_setup(rapid_flag, accel_flag, mdl);
+normal_flow_rate_simIn = normal_flow_rate_setup(rapid_flag, accel_flag, mdl, Log_to_file_flag);
 
 [valve_diameter_sweep_simIn, valve_diameter_vector] = valve_diameter_sweep_setup(rapid_flag, accel_flag, ...
-    mdl, valve_diameter_sweep_count, max_allowed_stop_time);
+    mdl, valve_diameter_sweep_count, max_allowed_stop_time, Log_to_file_flag);
 
 [valve_discharge_coeff_sweep_simIn, valve_discharge_coeff_vector] = ...
-    valve_discharge_coeff_sweep_setup(rapid_flag, accel_flag, mdl, valve_discharge_coeff_sweep_count, max_allowed_stop_time); 
+    valve_discharge_coeff_sweep_setup(rapid_flag, accel_flag, mdl, valve_discharge_coeff_sweep_count, ...
+    max_allowed_stop_time, Log_to_file_flag); 
 
 [tank_wall_vapour_heat_transfer_coeff_simIn, vapour_heat_transfer_coeff_vector] = ...
     tank_wall_vapour_heat_transfer_coeff_setup(rapid_flag, accel_flag, mdl,...
@@ -76,30 +78,30 @@ normal_flow_rate_simIn = normal_flow_rate_setup(rapid_flag, accel_flag, mdl);
 
 [tank_wall_liquid_heat_transfer_coeff_simIn, liquid_heat_transfer_coeff_vector] = ...
     tank_wall_liquid_heat_transfer_coeff_setup(rapid_flag, accel_flag, mdl,...
-    tank_wall_liquid_heat_transfer_coeff_count, max_allowed_stop_time);
+    tank_wall_liquid_heat_transfer_coeff_count, max_allowed_stop_time, Log_to_file_flag);
 
 [hose_length_sweep_simIn, hose_length_vector] = hose_length_sweep_setup(rapid_flag, accel_flag, ...
-    mdl, hose_length_sweep_count, max_allowed_stop_time);
+    mdl, hose_length_sweep_count, max_allowed_stop_time, Log_to_file_flag);
 
 [tank_conductivity_sweep_simIn, AC_tank_equivalent_conductivity_vector] = ...
     tank_conductivity_sweep_setup(rapid_flag, accel_flag, mdl, AC_tank_equivalent_conductivity_count,...
-    max_allowed_stop_time, Ambient_temp, AC_wall_thickness);
+    max_allowed_stop_time, Ambient_temp, AC_wall_thickness, Log_to_file_flag);
 
 [Tank_size_sweep_simIn, m_LH2_vector] = ...
     Tank_size_sweep_setup(rapid_flag, accel_flag, mdl, tank_size_count, max_allowed_stop_time, ...
-    AC_tank_vol_limit, AC_tank_cross_sectional_area, AC_tank_radius);
+    AC_tank_vol_limit, AC_tank_cross_sectional_area, AC_tank_radius, Log_to_file_flag);
 
 [Feed_pres_sweep_simIn, FEED_PRES_VEC] = Feed_pres_sweep_setup(rapid_flag, accel_flag, ...
-    mdl, LH2_FEED_PRES_COUNT, max_allowed_stop_time);
+    mdl, LH2_FEED_PRES_COUNT, max_allowed_stop_time, Log_to_file_flag);
 
 [Feed_temp_sweep_simIn, LH2_Feed_Temp_vec] = Feed_temp_sweep_setup(rapid_flag, accel_flag, ...
-    mdl, LH2_FEED_TEMP_COUNT, max_allowed_stop_time);
+    mdl, LH2_FEED_TEMP_COUNT, max_allowed_stop_time, Log_to_file_flag);
 
 [hose_insulation_sweep_simIn, hose_thermal_conductivity_vec] = hose_insulation_sweep_setup(rapid_flag, accel_flag, ...
-    mdl, hose_thermal_conductivity_count, max_allowed_stop_time);
+    mdl, hose_thermal_conductivity_count, max_allowed_stop_time, Log_to_file_flag);
 
 [UAM_tank_pressure_sweep_simIn, UAM_TANK_PRES_VEC] = UAM_tank_pressure_sweep_setup(rapid_flag, accel_flag, ...
-    mdl, UAM_TANK_PRES_COUNT, max_allowed_stop_time);
+    mdl, UAM_TANK_PRES_COUNT, max_allowed_stop_time, Log_to_file_flag);
 
 
 % shove everything in one simIn
@@ -129,6 +131,7 @@ toc;
 
 %% graphing
 
+if ~Log_to_file_flag
 close all
 normal_flow_rate_graphing(simOut(1, normal_flow_rate_sweep_pos), AC_supply_line_port_inner_area)
 close all
@@ -164,7 +167,7 @@ close all
 UAM_tank_pressure_sweep_graphing(simOut(1, hose_thermal_conductivity_pos+1:UAM_TANK_PRES_POS), ...
     UAM_TANK_PRES_VEC)
 
-
+end
 
 
 diary off

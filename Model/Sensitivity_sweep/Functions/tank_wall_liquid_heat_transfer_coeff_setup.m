@@ -13,7 +13,7 @@ function [tank_wall_liquid_heat_transfer_coeff_simIn, liquid_heat_transfer_coeff
     for i = 1:length(liquid_heat_transfer_coeff_vector) 
         if Log_to_file_flag
             tank_wall_liquid_heat_transfer_coeff_simIn(i) = tank_wall_liquid_heat_transfer_coeff_simIn(i).setModelParameter('LoggingToFile','on',...
-                                'LoggingFileName','Graphs/tank_wall_liquid_heat_transfer_coeff_simOut'+i+'.mat');
+                                'LoggingFileName',strcat('Graphs/tank_wall_liquid_heat_transfer_coeff_simOut', num2str(i), '.mat'));
         end
         if rapid_flag
             tank_wall_liquid_heat_transfer_coeff_simIn(i) = tank_wall_liquid_heat_transfer_coeff_simIn(i).setModelParameter(SimulationMode="rapid-accelerator");

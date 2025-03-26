@@ -3,12 +3,13 @@ ans =
 
   <a href="matlab:helpPopup('datetime')" style="font-weight:bold">datetime</a>
 
-   26-Mar-2025 00:52:17 +0000
+   26-Mar-2025 10:49:12 +0000
 
 Model 'AC_gauge_R2024a' was exported from R2024b to R2024a. To find blocks that were removed during the export operation, <a href="matlab:slexportprevious.utils.displayReplacedBlocks('AC_gauge_R2024a')">click here</a>. Save the model to remove this notification.
 Model 'GS_refuel_control_R2024a' was exported from R2024b to R2024a. To find blocks that were removed during the export operation, <a href="matlab:slexportprevious.utils.displayReplacedBlocks('GS_refuel_control_R2024a')">click here</a>. Save the model to remove this notification.
 Model 'AC_Engine_SOV_R2024a' was exported from R2024b to R2024a. To find blocks that were removed during the export operation, <a href="matlab:slexportprevious.utils.displayReplacedBlocks('AC_Engine_SOV_R2024a')">click here</a>. Save the model to remove this notification.
-[Warning: <a href="matlab:sfprivate('sfOpenObjectBySId','aircraft_refuel_control_R2024a:1:::83')">'AC_VALVE_FEEDBACK'</a> is defined, but is not used in the Stateflow chart. <a href= "matlab: internal.stateflow.dialogs.UnusedObjectDeleter.createDeleter('aircraft_refuel_control_R2024a:1:::83')">Delete this object</a> or <a href= "matlab: sfprivate('openConfigParamsSFDiagnostics',21)">configure the diagnostic</a>.
+[Warning: <a href="matlab:sfprivate('sfOpenObjectBySId','aircraft_refuel_control_R2024a:1:::83')">'AC_VALVE_FEEDBACK'</a> is defined, but is not used in the Stateflow chart. <a href= "matlab: internal.stateflow.dialogs.UnusedObjectDeleter.createDeleter('aircraft_refuel_control_R2024a:1:::83')">Delete this
+object</a> or <a href= "matlab: sfprivate('openConfigParamsSFDiagnostics',21)">configure the diagnostic</a>.
 
 ] 
 [> In sldiagviewer.reportWarning
@@ -26,8 +27,9 @@ In Simulink/SimulationManager/run
 In Simulink.Simulation.internal.DesktopSimHelper.runUsingManager
 In Simulink/SimulationInput/runSingleSimWithOptions
 In Simulink/SimulationInput/sim
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('run_everything_slowly', 'C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m', 40)" style="font-weight:bold">run_everything_slowly</a> (<a href="matlab: opentoline('C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m',40,0)">line 40</a>)] 
-[Warning: <a href="matlab:sfprivate('sfOpenObjectBySId','aircraft_refuel_control_R2024a:1:::85')">'P_COUPLING_AC'</a> is defined, but is not used in the Stateflow chart. <a href= "matlab: internal.stateflow.dialogs.UnusedObjectDeleter.createDeleter('aircraft_refuel_control_R2024a:1:::85')">Delete this object</a> or <a href= "matlab: sfprivate('openConfigParamsSFDiagnostics',21)">configure the diagnostic</a>.
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('run_everything_slowly', 'C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m', 43)" style="font-weight:bold">run_everything_slowly</a> (<a href="matlab: opentoline('C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m',43,0)">line 43</a>)] 
+[Warning: <a href="matlab:sfprivate('sfOpenObjectBySId','aircraft_refuel_control_R2024a:1:::85')">'P_COUPLING_AC'</a> is defined, but is not used in the Stateflow chart. <a href= "matlab: internal.stateflow.dialogs.UnusedObjectDeleter.createDeleter('aircraft_refuel_control_R2024a:1:::85')">Delete this object</a>
+or <a href= "matlab: sfprivate('openConfigParamsSFDiagnostics',21)">configure the diagnostic</a>.
 
 ] 
 [> In sldiagviewer.reportWarning
@@ -45,8 +47,9 @@ In Simulink/SimulationManager/run
 In Simulink.Simulation.internal.DesktopSimHelper.runUsingManager
 In Simulink/SimulationInput/runSingleSimWithOptions
 In Simulink/SimulationInput/sim
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('run_everything_slowly', 'C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m', 40)" style="font-weight:bold">run_everything_slowly</a> (<a href="matlab: opentoline('C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m',40,0)">line 40</a>)] 
-[Warning: <a href="matlab:sfprivate('sfOpenObjectBySId','aircraft_refuel_control_R2024a:1:::86')">'P_COUPLING_AC_RETURN'</a> is defined, but is not used in the Stateflow chart. <a href= "matlab: internal.stateflow.dialogs.UnusedObjectDeleter.createDeleter('aircraft_refuel_control_R2024a:1:::86')">Delete this object</a> or <a href= "matlab: sfprivate('openConfigParamsSFDiagnostics',21)">configure the diagnostic</a>.
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('run_everything_slowly', 'C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m', 43)" style="font-weight:bold">run_everything_slowly</a> (<a href="matlab: opentoline('C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m',43,0)">line 43</a>)] 
+[Warning: <a href="matlab:sfprivate('sfOpenObjectBySId','aircraft_refuel_control_R2024a:1:::86')">'P_COUPLING_AC_RETURN'</a> is defined, but is not used in the Stateflow chart. <a href= "matlab: internal.stateflow.dialogs.UnusedObjectDeleter.createDeleter('aircraft_refuel_control_R2024a:1:::86')">Delete this
+object</a> or <a href= "matlab: sfprivate('openConfigParamsSFDiagnostics',21)">configure the diagnostic</a>.
 
 ] 
 [> In sldiagviewer.reportWarning
@@ -64,8 +67,9 @@ In Simulink/SimulationManager/run
 In Simulink.Simulation.internal.DesktopSimHelper.runUsingManager
 In Simulink/SimulationInput/runSingleSimWithOptions
 In Simulink/SimulationInput/sim
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('run_everything_slowly', 'C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m', 40)" style="font-weight:bold">run_everything_slowly</a> (<a href="matlab: opentoline('C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m',40,0)">line 40</a>)] 
-[Warning: <a href="matlab:sfprivate('sfOpenObjectBySId','GS_refuel_control_R2024a:1:::58')">'GS_VALVE_FEEDBACK'</a> is defined, but is not used in the Stateflow chart. <a href= "matlab: internal.stateflow.dialogs.UnusedObjectDeleter.createDeleter('GS_refuel_control_R2024a:1:::58')">Delete this object</a> or <a href= "matlab: sfprivate('openConfigParamsSFDiagnostics',21)">configure the diagnostic</a>.
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('run_everything_slowly', 'C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m', 43)" style="font-weight:bold">run_everything_slowly</a> (<a href="matlab: opentoline('C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m',43,0)">line 43</a>)] 
+[Warning: <a href="matlab:sfprivate('sfOpenObjectBySId','GS_refuel_control_R2024a:1:::58')">'GS_VALVE_FEEDBACK'</a> is defined, but is not used in the Stateflow chart. <a href= "matlab: internal.stateflow.dialogs.UnusedObjectDeleter.createDeleter('GS_refuel_control_R2024a:1:::58')">Delete this
+object</a> or <a href= "matlab: sfprivate('openConfigParamsSFDiagnostics',21)">configure the diagnostic</a>.
 
 ] 
 [> In sldiagviewer.reportWarning
@@ -83,498 +87,146 @@ In Simulink/SimulationManager/run
 In Simulink.Simulation.internal.DesktopSimHelper.runUsingManager
 In Simulink/SimulationInput/runSingleSimWithOptions
 In Simulink/SimulationInput/sim
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('run_everything_slowly', 'C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m', 40)" style="font-weight:bold">run_everything_slowly</a> (<a href="matlab: opentoline('C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m',40,0)">line 40</a>)] 
-    tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 1.5000 … ] (1×9681 double)
-    yout: {1×33 cell}
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('run_everything_slowly', 'C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m', 43)" style="font-weight:bold">run_everything_slowly</a> (<a href="matlab: opentoline('C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m',43,0)">line 43</a>)] 
+Elapsed time is 1038.934330 seconds.
+{Error using <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('plus')" style="font-weight:bold"> + </a>
+Arrays have incompatible sizes for this operation.
 
-Elapsed time is 490.184143 seconds.
-Max flow speed for LH2 is 58.8541m/s.
-Max flow speed for GH2 is 134.2044m/s.
-Max mass flow rate for GH2 during warm tank warmup is 1.5633kg/s.
-Mean mass flow rate for GH2 during warm tank warmup is 0.018982kg/s.
-Max mass flow rate  for GH2 during cold tank warmup is 0.67057kg/s.
-Mean mass flow rate for GH2 during cold tank warmup is 0.020017kg/s.
-Max mass flow rate for GH2 during defuel tank drain is 2.0918kg/s.
-Mean mass flow rate for GH2 during defuel tank drain is 0.107kg/s.
-Max mass flow rate for LH2 during warm tank chilldown is 0.063487kg/s.
-Mean mass flow rate for LH2 during warm tank chilldown is 0.03404kg/s.
-Max mass flow rate for LH2 during warm tank fill is 0.96449kg/s.
-Mean mass flow rate for LH2 during warm tank fill is 0.25978kg/s.
-Max mass flow rate for LH2 during cold tank chilldown is 0.22565kg/s.
-Mean mass flow rate for LH2 during cold tank chilldown is 0.031488kg/s.
-Max mass flow rate for LH2 during cold tank fill is 0.75488kg/s.
-Mean mass flow rate for LH2 during cold tank fill is 0.3516kg/s.
-Max mass flow rate for LH2 during defuel chilldown is 0.23065kg/s.
-Mean mass flow rate for LH2 during defuel chilldown is 0.032667kg/s.
-            <strong>Operation phase</strong>            <strong>Mean flow rate</strong>    <strong>Unit</strong> 
-    <strong>_______________________________</strong>    <strong>______________</strong>    <strong>_____</strong>
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('valve_diameter_sweep_setup', 'C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\Functions\valve_diameter_sweep_setup.m', 15)" style="font-weight:bold">valve_diameter_sweep_setup</a> (<a href="matlab: opentoline('C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\Functions\valve_diameter_sweep_setup.m',15,0)">line 15</a>)
+                                'LoggingFileName','Graphs/valve_diameter_simOut' + i + '.mat');
 
-    "Warm tank refuel chilldown"           29.954        "m/s"
-    "Warm tank refuel tank filling"        2.8282        "m/s"
-    "Warm tank refuel warmup"              42.332        "m/s"
-    "Cold tank refuel chilldown"            24.85        "m/s"
-    "Cold tank refuel tank filling"        5.2102        "m/s"
-    "Cold tank refuel warmup"              41.761        "m/s"
-    "Defuel chilldown"                     29.442        "m/s"
-    "Defuel wamrup"                        30.693        "m/s"
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('run_everything_slowly', 'C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m', 64)" style="font-weight:bold">run_everything_slowly</a> (<a href="matlab: opentoline('C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m',64,0)">line 64</a>)
+[valve_diameter_sweep_simIn, valve_diameter_vector] = valve_diameter_sweep_setup(rapid_flag, accel_flag, ...
 
-Total LH2 supplied by ground station = 34.8798kg.
-Total LH2 in the UAM tank = 16.0958kg.
-Total LH2 supplied by ground station = 30.8605kg.
-Total LH2 in the UAM tank = 16.0958kg.
-[26-Mar-2025 01:00:46] Running simulations...
-[Warning: <a href="matlab:sfprivate('sfOpenObjectBySId','aircraft_refuel_control_R2024a:1:::83')">'AC_VALVE_FEEDBACK'</a> is defined, but is not used in the Stateflow chart. <a href= "matlab: internal.stateflow.dialogs.UnusedObjectDeleter.createDeleter('aircraft_refuel_control_R2024a:1:::83')">Delete this object</a> or <a href= "matlab: sfprivate('openConfigParamsSFDiagnostics',21)">configure the diagnostic</a>.
-
-] 
-[> In sldiagviewer.reportWarning
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('construct_error', 'C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\private\construct_error.m', 130)" style="font-weight:bold">construct_error</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\private\construct_error.m',130,0)">line 130</a>)
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('sfprivate', 'C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\sfprivate.m', 13)" style="font-weight:bold">sfprivate</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\sfprivate.m',13,0)">line 13</a>)
-In Simulink.Simulation.internal.DesktopSimHelper
-In Simulink.Simulation.internal.DesktopSimHelper.sim
-In Simulink/SimulationInput/sim
-In MultiSim.internal.runSingleSim
-In MultiSim.internal/SimulationRunnerSerial/executeImplSingle
-In MultiSim.internal/SimulationRunnerSerial/executeImpl
-In Simulink/SimulationManager/executeSims
-In Simulink/SimulationManager/execute
-In Simulink/SimulationManager/run
-In Simulink.Simulation.internal.DesktopSimHelper.runUsingManager
-In Simulink/SimulationInput/sim
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('run_everything_slowly', 'C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m', 73)" style="font-weight:bold">run_everything_slowly</a> (<a href="matlab: opentoline('C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m',73,0)">line 73</a>)] 
-[Warning: <a href="matlab:sfprivate('sfOpenObjectBySId','aircraft_refuel_control_R2024a:1:::85')">'P_COUPLING_AC'</a> is defined, but is not used in the Stateflow chart. <a href= "matlab: internal.stateflow.dialogs.UnusedObjectDeleter.createDeleter('aircraft_refuel_control_R2024a:1:::85')">Delete this object</a> or <a href= "matlab: sfprivate('openConfigParamsSFDiagnostics',21)">configure the diagnostic</a>.
-
-] 
-[> In sldiagviewer.reportWarning
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('construct_error', 'C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\private\construct_error.m', 130)" style="font-weight:bold">construct_error</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\private\construct_error.m',130,0)">line 130</a>)
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('sfprivate', 'C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\sfprivate.m', 13)" style="font-weight:bold">sfprivate</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\sfprivate.m',13,0)">line 13</a>)
-In Simulink.Simulation.internal.DesktopSimHelper
-In Simulink.Simulation.internal.DesktopSimHelper.sim
-In Simulink/SimulationInput/sim
-In MultiSim.internal.runSingleSim
-In MultiSim.internal/SimulationRunnerSerial/executeImplSingle
-In MultiSim.internal/SimulationRunnerSerial/executeImpl
-In Simulink/SimulationManager/executeSims
-In Simulink/SimulationManager/execute
-In Simulink/SimulationManager/run
-In Simulink.Simulation.internal.DesktopSimHelper.runUsingManager
-In Simulink/SimulationInput/sim
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('run_everything_slowly', 'C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m', 73)" style="font-weight:bold">run_everything_slowly</a> (<a href="matlab: opentoline('C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m',73,0)">line 73</a>)] 
-[Warning: <a href="matlab:sfprivate('sfOpenObjectBySId','aircraft_refuel_control_R2024a:1:::86')">'P_COUPLING_AC_RETURN'</a> is defined, but is not used in the Stateflow chart. <a href= "matlab: internal.stateflow.dialogs.UnusedObjectDeleter.createDeleter('aircraft_refuel_control_R2024a:1:::86')">Delete this object</a> or <a href= "matlab: sfprivate('openConfigParamsSFDiagnostics',21)">configure the diagnostic</a>.
-
-] 
-[> In sldiagviewer.reportWarning
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('construct_error', 'C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\private\construct_error.m', 130)" style="font-weight:bold">construct_error</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\private\construct_error.m',130,0)">line 130</a>)
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('sfprivate', 'C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\sfprivate.m', 13)" style="font-weight:bold">sfprivate</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\sfprivate.m',13,0)">line 13</a>)
-In Simulink.Simulation.internal.DesktopSimHelper
-In Simulink.Simulation.internal.DesktopSimHelper.sim
-In Simulink/SimulationInput/sim
-In MultiSim.internal.runSingleSim
-In MultiSim.internal/SimulationRunnerSerial/executeImplSingle
-In MultiSim.internal/SimulationRunnerSerial/executeImpl
-In Simulink/SimulationManager/executeSims
-In Simulink/SimulationManager/execute
-In Simulink/SimulationManager/run
-In Simulink.Simulation.internal.DesktopSimHelper.runUsingManager
-In Simulink/SimulationInput/sim
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('run_everything_slowly', 'C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m', 73)" style="font-weight:bold">run_everything_slowly</a> (<a href="matlab: opentoline('C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m',73,0)">line 73</a>)] 
-[Warning: <a href="matlab:sfprivate('sfOpenObjectBySId','GS_refuel_control_R2024a:1:::58')">'GS_VALVE_FEEDBACK'</a> is defined, but is not used in the Stateflow chart. <a href= "matlab: internal.stateflow.dialogs.UnusedObjectDeleter.createDeleter('GS_refuel_control_R2024a:1:::58')">Delete this object</a> or <a href= "matlab: sfprivate('openConfigParamsSFDiagnostics',21)">configure the diagnostic</a>.
-
-] 
-[> In sldiagviewer.reportWarning
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('construct_error', 'C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\private\construct_error.m', 130)" style="font-weight:bold">construct_error</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\private\construct_error.m',130,0)">line 130</a>)
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('sfprivate', 'C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\sfprivate.m', 13)" style="font-weight:bold">sfprivate</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\sfprivate.m',13,0)">line 13</a>)
-In Simulink.Simulation.internal.DesktopSimHelper
-In Simulink.Simulation.internal.DesktopSimHelper.sim
-In Simulink/SimulationInput/sim
-In MultiSim.internal.runSingleSim
-In MultiSim.internal/SimulationRunnerSerial/executeImplSingle
-In MultiSim.internal/SimulationRunnerSerial/executeImpl
-In Simulink/SimulationManager/executeSims
-In Simulink/SimulationManager/execute
-In Simulink/SimulationManager/run
-In Simulink.Simulation.internal.DesktopSimHelper.runUsingManager
-In Simulink/SimulationInput/sim
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('run_everything_slowly', 'C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m', 73)" style="font-weight:bold">run_everything_slowly</a> (<a href="matlab: opentoline('C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m',73,0)">line 73</a>)] 
-{Operation terminated by user during Simulink.SimulationInput/sim
-
-
-In MultiSim.internal.runSingleSim
-
-In MultiSim.internal.SimulationRunnerSerial/executeImplSingle
-
-In MultiSim.internal.SimulationRunnerSerial/executeImpl
-
-In Simulink.SimulationManager/executeSims
-
-In Simulink.SimulationManager/execute
-
-In Simulink.SimulationManager/run
-
-In Simulink.Simulation.internal.DesktopSimHelper.runUsingManager
-
-In Simulink.SimulationInput/sim
-
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('run_everything_slowly', 'C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m', 73)" style="font-weight:bold">run_everything_slowly</a> (<a href="matlab: opentoline('C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m',73,0)">line 73</a>)
-    valve_diameter_simOut = sim(valve_diameter_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
+<a href="matlab:helpview('matlab','error_sizeDimensionsMustMatch')" style="font-weight:bold">Related documentation</a>
 } 
-{Operation terminated by user during matlab.graphics.controls.internal.ControlsGroup
+open(" valve_diameter_sweep_setup")
+'Graphs/valve_diameter_simOut' + 1 + '.mat'
+{Error using <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('plus')" style="font-weight:bold"> + </a>
+Arrays have incompatible sizes for this operation.
 
-
-In matlab.graphics.controls.AxesToolbar
-
-In matlab.ui.controls.AxesToolbar
-
-In matlab.graphics.controls.ToolbarController.getDefaultToolbar
-
-In matlab.graphics.controls.WebToolbarController.createToolbar
-
-In matlab.graphics.controls.WebToolbarController/cleanupStrandedToolbars
-
-In matlab.graphics.controls.WebToolbarController>localCleanupStrandedToolbars
-
-In matlab.graphics.controls.WebToolbarController>@()localCleanupStrandedToolbars(obj,allAx(1))
+<a href="matlab:helpview('matlab','error_sizeDimensionsMustMatch')" style="font-weight:bold">Related documentation</a>
 } 
-{Operation terminated by user during matlab.graphics.controls.internal.ControlsGroup
+[26-Mar-2025 11:09:42] Checking for availability of parallel pool...
+Starting parallel pool (parpool) using the 'LocalProfile2' profile ...
+26-Mar-2025 11:11:10: Job Queued. Waiting for parallel pool job with ID 1 to start ...
+26-Mar-2025 11:12:11: Job Queued. Waiting for parallel pool job with ID 1 to start ...
+26-Mar-2025 11:13:11: Job Queued. Waiting for parallel pool job with ID 1 to start ...
+26-Mar-2025 11:14:11: Job Running. Waiting for parallel pool workers to connect ...
+Connected to parallel pool with 10 workers.
+[26-Mar-2025 11:14:28] Starting Simulink on parallel workers...
+[26-Mar-2025 11:14:30] Configuring simulation cache folder on parallel workers...
+[26-Mar-2025 11:14:31] Loading model on parallel workers...
+[26-Mar-2025 11:15:21] Running simulations...
+[26-Mar-2025 11:22:04] Completed 1 of 10 simulation runs. Run 1 has errors.
+[26-Mar-2025 11:22:04] Completed 2 of 10 simulation runs. Run 8 has errors.
+[26-Mar-2025 11:22:04] Completed 3 of 10 simulation runs. Run 10 has errors.
+[26-Mar-2025 11:22:04] Completed 4 of 10 simulation runs. Run 5 has errors.
+[26-Mar-2025 11:22:05] Completed 5 of 10 simulation runs. Run 4 has errors.
+[26-Mar-2025 11:22:05] Completed 6 of 10 simulation runs. Run 2 has errors.
+[26-Mar-2025 11:22:08] Completed 7 of 10 simulation runs. Run 6 has errors.
+[26-Mar-2025 11:22:08] Completed 8 of 10 simulation runs. Run 3 has errors.
+[26-Mar-2025 11:22:08] Completed 9 of 10 simulation runs. Run 9 has errors.
+[26-Mar-2025 11:22:13] Completed 10 of 10 simulation runs. Run 7 has errors.
+[Warning: One or more simulations completed with errors. For more information, inspect the
+SimulationOutput objects at these indices:
+[1 2 3 4 5 6 7 8 9 10]] 
+[26-Mar-2025 11:22:14] Cleaning up parallel workers...
+Elapsed time is 769.543262 seconds.
+strcat('Graphs/valve_diameter_simOut', 1, '.mat')
 
+ans =
 
-In matlab.graphics.controls.AxesToolbar
+    'Graphs/valve_diameter_simOut.mat'
 
-In matlab.ui.controls.AxesToolbar
+length(valve_diameter_vector) 
 
-In matlab.graphics.controls.ToolbarController.getDefaultToolbar
+ans =
 
-In matlab.graphics.controls.WebToolbarController.createToolbar
+    10
 
-In matlab.graphics.controls.WebToolbarController/cleanupStrandedToolbars
+class(length(valve_diameter_vector) )
 
-In matlab.graphics.controls.WebToolbarController>localCleanupStrandedToolbars
+ans =
 
-In matlab.graphics.controls.WebToolbarController>@()localCleanupStrandedToolbars(obj,allAx(1))
-} 
-open("normal_flow_rate_setup")
-open("valve_diameter_sweep_setup")
-open("valve_discharge_coeff_sweep_setup")
-open("valve_diameter_sweep_setup")
-open("tank_wall_vapour_heat_transfer_coeff_setup")
-open("tank_wall_liquid_heat_transfer_coeff_setup")
-open("hose_length_sweep_setup")
-open("tank_conductivity_sweep_setup")
-open("Feed_pres_sweep_setup")
-open("Feed_temp_sweep_setup")
-open("hose_insulation_sweep_setup")
-open("UAM_tank_pressure_sweep_setup")
-open("Tank_size_sweep_setup")
-ccl
-{Unrecognized function or variable 'ccl'.
-} 
-clc
-run_everything_slowly
-[Warning: File not found or permission denied] 
-[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('run_everything_slowly', 'C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m', 10)" style="font-weight:bold">run_everything_slowly</a> (<a href="matlab: opentoline('C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m',10,0)">line 10</a>)] 
+    'double'
 
-ans = 
+num2str(length(valve_diameter_vector))
 
-  <a href="matlab:helpPopup('datetime')" style="font-weight:bold">datetime</a>
+ans =
 
-   26-Mar-2025 01:23:27 +0000
+    '10'
 
-{Error using <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('run_everything_slowly', 'C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m', 41)" style="font-weight:bold">run_everything_slowly</a> (<a href="matlab: opentoline('C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m',41,0)">line 41</a>)
-Expected input to be one of these types:
+[26-Mar-2025 11:25:18] Checking for availability of parallel pool...
+[26-Mar-2025 11:25:18] Starting Simulink on parallel workers...
+[26-Mar-2025 11:25:20] Configuring simulation cache folder on parallel workers...
+[26-Mar-2025 11:25:20] Loading model on parallel workers...
+[26-Mar-2025 11:25:26] Running simulations...
+[26-Mar-2025 11:39:53] Completed 1 of 10 simulation runs
+[26-Mar-2025 11:40:13] Completed 2 of 10 simulation runs
+[26-Mar-2025 11:40:30] Completed 3 of 10 simulation runs
+[26-Mar-2025 11:40:45] Completed 4 of 10 simulation runs
+[26-Mar-2025 11:41:01] Completed 5 of 10 simulation runs
+[26-Mar-2025 11:41:19] Completed 6 of 10 simulation runs
+[26-Mar-2025 11:41:36] Completed 7 of 10 simulation runs
+[26-Mar-2025 11:41:55] Completed 8 of 10 simulation runs
+[26-Mar-2025 11:42:14] Completed 9 of 10 simulation runs
+[26-Mar-2025 11:42:35] Completed 10 of 10 simulation runs
+[26-Mar-2025 11:42:35] Cleaning up parallel workers...
+Elapsed time is 1053.166332 seconds.
+[26-Mar-2025 11:44:29] Checking for availability of parallel pool...
+[26-Mar-2025 11:44:29] Starting Simulink on parallel workers...
+[26-Mar-2025 11:44:31] Configuring simulation cache folder on parallel workers...
+[26-Mar-2025 11:44:31] Loading model on parallel workers...
+[26-Mar-2025 11:44:36] Running simulations...
+[26-Mar-2025 11:56:37] Completed 1 of 10 simulation runs
+[26-Mar-2025 11:56:56] Completed 2 of 10 simulation runs
+[26-Mar-2025 11:57:14] Completed 3 of 10 simulation runs
+[26-Mar-2025 11:57:33] Completed 4 of 10 simulation runs
+[26-Mar-2025 11:57:55] Completed 5 of 10 simulation runs
+[26-Mar-2025 11:58:14] Completed 6 of 10 simulation runs
+[26-Mar-2025 11:58:36] Completed 7 of 10 simulation runs
+[26-Mar-2025 11:58:59] Completed 8 of 10 simulation runs
+[26-Mar-2025 11:59:21] Completed 9 of 10 simulation runs
+[26-Mar-2025 11:59:44] Completed 10 of 10 simulation runs
+[26-Mar-2025 11:59:44] Cleaning up parallel workers...
+Elapsed time is 924.601076 seconds.
+Error using <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('plus')" style="font-weight:bold"> + </a>
+Arrays have incompatible sizes for this operation.
 
-char
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('tank_wall_vapour_heat_transfer_coeff_setup', 'C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\Functions\tank_wall_vapour_heat_transfer_coeff_setup.m', 14)" style="font-weight:bold">tank_wall_vapour_heat_transfer_coeff_setup</a> (<a href="matlab: opentoline('C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\Functions\tank_wall_vapour_heat_transfer_coeff_setup.m',14,0)">line 14</a>)
+                                'LoggingFileName','Graphs/tank_wall_vapour_heat_transfer_coeff_simOut'+i+'.mat');
 
-Instead its type was string.
-} 
-open("normal_flow_rate_setup")
-run_everything_slowly
-[Warning: File not found or permission denied] 
-[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('run_everything_slowly', 'C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m', 10)" style="font-weight:bold">run_everything_slowly</a> (<a href="matlab: opentoline('C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m',10,0)">line 10</a>)] 
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('run_everything_slowly', 'C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m', 128)" style="font-weight:bold">run_everything_slowly</a> (<a href="matlab: opentoline('C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m',128,0)">line 128</a>)
+    tank_wall_vapour_heat_transfer_coeff_setup(rapid_flag, accel_flag, mdl,...
 
-ans = 
+<a href="matlab:helpview('matlab','error_sizeDimensionsMustMatch')" style="font-weight:bold">Related documentation</a>
 
-  <a href="matlab:helpPopup('datetime')" style="font-weight:bold">datetime</a>
-
-   26-Mar-2025 01:24:55 +0000
-
-Model 'AC_gauge_R2024a' was exported from R2024b to R2024a. To find blocks that were removed during the export operation, <a href="matlab:slexportprevious.utils.displayReplacedBlocks('AC_gauge_R2024a')">click here</a>. Save the model to remove this notification.
-Model 'AC_Engine_SOV_R2024a' was exported from R2024b to R2024a. To find blocks that were removed during the export operation, <a href="matlab:slexportprevious.utils.displayReplacedBlocks('AC_Engine_SOV_R2024a')">click here</a>. Save the model to remove this notification.
-{Error using <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('run_everything_slowly', 'C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m', 41)" style="font-weight:bold">run_everything_slowly</a> (<a href="matlab: opentoline('C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m',41,0)">line 41</a>)
-Simulation aborted
-} 
-run_everything_slowly
-[Warning: File not found or permission denied] 
-[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('run_everything_slowly', 'C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m', 10)" style="font-weight:bold">run_everything_slowly</a> (<a href="matlab: opentoline('C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m',10,0)">line 10</a>)] 
-
-ans = 
-
-  <a href="matlab:helpPopup('datetime')" style="font-weight:bold">datetime</a>
-
-   26-Mar-2025 01:27:21 +0000
-
-[Warning: <a href="matlab:sfprivate('sfOpenObjectBySId','aircraft_refuel_control_R2024a:1:::83')">'AC_VALVE_FEEDBACK'</a> is defined, but is not used in the Stateflow chart. <a href= "matlab: internal.stateflow.dialogs.UnusedObjectDeleter.createDeleter('aircraft_refuel_control_R2024a:1:::83')">Delete this object</a> or <a href= "matlab: sfprivate('openConfigParamsSFDiagnostics',21)">configure the diagnostic</a>.
-
-] 
-[> In sldiagviewer.reportWarning
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('construct_error', 'C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\private\construct_error.m', 130)" style="font-weight:bold">construct_error</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\private\construct_error.m',130,0)">line 130</a>)
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('sfprivate', 'C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\sfprivate.m', 13)" style="font-weight:bold">sfprivate</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\sfprivate.m',13,0)">line 13</a>)
-In Simulink.Simulation.internal.DesktopSimHelper
-In Simulink.Simulation.internal.DesktopSimHelper.sim
-In Simulink/SimulationInput/sim
-In MultiSim.internal.runSingleSim
-In MultiSim.internal/SimulationRunnerSerial/executeImplSingle
-In MultiSim.internal/SimulationRunnerSerial/executeImpl
-In Simulink/SimulationManager/executeSims
-In Simulink/SimulationManager/execute
-In Simulink/SimulationManager/run
-In Simulink.Simulation.internal.DesktopSimHelper.runUsingManager
-In Simulink/SimulationInput/runSingleSimWithOptions
-In Simulink/SimulationInput/sim
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('run_everything_slowly', 'C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m', 41)" style="font-weight:bold">run_everything_slowly</a> (<a href="matlab: opentoline('C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m',41,0)">line 41</a>)] 
-[Warning: <a href="matlab:sfprivate('sfOpenObjectBySId','aircraft_refuel_control_R2024a:1:::85')">'P_COUPLING_AC'</a> is defined, but is not used in the Stateflow chart. <a href= "matlab: internal.stateflow.dialogs.UnusedObjectDeleter.createDeleter('aircraft_refuel_control_R2024a:1:::85')">Delete this object</a> or <a href= "matlab: sfprivate('openConfigParamsSFDiagnostics',21)">configure the diagnostic</a>.
-
-] 
-[> In sldiagviewer.reportWarning
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('construct_error', 'C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\private\construct_error.m', 130)" style="font-weight:bold">construct_error</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\private\construct_error.m',130,0)">line 130</a>)
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('sfprivate', 'C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\sfprivate.m', 13)" style="font-weight:bold">sfprivate</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\sfprivate.m',13,0)">line 13</a>)
-In Simulink.Simulation.internal.DesktopSimHelper
-In Simulink.Simulation.internal.DesktopSimHelper.sim
-In Simulink/SimulationInput/sim
-In MultiSim.internal.runSingleSim
-In MultiSim.internal/SimulationRunnerSerial/executeImplSingle
-In MultiSim.internal/SimulationRunnerSerial/executeImpl
-In Simulink/SimulationManager/executeSims
-In Simulink/SimulationManager/execute
-In Simulink/SimulationManager/run
-In Simulink.Simulation.internal.DesktopSimHelper.runUsingManager
-In Simulink/SimulationInput/runSingleSimWithOptions
-In Simulink/SimulationInput/sim
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('run_everything_slowly', 'C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m', 41)" style="font-weight:bold">run_everything_slowly</a> (<a href="matlab: opentoline('C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m',41,0)">line 41</a>)] 
-[Warning: <a href="matlab:sfprivate('sfOpenObjectBySId','aircraft_refuel_control_R2024a:1:::86')">'P_COUPLING_AC_RETURN'</a> is defined, but is not used in the Stateflow chart. <a href= "matlab: internal.stateflow.dialogs.UnusedObjectDeleter.createDeleter('aircraft_refuel_control_R2024a:1:::86')">Delete this object</a> or <a href= "matlab: sfprivate('openConfigParamsSFDiagnostics',21)">configure the diagnostic</a>.
-
-] 
-[> In sldiagviewer.reportWarning
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('construct_error', 'C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\private\construct_error.m', 130)" style="font-weight:bold">construct_error</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\private\construct_error.m',130,0)">line 130</a>)
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('sfprivate', 'C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\sfprivate.m', 13)" style="font-weight:bold">sfprivate</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\sfprivate.m',13,0)">line 13</a>)
-In Simulink.Simulation.internal.DesktopSimHelper
-In Simulink.Simulation.internal.DesktopSimHelper.sim
-In Simulink/SimulationInput/sim
-In MultiSim.internal.runSingleSim
-In MultiSim.internal/SimulationRunnerSerial/executeImplSingle
-In MultiSim.internal/SimulationRunnerSerial/executeImpl
-In Simulink/SimulationManager/executeSims
-In Simulink/SimulationManager/execute
-In Simulink/SimulationManager/run
-In Simulink.Simulation.internal.DesktopSimHelper.runUsingManager
-In Simulink/SimulationInput/runSingleSimWithOptions
-In Simulink/SimulationInput/sim
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('run_everything_slowly', 'C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m', 41)" style="font-weight:bold">run_everything_slowly</a> (<a href="matlab: opentoline('C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m',41,0)">line 41</a>)] 
-[Warning: <a href="matlab:sfprivate('sfOpenObjectBySId','GS_refuel_control_R2024a:1:::58')">'GS_VALVE_FEEDBACK'</a> is defined, but is not used in the Stateflow chart. <a href= "matlab: internal.stateflow.dialogs.UnusedObjectDeleter.createDeleter('GS_refuel_control_R2024a:1:::58')">Delete this object</a> or <a href= "matlab: sfprivate('openConfigParamsSFDiagnostics',21)">configure the diagnostic</a>.
-
-] 
-[> In sldiagviewer.reportWarning
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('construct_error', 'C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\private\construct_error.m', 130)" style="font-weight:bold">construct_error</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\private\construct_error.m',130,0)">line 130</a>)
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('sfprivate', 'C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\sfprivate.m', 13)" style="font-weight:bold">sfprivate</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\sfprivate.m',13,0)">line 13</a>)
-In Simulink.Simulation.internal.DesktopSimHelper
-In Simulink.Simulation.internal.DesktopSimHelper.sim
-In Simulink/SimulationInput/sim
-In MultiSim.internal.runSingleSim
-In MultiSim.internal/SimulationRunnerSerial/executeImplSingle
-In MultiSim.internal/SimulationRunnerSerial/executeImpl
-In Simulink/SimulationManager/executeSims
-In Simulink/SimulationManager/execute
-In Simulink/SimulationManager/run
-In Simulink.Simulation.internal.DesktopSimHelper.runUsingManager
-In Simulink/SimulationInput/runSingleSimWithOptions
-In Simulink/SimulationInput/sim
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('run_everything_slowly', 'C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m', 41)" style="font-weight:bold">run_everything_slowly</a> (<a href="matlab: opentoline('C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m',41,0)">line 41</a>)] 
-[Warning: Neither Fast Restart mode nor stepping back can be enabled for the model '<a href="matlab:open_system ('simscape_automatic_R2024a')">simscape_automatic_R2024a</a>' for the following reasons:] 
-[> In Simulink.Simulation.internal.DesktopSimHelper
-In Simulink.Simulation.internal.DesktopSimHelper.sim
-In Simulink/SimulationInput/sim
-In MultiSim.internal.runSingleSim
-In MultiSim.internal/SimulationRunnerSerial/executeImplSingle
-In MultiSim.internal/SimulationRunnerSerial/executeImpl
-In Simulink/SimulationManager/executeSims
-In Simulink/SimulationManager/execute
-In Simulink/SimulationManager/run
-In Simulink.Simulation.internal.DesktopSimHelper.runUsingManager
-In Simulink/SimulationInput/runSingleSimWithOptions
-In Simulink/SimulationInput/sim
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('run_everything_slowly', 'C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m', 41)" style="font-weight:bold">run_everything_slowly</a> (<a href="matlab: opentoline('C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m',41,0)">line 41</a>)] 
-[Warning: Simulation Stepper and Fast Restart are incompatible with logging to file. To enable these capabilities, turn off 'Log Dataset
-data to file' in 'Configuration Parameters' > 'Data Import/Export' panel.] 
-[> In Simulink.Simulation.internal.DesktopSimHelper
-In Simulink.Simulation.internal.DesktopSimHelper.sim
-In Simulink/SimulationInput/sim
-In MultiSim.internal.runSingleSim
-In MultiSim.internal/SimulationRunnerSerial/executeImplSingle
-In MultiSim.internal/SimulationRunnerSerial/executeImpl
-In Simulink/SimulationManager/executeSims
-In Simulink/SimulationManager/execute
-In Simulink/SimulationManager/run
-In Simulink.Simulation.internal.DesktopSimHelper.runUsingManager
-In Simulink/SimulationInput/runSingleSimWithOptions
-In Simulink/SimulationInput/sim
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('run_everything_slowly', 'C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m', 41)" style="font-weight:bold">run_everything_slowly</a> (<a href="matlab: opentoline('C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m',41,0)">line 41</a>)] 
-
---------------------------------------------------------------------------------
-             Access violation detected at 2025-03-26 01:30:41 +0000
---------------------------------------------------------------------------------
-
-Configuration:
-  Crash Decoding           : Disabled - No sandbox or build area path
-  Crash Mode               : continue (default)
-  Default Encoding         : UTF-8
-  Deployed                 : false
-  Graphics Driver          : NVIDIA Corporation NVIDIA GeForce RTX 3050 Ti Laptop GPU/PCIe/SSE2 Version 4.6.0 NVIDIA 572.16
-  Graphics card 1          : NVIDIA ( 0x10de ) NVIDIA GeForce RTX 3050 Ti Laptop GPU Version 32.0.15.7216 (2025-1-26)
-  Graphics card 2          : Intel Corporation ( 0x8086 ) Intel(R) Iris(R) Xe Graphics Version 30.0.101.1660 (2022-3-18)
-  Java Version             : Java 1.8.0_202-b08 with Oracle Corporation Java HotSpot(TM) 64-Bit Server VM mixed mode
-  MATLAB Architecture      : win64
-  MATLAB Entitlement ID    : 2473545
-  MATLAB Root              : C:\Program Files\MATLAB\R2024a
-  MATLAB Version           : 24.1.0.2837808 (R2024a) Update 7
-  OpenGL                   : hardware
-  Operating System         : Microsoft Windows 11 Home
-  Process ID               : 38760
-  Processor ID             : x86 Family 6 Model 154 Stepping 3, GenuineIntel
-  Session Key              : 2d40cc16-8b2e-4e96-ae36-7692b4b0b1e1
-  Window System            : Version 10.0 (Build 26100)
-
-Fault Count: 1
-
-
-Abnormal termination:
-Access violation
-
-Current Thread: 'MCR 0 interpreter thread' id 18264
-
-Register State (from fault):
-  RAX = 0000000000000000  RBX = 000001ffac6d5fe8
-  RCX = 000001ff368ac370  RDX = 0000000000000001
-  RSP = 00000043953f5868  RBP = 00007ffc8009cc20
-  RSI = 000001ff83522440  RDI = 000002000f596aa0
- 
-   R8 = 00000043953f5878   R9 = 000001ffab1a46e0
-  R10 = 000001ffa9481ef0  R11 = 00000043953f5888
-  R12 = 000001ffe24b6e70  R13 = 000001ff91c600d0
-  R14 = 0000000000000000  R15 = 0000020046d74ee0
- 
-  RIP = 00007ffc8a1cb303  EFL = 00010246
- 
-   CS = 0033   FS = 0053   GS = 002b
-
-Stack Trace (from fault):
-[  0] 0x00007ffc8a1cb303 C:\Program Files\MATLAB\R2024a\bin\win64\libmwsl_AsyncioQueue.dll+00766723 sl_observer::DataProcessingInterface::cacheFixedPointProperties+00005715
-[  1] 0x00007ffc8a2b3d18 C:\Program Files\MATLAB\R2024a\bin\win64\libmwsl_AsyncioQueue.dll+01719576 ConstructAsyncQueueObserverBinding+00024104
-[  2] 0x00007ffc96fa3ce6   C:\Program Files\MATLAB\R2024a\bin\win64\dmr.dll+00277734 dmr::ObjectRef::objectID+00003654
-[  3] 0x00007ffc96fa3bd0   C:\Program Files\MATLAB\R2024a\bin\win64\dmr.dll+00277456 dmr::ObjectRef::objectID+00003376
-[  4] 0x00007ffc7fc0b7b4 C:\Program Files\MATLAB\R2024a\bin\win64\simulation_data_repository.dll+00833460 sdi::ObjectManager::safeTransaction+00000148
-[  5] 0x00007ffc8a2b2f7d C:\Program Files\MATLAB\R2024a\bin\win64\libmwsl_AsyncioQueue.dll+01716093 ConstructAsyncQueueObserverBinding+00020621
-[  6] 0x00007ffc930a4122 C:\Program Files\MATLAB\R2024a\bin\win64\sl_compile.dll+10043682 HMICompiler::finalize+00000194
-[  7] 0x00007ffca6357d07 C:\Program Files\MATLAB\R2024a\bin\win64\libmwsimulink.dll+07240967 SLModelSlicerUtils::getSegmentsInPath+00015191
-[  8] 0x00007ffcb6b4a919 C:\Program Files\MATLAB\R2024a\bin\win64\sl_engine_classes.dll+01419545 ModelMethodDecor::postMethod+00000025
-[  9] 0x00007ffc8bf19330 C:\Program Files\MATLAB\R2024a\bin\win64\libmwslexec_tldr.dll+00234288 slexec::tldr::block::dispatch::changeRunTimeDispatcher+00001072
-[ 10] 0x00007ffc8bf19130 C:\Program Files\MATLAB\R2024a\bin\win64\libmwslexec_tldr.dll+00233776 slexec::tldr::block::dispatch::changeRunTimeDispatcher+00000560
-[ 11] 0x00007ffc8bf79a8c C:\Program Files\MATLAB\R2024a\bin\win64\libmwslexec_tldr.dll+00629388 slexec::tldr::method::ModelMethods::terminate+00000092
-[ 12] 0x00007ffc8bf77d8f C:\Program Files\MATLAB\R2024a\bin\win64\libmwslexec_tldr.dll+00621967 slexec::tldr::method::ModelMethods::cleanupRuntimeResourcesImpl+00000767
-[ 13] 0x00007ffc8bf77a6e C:\Program Files\MATLAB\R2024a\bin\win64\libmwslexec_tldr.dll+00621166 slexec::tldr::method::ModelMethods::cleanupRuntimeResources+00000046
-[ 14] 0x00007ffc8bfa94f2 C:\Program Files\MATLAB\R2024a\bin\win64\libmwslexec_tldr.dll+00824562 slexec::tldr::misc::destroyEBDOrCBDOnlyWithCheck+00000338
-[ 15] 0x00007ffca37bd38e C:\Program Files\MATLAB\R2024a\bin\win64\sl_graphical_classes.dll+00906126 SLRootBD::destroyAllCompAndExecDataStructures+00000238
-[ 16] 0x00007ffca69f0bba C:\Program Files\MATLAB\R2024a\bin\win64\libmwsimulink.dll+14158778 slsim::setUIControlOverrideToInactive+00084778
-[ 17] 0x00007ffca69fe139 C:\Program Files\MATLAB\R2024a\bin\win64\libmwsimulink.dll+14213433 slsim::setUIControlOverrideToInactive+00139433
-[ 18] 0x00007ffca69e9cf8 C:\Program Files\MATLAB\R2024a\bin\win64\libmwsimulink.dll+14130424 slsim::setUIControlOverrideToInactive+00056424
-[ 19] 0x00007ffca5f70b6b C:\Program Files\MATLAB\R2024a\bin\win64\libmwsimulink.dll+03148651 StringVectorFilter<SlVariableUsage>::~StringVectorFilter<SlVariableUsage>+00000347
-[ 20] 0x00007ffca69fc84d C:\Program Files\MATLAB\R2024a\bin\win64\libmwsimulink.dll+14207053 slsim::setUIControlOverrideToInactive+00133053
-[ 21] 0x00007ffca69fb840 C:\Program Files\MATLAB\R2024a\bin\win64\libmwsimulink.dll+14202944 slsim::setUIControlOverrideToInactive+00128944
-[ 22] 0x00007ffca6a424f0 C:\Program Files\MATLAB\R2024a\bin\win64\libmwsimulink.dll+14492912 slsim::setUIControlOverrideToInactive+00418912
-[ 23] 0x00007ffca6377b85 C:\Program Files\MATLAB\R2024a\bin\win64\libmwsimulink.dll+07371653 slAccRegPrmChangeFcn+00100565
-[ 24] 0x00007ffca62cc704 C:\Program Files\MATLAB\R2024a\bin\win64\libmwsimulink.dll+06670084 slFullSimulate+00000516
-[ 25] 0x00007ffc690d999a C:\Program Files\MATLAB\R2024a\bin\win64\sl_proxy_interface.dll+00039322 wrapper_matl_sim+00000074
-[ 26] 0x00007ffc690f8f72 C:\Program Files\MATLAB\R2024a\bin\win64\builtins\sl_proxy_interface\mwsl_proxy_interface_builtinimpl.dll+00036722 us_set_bundle_context_instance_com_mathworks_sl_proxy_interface_builtinimpl+00001058
-[ 27] 0x00007ffdb130b957 C:\Program Files\MATLAB\R2024a\bin\win64\builtin.dll+00178519 MathWorks::builtin::BuiltinFcn::invoke+00001559
-[ 28] 0x00007ffdae60859f C:\Program Files\MATLAB\R2024a\bin\win64\m_dispatcher.dll+00361887 mdLoadModuleForPackageOrClass+00008063
-[ 29] 0x00007ffdae608735 C:\Program Files\MATLAB\R2024a\bin\win64\m_dispatcher.dll+00362293 mdLoadModuleForPackageOrClass+00008469
-[ 30] 0x00007ffdae5bc795 C:\Program Files\MATLAB\R2024a\bin\win64\m_dispatcher.dll+00051093
-[ 31] 0x00007ffdae5ddbad C:\Program Files\MATLAB\R2024a\bin\win64\m_dispatcher.dll+00187309 Mfh_MATLAB_fn_impl::dispatch+00000045
-[ 32] 0x00007ffcc76fda5b C:\Program Files\MATLAB\R2024a\bin\win64\mcos_impl.dll+05233243 musBeA+00166251
-[ 33] 0x00007ffdae6cf759 C:\Program Files\MATLAB\R2024a\bin\win64\m_dispatcher.dll+01177433 mdBuiltinAsBuiltinFcn+00000233
-[ 34] 0x00007ffdb130b957 C:\Program Files\MATLAB\R2024a\bin\win64\builtin.dll+00178519 MathWorks::builtin::BuiltinFcn::invoke+00001559
-[ 35] 0x00007ffdae60859f C:\Program Files\MATLAB\R2024a\bin\win64\m_dispatcher.dll+00361887 mdLoadModuleForPackageOrClass+00008063
-[ 36] 0x00007ffdae608735 C:\Program Files\MATLAB\R2024a\bin\win64\m_dispatcher.dll+00362293 mdLoadModuleForPackageOrClass+00008469
-[ 37] 0x00007ffdae5bcbdb C:\Program Files\MATLAB\R2024a\bin\win64\m_dispatcher.dll+00052187
-[ 38] 0x00007ffdae5ddbed C:\Program Files\MATLAB\R2024a\bin\win64\m_dispatcher.dll+00187373 Mfh_MATLAB_fn_impl::dispatch+00000045
-[ 39] 0x00007ffdada879ed C:\Program Files\MATLAB\R2024a\bin\win64\libmwlxemainservices.dll+00424429 mwboost::archive::codecvt_null<wchar_t>::do_max_length+00311581
-[ 40] 0x00007ffdada96dce C:\Program Files\MATLAB\R2024a\bin\win64\libmwlxemainservices.dll+00486862 mwboost::archive::codecvt_null<wchar_t>::do_max_length+00374014
-[ 41] 0x00007ffccb1a2016 C:\Program Files\MATLAB\R2024a\bin\win64\m_lxe.dll+06234134 MathWorks::lxe::ReadOnlyXvaluePtr::operator=+00006966
-[ 42] 0x00007ffccb1a3e1b C:\Program Files\MATLAB\R2024a\bin\win64\m_lxe.dll+06241819 MathWorks::lxe::ReadOnlyXvaluePtr::operator=+00014651
-[ 43] 0x00007ffccb0d3628 C:\Program Files\MATLAB\R2024a\bin\win64\m_lxe.dll+05387816 MathWorks::lxe::function_handle::invoke_with_adaptor+00016024
-[ 44] 0x00007ffccb0f1e89 C:\Program Files\MATLAB\R2024a\bin\win64\m_lxe.dll+05512841 MathWorks::lxe::function_handle::invoke_with_adaptor+00141049
-[ 45] 0x00007ffccae98366 C:\Program Files\MATLAB\R2024a\bin\win64\m_lxe.dll+03048294 MathWorks::lxe::LXEConstants::IsIfElse+00533270
-[ 46] 0x00007ffccae9c4a2 C:\Program Files\MATLAB\R2024a\bin\win64\m_lxe.dll+03064994 MathWorks::lxe::LXEConstants::IsY+00011986
-[ 47] 0x00007ffccae99ce3 C:\Program Files\MATLAB\R2024a\bin\win64\m_lxe.dll+03054819 MathWorks::lxe::LXEConstants::IsY+00001811
-[ 48] 0x00007ffccae9d585 C:\Program Files\MATLAB\R2024a\bin\win64\m_lxe.dll+03069317 MathWorks::lxe::LXEConstants::IsY+00016309
-[ 49] 0x00007ffccae9d833 C:\Program Files\MATLAB\R2024a\bin\win64\m_lxe.dll+03070003 MathWorks::lxe::LXEConstants::IsY+00016995
-[ 50] 0x00007ffccae9d19e C:\Program Files\MATLAB\R2024a\bin\win64\m_lxe.dll+03068318 MathWorks::lxe::LXEConstants::IsY+00015310
-[ 51] 0x00007ffccae99426 C:\Program Files\MATLAB\R2024a\bin\win64\m_lxe.dll+03052582 MathWorks::lxe::LxeTypes::GetTypeXvalueOf+00000262
-[ 52] 0x00007ffccaf8daaa C:\Program Files\MATLAB\R2024a\bin\win64\m_lxe.dll+04053674 MathWorks::lxe::SetEngineImplUnlinkFlagForAllCallsOnStack+00044810
-[ 53] 0x00007ffccaf91325 C:\Program Files\MATLAB\R2024a\bin\win64\m_lxe.dll+04068133 MathWorks::lxe::SetEngineImplUnlinkFlagForAllCallsOnStack+00059269
-[ 54] 0x00007ffdadb87b96 C:\Program Files\MATLAB\R2024a\bin\win64\libmwlxemainservices.dll+01473430 FeatureTestObservableWorkspace+00211910
-[ 55] 0x00007ffdada7fd73 C:\Program Files\MATLAB\R2024a\bin\win64\libmwlxemainservices.dll+00392563 mwboost::archive::codecvt_null<wchar_t>::do_max_length+00279715
-[ 56] 0x00007ffdada7f4d3 C:\Program Files\MATLAB\R2024a\bin\win64\libmwlxemainservices.dll+00390355 mwboost::archive::codecvt_null<wchar_t>::do_max_length+00277507
-[ 57] 0x00007ffdada81fd2 C:\Program Files\MATLAB\R2024a\bin\win64\libmwlxemainservices.dll+00401362 mwboost::archive::codecvt_null<wchar_t>::do_max_length+00288514
-[ 58] 0x00007ffdae6d79e8 C:\Program Files\MATLAB\R2024a\bin\win64\m_dispatcher.dll+01210856 Mfh_file::dispatch_file_common+00000152
-[ 59] 0x00007ffdae6d68fb C:\Program Files\MATLAB\R2024a\bin\win64\m_dispatcher.dll+01206523 Mfh_error::lookup+00012347
-[ 60] 0x00007ffdae6d793d C:\Program Files\MATLAB\R2024a\bin\win64\m_dispatcher.dll+01210685 Mfh_file::dispatch+00000045
-[ 61] 0x00007ffdada879ed C:\Program Files\MATLAB\R2024a\bin\win64\libmwlxemainservices.dll+00424429 mwboost::archive::codecvt_null<wchar_t>::do_max_length+00311581
-[ 62] 0x00007ffdada96dce C:\Program Files\MATLAB\R2024a\bin\win64\libmwlxemainservices.dll+00486862 mwboost::archive::codecvt_null<wchar_t>::do_max_length+00374014
-[ 63] 0x00007ffccb1a2016 C:\Program Files\MATLAB\R2024a\bin\win64\m_lxe.dll+06234134 MathWorks::lxe::ReadOnlyXvaluePtr::operator=+00006966
-[ 64] 0x00007ffccb1a3665 C:\Program Files\MATLAB\R2024a\bin\win64\m_lxe.dll+06239845 MathWorks::lxe::ReadOnlyXvaluePtr::operator=+00012677
-[ 65] 0x00007ffccb0d3628 C:\Program Files\MATLAB\R2024a\bin\win64\m_lxe.dll+05387816 MathWorks::lxe::function_handle::invoke_with_adaptor+00016024
-[ 66] 0x00007ffccb0f1a79 C:\Program Files\MATLAB\R2024a\bin\win64\m_lxe.dll+05511801 MathWorks::lxe::function_handle::invoke_with_adaptor+00140009
-[ 67] 0x00007ffccae98366 C:\Program Files\MATLAB\R2024a\bin\win64\m_lxe.dll+03048294 MathWorks::lxe::LXEConstants::IsIfElse+00533270
-[ 68] 0x00007ffccae9c4a2 C:\Program Files\MATLAB\R2024a\bin\win64\m_lxe.dll+03064994 MathWorks::lxe::LXEConstants::IsY+00011986
-[ 69] 0x00007ffccae99ce3 C:\Program Files\MATLAB\R2024a\bin\win64\m_lxe.dll+03054819 MathWorks::lxe::LXEConstants::IsY+00001811
-[ 70] 0x00007ffccae9d585 C:\Program Files\MATLAB\R2024a\bin\win64\m_lxe.dll+03069317 MathWorks::lxe::LXEConstants::IsY+00016309
-[ 71] 0x00007ffccae9d833 C:\Program Files\MATLAB\R2024a\bin\win64\m_lxe.dll+03070003 MathWorks::lxe::LXEConstants::IsY+00016995
-[ 72] 0x00007ffccae9d19e C:\Program Files\MATLAB\R2024a\bin\win64\m_lxe.dll+03068318 MathWorks::lxe::LXEConstants::IsY+00015310
-[ 73] 0x00007ffccae99426 C:\Program Files\MATLAB\R2024a\bin\win64\m_lxe.dll+03052582 MathWorks::lxe::LxeTypes::GetTypeXvalueOf+00000262
-[ 74] 0x00007ffccaf8daaa C:\Program Files\MATLAB\R2024a\bin\win64\m_lxe.dll+04053674 MathWorks::lxe::SetEngineImplUnlinkFlagForAllCallsOnStack+00044810
-[ 75] 0x00007ffccaf91325 C:\Program Files\MATLAB\R2024a\bin\win64\m_lxe.dll+04068133 MathWorks::lxe::SetEngineImplUnlinkFlagForAllCallsOnStack+00059269
-[ 76] 0x00007ffdadb87b96 C:\Program Files\MATLAB\R2024a\bin\win64\libmwlxemainservices.dll+01473430 FeatureTestObservableWorkspace+00211910
-[ 77] 0x00007ffdadacb616 C:\Program Files\MATLAB\R2024a\bin\win64\libmwlxemainservices.dll+00701974 mwboost::archive::detail::pointer_oserializer<mwboost::archive::xml_oarchive,MathWorks::lxe::PreLineExecutionEvent>::save_object_ptr+00073878
-[ 78] 0x00007ffdadacd194 C:\Program Files\MATLAB\R2024a\bin\win64\libmwlxemainservices.dll+00709012 mwboost::archive::detail::pointer_oserializer<mwboost::archive::xml_oarchive,MathWorks::lxe::PreLineExecutionEvent>::save_object_ptr+00080916
-[ 79] 0x00007ffdadb4af8f C:\Program Files\MATLAB\R2024a\bin\win64\libmwlxemainservices.dll+01224591 mwboost::archive::detail::oserializer<mwboost::archive::text_oarchive,MathWorks::MatlabComponents::ComponentIdentifier>::save_object_data+00323007
-[ 80] 0x00007ffdadb4cd77 C:\Program Files\MATLAB\R2024a\bin\win64\libmwlxemainservices.dll+01232247 mwboost::archive::detail::oserializer<mwboost::archive::text_oarchive,MathWorks::MatlabComponents::ComponentIdentifier>::save_object_data+00330663
-[ 81] 0x00007ffdadb4c060 C:\Program Files\MATLAB\R2024a\bin\win64\libmwlxemainservices.dll+01228896 mwboost::archive::detail::oserializer<mwboost::archive::text_oarchive,MathWorks::MatlabComponents::ComponentIdentifier>::save_object_data+00327312
-[ 82] 0x00007ffdae019e59 C:\Program Files\MATLAB\R2024a\bin\win64\libmwbridge.dll+00302681 mnGetPrompt+00013977
-[ 83] 0x00007ffdae9e9486   C:\Program Files\MATLAB\R2024a\bin\win64\iqm.dll+00496774 iqm::Iqm::instance+00001606
-[ 84] 0x00007ffdaea3fb62   C:\Program Files\MATLAB\R2024a\bin\win64\iqm.dll+00850786 iqm::UserEvalPlugin::execute+00001314
-[ 85] 0x00007ffdaea0de5e   C:\Program Files\MATLAB\R2024a\bin\win64\iqm.dll+00646750 iqm::Iqm::setupIqmFcnPtrs+00104766
-[ 86] 0x00007ffdaea1a1d9   C:\Program Files\MATLAB\R2024a\bin\win64\iqm.dll+00696793 iqm::Iqm::setupIqmFcnPtrs+00154809
-[ 87] 0x00007ffdae9dcdef   C:\Program Files\MATLAB\R2024a\bin\win64\iqm.dll+00445935 iqm::Iqm::create+00010447
-[ 88] 0x00007ffdadfe8476 C:\Program Files\MATLAB\R2024a\bin\win64\libmwbridge.dll+00099446 ioReadLine+00000406
-[ 89] 0x00007ffdadfe82a5 C:\Program Files\MATLAB\R2024a\bin\win64\libmwbridge.dll+00098981 ioReadLine+00000165
-[ 90] 0x00007ffdae01a220 C:\Program Files\MATLAB\R2024a\bin\win64\libmwbridge.dll+00303648 mnGetCommandLineBuffer+00000288
-[ 91] 0x00007ffdae01a6c7 C:\Program Files\MATLAB\R2024a\bin\win64\libmwbridge.dll+00304839 mnParser+00000487
-[ 92] 0x00007ffdae86c44f   C:\Program Files\MATLAB\R2024a\bin\win64\mcr.dll+00443471 mcr_initialize_main+00016591
-[ 93] 0x00007ffdae818c7e   C:\Program Files\MATLAB\R2024a\bin\win64\mcr.dll+00101502 mcrFunctionSignature::set_signature+00080494
-[ 94] 0x00007ffdae8365a2   C:\Program Files\MATLAB\R2024a\bin\win64\mcr.dll+00222626 mwboost::archive::codecvt_null<wchar_t>::`default constructor closure'+00017282
-[ 95] 0x00007ffdaea3aaba   C:\Program Files\MATLAB\R2024a\bin\win64\iqm.dll+00830138 iqm::PackagedTaskPlugin::execute+00000074
-[ 96] 0x00007ffdaea0de5e   C:\Program Files\MATLAB\R2024a\bin\win64\iqm.dll+00646750 iqm::Iqm::setupIqmFcnPtrs+00104766
-[ 97] 0x00007ffdae9dd70a   C:\Program Files\MATLAB\R2024a\bin\win64\iqm.dll+00448266 iqm::Iqm::create+00012778
-[ 98] 0x00007ffdae9ddbf1   C:\Program Files\MATLAB\R2024a\bin\win64\iqm.dll+00449521 iqm::Iqm::create+00014033
-[ 99] 0x00007ffdae9dd07d   C:\Program Files\MATLAB\R2024a\bin\win64\iqm.dll+00446589 iqm::Iqm::create+00011101
-[100] 0x00007ffdae85245c   C:\Program Files\MATLAB\R2024a\bin\win64\mcr.dll+00336988 mcrInstantiationError::operator=+00010604
-[101] 0x00007ffdae852ef8   C:\Program Files\MATLAB\R2024a\bin\win64\mcr.dll+00339704 mcrInstantiationError::operator=+00013320
-[102] 0x00007ffdae850531   C:\Program Files\MATLAB\R2024a\bin\win64\mcr.dll+00329009 mcrInstantiationError::operator=+00002625
-[103] 0x00007ffe2ee591aa C:\Program Files\MATLAB\R2024a\bin\win64\mwboost_thread-vc143-mt-x64-1_78.dll+00037290 mwboost::detail::win32::handle_manager::swap+00001626
-[104] 0x00007ffe417037b0                   C:\WINDOWS\System32\ucrtbase.dll+00014256 wcsrchr+00000336
-[105] 0x00007ffe437de8d7                   C:\WINDOWS\System32\KERNEL32.DLL+00190679 BaseThreadInitThunk+00000023
-[106] 0x00007ffe4439bf6c                      C:\WINDOWS\SYSTEM32\ntdll.dll+00769900 RtlUserThreadStart+00000044
-
-** This crash report has been saved to disk as C:\Users\MW\AppData\Local\Temp\matlab_crash_dump.38760-1 **
-
-
-
-MATLAB is exiting because of fatal error
+[26-Mar-2025 12:02:01] Checking for availability of parallel pool...
+[26-Mar-2025 12:02:01] Starting Simulink on parallel workers...
+[26-Mar-2025 12:02:02] Configuring simulation cache folder on parallel workers...
+[26-Mar-2025 12:02:02] Loading model on parallel workers...
+[26-Mar-2025 12:02:04] Running simulations...
+[26-Mar-2025 12:11:01] Completed 1 of 10 simulation runs
+[26-Mar-2025 12:11:34] Completed 2 of 10 simulation runs
+[26-Mar-2025 12:12:13] Completed 3 of 10 simulation runs
+[26-Mar-2025 12:12:47] Completed 4 of 10 simulation runs
+[26-Mar-2025 12:13:04] Completed 5 of 10 simulation runs
+[26-Mar-2025 12:13:54] Completed 6 of 10 simulation runs
+[Warning: While loading an object of class 'Node':
+Cannot load 'simscape.logging.Node' object. The file might be corrupted.] 
+[26-Mar-2025 12:13:55] Completed 7 of 10 simulation runs
+[26-Mar-2025 12:18:26] Cleaning up parallel workers...
+[26-Mar-2025 12:19:06] Checking for availability of parallel pool...
+[26-Mar-2025 12:19:06] Starting Simulink on parallel workers...
+[26-Mar-2025 12:19:07] Configuring simulation cache folder on parallel workers...
+[26-Mar-2025 12:19:07] Loading model on parallel workers...
+[26-Mar-2025 12:19:10] Running simulations...
+[Warning: Graphics timeout occurred. To share details of this issue with MathWorks technical
+support, please include that this is an unresponsive graphics client with your service request.] 
+[Warning: 1 worker(s) crashed while executing code in the current parallel pool. MATLAB may
+attempt to run the code again on the remaining workers of the pool, unless an spmd block has
+run. <a href="matlab:edit('C:\Users\hc21562\Documents\Matlab_parallel\Job1\matlab_crash_dump.52564-1')">View the crash dump files to determine what caused the workers to crash.</a>] 
+[Warning: 1 worker(s) crashed while executing code in the current parallel pool. MATLAB may
+attempt to run the code again on the remaining workers of the pool, unless an spmd block has
+run. <a href="matlab:edit('C:\Users\hc21562\Documents\Matlab_parallel\Job1\matlab_crash_dump.52564-1')">View the crash dump files to determine what caused the workers to crash.</a>] 

@@ -10,7 +10,7 @@ Feed_temp_sweep_simIn(1:length(LH2_Feed_Temp_vec)) = Simulink.SimulationInput(md
 for i = 1:length(LH2_Feed_Temp_vec) 
     if Log_to_file_flag
             Feed_temp_sweep_simIn(i) = Feed_temp_sweep_simIn(i).setModelParameter('LoggingToFile','on',...
-                                'LoggingFileName','Graphs/Feed_temp_sweep_simOut'+i+'.mat');
+                                'LoggingFileName',strcat('Graphs/Feed_temp_sweep_simOut', num2str(i), '.mat'));
     end
     if rapid_flag
         Feed_temp_sweep_simIn(i) = Feed_temp_sweep_simIn(i).setModelParameter(SimulationMode="rapid-accelerator");

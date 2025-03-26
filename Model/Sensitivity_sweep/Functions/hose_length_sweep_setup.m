@@ -9,7 +9,7 @@ function [hose_length_sweep_simIn, hose_length_vector] = hose_length_sweep_setup
     for i = 1:length(hose_length_vector) 
         if Log_to_file_flag
             hose_length_sweep_simIn(i) = hose_length_sweep_simIn(i).setModelParameter('LoggingToFile','on',...
-                                'LoggingFileName','Graphs/hose_length_sweep_simOut'+i+'.mat');
+                                'LoggingFileName',strcat('Graphs/hose_length_sweep_simOut', num2str(i), '.mat'));
         end
         if rapid_flag
             hose_length_sweep_simIn(i) = hose_length_sweep_simIn(i).setModelParameter(SimulationMode="rapid-accelerator");

@@ -16,7 +16,7 @@ Tank_size_sweep_simIn(1:length(tank_volume_vector)) = Simulink.SimulationInput(m
 for i = 1:length(tank_volume_vector) 
     if Log_to_file_flag
             Tank_size_sweep_simIn(i) = Tank_size_sweep_simIn(i).setModelParameter('LoggingToFile','on',...
-                                'LoggingFileName','Graphs/Tank_size_sweep_simOut'+i+'.mat');
+                                'LoggingFileName',strcat('Graphs/Tank_size_sweep_simOut', num2str(i), '.mat'));
     end
     if rapid_flag
         Tank_size_sweep_simIn(i) = Tank_size_sweep_simIn(i).setModelParameter(SimulationMode="rapid-accelerator");
