@@ -43,5 +43,7 @@ feed_temp_sweep_results_table = array2table(feed_temp_sweep_results, ...
     'Time taken for cold tank refuel (s)'});
 
     writetable(feed_temp_sweep_results_table, "Graphs/feed_temp_sweep_results.xlsx")
+    delete('Graphs\feed_temp_sweep_results.xlsx')
+    writetable(feed_temp_sweep_results_table, "Graphs/feed_temp_sweep_results.xlsx")
 
 end

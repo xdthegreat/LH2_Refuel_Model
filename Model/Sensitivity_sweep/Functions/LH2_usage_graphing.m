@@ -14,7 +14,10 @@ function LH2_usage_graphing(LH2_usage_simOut)
             mode_breakpoint_array = [mode_breakpoint_array, AC_mode_time(i+1)];
         end
     end
-        start_warm_chilldown_index = find_nearest(mode_breakpoint_array(1), LH2_usage_simOut.tout);
+
+    disp(mode_breakpoint_array)
+    
+    start_warm_chilldown_index = find_nearest(mode_breakpoint_array(1), LH2_usage_simOut.tout);
     start_warm_tank_fill_index = find_nearest(mode_breakpoint_array(2), LH2_usage_simOut.tout);
     start_warm_warmup_index = find_nearest(mode_breakpoint_array(3), LH2_usage_simOut.tout);
     start_warm_disconnect_index = find_nearest(mode_breakpoint_array(4), LH2_usage_simOut.tout);
