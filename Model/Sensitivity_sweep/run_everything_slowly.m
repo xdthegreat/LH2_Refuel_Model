@@ -14,10 +14,10 @@ datetime('now','TimeZone','local','Format','d-MMM-y HH:mm:ss Z')
 %% setup
 rapid_flag = false;
 accel_flag = false;
-fast_restart_flag = true;
+fast_restart_flag = false;
 max_allowed_stop_time = 3000;
 save_simOut_flag = true;
-parsim_flag = false;
+parsim_flag = true;
 simplify_output_func_flag = true;
 
 %check matlab version
@@ -32,7 +32,7 @@ end
 normal_flow_rate_simIn = normal_flow_rate_setup(rapid_flag, accel_flag, mdl);
 
 if simplify_output_func_flag
-    normal_flow_rate_simIn = setPostSimFcn(normal_flow_rate_simIn, @simplify_data);
+    normal_flow_rate_simIn = setPostSimFcn(normal_flow_rate_simIn, @(x) simplify_data(x));
 end
 
 tic;
