@@ -2,7 +2,7 @@
 
 function [tank_conductivity_sweep_simIn, AC_tank_equivalent_conductivity_vector] = ...
     tank_conductivity_sweep_setup(rapid_flag, accel_flag, mdl, AC_tank_equivalent_conductivity_count,...
-    max_allowed_stop_time, Ambient_temp, AC_wall_thickness)
+    max_allowed_stop_time, Ambient_temp, AC_wall_thickness, Log_to_file_flag)
     
     AC_tank_equivalent_conductivity_vector = logspace(log10(1), log10(1200), ...
         AC_tank_equivalent_conductivity_count)/(Ambient_temp-20)*AC_wall_thickness; % to be changed
@@ -10,6 +10,10 @@ function [tank_conductivity_sweep_simIn, AC_tank_equivalent_conductivity_vector]
     
     tank_conductivity_sweep_simIn(1:length(AC_tank_equivalent_conductivity_vector)) = Simulink.SimulationInput(mdl); 
     for i = 1:length(AC_tank_equivalent_conductivity_vector) 
+        if Log_to_file_flag
+            tank_conductivity_sweep_simIn(i) = tank_conductivity_sweep_simIn(i).setModelParameter('LoggingToFile','on',...
+                                'LoggingFileName','Graphs/tank_conductivity_sweep_simOut'+i+'.mat');
+        end
         if rapid_flag
             tank_conductivity_sweep_simIn(i) = tank_conductivity_sweep_simIn(i).setModelParameter(SimulationMode="rapid-accelerator");
         elseif accel_flag
