@@ -1,12 +1,16 @@
 
 
 function [hose_length_sweep_simIn, hose_length_vector] = hose_length_sweep_setup(rapid_flag, accel_flag, ...
-    mdl, hose_length_sweep_count, max_allowed_stop_time)
+    mdl, hose_length_sweep_count, max_allowed_stop_time, Log_to_file_flag)
 
     hose_length_vector = linspace(5, 20, hose_length_sweep_count);
 
     hose_length_sweep_simIn(1:length(hose_length_vector)) = Simulink.SimulationInput(mdl); 
     for i = 1:length(hose_length_vector) 
+        if Log_to_file_flag
+            hose_length_sweep_simIn(i) = hose_length_sweep_simIn(i).setModelParameter('LoggingToFile','on',...
+                                'LoggingFileName','Graphs/hose_length_sweep_simOut'+i+'.mat');
+        end
         if rapid_flag
             hose_length_sweep_simIn(i) = hose_length_sweep_simIn(i).setModelParameter(SimulationMode="rapid-accelerator");
         elseif accel_flag

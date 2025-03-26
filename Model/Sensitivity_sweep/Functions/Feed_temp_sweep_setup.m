@@ -1,13 +1,17 @@
 
 
 function [Feed_temp_sweep_simIn, LH2_Feed_Temp_vec] = Feed_temp_sweep_setup(rapid_flag, accel_flag, ...
-    mdl, LH2_FEED_TEMP_COUNT, max_allowed_stop_time)
+    mdl, LH2_FEED_TEMP_COUNT, max_allowed_stop_time, Log_to_file_flag)
 
 LH2_Feed_Temp_vec = linspace(18, 21, LH2_FEED_TEMP_COUNT);
 
 
 Feed_temp_sweep_simIn(1:length(LH2_Feed_Temp_vec)) = Simulink.SimulationInput(mdl); 
 for i = 1:length(LH2_Feed_Temp_vec) 
+    if Log_to_file_flag
+            Feed_temp_sweep_simIn(i) = Feed_temp_sweep_simIn(i).setModelParameter('LoggingToFile','on',...
+                                'LoggingFileName','Graphs/Feed_temp_sweep_simOut'+i+'.mat');
+    end
     if rapid_flag
         Feed_temp_sweep_simIn(i) = Feed_temp_sweep_simIn(i).setModelParameter(SimulationMode="rapid-accelerator");
     elseif accel_flag

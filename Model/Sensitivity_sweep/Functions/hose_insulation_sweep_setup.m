@@ -2,13 +2,17 @@
 
 
 function [hose_insulation_sweep_simIn, hose_thermal_conductivity_vec] = hose_insulation_sweep_setup(rapid_flag, accel_flag, ...
-    mdl, hose_thermal_conductivity_count, max_allowed_stop_time)
+    mdl, hose_thermal_conductivity_count, max_allowed_stop_time, Log_to_file_flag)
 
 
 hose_thermal_conductivity_vec = logspace(log10(0.1), log10(1000), hose_thermal_conductivity_count);
 
 hose_insulation_sweep_simIn(1:length(hose_thermal_conductivity_vec)) = Simulink.SimulationInput(mdl); 
 for i = 1:length(hose_thermal_conductivity_vec) 
+    if Log_to_file_flag
+            hose_insulation_sweep_simIn(i) = hose_insulation_sweep_simIn(i).setModelParameter('LoggingToFile','on',...
+                                'LoggingFileName','Graphs/hose_insulation_sweep_simOut'+i+'.mat');
+    end
     if rapid_flag
         hose_insulation_sweep_simIn(i) = hose_insulation_sweep_simIn(i).setModelParameter(SimulationMode="rapid-accelerator");
     elseif accel_flag
