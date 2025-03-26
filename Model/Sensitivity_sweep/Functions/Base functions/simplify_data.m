@@ -1,11 +1,7 @@
 
 
-function new_simOut = simplify_data(simOut)
+function simOut = simplify_data(simOut)
 % reduces freqnecy of data to avoid crashing computers
-
-    % This is needed to get error messages and whatnot across
-    % new_simOut.ErrorMessage = simOut.ErrorMessage;
-    new_simOut = simOut;
     
     max_time = max(simOut.tout);
     dt = 0.1;
@@ -32,5 +28,9 @@ function new_simOut = simplify_data(simOut)
             end
         end
     end
-    clear simOut
+    disp(new_simOut)
+    simOut.tout = [];
+    simOut.tout = new_simOut.tout;
+    simOut.yout = [];
+    simOut.yout = new_simOut.yout;
 end
