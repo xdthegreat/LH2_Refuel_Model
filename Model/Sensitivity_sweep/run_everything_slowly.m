@@ -14,10 +14,10 @@ datetime('now','TimeZone','local','Format','d-MMM-y HH:mm:ss Z')
 %% setup
 rapid_flag = false;
 accel_flag = false;
-fast_restart_flag = true;
+fast_restart_flag = false;
 max_allowed_stop_time = 3000;
 save_simOut_flag = false;
-parsim_flag = false;
+parsim_flag = true;
 simplify_output_func_flag = false;
 Log_to_file_flag = true;
 
@@ -44,11 +44,14 @@ else
 end
 toc;
 
+if ~Log_to_file_flag
+    close all
+    normal_flow_rate_graphing(normal_flow_rate_simOut, AC_supply_line_port_inner_area)
+    close all
+    LH2_usage_graphing(normal_flow_rate_simOut)
+end
 
-close all
-normal_flow_rate_graphing(normal_flow_rate_simOut, AC_supply_line_port_inner_area)
-close all
-LH2_usage_graphing(normal_flow_rate_simOut)
+
 
 if save_simOut_flag && ~Log_to_file_flag
     % save results
@@ -77,8 +80,10 @@ else
 end
 toc;
 
-close all
-valve_diameter_sweep_graphing(valve_diameter_simOut, valve_diameter_vector)
+if ~Log_to_file_flag
+    close all
+    valve_diameter_sweep_graphing(valve_diameter_simOut, valve_diameter_vector)
+end
 
 % save results
 if save_simOut_flag && ~Log_to_file_flag
@@ -106,8 +111,10 @@ else
 end
 toc;
 
-close all
-valve_discharge_coeff_sweep_graphing(valve_discharge_coeff_sweep_simOut, valve_discharge_coeff_vector);
+if ~Log_to_file_flag
+    close all
+    valve_discharge_coeff_sweep_graphing(valve_discharge_coeff_sweep_simOut, valve_discharge_coeff_vector);
+end
 
 % save results
 if save_simOut_flag && ~Log_to_file_flag
@@ -137,9 +144,11 @@ else
 end
 toc;
 
+if ~Log_to_file_flag
 close all
 tank_wall_vapour_heat_transfer_coeff_graphing(tank_wall_vapour_heat_transfer_coeff_simOut, ...
     vapour_heat_transfer_coeff_vector);
+end
 
 % save results
 if save_simOut_flag && ~Log_to_file_flag
@@ -168,9 +177,11 @@ else
 end
 toc;
 
+if ~Log_to_file_flag
 close all
 tank_wall_liquid_heat_transfer_coeff_graphing(tank_wall_liquid_heat_transfer_coeff_simOut, ...
     liquid_heat_transfer_coeff_vector);
+end
 
 % save results
 if save_simOut_flag && ~Log_to_file_flag
@@ -199,8 +210,10 @@ else
 end
 toc;
 
-close all
-hose_length_graphing(hose_length_sweep_simOut, hose_length_vector)
+if ~Log_to_file_flag
+    close all
+    hose_length_graphing(hose_length_sweep_simOut, hose_length_vector)
+end
 
 % save results
 if save_simOut_flag && ~Log_to_file_flag
@@ -229,9 +242,11 @@ else
 end
 toc;
 
-close all
-tank_conductivity_sweep_graphing(tank_conductivity_sweep_simOut, ...
+if ~Log_to_file_flag
+    close all
+    tank_conductivity_sweep_graphing(tank_conductivity_sweep_simOut, ...
     AC_tank_equivalent_conductivity_vector)
+end
 
 % save results
 if save_simOut_flag && ~Log_to_file_flag
@@ -261,8 +276,10 @@ end
 
 toc;
 
+if ~Log_to_file_flag
 close all
 Tank_size_sweep_graphing(Tank_size_sweep_simOut, m_LH2_vector)
+end
 
 % save results
 if save_simOut_flag && ~Log_to_file_flag
@@ -290,8 +307,10 @@ else
 end
 toc;
 
+if ~Log_to_file_flag
 close all
 Feed_pressure_sweep_graphing(Feed_pres_sweep_simOut, FEED_PRES_VEC)
+end
 
 % save results
 if save_simOut_flag && ~Log_to_file_flag
@@ -322,8 +341,10 @@ end
 
 toc;
 
+if ~Log_to_file_flag
 close all
 Feed_temp_sweep_graphing(Feed_temp_sweep_simOut, LH2_Feed_Temp_vec)
+end
 
 % save results
 if save_simOut_flag && ~Log_to_file_flag
@@ -352,8 +373,10 @@ else
 end
 toc;
 
+if ~Log_to_file_flag
 close all
 hose_insulation_sweep_graphing(hose_insulation_sweep_simOut, hose_thermal_conductivity_vec)
+end
 
 % save results
 if save_simOut_flag && ~Log_to_file_flag
@@ -380,9 +403,11 @@ else
 end
 toc;
 
+if ~Log_to_file_flag
 close all
 UAM_tank_pressure_sweep_graphing(UAM_tank_pressure_sweep_simOut, ...
     UAM_TANK_PRES_VEC)
+end
 
 % save results
 if save_simOut_flag && ~Log_to_file_flag

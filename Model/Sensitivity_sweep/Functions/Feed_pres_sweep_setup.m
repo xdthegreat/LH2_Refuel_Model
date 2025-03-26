@@ -10,7 +10,7 @@ Feed_pres_sweep_simIn(1:length(AC_LH2_TARGET_DELTA_P)) = Simulink.SimulationInpu
 for i = 1:length(AC_LH2_TARGET_DELTA_P) 
     if Log_to_file_flag
             Feed_pres_sweep_simIn(i) = Feed_pres_sweep_simIn(i).setModelParameter('LoggingToFile','on',...
-                                'LoggingFileName','Graphs/Feed_pres_sweep_simOut'+i+'.mat');
+                                'LoggingFileName',strcat('Graphs/Feed_pres_sweep_simOut', num2str(i), '.mat'));
     end
 
     if rapid_flag

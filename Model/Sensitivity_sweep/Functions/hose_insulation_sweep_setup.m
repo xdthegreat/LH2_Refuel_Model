@@ -11,7 +11,7 @@ hose_insulation_sweep_simIn(1:length(hose_thermal_conductivity_vec)) = Simulink.
 for i = 1:length(hose_thermal_conductivity_vec) 
     if Log_to_file_flag
             hose_insulation_sweep_simIn(i) = hose_insulation_sweep_simIn(i).setModelParameter('LoggingToFile','on',...
-                                'LoggingFileName','Graphs/hose_insulation_sweep_simOut'+i+'.mat');
+                                'LoggingFileName', strcat('Graphs/hose_insulation_sweep_simOut', num2str(i), '.mat'));
     end
     if rapid_flag
         hose_insulation_sweep_simIn(i) = hose_insulation_sweep_simIn(i).setModelParameter(SimulationMode="rapid-accelerator");

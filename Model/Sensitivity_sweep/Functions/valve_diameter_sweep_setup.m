@@ -12,7 +12,7 @@ function [valve_diameter_sweep_simIn, valve_diameter_vector] = valve_diameter_sw
     for i = 1:length(valve_diameter_vector) 
         if Log_to_file_flag
             valve_diameter_sweep_simIn(i) = valve_diameter_sweep_simIn(i).setModelParameter('LoggingToFile','on',...
-                                'LoggingFileName','Graphs/valve_diameter_simOut' + i + '.mat');
+                                'LoggingFileName', strcat('Graphs/valve_diameter_simOut', num2str(i), '.mat'));
         end
         
         if rapid_flag
