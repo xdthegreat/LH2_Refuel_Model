@@ -3,7 +3,7 @@
 
 function [Tank_size_sweep_simIn, m_LH2_vector] = ...
     Tank_size_sweep_setup(rapid_flag, accel_flag, mdl, tank_size_count, max_allowed_stop_time, ...
-    AC_tank_vol_limit, AC_tank_cross_sectional_area, AC_tank_radius)
+    AC_tank_vol_limit, AC_tank_cross_sectional_area, AC_tank_radius, Log_to_file_flag)
 
 
 m_LH2_vector = linspace(16, 70, tank_size_count);
@@ -14,6 +14,10 @@ AC_tank_surface_area_vector = AC_tank_cross_sectional_area*2 + AC_tank_radius*2*
 
 Tank_size_sweep_simIn(1:length(tank_volume_vector)) = Simulink.SimulationInput(mdl); 
 for i = 1:length(tank_volume_vector) 
+    if Log_to_file_flag
+            Tank_size_sweep_simIn(i) = Tank_size_sweep_simIn(i).setModelParameter('LoggingToFile','on',...
+                                'LoggingFileName','Graphs/Tank_size_sweep_simOut'+i+'.mat');
+    end
     if rapid_flag
         Tank_size_sweep_simIn(i) = Tank_size_sweep_simIn(i).setModelParameter(SimulationMode="rapid-accelerator");
     elseif accel_flag

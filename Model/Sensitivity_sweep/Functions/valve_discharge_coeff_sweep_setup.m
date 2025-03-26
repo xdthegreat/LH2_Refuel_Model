@@ -1,12 +1,21 @@
 
 
 function [valve_discharge_coeff_sweep_simIn, valve_discharge_coeff_vector] = ...
-    valve_discharge_coeff_sweep_setup(rapid_flag, accel_flag, mdl, valve_discharge_coeff_sweep_count, max_allowed_stop_time) 
+    valve_discharge_coeff_sweep_setup(rapid_flag, accel_flag, mdl, valve_discharge_coeff_sweep_count, max_allowed_stop_time, ...
+    Log_to_file_flag) 
 
     valve_discharge_coeff_vector = linspace(0.4, 0.8, valve_discharge_coeff_sweep_count);
     
     valve_discharge_coeff_sweep_simIn(1:length(valve_discharge_coeff_vector)) = Simulink.SimulationInput(mdl); 
+
+   
+
     for i = 1:length(valve_discharge_coeff_vector) 
+        if Log_to_file_flag
+            valve_discharge_coeff_sweep_simIn(i) = valve_discharge_coeff_sweep_simIn(i).setModelParameter('LoggingToFile','on',...
+                                'LoggingFileName','Graphs/valve_discharge_coeff_sweep_simOut'+ i + '.mat');
+        end
+
         if rapid_flag
             valve_discharge_coeff_sweep_simIn(i) = valve_discharge_coeff_sweep_simIn(i).setModelParameter(SimulationMode="rapid-accelerator");
         elseif accel_flag

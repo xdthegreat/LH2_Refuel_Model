@@ -1,11 +1,20 @@
 function [valve_diameter_sweep_simIn, valve_diameter_vector] = valve_diameter_sweep_setup(rapid_flag, accel_flag, ...
-    mdl, valve_diameter_sweep_count, max_allowed_stop_time)
+    mdl, valve_diameter_sweep_count, max_allowed_stop_time, Log_to_file_flag)
 
 
     valve_diameter_vector = linspace(0.007, 0.01, valve_diameter_sweep_count);
 
     valve_diameter_sweep_simIn(1:length(valve_diameter_vector)) = Simulink.SimulationInput(mdl); 
+
+
+
+
     for i = 1:length(valve_diameter_vector) 
+        if Log_to_file_flag
+            valve_diameter_sweep_simIn(i) = valve_diameter_sweep_simIn(i).setModelParameter('LoggingToFile','on',...
+                                'LoggingFileName','Graphs/valve_diameter_simOut' + i + '.mat');
+        end
+        
         if rapid_flag
             valve_diameter_sweep_simIn(i) = valve_diameter_sweep_simIn(i).setModelParameter(SimulationMode="rapid-accelerator");
         elseif accel_flag
