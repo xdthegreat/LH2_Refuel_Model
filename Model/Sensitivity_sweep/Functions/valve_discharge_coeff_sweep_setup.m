@@ -13,7 +13,7 @@ function [valve_discharge_coeff_sweep_simIn, valve_discharge_coeff_vector] = ...
     for i = 1:length(valve_discharge_coeff_vector) 
         if Log_to_file_flag
             valve_discharge_coeff_sweep_simIn(i) = valve_discharge_coeff_sweep_simIn(i).setModelParameter('LoggingToFile','on',...
-                                'LoggingFileName','Graphs/valve_discharge_coeff_sweep_simOut'+ i + '.mat');
+                                'LoggingFileName',strcat('Graphs/valve_discharge_coeff_sweep_simOut', num2str(i), '.mat'));
         end
 
         if rapid_flag

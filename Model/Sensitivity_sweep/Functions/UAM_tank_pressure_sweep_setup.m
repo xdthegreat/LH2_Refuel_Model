@@ -9,7 +9,7 @@ UAM_tank_pressure_sweep_simIn(1:length(LH2_FEED_PRES_VEC)) = Simulink.Simulation
 for i = 1:length(LH2_FEED_PRES_VEC) 
     if Log_to_file_flag
             UAM_tank_pressure_sweep_simIn(i) = UAM_tank_pressure_sweep_simIn(i).setModelParameter('LoggingToFile','on',...
-                                'LoggingFileName','Graphs/UAM_tank_pressure_sweep_simOut'+i+'.mat');
+                                'LoggingFileName',strcat('Graphs/UAM_tank_pressure_sweep_simOut', num2str(i), '.mat'));
     end
 
     if rapid_flag

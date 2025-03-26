@@ -12,7 +12,7 @@ function [tank_conductivity_sweep_simIn, AC_tank_equivalent_conductivity_vector]
     for i = 1:length(AC_tank_equivalent_conductivity_vector) 
         if Log_to_file_flag
             tank_conductivity_sweep_simIn(i) = tank_conductivity_sweep_simIn(i).setModelParameter('LoggingToFile','on',...
-                                'LoggingFileName','Graphs/tank_conductivity_sweep_simOut'+i+'.mat');
+                                'LoggingFileName',strcat('Graphs/tank_conductivity_sweep_simOut', num2str(i), '.mat'));
         end
         if rapid_flag
             tank_conductivity_sweep_simIn(i) = tank_conductivity_sweep_simIn(i).setModelParameter(SimulationMode="rapid-accelerator");
