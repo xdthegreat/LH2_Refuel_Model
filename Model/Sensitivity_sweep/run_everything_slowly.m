@@ -14,9 +14,11 @@ datetime('now','TimeZone','local','Format','d-MMM-y HH:mm:ss Z')
 %% setup
 rapid_flag = false;
 accel_flag = false;
-fast_restart_flag = false;
+fast_restart_flag = true;
 max_allowed_stop_time = 3000;
-save_simOut_flag = false;
+save_simOut_flag = true;
+parsim_flag = false;
+simplify_output_func_flag = true;
 
 %check matlab version
 v = matlabRelease;
@@ -29,6 +31,10 @@ end
 %% normal flow rate and LH2 usage graphing
 normal_flow_rate_simIn = normal_flow_rate_setup(rapid_flag, accel_flag, mdl);
 
+if simplify_output_func_flag
+    normal_flow_rate_simIn = setPostSimFcn(normal_flow_rate_simIn, @simplify_data);
+end
+
 tic;
 if rapid_flag == false && accel_flag == false && fast_restart_flag
     normal_flow_rate_simOut = sim(normal_flow_rate_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
@@ -36,6 +42,7 @@ else
     normal_flow_rate_simOut = sim(normal_flow_rate_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
 end
 toc;
+
 
 close all
 normal_flow_rate_graphing(normal_flow_rate_simOut, AC_supply_line_port_inner_area)
@@ -53,11 +60,19 @@ end
 [valve_diameter_sweep_simIn, valve_diameter_vector] = valve_diameter_sweep_setup(rapid_flag, accel_flag, ...
     mdl, 10, max_allowed_stop_time);
 
+if simplify_output_func_flag
+    valve_diameter_sweep_simIn = setPostSimFcn(valve_diameter_sweep_simIn, @simplify_data);
+end
+
 tic;
-if rapid_flag == false && accel_flag == false && fast_restart_flag
+if rapid_flag == false && accel_flag == false && fast_restart_flag && parsim_flag
     valve_diameter_simOut = parsim(valve_diameter_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
-else
+elseif parsim_flag
     valve_diameter_simOut = parsim(valve_diameter_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
+elseif rapid_flag == false && accel_flag == false && fast_restart_flag && parsim_flag == false
+    valve_diameter_simOut = sim(valve_diameter_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
+else
+    valve_diameter_simOut = sim(valve_diameter_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
 end
 toc;
 
@@ -74,11 +89,19 @@ end
 [valve_discharge_coeff_sweep_simIn, valve_discharge_coeff_vector] = ...
     valve_discharge_coeff_sweep_setup(rapid_flag, accel_flag, mdl, 10, max_allowed_stop_time); 
 
+if simplify_output_func_flag
+    valve_discharge_coeff_sweep_simIn = setPostSimFcn(valve_discharge_coeff_sweep_simIn, @simplify_data);
+end
+
 tic;
-if rapid_flag == false && accel_flag == false && fast_restart_flag
-    valve_discharge_coeff_sweep_simOut = parsim(valve_discharge_coeff_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
+if rapid_flag == false && accel_flag == false && fast_restart_flag && parsim_flag
+     valve_discharge_coeff_sweep_simOut = parsim(valve_discharge_coeff_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
+elseif parsim_flag
+     valve_discharge_coeff_sweep_simOut = parsim(valve_discharge_coeff_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
+elseif rapid_flag == false && accel_flag == false && fast_restart_flag && parsim_flag == false
+     valve_discharge_coeff_sweep_simOut = sim(valve_discharge_coeff_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
 else
-    valve_discharge_coeff_sweep_simOut = parsim(valve_discharge_coeff_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
+     valve_discharge_coeff_sweep_simOut = sim(valve_discharge_coeff_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
 end
 toc;
 
@@ -97,11 +120,19 @@ end
     tank_wall_vapour_heat_transfer_coeff_setup(rapid_flag, accel_flag, mdl,...
     10, max_allowed_stop_time);
 
+if simplify_output_func_flag
+    tank_wall_vapour_heat_transfer_coeff_simIn = setPostSimFcn(tank_wall_vapour_heat_transfer_coeff_simIn, @simplify_data);
+end
+
 tic;
-if rapid_flag == false && accel_flag == false && fast_restart_flag
-    tank_wall_vapour_heat_transfer_coeff_simOut = parsim(tank_wall_vapour_heat_transfer_coeff_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
+if rapid_flag == false && accel_flag == false && fast_restart_flag && parsim_flag
+     tank_wall_vapour_heat_transfer_coeff_simOut = parsim(tank_wall_vapour_heat_transfer_coeff_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
+elseif parsim_flag
+     tank_wall_vapour_heat_transfer_coeff_simOut = parsim(tank_wall_vapour_heat_transfer_coeff_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
+elseif rapid_flag == false && accel_flag == false && fast_restart_flag && parsim_flag == false
+     tank_wall_vapour_heat_transfer_coeff_simOut = sim(tank_wall_vapour_heat_transfer_coeff_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
 else
-    tank_wall_vapour_heat_transfer_coeff_simOut = parsim(tank_wall_vapour_heat_transfer_coeff_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
+     tank_wall_vapour_heat_transfer_coeff_simOut = sim(tank_wall_vapour_heat_transfer_coeff_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
 end
 toc;
 
@@ -120,11 +151,19 @@ end
     tank_wall_liquid_heat_transfer_coeff_setup(rapid_flag, accel_flag, mdl,...
     10, max_allowed_stop_time);
 
+if simplify_output_func_flag
+    tank_wall_liquid_heat_transfer_coeff_simIn = setPostSimFcn(tank_wall_liquid_heat_transfer_coeff_simIn, @simplify_data);
+end
+
 tic;
-if rapid_flag == false && accel_flag == false && fast_restart_flag
-    tank_wall_liquid_heat_transfer_coeff_simOut = parsim(tank_wall_liquid_heat_transfer_coeff_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
+if rapid_flag == false && accel_flag == false && fast_restart_flag && parsim_flag
+     tank_wall_liquid_heat_transfer_coeff_simOut = parsim(tank_wall_liquid_heat_transfer_coeff_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
+elseif parsim_flag
+     tank_wall_liquid_heat_transfer_coeff_simOut = parsim(tank_wall_liquid_heat_transfer_coeff_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
+elseif rapid_flag == false && accel_flag == false && fast_restart_flag && parsim_flag == false
+     tank_wall_liquid_heat_transfer_coeff_simOut = sim(tank_wall_liquid_heat_transfer_coeff_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
 else
-    tank_wall_liquid_heat_transfer_coeff_simOut = parsim(tank_wall_liquid_heat_transfer_coeff_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
+     tank_wall_liquid_heat_transfer_coeff_simOut = sim(tank_wall_liquid_heat_transfer_coeff_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
 end
 toc;
 
@@ -142,11 +181,20 @@ end
 [hose_length_sweep_simIn, hose_length_vector] = hose_length_sweep_setup(rapid_flag, accel_flag, ...
     mdl, 10, max_allowed_stop_time);
 
+
+if simplify_output_func_flag
+    hose_length_sweep_simIn = setPostSimFcn(hose_length_sweep_simIn, @simplify_data);
+end
+
 tic;
-if rapid_flag == false && accel_flag == false && fast_restart_flag
-    hose_length_sweep_simOut = parsim(hose_length_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
+if rapid_flag == false && accel_flag == false && fast_restart_flag && parsim_flag
+     hose_length_sweep_simOut = parsim(hose_length_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
+elseif parsim_flag
+     hose_length_sweep_simOut = parsim(hose_length_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
+elseif rapid_flag == false && accel_flag == false && fast_restart_flag && parsim_flag == false
+     hose_length_sweep_simOut = sim(hose_length_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
 else
-    hose_length_sweep_simOut = parsim(hose_length_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
+     hose_length_sweep_simOut = sim(hose_length_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
 end
 toc;
 
@@ -164,11 +212,19 @@ end
     tank_conductivity_sweep_setup(rapid_flag, accel_flag, mdl, 10,...
     max_allowed_stop_time, Ambient_temp, AC_wall_thickness);
 
+if simplify_output_func_flag
+    tank_conductivity_sweep_simIn = setPostSimFcn(tank_conductivity_sweep_simIn, @simplify_data);
+end
+
 tic;
-if rapid_flag == false && accel_flag == false && fast_restart_flag
-    tank_conductivity_sweep_simOut = parsim(tank_conductivity_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
+if rapid_flag == false && accel_flag == false && fast_restart_flag && parsim_flag
+     tank_conductivity_sweep_simOut = parsim(tank_conductivity_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
+elseif parsim_flag
+     tank_conductivity_sweep_simOut = parsim(tank_conductivity_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
+elseif rapid_flag == false && accel_flag == false && fast_restart_flag && parsim_flag == false
+     tank_conductivity_sweep_simOut = sim(tank_conductivity_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
 else
-    tank_conductivity_sweep_simOut = parsim(tank_conductivity_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
+     tank_conductivity_sweep_simOut = sim(tank_conductivity_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
 end
 toc;
 
@@ -187,12 +243,21 @@ end
     Tank_size_sweep_setup(rapid_flag, accel_flag, mdl, 10, max_allowed_stop_time, ...
     AC_tank_vol_limit, AC_tank_cross_sectional_area, AC_tank_radius);
 
-tic;
-if rapid_flag == false && accel_flag == false && fast_restart_flag
-    Tank_size_sweep_simOut = parsim(Tank_size_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
-else
-    Tank_size_sweep_simOut = parsim(Tank_size_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
+if simplify_output_func_flag
+    Tank_size_sweep_simIn = setPostSimFcn(Tank_size_sweep_simIn, @simplify_data);
 end
+
+tic;
+if rapid_flag == false && accel_flag == false && fast_restart_flag && parsim_flag
+     Tank_size_sweep_simOut = parsim(Tank_size_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
+elseif parsim_flag
+     Tank_size_sweep_simOut = parsim(Tank_size_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
+elseif rapid_flag == false && accel_flag == false && fast_restart_flag && parsim_flag == false
+     Tank_size_sweep_simOut = sim(Tank_size_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
+else
+     Tank_size_sweep_simOut = sim(Tank_size_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
+end
+
 toc;
 
 close all
@@ -208,11 +273,19 @@ end
 [Feed_pres_sweep_simIn, FEED_PRES_VEC] = Feed_pres_sweep_setup(rapid_flag, accel_flag, ...
     mdl, 10, max_allowed_stop_time);
 
+if simplify_output_func_flag
+    Feed_pres_sweep_simIn = setPostSimFcn(Feed_pres_sweep_simIn, @simplify_data);
+end
+
 tic;
-if rapid_flag == false && accel_flag == false && fast_restart_flag
-    Feed_pres_sweep_simOut = parsim(Feed_pres_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
+if rapid_flag == false && accel_flag == false && fast_restart_flag && parsim_flag
+     Feed_pres_sweep_simOut = parsim(Feed_pres_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
+elseif parsim_flag
+     Feed_pres_sweep_simOut = parsim(Feed_pres_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
+elseif rapid_flag == false && accel_flag == false && fast_restart_flag && parsim_flag == false
+     Feed_pres_sweep_simOut = sim(Feed_pres_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
 else
-    Feed_pres_sweep_simOut = parsim(Feed_pres_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
+     Feed_pres_sweep_simOut = sim(Feed_pres_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
 end
 toc;
 
@@ -230,12 +303,22 @@ end
 [Feed_temp_sweep_simIn, LH2_Feed_Temp_vec] = Feed_temp_sweep_setup(rapid_flag, accel_flag, ...
     mdl, 10, max_allowed_stop_time);
 
-tic;
-if rapid_flag == false && accel_flag == false && fast_restart_flag
-    Feed_temp_sweep_simOut = parsim(Feed_temp_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
-else
-    Feed_temp_sweep_simOut = parsim(Feed_temp_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
+
+if simplify_output_func_flag
+    Feed_temp_sweep_simIn = setPostSimFcn(Feed_temp_sweep_simIn, @simplify_data);
 end
+
+tic;
+if rapid_flag == false && accel_flag == false && fast_restart_flag && parsim_flag
+    Feed_temp_sweep_simOut = parsim(Feed_temp_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
+elseif parsim_flag
+     Feed_temp_sweep_simOut = parsim(Feed_temp_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
+elseif rapid_flag == false && accel_flag == false && fast_restart_flag && parsim_flag == false
+     Feed_temp_sweep_simOut = sim(Feed_temp_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
+else
+     Feed_temp_sweep_simOut = sim(Feed_temp_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
+end
+
 toc;
 
 close all
@@ -252,11 +335,19 @@ end
 [hose_insulation_sweep_simIn, hose_thermal_conductivity_vec] = hose_insulation_sweep_setup(rapid_flag, accel_flag, ...
     mdl, 10, max_allowed_stop_time);
 
+if simplify_output_func_flag
+    hose_insulation_sweep_simIn = setPostSimFcn(hose_insulation_sweep_simIn, @simplify_data);
+end
+
 tic;
-if rapid_flag == false && accel_flag == false && fast_restart_flag
+if rapid_flag == false && accel_flag == false && fast_restart_flag && parsim_flag
     hose_insulation_sweep_simOut = parsim(hose_insulation_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
+elseif parsim_flag
+     hose_insulation_sweep_simOut = parsim(hose_insulation_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
+elseif rapid_flag == false && accel_flag == false && fast_restart_flag && parsim_flag == false
+     hose_insulation_sweep_simOut = sim(hose_insulation_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
 else
-    hose_insulation_sweep_simOut = parsim(hose_insulation_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
+     hose_insulation_sweep_simOut = sim(hose_insulation_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
 end
 toc;
 
@@ -272,11 +363,19 @@ end
 [UAM_tank_pressure_sweep_simIn, UAM_TANK_PRES_VEC] = UAM_tank_pressure_sweep_setup(rapid_flag, accel_flag, ...
     mdl, 10, max_allowed_stop_time);
 
+if simplify_output_func_flag
+    UAM_tank_pressure_sweep_simIn = setPostSimFcn(UAM_tank_pressure_sweep_simIn, @simplify_data);
+end
+
 tic;
-if rapid_flag == false && accel_flag == false && fast_restart_flag
+if rapid_flag == false && accel_flag == false && fast_restart_flag && parsim_flag
     UAM_tank_pressure_sweep_simOut = parsim(UAM_tank_pressure_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
+elseif parsim_flag
+     UAM_tank_pressure_sweep_simOut = parsim(UAM_tank_pressure_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
+elseif rapid_flag == false && accel_flag == false && fast_restart_flag && parsim_flag == false
+     UAM_tank_pressure_sweep_simOut = sim(UAM_tank_pressure_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
 else
-    UAM_tank_pressure_sweep_simOut = parsim(UAM_tank_pressure_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
+     UAM_tank_pressure_sweep_simOut = sim(UAM_tank_pressure_sweep_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
 end
 toc;
 

@@ -13,7 +13,10 @@ datetime('now','TimeZone','local','Format','d-MMM-y HH:mm:ss Z')
 rapid_flag = false;
 accel_flag = false;
 fast_restart_flag = true;
-max_allowed_stop_time = 3000;
+max_allowed_stop_time = 2000;
+parsim_flag = false;
+save_simout_flag = true;
+simplify_output_func_flag = true;
 
 %check matlab version
 v = matlabRelease;
@@ -107,12 +110,20 @@ simIn = [normal_flow_rate_simIn, valve_diameter_sweep_simIn, valve_discharge_coe
     Feed_pres_sweep_simIn, Feed_temp_sweep_simIn, hose_insulation_sweep_simIn, UAM_tank_pressure_sweep_simIn];
 
 
+if simplify_output_func_flag
+    simIn = setPostSimFcn(simIn, @simplify_data);
+end
+
 %% actual simulation
 tic;
-if rapid_flag == false && accel_flag == false && fast_restart_flag
+if rapid_flag == false && accel_flag == false && fast_restart_flag && parsim_flag
     simOut = parsim(simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
-else
+elseif parsim_flag
     simOut = parsim(simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
+elseif rapid_flag == false && accel_flag == false && fast_restart_flag && parsim_flag == false
+    simOut = sim(simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','on');
+else
+    simOut = sim(simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
 end
 toc;
 
@@ -162,6 +173,7 @@ run("Nice_graph")
 
 
 %% save results
-
-% save("Graphs/simOut.mat", "simOut", '-v7.3')
-% zip('Graphs/simOut.zip', 'Graphs/simOut.mat')
+if save_simout_flag
+save("Graphs/simOut.mat", "simOut", '-v7.3')
+zip('Graphs/simOut.zip', 'Graphs/simOut.mat')
+end
