@@ -3,141 +3,2070 @@ ans =
 
   <a href="matlab:helpPopup('datetime')" style="font-weight:bold">datetime</a>
 
-   25-Mar-2025 17:58:02 +0000
+   25-Mar-2025 21:12:41 +0000
 
-General Error occurred in WebControllerFactory::create()
-{Operation terminated by user during matlab.graphics.chart.primitive.internal.AbstractScatter/set.CurrentIconColorInfoMode
+[25-Mar-2025 21:12:58] Running simulations...
+Model 'AC_gauge_R2024a' was exported from R2024b to R2024a. To find blocks that were removed during the export operation, <a href="matlab:slexportprevious.utils.displayReplacedBlocks('AC_gauge_R2024a')">click here</a>. Save the model to remove this notification.
+Model 'GS_refuel_control_R2024a' was exported from R2024b to R2024a. To find blocks that were removed during the export operation, <a href="matlab:slexportprevious.utils.displayReplacedBlocks('GS_refuel_control_R2024a')">click here</a>. Save the model to remove this notification.
+Model 'AC_Engine_SOV_R2024a' was exported from R2024b to R2024a. To find blocks that were removed during the export operation, <a href="matlab:slexportprevious.utils.displayReplacedBlocks('AC_Engine_SOV_R2024a')">click here</a>. Save the model to remove this notification.
+[Warning: <a href="matlab:sfprivate('sfOpenObjectBySId','aircraft_refuel_control_R2024a:1:::83')">'AC_VALVE_FEEDBACK'</a> is defined, but is not used in the Stateflow chart. <a href= "matlab: internal.stateflow.dialogs.UnusedObjectDeleter.createDeleter('aircraft_refuel_control_R2024a:1:::83')">Delete this object</a> or <a href= "matlab: sfprivate('openConfigParamsSFDiagnostics',21)">configure the diagnostic</a>.
+
+] 
+[Warning: <a href="matlab:sfprivate('sfOpenObjectBySId','aircraft_refuel_control_R2024a:1:::85')">'P_COUPLING_AC'</a> is defined, but is not used in the Stateflow chart. <a href= "matlab: internal.stateflow.dialogs.UnusedObjectDeleter.createDeleter('aircraft_refuel_control_R2024a:1:::85')">Delete this object</a> or <a href= "matlab: sfprivate('openConfigParamsSFDiagnostics',21)">configure the diagnostic</a>.
+
+] 
+[Warning: <a href="matlab:sfprivate('sfOpenObjectBySId','aircraft_refuel_control_R2024a:1:::86')">'P_COUPLING_AC_RETURN'</a> is defined, but is not used in the Stateflow chart. <a href= "matlab: internal.stateflow.dialogs.UnusedObjectDeleter.createDeleter('aircraft_refuel_control_R2024a:1:::86')">Delete this object</a> or <a href= "matlab: sfprivate('openConfigParamsSFDiagnostics',21)">configure the diagnostic</a>.
+
+] 
+[Warning: <a href="matlab:sfprivate('sfOpenObjectBySId','GS_refuel_control_R2024a:1:::58')">'GS_VALVE_FEEDBACK'</a> is defined, but is not used in the Stateflow chart. <a href= "matlab: internal.stateflow.dialogs.UnusedObjectDeleter.createDeleter('GS_refuel_control_R2024a:1:::58')">Delete this object</a> or <a href= "matlab: sfprivate('openConfigParamsSFDiagnostics',21)">configure the diagnostic</a>.
+
+] 
+[25-Mar-2025 21:18:38] Completed 1 of 10 simulation runs
+[25-Mar-2025 21:23:09] Completed 2 of 10 simulation runs
+[25-Mar-2025 21:27:45] Completed 3 of 10 simulation runs
+[25-Mar-2025 21:32:19] Completed 4 of 10 simulation runs
+[25-Mar-2025 21:36:42] Completed 5 of 10 simulation runs
+[25-Mar-2025 21:40:19] Completed 6 of 10 simulation runs
+[25-Mar-2025 21:43:58] Completed 7 of 10 simulation runs
+[25-Mar-2025 21:47:40] Completed 8 of 10 simulation runs
+[25-Mar-2025 21:51:10] Completed 9 of 10 simulation runs
+[25-Mar-2025 21:55:15] Completed 10 of 10 simulation runs
+Elapsed time is 2550.927866 seconds.
+Total LH2 supplied by ground station = 34.8276kg.
+Total LH2 in the UAM tank = 16.0956kg.
+Total LH2 supplied by ground station = 35.0429kg.
+Total LH2 in the UAM tank = 16.2888kg.
+Total LH2 supplied by ground station = 34.7332kg.
+Total LH2 in the UAM tank = 16.041kg.
+Total LH2 supplied by ground station = 34.8784kg.
+Total LH2 in the UAM tank = 16.1141kg.
+Total LH2 supplied by ground station = 35.007kg.
+Total LH2 in the UAM tank = 16.2332kg.
+Total LH2 supplied by ground station = 35.1004kg.
+Total LH2 in the UAM tank = 16.2862kg.
+Total LH2 supplied by ground station = 34.6916kg.
+Total LH2 in the UAM tank = 15.9863kg.
+Total LH2 supplied by ground station = 34.7757kg.
+Total LH2 in the UAM tank = 16.0623kg.
+Total LH2 supplied by ground station = 34.8192kg.
+Total LH2 in the UAM tank = 16.1013kg.
+Total LH2 supplied by ground station = 34.8798kg.
+Total LH2 in the UAM tank = 16.1155kg.
+[25-Mar-2025 21:55:32] Running simulations...
+[Warning: <a href="matlab:sfprivate('sfOpenObjectBySId','aircraft_refuel_control_R2024a:1:::83')">'AC_VALVE_FEEDBACK'</a> is defined, but is not used in the Stateflow chart. <a href= "matlab: internal.stateflow.dialogs.UnusedObjectDeleter.createDeleter('aircraft_refuel_control_R2024a:1:::83')">Delete this object</a> or <a href= "matlab: sfprivate('openConfigParamsSFDiagnostics',21)">configure the diagnostic</a>.
+
+] 
+[Warning: <a href="matlab:sfprivate('sfOpenObjectBySId','aircraft_refuel_control_R2024a:1:::85')">'P_COUPLING_AC'</a> is defined, but is not used in the Stateflow chart. <a href= "matlab: internal.stateflow.dialogs.UnusedObjectDeleter.createDeleter('aircraft_refuel_control_R2024a:1:::85')">Delete this object</a> or <a href= "matlab: sfprivate('openConfigParamsSFDiagnostics',21)">configure the diagnostic</a>.
+
+] 
+[Warning: <a href="matlab:sfprivate('sfOpenObjectBySId','aircraft_refuel_control_R2024a:1:::86')">'P_COUPLING_AC_RETURN'</a> is defined, but is not used in the Stateflow chart. <a href= "matlab: internal.stateflow.dialogs.UnusedObjectDeleter.createDeleter('aircraft_refuel_control_R2024a:1:::86')">Delete this object</a> or <a href= "matlab: sfprivate('openConfigParamsSFDiagnostics',21)">configure the diagnostic</a>.
+
+] 
+[Warning: <a href="matlab:sfprivate('sfOpenObjectBySId','GS_refuel_control_R2024a:1:::58')">'GS_VALVE_FEEDBACK'</a> is defined, but is not used in the Stateflow chart. <a href= "matlab: internal.stateflow.dialogs.UnusedObjectDeleter.createDeleter('GS_refuel_control_R2024a:1:::58')">Delete this object</a> or <a href= "matlab: sfprivate('openConfigParamsSFDiagnostics',21)">configure the diagnostic</a>.
+
+] 
+[25-Mar-2025 22:00:13] Completed 1 of 10 simulation runs
+[25-Mar-2025 22:03:25] Completed 2 of 10 simulation runs
+[25-Mar-2025 22:07:42] Completed 3 of 10 simulation runs
+[25-Mar-2025 22:12:19] Completed 4 of 10 simulation runs
+[25-Mar-2025 22:16:11] Completed 5 of 10 simulation runs
+[25-Mar-2025 22:20:33] Completed 6 of 10 simulation runs
+[25-Mar-2025 22:24:34] Completed 7 of 10 simulation runs
+[25-Mar-2025 22:28:22] Completed 8 of 10 simulation runs
+[25-Mar-2025 22:33:21] Completed 9 of 10 simulation runs
+[25-Mar-2025 22:37:43] Completed 10 of 10 simulation runs
+Elapsed time is 2537.511716 seconds.
+Total LH2 supplied by ground station = 34.75kg.
+Total LH2 in the UAM tank = 16.0274kg.
+Total LH2 supplied by ground station = 34.7923kg.
+Total LH2 in the UAM tank = 16.0709kg.
+Total LH2 supplied by ground station = 34.8224kg.
+Total LH2 in the UAM tank = 16.1035kg.
+Total LH2 supplied by ground station = 34.843kg.
+Total LH2 in the UAM tank = 16.1216kg.
+Total LH2 supplied by ground station = 34.8624kg.
+Total LH2 in the UAM tank = 16.129kg.
+Total LH2 supplied by ground station = 34.8688kg.
+Total LH2 in the UAM tank = 16.1377kg.
+Total LH2 supplied by ground station = 34.8776kg.
+Total LH2 in the UAM tank = 16.145kg.
+Total LH2 supplied by ground station = 34.8909kg.
+Total LH2 in the UAM tank = 16.1316kg.
+Total LH2 supplied by ground station = 34.9039kg.
+Total LH2 in the UAM tank = 16.1191kg.
+Total LH2 supplied by ground station = 34.918kg.
+Total LH2 in the UAM tank = 16.1337kg.
+[25-Mar-2025 22:38:01] Running simulations...
+[Warning: <a href="matlab:sfprivate('sfOpenObjectBySId','aircraft_refuel_control_R2024a:1:::83')">'AC_VALVE_FEEDBACK'</a> is defined, but is not used in the Stateflow chart. <a href= "matlab: internal.stateflow.dialogs.UnusedObjectDeleter.createDeleter('aircraft_refuel_control_R2024a:1:::83')">Delete this object</a> or <a href= "matlab: sfprivate('openConfigParamsSFDiagnostics',21)">configure the diagnostic</a>.
+
+] 
+[Warning: <a href="matlab:sfprivate('sfOpenObjectBySId','aircraft_refuel_control_R2024a:1:::85')">'P_COUPLING_AC'</a> is defined, but is not used in the Stateflow chart. <a href= "matlab: internal.stateflow.dialogs.UnusedObjectDeleter.createDeleter('aircraft_refuel_control_R2024a:1:::85')">Delete this object</a> or <a href= "matlab: sfprivate('openConfigParamsSFDiagnostics',21)">configure the diagnostic</a>.
+
+] 
+[Warning: <a href="matlab:sfprivate('sfOpenObjectBySId','aircraft_refuel_control_R2024a:1:::86')">'P_COUPLING_AC_RETURN'</a> is defined, but is not used in the Stateflow chart. <a href= "matlab: internal.stateflow.dialogs.UnusedObjectDeleter.createDeleter('aircraft_refuel_control_R2024a:1:::86')">Delete this object</a> or <a href= "matlab: sfprivate('openConfigParamsSFDiagnostics',21)">configure the diagnostic</a>.
+
+] 
+[Warning: <a href="matlab:sfprivate('sfOpenObjectBySId','GS_refuel_control_R2024a:1:::58')">'GS_VALVE_FEEDBACK'</a> is defined, but is not used in the Stateflow chart. <a href= "matlab: internal.stateflow.dialogs.UnusedObjectDeleter.createDeleter('GS_refuel_control_R2024a:1:::58')">Delete this object</a> or <a href= "matlab: sfprivate('openConfigParamsSFDiagnostics',21)">configure the diagnostic</a>.
+
+] 
+[25-Mar-2025 23:11:02] Completed 1 of 10 simulation runs. Run 1 has errors.
+Error using <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('run_everything_slowly', 'C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m', 115)" style="font-weight:bold">run_everything_slowly</a> (<a href="matlab: opentoline('C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m',115,0)">line 115</a>)
+Simulation aborted
+
+open("simplify_data")
+close all
+clc
+[Warning: <a href="matlab:sfprivate('sfOpenObjectBySId','aircraft_refuel_control_R2024a:1:::83')">'AC_VALVE_FEEDBACK'</a> is defined, but is not used in the Stateflow chart. <a href= "matlab: internal.stateflow.dialogs.UnusedObjectDeleter.createDeleter('aircraft_refuel_control_R2024a:1:::83')">Delete this object</a> or <a href= "matlab: sfprivate('openConfigParamsSFDiagnostics',21)">configure the diagnostic</a>.
+
+] 
+[Warning: <a href="matlab:sfprivate('sfOpenObjectBySId','aircraft_refuel_control_R2024a:1:::85')">'P_COUPLING_AC'</a> is defined, but is not used in the Stateflow chart. <a href= "matlab: internal.stateflow.dialogs.UnusedObjectDeleter.createDeleter('aircraft_refuel_control_R2024a:1:::85')">Delete this object</a> or <a href= "matlab: sfprivate('openConfigParamsSFDiagnostics',21)">configure the diagnostic</a>.
+
+] 
+[Warning: <a href="matlab:sfprivate('sfOpenObjectBySId','aircraft_refuel_control_R2024a:1:::86')">'P_COUPLING_AC_RETURN'</a> is defined, but is not used in the Stateflow chart. <a href= "matlab: internal.stateflow.dialogs.UnusedObjectDeleter.createDeleter('aircraft_refuel_control_R2024a:1:::86')">Delete this object</a> or <a href= "matlab: sfprivate('openConfigParamsSFDiagnostics',21)">configure the diagnostic</a>.
+
+] 
+[Warning: <a href="matlab:sfprivate('sfOpenObjectBySId','GS_refuel_control_R2024a:1:::58')">'GS_VALVE_FEEDBACK'</a> is defined, but is not used in the Stateflow chart. <a href= "matlab: internal.stateflow.dialogs.UnusedObjectDeleter.createDeleter('GS_refuel_control_R2024a:1:::58')">Delete this object</a> or <a href= "matlab: sfprivate('openConfigParamsSFDiagnostics',21)">configure the diagnostic</a>.
+
+] 
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
 
 
-In matlab.graphics.chart.primitive.internal.AbstractScatter/set.CurrentIconColorInfo
+new_simOut = 
 
-In matlab.graphics.chart.primitive.Scatter/doSetup
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
 
-In matlab.graphics.chart.primitive.internal.AbstractScatter
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
 
-In matlab.graphics.chart.primitive.Scatter
 
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('scatter>matrixScatter', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\graphics\scatter.m', 257)" style="font-weight:bold">scatter>matrixScatter</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\graphics\scatter.m',257,0)">line 257</a>)
-    h(n) = matlab.graphics.chart.primitive.Scatter('Parent', parent, ...
+new_simOut = 
 
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('scatter', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\graphics\scatter.m', 65)" style="font-weight:bold">scatter</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\graphics\scatter.m',65,0)">line 65</a>)
-        h = matrixScatter(parent, args);
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
 
-In simmanager.designview.internal.ScatterPlotOverlayLayer
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
 
-In simmanager.designview.internal.ScatterPlotBlackLayer
 
-In simmanager.designview.ScatterPlot/createScatters
+new_simOut = 
 
-In simmanager.designview.ScatterPlot
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
 
-In simmanager.designview.FigureManager/createScatterPlot
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
 
-In simmanager.designview.FigureManager/createFigure
 
-In MultiSim.internal.MultiSimJob/initializeUIData
+new_simOut = 
 
-In MultiSim.internal.MultiSimJob
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
 
-In MultiSim.internal.MultiSimManager/addJob
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
 
-In Simulink.Simulation.internal.DesktopSimHelper.runUsingManager
 
-In Simulink.SimulationInput/runSingleSimWithOptions
+new_simOut = 
 
-In Simulink.SimulationInput/sim
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
 
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('run_everything_slowly', 'C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m', 36)" style="font-weight:bold">run_everything_slowly</a> (<a href="matlab: opentoline('C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m',36,0)">line 36</a>)
-    normal_flow_rate_simOut = sim(normal_flow_rate_simIn, 'ShowSimulationManager', 'on', 'UseFastRestart','off');
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×19 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×19 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×19 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×19 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×19 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×19 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×19 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×19 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×20 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×20 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×20 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×20 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×31 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×31 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×31 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×31 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×31 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×31 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×31 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×31 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×31 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×32 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×32 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×32 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×32 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×32 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×32 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×32 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×33 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×33 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×33 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×33 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×33 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×33 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×33 cell}
+
+[Warning: The property or method 'ErrorMessage' on the SimulationOutput object shadows the contained output data named 'ErrorMessage'.
+Use get('ErrorMessage') to get the output data.] 
+Elapsed time is 600.834369 seconds.
+Max flow speed for LH2 is 58.8541m/s.
+Max flow speed for GH2 is 134.2044m/s.
+Max mass flow rate for GH2 during warm tank warmup is 1.5633kg/s.
+Mean mass flow rate for GH2 during warm tank warmup is 0.018982kg/s.
+Max mass flow rate  for GH2 during cold tank warmup is 0.67057kg/s.
+Mean mass flow rate for GH2 during cold tank warmup is 0.020017kg/s.
+Max mass flow rate for GH2 during defuel tank drain is 2.0918kg/s.
+Mean mass flow rate for GH2 during defuel tank drain is 0.107kg/s.
+Max mass flow rate for LH2 during warm tank chilldown is 0.063487kg/s.
+Mean mass flow rate for LH2 during warm tank chilldown is 0.03404kg/s.
+Max mass flow rate for LH2 during warm tank fill is 0.96449kg/s.
+Mean mass flow rate for LH2 during warm tank fill is 0.25978kg/s.
+Max mass flow rate for LH2 during cold tank chilldown is 0.22565kg/s.
+Mean mass flow rate for LH2 during cold tank chilldown is 0.031488kg/s.
+Max mass flow rate for LH2 during cold tank fill is 0.75488kg/s.
+Mean mass flow rate for LH2 during cold tank fill is 0.3516kg/s.
+Max mass flow rate for LH2 during defuel chilldown is 0.23065kg/s.
+Mean mass flow rate for LH2 during defuel chilldown is 0.032667kg/s.
+            <strong>Operation phase</strong>            <strong>Mean flow rate</strong>    <strong>Unit</strong> 
+    <strong>_______________________________</strong>    <strong>______________</strong>    <strong>_____</strong>
+
+    "Warm tank refuel chilldown"           29.954        "m/s"
+    "Warm tank refuel tank filling"        2.8282        "m/s"
+    "Warm tank refuel warmup"              42.332        "m/s"
+    "Cold tank refuel chilldown"            24.85        "m/s"
+    "Cold tank refuel tank filling"        5.2102        "m/s"
+    "Cold tank refuel warmup"              41.761        "m/s"
+    "Defuel chilldown"                     29.442        "m/s"
+    "Defuel wamrup"                        30.693        "m/s"
+
+Total LH2 supplied by ground station = 34.8798kg.
+Total LH2 in the UAM tank = 16.0958kg.
+normal_flow_rate_simOut
+
+normal_flow_rate_simOut = 
+
+  <a href="matlab: help Simulink.SimulationOutput">Simulink.SimulationOutput</a>:
+
+           ErrorMessage: [0x0 char] 
+                   tout: [1x9681 double] 
+                   yout: [1x33 cell] 
+
+     SimulationMetadata: [1x1 Simulink.SimulationMetadata] 
+           ErrorMessage: [0x0 char] 
+
+clear all
+startup
+Starting up LH2 Refuel Model, please read README.md and run startup.m
+[Warning: <a href="matlab:sfprivate('sfOpenObjectBySId','aircraft_refuel_control_R2024a:1:::83')">'AC_VALVE_FEEDBACK'</a> is defined, but is not used in the Stateflow chart. <a href= "matlab: internal.stateflow.dialogs.UnusedObjectDeleter.createDeleter('aircraft_refuel_control_R2024a:1:::83')">Delete this object</a> or <a href= "matlab: sfprivate('openConfigParamsSFDiagnostics',21)">configure the diagnostic</a>.
+
+] 
+[Warning: <a href="matlab:sfprivate('sfOpenObjectBySId','aircraft_refuel_control_R2024a:1:::85')">'P_COUPLING_AC'</a> is defined, but is not used in the Stateflow chart. <a href= "matlab: internal.stateflow.dialogs.UnusedObjectDeleter.createDeleter('aircraft_refuel_control_R2024a:1:::85')">Delete this object</a> or <a href= "matlab: sfprivate('openConfigParamsSFDiagnostics',21)">configure the diagnostic</a>.
+
+] 
+[Warning: <a href="matlab:sfprivate('sfOpenObjectBySId','aircraft_refuel_control_R2024a:1:::86')">'P_COUPLING_AC_RETURN'</a> is defined, but is not used in the Stateflow chart. <a href= "matlab: internal.stateflow.dialogs.UnusedObjectDeleter.createDeleter('aircraft_refuel_control_R2024a:1:::86')">Delete this object</a> or <a href= "matlab: sfprivate('openConfigParamsSFDiagnostics',21)">configure the diagnostic</a>.
+
+] 
+[Warning: <a href="matlab:sfprivate('sfOpenObjectBySId','GS_refuel_control_R2024a:1:::58')">'GS_VALVE_FEEDBACK'</a> is defined, but is not used in the Stateflow chart. <a href= "matlab: internal.stateflow.dialogs.UnusedObjectDeleter.createDeleter('GS_refuel_control_R2024a:1:::58')">Delete this object</a> or <a href= "matlab: sfprivate('openConfigParamsSFDiagnostics',21)">configure the diagnostic</a>.
+
+] 
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×19 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×19 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×19 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×19 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×19 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×19 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×19 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×19 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×20 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×20 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×20 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×20 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×31 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×31 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×31 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×31 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×31 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×31 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×31 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×31 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×31 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×32 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×32 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×32 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×32 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×32 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×32 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×32 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×33 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×33 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×33 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×33 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×33 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×33 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×33 cell}
+
+
+clear normal_flow_rate_simOut
+[Warning: <a href="matlab:sfprivate('sfOpenObjectBySId','aircraft_refuel_control_R2024a:1:::83')">'AC_VALVE_FEEDBACK'</a> is defined, but is not used in the Stateflow chart. <a href= "matlab: internal.stateflow.dialogs.UnusedObjectDeleter.createDeleter('aircraft_refuel_control_R2024a:1:::83')">Delete this object</a> or <a href= "matlab: sfprivate('openConfigParamsSFDiagnostics',21)">configure the diagnostic</a>.
+
+] 
+[Warning: <a href="matlab:sfprivate('sfOpenObjectBySId','aircraft_refuel_control_R2024a:1:::85')">'P_COUPLING_AC'</a> is defined, but is not used in the Stateflow chart. <a href= "matlab: internal.stateflow.dialogs.UnusedObjectDeleter.createDeleter('aircraft_refuel_control_R2024a:1:::85')">Delete this object</a> or <a href= "matlab: sfprivate('openConfigParamsSFDiagnostics',21)">configure the diagnostic</a>.
+
+] 
+[Warning: <a href="matlab:sfprivate('sfOpenObjectBySId','aircraft_refuel_control_R2024a:1:::86')">'P_COUPLING_AC_RETURN'</a> is defined, but is not used in the Stateflow chart. <a href= "matlab: internal.stateflow.dialogs.UnusedObjectDeleter.createDeleter('aircraft_refuel_control_R2024a:1:::86')">Delete this object</a> or <a href= "matlab: sfprivate('openConfigParamsSFDiagnostics',21)">configure the diagnostic</a>.
+
+] 
+[Warning: <a href="matlab:sfprivate('sfOpenObjectBySId','GS_refuel_control_R2024a:1:::58')">'GS_VALVE_FEEDBACK'</a> is defined, but is not used in the Stateflow chart. <a href= "matlab: internal.stateflow.dialogs.UnusedObjectDeleter.createDeleter('GS_refuel_control_R2024a:1:::58')">Delete this object</a> or <a href= "matlab: sfprivate('openConfigParamsSFDiagnostics',21)">configure the diagnostic</a>.
+
+] 
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×19 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×19 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×19 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×19 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×19 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×19 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×19 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×19 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×20 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×20 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×20 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×20 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×31 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×31 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×31 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×31 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×31 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×31 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×31 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×31 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×31 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×32 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×32 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×32 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×32 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×32 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×32 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×32 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×33 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×33 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×33 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×33 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×33 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×33 cell}
+
+
+new_simOut = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    ErrorMessage: ''
+            tout: [0 0.1000 0.2000 0.3000 0.4000 0.5000 0.6000 0.7000 0.8000 0.9000 1 1.1000 1.2000 1.3000 1.4000 … ] (1×9681 double)
+            yout: {1×33 cell}
+
+[Warning: Graphics timeout occurred. To share details of this issue with MathWorks technical support, please include that this is an
+unresponsive graphics client with your service request.] 
+normal_flow_rate_simOut
+{Unrecognized function or variable 'normal_flow_rate_simOut'.
 } 
-[Warning: Error occurred while executing the listener callback for event MarkedClean defined for
-class matlab.graphics.axis.Axes:
-Unrecognized field name "Colorbar".
+startup
+Starting up LH2 Refuel Model, please read README.md and run startup.m
+clc
+[Warning: <a href="matlab:sfprivate('sfOpenObjectBySId','aircraft_refuel_control_R2024a:1:::83')">'AC_VALVE_FEEDBACK'</a> is defined, but is not used in the Stateflow chart. <a href= "matlab: internal.stateflow.dialogs.UnusedObjectDeleter.createDeleter('aircraft_refuel_control_R2024a:1:::83')">Delete this object</a> or <a href= "matlab: sfprivate('openConfigParamsSFDiagnostics',21)">configure the diagnostic</a>.
 
-Error in simmanager.designview.ScatterPlot/updateColorbar
+] 
+[Warning: <a href="matlab:sfprivate('sfOpenObjectBySId','aircraft_refuel_control_R2024a:1:::85')">'P_COUPLING_AC'</a> is defined, but is not used in the Stateflow chart. <a href= "matlab: internal.stateflow.dialogs.UnusedObjectDeleter.createDeleter('aircraft_refuel_control_R2024a:1:::85')">Delete this object</a> or <a href= "matlab: sfprivate('openConfigParamsSFDiagnostics',21)">configure the diagnostic</a>.
 
-Error in simmanager.designview.ScatterPlot/markedCleanCB
+] 
+[Warning: <a href="matlab:sfprivate('sfOpenObjectBySId','aircraft_refuel_control_R2024a:1:::86')">'P_COUPLING_AC_RETURN'</a> is defined, but is not used in the Stateflow chart. <a href= "matlab: internal.stateflow.dialogs.UnusedObjectDeleter.createDeleter('aircraft_refuel_control_R2024a:1:::86')">Delete this object</a> or <a href= "matlab: sfprivate('openConfigParamsSFDiagnostics',21)">configure the diagnostic</a>.
 
-Error in simmanager.designview.FigureObject>@(varargin)obj.markedCleanCB(varargin{:})] 
-{Operation terminated by user during matlab.graphics.shape.internal.Button
+] 
+[Warning: <a href="matlab:sfprivate('sfOpenObjectBySId','GS_refuel_control_R2024a:1:::58')">'GS_VALVE_FEEDBACK'</a> is defined, but is not used in the Stateflow chart. <a href= "matlab: internal.stateflow.dialogs.UnusedObjectDeleter.createDeleter('GS_refuel_control_R2024a:1:::58')">Delete this object</a> or <a href= "matlab: sfprivate('openConfigParamsSFDiagnostics',21)">configure the diagnostic</a>.
 
+] 
+[Warning: Graphics timeout occurred. To share details of this issue with MathWorks technical support, please include that this is a figure
+handshaking issue with your service request.] 
+Elapsed time is 465.049155 seconds.
+Max flow speed for LH2 is 58.8541m/s.
+Max flow speed for GH2 is 134.2044m/s.
+Max mass flow rate for GH2 during warm tank warmup is 1.5633kg/s.
+Mean mass flow rate for GH2 during warm tank warmup is 0.018982kg/s.
+Max mass flow rate  for GH2 during cold tank warmup is 0.67057kg/s.
+Mean mass flow rate for GH2 during cold tank warmup is 0.020017kg/s.
+Max mass flow rate for GH2 during defuel tank drain is 2.0918kg/s.
+Mean mass flow rate for GH2 during defuel tank drain is 0.107kg/s.
+Max mass flow rate for LH2 during warm tank chilldown is 0.063487kg/s.
+Mean mass flow rate for LH2 during warm tank chilldown is 0.03404kg/s.
+Max mass flow rate for LH2 during warm tank fill is 0.96449kg/s.
+Mean mass flow rate for LH2 during warm tank fill is 0.25978kg/s.
+Max mass flow rate for LH2 during cold tank chilldown is 0.22565kg/s.
+Mean mass flow rate for LH2 during cold tank chilldown is 0.031488kg/s.
+Max mass flow rate for LH2 during cold tank fill is 0.75488kg/s.
+Mean mass flow rate for LH2 during cold tank fill is 0.3516kg/s.
+Max mass flow rate for LH2 during defuel chilldown is 0.23065kg/s.
+Mean mass flow rate for LH2 during defuel chilldown is 0.032667kg/s.
+            <strong>Operation phase</strong>            <strong>Mean flow rate</strong>    <strong>Unit</strong> 
+    <strong>_______________________________</strong>    <strong>______________</strong>    <strong>_____</strong>
 
-In matlab.graphics.controls.AxesToolbarButton
+    "Warm tank refuel chilldown"           29.954        "m/s"
+    "Warm tank refuel tank filling"        2.8282        "m/s"
+    "Warm tank refuel warmup"              42.332        "m/s"
+    "Cold tank refuel chilldown"            24.85        "m/s"
+    "Cold tank refuel tank filling"        5.2102        "m/s"
+    "Cold tank refuel warmup"              41.761        "m/s"
+    "Defuel chilldown"                     29.442        "m/s"
+    "Defuel wamrup"                        30.693        "m/s"
 
-In matlab.ui.controls.ToolbarStateButton
+Total LH2 supplied by ground station = 34.8798kg.
+Total LH2 in the UAM tank = 16.0958kg.
+Total LH2 supplied by ground station = 30.8605kg.
+Total LH2 in the UAM tank = 16.0958kg.
+normal_flow_rate_simOut
 
-In matlab.graphics.controls.internal.ToolbarButtonRegistry/getButton
+normal_flow_rate_simOut = 
 
-In matlab.graphics.controls.ToolbarController.createToolbarButton
+  <a href="matlab: help Simulink.SimulationOutput">Simulink.SimulationOutput</a>:
 
-In matlab.graphics.controls.ToolbarController.createToolbarButton
+                 simlog: [1x1 simscape.logging.Node] 
+                   tout: [1x9681 double] 
+                   yout: [1x1 Simulink.SimulationData.Dataset] 
 
-In matlab.graphics.controls.ToolbarController.getDefaultToolbar
+     SimulationMetadata: [1x1 Simulink.SimulationMetadata] 
+           ErrorMessage: [0x0 char] 
 
-In matlab.graphics.controls.WebToolbarController.createToolbar
+normal_flow_rate_simOut
 
-In matlab.graphics.controls.WebToolbarController/cleanupStrandedToolbars
+normal_flow_rate_simOut = 
 
-In matlab.graphics.controls.WebToolbarController>localCleanupStrandedToolbars
+  <a href="matlab: help Simulink.SimulationOutput">Simulink.SimulationOutput</a>:
 
-In matlab.graphics.controls.WebToolbarController>@()localCleanupStrandedToolbars(obj,allAx(1))
+                 simlog: [1x1 simscape.logging.Node] 
+                   tout: [1x9681 double] 
+                   yout: [1x1 Simulink.SimulationData.Dataset] 
+
+     SimulationMetadata: [1x1 Simulink.SimulationMetadata] 
+           ErrorMessage: [0x0 char] 
+
+normal_flow_rate_simOut.simLog
+{Unrecognized field name "simLog".
 } 
-{Operation terminated by user during matlab.graphics.shape.internal.Button
+normal_flow_rate_simOut.simlog
+
+ans = 
+
+  <a href="matlab:helpPopup('simscape.logging.Node')" style="font-weight:bold">Node</a> with properties:
+
+                     id: 'simscape_automatic_R2024a'
+                savable: 1
+             exportable: 0
+    Fluids_and_controls: [1×1 simscape.logging.Node]
+
+normal_flow_rate_simOut.yout{7}
+
+ans = 
+
+  <a href="matlab: help Simulink.SimulationData.Signal">Simulink.SimulationData.Signal</a>
+  Package: Simulink.SimulationData
+
+  Properties:
+              Name: ''
+    PropagatedName: ''
+         BlockPath: [1×1 Simulink.SimulationData.BlockPath]
+          PortType: 'inport'
+         PortIndex: 1
+            Values: [1×1 struct]
 
 
-In matlab.graphics.controls.AxesToolbarButton
+  <a href="matlab: methods('Simulink.SimulationData.Signal')">Methods</a>, <a href="matlab: superclasses('Simulink.SimulationData.Signal')">Superclasses</a>
+normal_flow_rate_simOut.yout{7}.Values
 
-In matlab.ui.controls.ToolbarStateButton
+ans = 
 
-In matlab.graphics.controls.internal.ToolbarButtonRegistry/getButton
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
 
-In matlab.graphics.controls.ToolbarController.createToolbarButton
+               T_TANK_GS: [1×1 timeseries]
+               T_PUMP_GS: [1×1 timeseries]
+         T_GH2_SUPPLY_GS: [1×1 timeseries]
+              T_VALVE_GS: [1×1 timeseries]
+               T_HOSE_GS: [1×1 timeseries]
+          T_COUPLINGS_GS: [1×1 timeseries]
+           T_COUPLING_AC: [1×1 timeseries]
+                T_BYPASS: [1×1 timeseries]
+               T_TANK_AC: [1×1 timeseries]
+           T_ENGINE_FEED: [1×1 timeseries]
+    T_COUPLING_AC_RETURN: [1×1 timeseries]
+        T_HOSE_RETURN_GS: [1×1 timeseries]
+       T_VALVE_RETURN_GS: [1×1 timeseries]
+            T_GAS_RETURN: [1×1 timeseries]
 
-In matlab.graphics.controls.ToolbarController.createToolbarButton
+normal_flow_rate_simOut.yout{7}.Values.T_GAS_RETURN
+  <a href="matlab: help timeseries">timeseries</a>
 
-In matlab.graphics.controls.ToolbarController.getDefaultToolbar
+  Common Properties:
+            Name: 'T_GAS_RETURN'
+            Time: [9681x1 double]
+        TimeInfo: <a href="matlab: fprintf(['  ' char(60) 'a href=' char(34) 'matlab: help tsdata.timemetadata' char(34) '' char(62) 'tsdata.timemetadata' char(60) '/a' char(62) '\n  Namespace: tsdata\n\n  Non-Uniform Time:\n    Length       9681\n\n  Time Range:\n    Start        0 seconds\n    End          968 seconds\n\n  Common Properties:\n          Units: ''seconds''\n         Format: ''''\n      StartDate: ''''\n\n  ' char(60) 'a href=' char(34) 'matlab: properties(''tsdata.timemetadata'')' char(34) '' char(62) 'More properties' char(60) '/a' char(62) ', ' char(60) 'a href=' char(34) 'matlab: methods(''tsdata.timemetadata'')' char(34) '' char(62) 'Methods' char(60) '/a' char(62) '\n\n'])">[1x1 tsdata.timemetadata]</a>
+            Data: [9681x1 double]
+        DataInfo: <a href="matlab: fprintf(['  ' char(60) 'a href=' char(34) 'matlab: help tsdata.datametadata' char(34) '' char(62) 'tsdata.datametadata' char(60) '/a' char(62) '\n  Namespace: tsdata\n\n  Common Properties:\n               Units: ''''\n       Interpolation: linear (tsdata.interpolation)\n\n  ' char(60) 'a href=' char(34) 'matlab: properties(''tsdata.datametadata'')' char(34) '' char(62) 'More properties' char(60) '/a' char(62) ', ' char(60) 'a href=' char(34) 'matlab: methods(''tsdata.datametadata'')' char(34) '' char(62) 'Methods' char(60) '/a' char(62) '\n\n'])">[1x1 tsdata.datametadata]</a>
 
-In matlab.graphics.controls.WebToolbarController.createToolbar
+  <a href="matlab: properties('timeseries')">More properties</a>, <a href="matlab: methods('timeseries')">Methods</a>
 
-In matlab.graphics.controls.WebToolbarController/cleanupStrandedToolbars
+normal_flow_rate_simOut.yout{5}.Values
+  <a href="matlab: help timeseries">timeseries</a>
 
-In matlab.graphics.controls.WebToolbarController>localCleanupStrandedToolbars
+  Common Properties:
+            Name: 'unnamed'
+            Time: [9681x1 double]
+        TimeInfo: <a href="matlab: fprintf(['  ' char(60) 'a href=' char(34) 'matlab: help tsdata.timemetadata' char(34) '' char(62) 'tsdata.timemetadata' char(60) '/a' char(62) '\n  Namespace: tsdata\n\n  Non-Uniform Time:\n    Length       9681\n\n  Time Range:\n    Start        0 seconds\n    End          968 seconds\n\n  Common Properties:\n          Units: ''seconds''\n         Format: ''''\n      StartDate: ''''\n\n  ' char(60) 'a href=' char(34) 'matlab: properties(''tsdata.timemetadata'')' char(34) '' char(62) 'More properties' char(60) '/a' char(62) ', ' char(60) 'a href=' char(34) 'matlab: methods(''tsdata.timemetadata'')' char(34) '' char(62) 'Methods' char(60) '/a' char(62) '\n\n'])">[1x1 tsdata.timemetadata]</a>
+            Data: [9681x1 double]
+        DataInfo: <a href="matlab: fprintf(['  ' char(60) 'a href=' char(34) 'matlab: help tsdata.datametadata' char(34) '' char(62) 'tsdata.datametadata' char(60) '/a' char(62) '\n  Namespace: tsdata\n\n  Common Properties:\n               Units: ''''\n       Interpolation: zoh (tsdata.interpolation)\n\n  ' char(60) 'a href=' char(34) 'matlab: properties(''tsdata.datametadata'')' char(34) '' char(62) 'More properties' char(60) '/a' char(62) ', ' char(60) 'a href=' char(34) 'matlab: methods(''tsdata.datametadata'')' char(34) '' char(62) 'Methods' char(60) '/a' char(62) '\n\n'])">[1x1 tsdata.datametadata]</a>
 
-In matlab.graphics.controls.WebToolbarController>@()localCleanupStrandedToolbars(obj,allAx(1))
-} 
-{Operation terminated by user during matlab.graphics.interaction.graphicscontrol.Enumerations.Actions/toString
+  <a href="matlab: properties('timeseries')">More properties</a>, <a href="matlab: methods('timeseries')">Methods</a>
 
+Unrecognized function or variable 'simplify_output_func_flag'.
 
-In matlab.graphics.interaction.graphicscontrol.InteractionsManager/createRegistrationMessage
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('run_everything_slowly', 'C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m', 215)" style="font-weight:bold">run_everything_slowly</a> (<a href="matlab: opentoline('C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m',215,0)">line 215</a>)
+if simplify_output_func_flag
 
-In matlab.graphics.interaction.graphicscontrol.InteractionsManager/registerInteraction
-
-In matlab.graphics.interaction.interactioncontainers.BaseAxesInteractionContainer/createDefaultWebAxesInteractions
-
-In matlab.graphics.interaction.interactioncontainers.CartesianAxesInteractionContainer/createDefaultWebAxesInteractions
-
-In matlab.graphics.interaction.interactioncontainers.BaseAxesInteractionContainer/setupInteractions
-
-In matlab.graphics.interaction.internal.UnifiedAxesInteractions.createDefaultInteractionsOnAxes
-
-In matlab.graphics.interaction.internal.UnifiedAxesInteractions.createDefaultInteractionsInSync
-
-In matlab.graphics.interaction.internal.UnifiedAxesInteractions.createDefaultInteractions>@()matlab.graphics.interaction.internal.UnifiedAxesInteractions.createDefaultInteractionsInSync(ax,is2dim,numDataSpaces)
-} 
-{Operation terminated by user during matlab.graphics.interaction.interactions.DataTipInteraction/createWebInteraction
-
-
-In matlab.graphics.interaction.interactioncontainers.StandardAxesInteractionContainer/createWebInteraction
-
-In matlab.graphics.interaction.interactioncontainers.BaseAxesInteractionContainer/createDefaultWebAxesInteractions
-
-In matlab.graphics.interaction.interactioncontainers.CartesianAxesInteractionContainer/createDefaultWebAxesInteractions
-
-In matlab.graphics.interaction.interactioncontainers.BaseAxesInteractionContainer/setupInteractions
-
-In matlab.graphics.interaction.internal.UnifiedAxesInteractions.createDefaultInteractionsOnAxes
-
-In matlab.graphics.interaction.internal.UnifiedAxesInteractions.createDefaultInteractionsInSync
-
-In matlab.graphics.interaction.internal.UnifiedAxesInteractions.createDefaultInteractions>@()matlab.graphics.interaction.internal.UnifiedAxesInteractions.createDefaultInteractionsInSync(ax,is2dim,numDataSpaces)
-} 
