@@ -5,6 +5,14 @@ close all
 
 line_width = 2;
 
+baseline_results = readmatrix('Graphs\normal_tank_filling_time_total_consumption_results.xlsx');
+warm_tank_time_baseline = baseline_results(1);
+cold_tank_time_baseline = baseline_results(2);
+warm_tank_UAM_consumption_baseline = baseline_results(3);
+warm_tank_GS_consumption_baseline = baseline_results(4);
+cold_tank_UAM_consumption_baseline = baseline_results(5);
+cold_tank_GS_consumption_baseline = baseline_results(6);
+
 AC_tank_conductivity_results = readmatrix('Graphs\AC_tank_conductivity_sweep_results.xlsx');
 feed_pres_sweep_results = readmatrix('Graphs\feed_pressure_sweep_results.xlsx');
 feed_temp_sweep_results = readmatrix('Graphs\feed_temp_sweep_results.xlsx');
@@ -82,6 +90,16 @@ for i = 1:length(all_results)-2
     time_cold_refuel_output{i} = all_results{i}(:, 9);
 end
 
+% finding missing data
+sweep_length = 0;
+for i = 1:length(input_vector)
+    sweep_length = max(sweep_length, length(input_vector{i}));
+end
+for i = 1:length(input_vector)
+    if sweep_length > length(input_vector{i})
+        disp(result_arrangement{i} +  " has simulation errors")
+    end
+end
 
 
 % auto graphing
@@ -119,6 +137,7 @@ close all
 
 target_dataset = find(strcmp([result_arrangement{:}], "Valve diameter"));
 figure(1)
+hold on
 yyaxis left
 plot(input_vector{target_dataset}./0.01, time_warm_refuel_output{target_dataset}, ...
     'LineWidth', line_width)
@@ -127,7 +146,6 @@ ylabel('Time taken per warm tank refuel (s)')
 ylim([330, 360])
 
 yyaxis right
-hold on
 plot(input_vector{target_dataset}./0.01, LH2_consumed_warm_fill_output{target_dataset}, ...
     'LineWidth', line_width)
 hold off
@@ -139,6 +157,10 @@ legend(["Time taken for warm tank refuel", "Supplied by ground station"])
 title({"Time taken for warm tank refuel and LH2", ...
     "consumption with different valve orifice diameter"})
 saveas(gcf, 'Nicer_graphs/' + result_arrangement{target_dataset} +'.png')
+
+find_percentage_difference(result_arrangement, target_dataset, time_warm_refuel_output, ...
+    LH2_consumed_warm_fill_output, warm_tank_time_baseline, warm_tank_GS_consumption_baseline)
+
 
 
 target_dataset = find(strcmp([result_arrangement{:}], "Valve discharge coefficient"));
@@ -162,6 +184,8 @@ title({"Time taken for warm tank refuel and LH2", ...
 hold off
 saveas(gcf, 'Nicer_graphs/' + result_arrangement{target_dataset} +'.png')
 
+find_percentage_difference(result_arrangement, target_dataset, time_warm_refuel_output, ...
+    LH2_consumed_warm_fill_output, warm_tank_time_baseline, warm_tank_GS_consumption_baseline)
 
 %% SENS-003, SENS-004 liquid/vapour heat transfer coefficients
 close all
@@ -187,7 +211,8 @@ set(gca, 'XScale', 'log')
 hold off
 saveas(gcf, 'Nicer_graphs/' + result_arrangement{target_dataset} +'.png')
 
-
+find_percentage_difference(result_arrangement, target_dataset, time_warm_refuel_output, ...
+    LH2_consumed_warm_fill_output, warm_tank_time_baseline, warm_tank_GS_consumption_baseline)
 
 target_dataset = find(strcmp([result_arrangement{:}], "UAM vapour heat transfer coefficient"));
 figure(3)
@@ -211,6 +236,9 @@ hold off
 saveas(gcf, 'Nicer_graphs/' + result_arrangement{target_dataset} +'.png')
 
 
+find_percentage_difference(result_arrangement, target_dataset, time_warm_refuel_output, ...
+    LH2_consumed_warm_fill_output, warm_tank_time_baseline, warm_tank_GS_consumption_baseline)
+
 %% SENS-005 hose length
 close all
 
@@ -233,6 +261,10 @@ title({"Time taken for warm tank refuel and LH2 consumption ", ...
     "with different flexible hoses length"})
 hold off
 saveas(gcf, 'Nicer_graphs/' + result_arrangement{target_dataset} +'.png')
+
+
+find_percentage_difference(result_arrangement, target_dataset, time_warm_refuel_output, ...
+    LH2_consumed_warm_fill_output, warm_tank_time_baseline, warm_tank_GS_consumption_baseline)
 
 
 %% SENS-006 UAM tank wall heat transfer coefficient
@@ -259,6 +291,29 @@ hold off
 saveas(gcf, 'Nicer_graphs/' + result_arrangement{target_dataset} +'.png')
 
 
+find_percentage_difference(result_arrangement, target_dataset, time_warm_refuel_output, ...
+    LH2_consumed_warm_fill_output, warm_tank_time_baseline, warm_tank_GS_consumption_baseline)
+
+
+%% SENS-007 tank size
+
+close all
+
+target_dataset = find(strcmp([result_arrangement{:}], "Tank size"));
+figure(3)
+hold on
+xlabel("UAM tank capacity (kg)")
+
+plot(input_vector{target_dataset}, frac_useful_LH2_cold_fill_output{target_dataset}, 'LineWidth',line_width)
+plot(input_vector{target_dataset}, frac_useful_LH2_warm_fill_output{target_dataset}, 'LineWidth',line_width)
+legend(["Warm tank refuel", "Cold tank refuel"])
+ylabel('LH2 consumed (kg)')
+ylim([0.4, 0.9])
+title({"Fraction of useful LH2 ", ...
+    "with different UAM tank size"})
+hold off
+saveas(gcf, 'Nicer_graphs/' + result_arrangement{target_dataset} +'.png')
+
 
 %% SENS-008, SENS-009 feed pressure and temperature
 close all
@@ -284,6 +339,9 @@ title({"Time taken for warm tank refuel and LH2 consumption ", ...
 hold off
 saveas(gcf, 'Nicer_graphs/' + result_arrangement{target_dataset} +'.png')
 
+find_percentage_difference(result_arrangement, target_dataset, time_warm_refuel_output, ...
+    LH2_consumed_warm_fill_output, warm_tank_time_baseline, warm_tank_GS_consumption_baseline)
+
 
 target_dataset = find(strcmp([result_arrangement{:}], "Feed temperature"));
 figure(3)
@@ -305,6 +363,8 @@ title({"Time taken for warm tank refuel and LH2 consumption ", ...
 hold off
 saveas(gcf, 'Nicer_graphs/' + result_arrangement{target_dataset} +'.png')
 
+find_percentage_difference(result_arrangement, target_dataset, time_warm_refuel_output, ...
+    LH2_consumed_warm_fill_output, warm_tank_time_baseline, warm_tank_GS_consumption_baseline)
 
 %% SENS-010 hose insulation
 close all
@@ -332,6 +392,9 @@ set(gca, 'XScale', 'log')
 hold off
 saveas(gcf, 'Nicer_graphs/' + result_arrangement{target_dataset} +'.png')
 
+find_percentage_difference(result_arrangement, target_dataset, time_warm_refuel_output, ...
+    LH2_consumed_warm_fill_output, warm_tank_time_baseline, warm_tank_GS_consumption_baseline)
+
 
 %% SENS-011 UAM target pressure
 
@@ -357,4 +420,6 @@ hold off
 set(gca, 'XScale', 'log')
 saveas(gcf, 'Nicer_graphs/' + result_arrangement{target_dataset} +'.png')
 
+find_percentage_difference(result_arrangement, target_dataset, time_warm_refuel_output, ...
+    LH2_consumed_warm_fill_output, warm_tank_time_baseline, warm_tank_GS_consumption_baseline)
 
