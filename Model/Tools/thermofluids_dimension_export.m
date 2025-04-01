@@ -105,10 +105,24 @@ disp("GS return coupling orifice diameter is " + return_coupling_valve_inner_dia
 
 %% Export everything as .csv
 a = who;
-name_list = cell(2, 50);
+name_list = cell(0);
+AC_name_list = cell(0);
+
+
 for i = 1:length(a)
-    name_list{1, i} = a{i};
-    name_list{2, i} = eval(a{i});
+    if (strcmpi(class(eval(a{i})), "double") || strcmpi(class(eval(a{i})), "integer") ) && ...
+            length(eval(a{i})) <2
+        name_list{end+1, 1} = a{i};
+        name_list{end, 2} = eval(a{i});
+    end
 end
 
-writecell(name_list, "Graph/dimensions.csv")
+writecell(name_list, "Graphs/dimensions.csv")
+
+for i = 1:size(name_list)
+    if contains(name_list{i, 1}, "AC")
+        disp(name_list{i, 1})
+        AC_name_list{end+1, 1} = name_list{i, 1};
+        AC_name_list{end, 2} = name_list{i, 2};
+    end
+end

@@ -54,7 +54,7 @@ function LH2_usage_graphing(LH2_usage_simOut)
     plot(Ground_LH2_total_time(start_warm_chilldown_index:idle_1_index), ...
         Ground_LH2_total(start_warm_chilldown_index:idle_1_index), 'LineWidth', 2)
     plot(Ground_LH2_total_time(start_warm_chilldown_index:idle_1_index), ...
-        AC_LH2_total(start_warm_chilldown_index:idle_1_index), 'LineWidth', 2)
+        AC_LH2_total(start_warm_chilldown_index:idle_1_index),'-.', 'LineWidth', 2)
     legend(["Supplied by ground station", "UAM tank gauge"])
     xlabel("Time (s)")
     ylabel("LH2 used (kg)")
@@ -83,7 +83,7 @@ function LH2_usage_graphing(LH2_usage_simOut)
     plot(Ground_LH2_total_time(start_cold_chilldown_index:idle_3_index) - Ground_LH2_total_time(start_cold_chilldown_index), ...
         Ground_LH2_total(start_cold_chilldown_index:idle_3_index) - Ground_LH2_total(start_cold_chilldown_index), 'LineWidth', 2)
     plot(Ground_LH2_total_time(start_cold_chilldown_index:idle_3_index) - Ground_LH2_total_time(start_cold_chilldown_index), ...
-        AC_LH2_total(start_cold_chilldown_index:idle_3_index),'LineWidth', 2)
+        AC_LH2_total(start_cold_chilldown_index:idle_3_index), '-.', 'LineWidth', 2)
     legend(["Supplied by ground station", "Stored in UAM tank"])
     xlabel("Time (s)")
     ylabel("LH2 used (kg)")

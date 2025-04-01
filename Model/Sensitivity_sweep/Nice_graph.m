@@ -126,10 +126,33 @@ title({"LH2 consumed for warm tank refuel", ...
     "with different "} + result_arrangement{i})
 saveas(gcf, 'Auto_graph/LH2 consumedfor warm tank refuel vs ' + result_arrangement{i} + '.png')
 
+
+figure(3)
+plot(input_vector{i}, time_cold_refuel_output{i})
+xlabel(result_arrangement{i})
+ylabel('Time taken (s)')
+title({"Time taken for cold tank refuel", ...
+    "with different "} + result_arrangement{i})
+saveas(gcf, 'Auto_graph/Time taken for cold tank refuel vs ' + result_arrangement{i} + '.png')
+
+figure(4)
+hold on
+plot(input_vector{i}, LH2_consumed_cold_fill_output{i})
+plot(input_vector{i}, LH2_in_AC_tank_cold_fill_output{i})
+hold off
+legend(["Supplied by ground station", "Stored in UAM tank"])
+xlabel(result_arrangement{i})
+ylabel('LH2 consumed (kg)')
+title({"LH2 consumed for cold tank refuel", ...
+    "with different "} + result_arrangement{i})
+saveas(gcf, 'Auto_graph/LH2 consumed for cold tank refuel vs ' + result_arrangement{i} + '.png')
+
 end
 
 
-
+% init percentage array
+refuel_time_percentage_list = [];
+warm_refuel_GS_percentage_list = [];
 
 
 %% SENS-001, SENS-002, valve diameter and valve discharge ratio
@@ -147,7 +170,7 @@ ylim([330, 360])
 
 yyaxis right
 plot(input_vector{target_dataset}./0.01, LH2_consumed_warm_fill_output{target_dataset}, ...
-    'LineWidth', line_width)
+    "-.", 'LineWidth', line_width)
 hold off
 ylabel('LH2 consumed (kg)')
 ylim([30, 40])
@@ -158,9 +181,10 @@ title({"Time taken for warm tank refuel and LH2", ...
     "consumption with different valve orifice diameter"})
 saveas(gcf, 'Nicer_graphs/' + result_arrangement{target_dataset} +'.png')
 
-find_percentage_difference(result_arrangement, target_dataset, time_warm_refuel_output, ...
-    LH2_consumed_warm_fill_output, warm_tank_time_baseline, warm_tank_GS_consumption_baseline)
-
+[refuel_time_percentage_list, warm_refuel_GS_percentage_list] = ...
+    find_percentage_difference(result_arrangement, target_dataset, time_warm_refuel_output, ...
+    LH2_consumed_warm_fill_output, warm_tank_time_baseline, warm_tank_GS_consumption_baseline, ...
+    refuel_time_percentage_list, warm_refuel_GS_percentage_list);
 
 
 target_dataset = find(strcmp([result_arrangement{:}], "Valve discharge coefficient"));
@@ -175,7 +199,8 @@ ylabel('Time taken per warm tank refuel (s)')
 ylim([330, 360])
 
 yyaxis right
-plot(input_vector{target_dataset}, LH2_consumed_warm_fill_output{target_dataset}, 'LineWidth',line_width)
+plot(input_vector{target_dataset}, LH2_consumed_warm_fill_output{target_dataset}, ...
+    "-.", 'LineWidth',line_width)
 legend(["Time taken for warm tank refuel", "Supplied by ground station"])
 ylabel('LH2 consumed (kg)')
 ylim([30, 40])
@@ -184,8 +209,11 @@ title({"Time taken for warm tank refuel and LH2", ...
 hold off
 saveas(gcf, 'Nicer_graphs/' + result_arrangement{target_dataset} +'.png')
 
-find_percentage_difference(result_arrangement, target_dataset, time_warm_refuel_output, ...
-    LH2_consumed_warm_fill_output, warm_tank_time_baseline, warm_tank_GS_consumption_baseline)
+
+[refuel_time_percentage_list, warm_refuel_GS_percentage_list] = ...
+    find_percentage_difference(result_arrangement, target_dataset, time_warm_refuel_output, ...
+    LH2_consumed_warm_fill_output, warm_tank_time_baseline, warm_tank_GS_consumption_baseline, ...
+    refuel_time_percentage_list, warm_refuel_GS_percentage_list);
 
 %% SENS-003, SENS-004 liquid/vapour heat transfer coefficients
 close all
@@ -201,7 +229,8 @@ ylabel('Time taken per warm tank refuel (s)')
 ylim([280, 360])
 
 yyaxis right
-plot(input_vector{target_dataset}, LH2_consumed_warm_fill_output{target_dataset}, 'LineWidth',line_width)
+plot(input_vector{target_dataset}, LH2_consumed_warm_fill_output{target_dataset}, ...
+    "-.", 'LineWidth',line_width)
 legend(["Time taken for warm tank refuel", "Supplied by ground station"])
 ylabel('LH2 consumed (kg)')
 ylim([0, 45])
@@ -211,8 +240,11 @@ set(gca, 'XScale', 'log')
 hold off
 saveas(gcf, 'Nicer_graphs/' + result_arrangement{target_dataset} +'.png')
 
-find_percentage_difference(result_arrangement, target_dataset, time_warm_refuel_output, ...
-    LH2_consumed_warm_fill_output, warm_tank_time_baseline, warm_tank_GS_consumption_baseline)
+
+[refuel_time_percentage_list, warm_refuel_GS_percentage_list] = ...
+    find_percentage_difference(result_arrangement, target_dataset, time_warm_refuel_output, ...
+    LH2_consumed_warm_fill_output, warm_tank_time_baseline, warm_tank_GS_consumption_baseline, ...
+    refuel_time_percentage_list, warm_refuel_GS_percentage_list);
 
 target_dataset = find(strcmp([result_arrangement{:}], "UAM vapour heat transfer coefficient"));
 figure(3)
@@ -225,7 +257,8 @@ ylabel('Time taken per warm tank refuel (s)')
 ylim([320, 360])
 
 yyaxis right
-plot(input_vector{target_dataset}, LH2_consumed_warm_fill_output{target_dataset}, 'LineWidth',line_width)
+plot(input_vector{target_dataset}, LH2_consumed_warm_fill_output{target_dataset}, ...
+    "-.", 'LineWidth',line_width)
 legend(["Time taken for warm tank refuel", "Supplied by ground station"])
 ylabel('LH2 consumed (kg)')
 ylim([0, 45])
@@ -236,8 +269,11 @@ hold off
 saveas(gcf, 'Nicer_graphs/' + result_arrangement{target_dataset} +'.png')
 
 
-find_percentage_difference(result_arrangement, target_dataset, time_warm_refuel_output, ...
-    LH2_consumed_warm_fill_output, warm_tank_time_baseline, warm_tank_GS_consumption_baseline)
+
+[refuel_time_percentage_list, warm_refuel_GS_percentage_list] = ...
+    find_percentage_difference(result_arrangement, target_dataset, time_warm_refuel_output, ...
+    LH2_consumed_warm_fill_output, warm_tank_time_baseline, warm_tank_GS_consumption_baseline, ...
+    refuel_time_percentage_list, warm_refuel_GS_percentage_list);
 
 %% SENS-005 hose length
 close all
@@ -253,7 +289,8 @@ ylabel('Time taken per warm tank refuel (s)')
 ylim([250, 360])
 
 yyaxis right
-plot(input_vector{target_dataset}, LH2_consumed_warm_fill_output{target_dataset}, 'LineWidth',line_width)
+plot(input_vector{target_dataset}, LH2_consumed_warm_fill_output{target_dataset}, ...
+    "-.", 'LineWidth',line_width)
 legend(["Time taken for warm tank refuel", "Supplied by ground station"])
 ylabel('LH2 consumed (kg)')
 ylim([25, 45])
@@ -263,8 +300,10 @@ hold off
 saveas(gcf, 'Nicer_graphs/' + result_arrangement{target_dataset} +'.png')
 
 
-find_percentage_difference(result_arrangement, target_dataset, time_warm_refuel_output, ...
-    LH2_consumed_warm_fill_output, warm_tank_time_baseline, warm_tank_GS_consumption_baseline)
+[refuel_time_percentage_list, warm_refuel_GS_percentage_list] = ...
+    find_percentage_difference(result_arrangement, target_dataset, time_warm_refuel_output, ...
+    LH2_consumed_warm_fill_output, warm_tank_time_baseline, warm_tank_GS_consumption_baseline, ...
+    refuel_time_percentage_list, warm_refuel_GS_percentage_list);
 
 
 %% SENS-006 UAM tank wall heat transfer coefficient
@@ -275,12 +314,13 @@ hold on
 yyaxis left
 plot(input_vector{target_dataset}, time_warm_refuel_output{target_dataset}, ...
     'LineWidth', line_width)
-xlabel("UAM tank wall heat transfer coefficient (W/m^2)")
+xlabel("UAM tank wall insulation heat transfer coefficient (W/m^2)")
 ylabel('Time taken per warm tank refuel (s)')
 ylim([335, 340])
 
 yyaxis right
-plot(input_vector{target_dataset}, LH2_consumed_warm_fill_output{target_dataset}, 'LineWidth',line_width)
+plot(input_vector{target_dataset}, LH2_consumed_warm_fill_output{target_dataset}, ...
+    "-.", 'LineWidth',line_width)
 legend(["Time taken for warm tank refuel", "Supplied by ground station"])
 ylabel('LH2 consumed (kg)')
 ylim([33, 37])
@@ -291,8 +331,11 @@ hold off
 saveas(gcf, 'Nicer_graphs/' + result_arrangement{target_dataset} +'.png')
 
 
-find_percentage_difference(result_arrangement, target_dataset, time_warm_refuel_output, ...
-    LH2_consumed_warm_fill_output, warm_tank_time_baseline, warm_tank_GS_consumption_baseline)
+
+[refuel_time_percentage_list, warm_refuel_GS_percentage_list] = ...
+    find_percentage_difference(result_arrangement, target_dataset, time_warm_refuel_output, ...
+    LH2_consumed_warm_fill_output, warm_tank_time_baseline, warm_tank_GS_consumption_baseline, ...
+    refuel_time_percentage_list, warm_refuel_GS_percentage_list);
 
 
 %% SENS-007 tank size
@@ -305,7 +348,8 @@ hold on
 xlabel("UAM tank capacity (kg)")
 
 plot(input_vector{target_dataset}, frac_useful_LH2_cold_fill_output{target_dataset}, 'LineWidth',line_width)
-plot(input_vector{target_dataset}, frac_useful_LH2_warm_fill_output{target_dataset}, 'LineWidth',line_width)
+plot(input_vector{target_dataset}, frac_useful_LH2_warm_fill_output{target_dataset}, ...
+    "-.",'LineWidth',line_width)
 legend(["Warm tank refuel", "Cold tank refuel"])
 ylabel('LH2 consumed (kg)')
 ylim([0.4, 0.9])
@@ -330,7 +374,8 @@ ylabel('Time taken per warm tank refuel (s)')
 ylim([300, 500])
 
 yyaxis right
-plot(input_vector{target_dataset}*10, LH2_consumed_warm_fill_output{target_dataset}, 'LineWidth',line_width)
+plot(input_vector{target_dataset}*10, LH2_consumed_warm_fill_output{target_dataset}, ...
+    "-.", 'LineWidth',line_width)
 legend(["Time taken for warm tank refuel", "Supplied by ground station"])
 ylabel('LH2 consumed (kg)')
 ylim([30, 45])
@@ -339,8 +384,11 @@ title({"Time taken for warm tank refuel and LH2 consumption ", ...
 hold off
 saveas(gcf, 'Nicer_graphs/' + result_arrangement{target_dataset} +'.png')
 
-find_percentage_difference(result_arrangement, target_dataset, time_warm_refuel_output, ...
-    LH2_consumed_warm_fill_output, warm_tank_time_baseline, warm_tank_GS_consumption_baseline)
+
+[refuel_time_percentage_list, warm_refuel_GS_percentage_list] = ...
+    find_percentage_difference(result_arrangement, target_dataset, time_warm_refuel_output, ...
+    LH2_consumed_warm_fill_output, warm_tank_time_baseline, warm_tank_GS_consumption_baseline, ...
+    refuel_time_percentage_list, warm_refuel_GS_percentage_list);
 
 
 target_dataset = find(strcmp([result_arrangement{:}], "Feed temperature"));
@@ -354,7 +402,8 @@ ylabel('Time taken per warm tank refuel (s)')
 ylim([335, 340])
 
 yyaxis right
-plot(input_vector{target_dataset}, LH2_consumed_warm_fill_output{target_dataset}, 'LineWidth',line_width)
+plot(input_vector{target_dataset}, LH2_consumed_warm_fill_output{target_dataset}, ...
+    "-.", 'LineWidth',line_width)
 legend(["Time taken for warm tank refuel", "Supplied by ground station"])
 ylabel('LH2 consumed (kg)')
 ylim([30, 45])
@@ -363,8 +412,11 @@ title({"Time taken for warm tank refuel and LH2 consumption ", ...
 hold off
 saveas(gcf, 'Nicer_graphs/' + result_arrangement{target_dataset} +'.png')
 
-find_percentage_difference(result_arrangement, target_dataset, time_warm_refuel_output, ...
-    LH2_consumed_warm_fill_output, warm_tank_time_baseline, warm_tank_GS_consumption_baseline)
+
+[refuel_time_percentage_list, warm_refuel_GS_percentage_list] = ...
+    find_percentage_difference(result_arrangement, target_dataset, time_warm_refuel_output, ...
+    LH2_consumed_warm_fill_output, warm_tank_time_baseline, warm_tank_GS_consumption_baseline, ...
+    refuel_time_percentage_list, warm_refuel_GS_percentage_list);
 
 %% SENS-010 hose insulation
 close all
@@ -382,7 +434,8 @@ ylabel('Time taken per warm tank refuel (s)')
 ylim([300, 350])
 
 yyaxis right
-plot(input_vector{target_dataset}, LH2_consumed_warm_fill_output{target_dataset}, 'LineWidth',line_width)
+plot(input_vector{target_dataset}, LH2_consumed_warm_fill_output{target_dataset}, ...
+    "-.", 'LineWidth',line_width)
 legend(["Time taken for warm tank refuel", "Current technology", "Supplied by ground station"])
 ylabel('LH2 consumed (kg)')
 ylim([30, 45])
@@ -392,8 +445,11 @@ set(gca, 'XScale', 'log')
 hold off
 saveas(gcf, 'Nicer_graphs/' + result_arrangement{target_dataset} +'.png')
 
-find_percentage_difference(result_arrangement, target_dataset, time_warm_refuel_output, ...
-    LH2_consumed_warm_fill_output, warm_tank_time_baseline, warm_tank_GS_consumption_baseline)
+
+[refuel_time_percentage_list, warm_refuel_GS_percentage_list] = ...
+    find_percentage_difference(result_arrangement, target_dataset, time_warm_refuel_output, ...
+    LH2_consumed_warm_fill_output, warm_tank_time_baseline, warm_tank_GS_consumption_baseline, ...
+    refuel_time_percentage_list, warm_refuel_GS_percentage_list);
 
 
 %% SENS-011 UAM target pressure
@@ -410,7 +466,8 @@ ylabel('Time taken per warm tank refuel (s)')
 ylim([320, 350])
 
 yyaxis right
-plot(input_vector{target_dataset}*10, LH2_consumed_warm_fill_output{target_dataset}, 'LineWidth',line_width)
+plot(input_vector{target_dataset}*10, LH2_consumed_warm_fill_output{target_dataset}, ...
+    "-.", 'LineWidth',line_width)
 legend(["Time taken for warm tank refuel", "Supplied by ground station"])
 ylabel('LH2 consumed (kg)')
 ylim([30, 45])
@@ -420,6 +477,44 @@ hold off
 set(gca, 'XScale', 'log')
 saveas(gcf, 'Nicer_graphs/' + result_arrangement{target_dataset} +'.png')
 
-find_percentage_difference(result_arrangement, target_dataset, time_warm_refuel_output, ...
-    LH2_consumed_warm_fill_output, warm_tank_time_baseline, warm_tank_GS_consumption_baseline)
 
+[refuel_time_percentage_list, warm_refuel_GS_percentage_list] = ...
+    find_percentage_difference(result_arrangement, target_dataset, time_warm_refuel_output, ...
+    LH2_consumed_warm_fill_output, warm_tank_time_baseline, warm_tank_GS_consumption_baseline, ...
+    refuel_time_percentage_list, warm_refuel_GS_percentage_list);
+
+%% plot overall bar chart
+
+close all
+
+bar_xlabel = ["Valve diameter",...
+    "Valve discharge coefficient", ...
+    "UAM vapour heat transfer coefficient", ...
+    "UAM liquid heat transfer coefficient", ...
+    "Hose length", ...
+    "UAM tank conductivity", ...
+    "Feed pressure", ...
+    "Feed temperature", ...
+    "Hose conductivity", ...
+    "Target tank pressure"];
+
+percentage_array = [];
+for i = 1:length(refuel_time_percentage_list)
+    percentage_array(i, 1) = refuel_time_percentage_list(i);
+    percentage_array(i, 2) = warm_refuel_GS_percentage_list(i);
+end
+
+f = figure;
+f.Position = [50 50 1500 760];
+hold on
+b = bar(bar_xlabel, percentage_array, "LineWidth", line_width);
+ylabel("Percentage change (%)")
+for k = 1:size(percentage_array,2)
+    b(1).LineStyle = "-";
+    b(1).FaceColor = "blue";
+    b(2).LineStyle = "-.";
+    b(2).FaceColor = "white";
+end
+legend("Percentage change for refuel time", "Percentage change for warm tank refuel LH2 consumption")
+title("A graph showing the sensitivity of the model against different parameters")
+saveas(gcf, 'Nicer_graphs/Sweep_percentage.png')
