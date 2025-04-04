@@ -59,6 +59,8 @@ hose_thermal_conductivity = 0.0002;  %W/m*K
 pipe_thermal_conductivity = 0.0001;  %W/m*K
 liquid_supply_SOV_leak_frac = 1e-9;
 
+
+
 %Controller info
 timestep = 0.5;
 PID_timestep = 0.1;
@@ -66,9 +68,9 @@ tf_delay = 1e-3;
 vent_tf_delay = 1e-4;
 AC_LH2_TARGET_DELTA_P = 0.04;
 AC_GH2_TARGET_DELTA_P = 0.045;
-LH2_FEED_PRES = 0.3; %bar
-GH2_FEED_PRES = 0.2; %bar
-IDLE_FEED_PRES = 0.11; %bar
+LH2_FEED_PRES = 0.3; %MPa
+GH2_FEED_PRES = 0.2; %MPa
+IDLE_FEED_PRES = 0.13; %MPa
 
 
 %case info:
@@ -76,10 +78,10 @@ LH2_Feed_Temp = 20;
 Ambient_temp = 300;
 Initial_temp = 300;
 Initial_AC_LH2_frac = 0;
-Initial_AC_tank_pressure = 1.1;
+Initial_AC_tank_pressure = 1.3;
 Initial_AC_Tank_Liquid_Temp = 20;
 Initial_AC_Tank_Gas_Temp = 300;
-initial_hose_p = 1.1;
+initial_hose_p = 1.3;
 stopTime = 2000;
 
 valve_laminar_p_ratio = 0.999;

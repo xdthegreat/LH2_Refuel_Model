@@ -19,13 +19,7 @@ save_simout_flag = true;
 simplify_output_func_flag = true;
 Log_to_file_flag = false;
 
-%check matlab version
-v = matlabRelease;
-if strcmp(v.Release, 'R2024a')
-    mdl = "simscape_automatic_R2024a";
-else
-    mdl = "simscape_automatic";
-end
+mdl = "simscape_automatic_R2024a";
 
 
 % select number of cases
@@ -74,7 +68,7 @@ normal_flow_rate_simIn = normal_flow_rate_setup(rapid_flag, accel_flag, mdl, Log
 
 [tank_wall_vapour_heat_transfer_coeff_simIn, vapour_heat_transfer_coeff_vector] = ...
     tank_wall_vapour_heat_transfer_coeff_setup(rapid_flag, accel_flag, mdl,...
-    tank_wall_vapour_heat_transfer_coeff_count, max_allowed_stop_time);
+    tank_wall_vapour_heat_transfer_coeff_count, max_allowed_stop_time, Log_to_file_flag);
 
 [tank_wall_liquid_heat_transfer_coeff_simIn, liquid_heat_transfer_coeff_vector] = ...
     tank_wall_liquid_heat_transfer_coeff_setup(rapid_flag, accel_flag, mdl,...
@@ -131,7 +125,38 @@ toc;
 
 %% graphing
 
-if ~Log_to_file_flag
+
+if Log_to_file_flag
+    normal_flow_rate_simOut = logging_file_repackage("normal_flow_rate_simOut", normal_flow_rate_sweep_count);
+    valve_diameter_simOut = logging_file_repackage("valve_diameter_simOut", ...
+        valve_diameter_sweep_count);
+    valve_discharge_coeff_sweep_simOut = logging_file_repackage("valve_discharge_coeff_sweep_simOut", ...
+        valve_discharge_coeff_sweep_count);
+    tank_wall_vapour_heat_transfer_coeff_simOut = logging_file_repackage("tank_wall_vapour_heat_transfer_coeff_simOut", ...
+        tank_wall_vapour_heat_transfer_coeff_count);
+    tank_wall_liquid_heat_transfer_coeff_simOut = logging_file_repackage("tank_wall_liquid_heat_transfer_coeff_simOut", ...
+        tank_wall_liquid_heat_transfer_coeff_count);
+    hose_length_sweep_simOut = logging_file_repackage("hose_length_sweep_simOut", ...
+        hose_length_sweep_count);
+    tank_conductivity_sweep_simOut = logging_file_repackage("tank_conductivity_sweep_simOut", ...
+        AC_tank_equivalent_conductivity_count);
+    Tank_size_sweep_simOut = logging_file_repackage("Tank_size_sweep_simOut", ...
+        tank_size_count);
+    Feed_pres_sweep_simOut = logging_file_repackage("Feed_pres_sweep_simOut", ...
+        LH2_FEED_PRES_COUNT);
+    Feed_temp_sweep_simOut = logging_file_repackage("Feed_temp_sweep_simOut", ...
+        LH2_FEED_TEMP_COUNT);
+    hose_insulation_sweep_simOut = logging_file_repackage("hose_insulation_sweep_simOut", ...
+        hose_thermal_conductivity_count);
+    UAM_tank_pressure_sweep_simOut = logging_file_repackage("UAM_tank_pressure_sweep_simOut", ...
+        UAM_TANK_PRES_COUNT);
+end
+simOut = [normal_flow_rate_simOut, valve_diameter_simOut, valve_discharge_coeff_sweep_simOut, ...
+    tank_wall_vapour_heat_transfer_coeff_simOut, tank_wall_liquid_heat_transfer_coeff_simOut, ...
+    hose_length_sweep_simOut, tank_conductivity_sweep_simOut, Tank_size_sweep_simOut, ...
+    Feed_pres_sweep_simOut, Feed_temp_sweep_simOut, hose_insulation_sweep_simOut, ...
+    UAM_tank_pressure_sweep_simOut];
+
 close all
 normal_flow_rate_graphing(simOut(1, normal_flow_rate_sweep_pos), AC_supply_line_port_inner_area)
 close all
@@ -167,7 +192,7 @@ close all
 UAM_tank_pressure_sweep_graphing(simOut(1, hose_thermal_conductivity_pos+1:UAM_TANK_PRES_POS), ...
     UAM_TANK_PRES_VEC)
 
-end
+
 
 
 diary off

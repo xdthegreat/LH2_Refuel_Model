@@ -3,230 +3,477 @@ ans =
 
   <a href="matlab:helpPopup('datetime')" style="font-weight:bold">datetime</a>
 
-   26-Mar-2025 10:49:12 +0000
+   26-Mar-2025 17:27:59 +0000
 
-Model 'AC_gauge_R2024a' was exported from R2024b to R2024a. To find blocks that were removed during the export operation, <a href="matlab:slexportprevious.utils.displayReplacedBlocks('AC_gauge_R2024a')">click here</a>. Save the model to remove this notification.
-Model 'GS_refuel_control_R2024a' was exported from R2024b to R2024a. To find blocks that were removed during the export operation, <a href="matlab:slexportprevious.utils.displayReplacedBlocks('GS_refuel_control_R2024a')">click here</a>. Save the model to remove this notification.
-Model 'AC_Engine_SOV_R2024a' was exported from R2024b to R2024a. To find blocks that were removed during the export operation, <a href="matlab:slexportprevious.utils.displayReplacedBlocks('AC_Engine_SOV_R2024a')">click here</a>. Save the model to remove this notification.
-[Warning: <a href="matlab:sfprivate('sfOpenObjectBySId','aircraft_refuel_control_R2024a:1:::83')">'AC_VALVE_FEEDBACK'</a> is defined, but is not used in the Stateflow chart. <a href= "matlab: internal.stateflow.dialogs.UnusedObjectDeleter.createDeleter('aircraft_refuel_control_R2024a:1:::83')">Delete this
-object</a> or <a href= "matlab: sfprivate('openConfigParamsSFDiagnostics',21)">configure the diagnostic</a>.
+[Warning: <a href="matlab:sfprivate('sfOpenObjectBySId','aircraft_refuel_control_R2024a:1:::83')">'AC_VALVE_FEEDBACK'</a> is defined, but is not used in the Stateflow chart. <a href= "matlab: internal.stateflow.dialogs.UnusedObjectDeleter.createDeleter('aircraft_refuel_control_R2024a:1:::83')">Delete this object</a> or <a href= "matlab: sfprivate('openConfigParamsSFDiagnostics',21)">configure the diagnostic</a>.
 
 ] 
-[> In sldiagviewer.reportWarning
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('construct_error', 'C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\private\construct_error.m', 130)" style="font-weight:bold">construct_error</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\private\construct_error.m',130,0)">line 130</a>)
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('sfprivate', 'C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\sfprivate.m', 13)" style="font-weight:bold">sfprivate</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\sfprivate.m',13,0)">line 13</a>)
-In Simulink.Simulation.internal.DesktopSimHelper
-In Simulink.Simulation.internal.DesktopSimHelper.sim
-In Simulink/SimulationInput/sim
-In MultiSim.internal.runSingleSim
-In MultiSim.internal/SimulationRunnerSerial/executeImplSingle
-In MultiSim.internal/SimulationRunnerSerial/executeImpl
-In Simulink/SimulationManager/executeSims
-In Simulink/SimulationManager/execute
-In Simulink/SimulationManager/run
-In Simulink.Simulation.internal.DesktopSimHelper.runUsingManager
-In Simulink/SimulationInput/runSingleSimWithOptions
-In Simulink/SimulationInput/sim
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('run_everything_slowly', 'C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m', 43)" style="font-weight:bold">run_everything_slowly</a> (<a href="matlab: opentoline('C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m',43,0)">line 43</a>)] 
-[Warning: <a href="matlab:sfprivate('sfOpenObjectBySId','aircraft_refuel_control_R2024a:1:::85')">'P_COUPLING_AC'</a> is defined, but is not used in the Stateflow chart. <a href= "matlab: internal.stateflow.dialogs.UnusedObjectDeleter.createDeleter('aircraft_refuel_control_R2024a:1:::85')">Delete this object</a>
-or <a href= "matlab: sfprivate('openConfigParamsSFDiagnostics',21)">configure the diagnostic</a>.
+[Warning: <a href="matlab:sfprivate('sfOpenObjectBySId','aircraft_refuel_control_R2024a:1:::85')">'P_COUPLING_AC'</a> is defined, but is not used in the Stateflow chart. <a href= "matlab: internal.stateflow.dialogs.UnusedObjectDeleter.createDeleter('aircraft_refuel_control_R2024a:1:::85')">Delete this object</a> or <a href= "matlab: sfprivate('openConfigParamsSFDiagnostics',21)">configure the diagnostic</a>.
 
 ] 
-[> In sldiagviewer.reportWarning
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('construct_error', 'C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\private\construct_error.m', 130)" style="font-weight:bold">construct_error</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\private\construct_error.m',130,0)">line 130</a>)
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('sfprivate', 'C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\sfprivate.m', 13)" style="font-weight:bold">sfprivate</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\sfprivate.m',13,0)">line 13</a>)
-In Simulink.Simulation.internal.DesktopSimHelper
-In Simulink.Simulation.internal.DesktopSimHelper.sim
-In Simulink/SimulationInput/sim
-In MultiSim.internal.runSingleSim
-In MultiSim.internal/SimulationRunnerSerial/executeImplSingle
-In MultiSim.internal/SimulationRunnerSerial/executeImpl
-In Simulink/SimulationManager/executeSims
-In Simulink/SimulationManager/execute
-In Simulink/SimulationManager/run
-In Simulink.Simulation.internal.DesktopSimHelper.runUsingManager
-In Simulink/SimulationInput/runSingleSimWithOptions
-In Simulink/SimulationInput/sim
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('run_everything_slowly', 'C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m', 43)" style="font-weight:bold">run_everything_slowly</a> (<a href="matlab: opentoline('C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m',43,0)">line 43</a>)] 
-[Warning: <a href="matlab:sfprivate('sfOpenObjectBySId','aircraft_refuel_control_R2024a:1:::86')">'P_COUPLING_AC_RETURN'</a> is defined, but is not used in the Stateflow chart. <a href= "matlab: internal.stateflow.dialogs.UnusedObjectDeleter.createDeleter('aircraft_refuel_control_R2024a:1:::86')">Delete this
-object</a> or <a href= "matlab: sfprivate('openConfigParamsSFDiagnostics',21)">configure the diagnostic</a>.
+[Warning: <a href="matlab:sfprivate('sfOpenObjectBySId','aircraft_refuel_control_R2024a:1:::86')">'P_COUPLING_AC_RETURN'</a> is defined, but is not used in the Stateflow chart. <a href= "matlab: internal.stateflow.dialogs.UnusedObjectDeleter.createDeleter('aircraft_refuel_control_R2024a:1:::86')">Delete this object</a> or <a href= "matlab: sfprivate('openConfigParamsSFDiagnostics',21)">configure the diagnostic</a>.
 
 ] 
-[> In sldiagviewer.reportWarning
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('construct_error', 'C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\private\construct_error.m', 130)" style="font-weight:bold">construct_error</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\private\construct_error.m',130,0)">line 130</a>)
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('sfprivate', 'C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\sfprivate.m', 13)" style="font-weight:bold">sfprivate</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\sfprivate.m',13,0)">line 13</a>)
-In Simulink.Simulation.internal.DesktopSimHelper
-In Simulink.Simulation.internal.DesktopSimHelper.sim
-In Simulink/SimulationInput/sim
-In MultiSim.internal.runSingleSim
-In MultiSim.internal/SimulationRunnerSerial/executeImplSingle
-In MultiSim.internal/SimulationRunnerSerial/executeImpl
-In Simulink/SimulationManager/executeSims
-In Simulink/SimulationManager/execute
-In Simulink/SimulationManager/run
-In Simulink.Simulation.internal.DesktopSimHelper.runUsingManager
-In Simulink/SimulationInput/runSingleSimWithOptions
-In Simulink/SimulationInput/sim
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('run_everything_slowly', 'C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m', 43)" style="font-weight:bold">run_everything_slowly</a> (<a href="matlab: opentoline('C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m',43,0)">line 43</a>)] 
-[Warning: <a href="matlab:sfprivate('sfOpenObjectBySId','GS_refuel_control_R2024a:1:::58')">'GS_VALVE_FEEDBACK'</a> is defined, but is not used in the Stateflow chart. <a href= "matlab: internal.stateflow.dialogs.UnusedObjectDeleter.createDeleter('GS_refuel_control_R2024a:1:::58')">Delete this
-object</a> or <a href= "matlab: sfprivate('openConfigParamsSFDiagnostics',21)">configure the diagnostic</a>.
+[Warning: <a href="matlab:sfprivate('sfOpenObjectBySId','GS_refuel_control_R2024a:1:::58')">'GS_VALVE_FEEDBACK'</a> is defined, but is not used in the Stateflow chart. <a href= "matlab: internal.stateflow.dialogs.UnusedObjectDeleter.createDeleter('GS_refuel_control_R2024a:1:::58')">Delete this object</a> or <a href= "matlab: sfprivate('openConfigParamsSFDiagnostics',21)">configure the diagnostic</a>.
 
 ] 
-[> In sldiagviewer.reportWarning
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('construct_error', 'C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\private\construct_error.m', 130)" style="font-weight:bold">construct_error</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\private\construct_error.m',130,0)">line 130</a>)
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('sfprivate', 'C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\sfprivate.m', 13)" style="font-weight:bold">sfprivate</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stateflow\stateflow\sfprivate.m',13,0)">line 13</a>)
-In Simulink.Simulation.internal.DesktopSimHelper
-In Simulink.Simulation.internal.DesktopSimHelper.sim
-In Simulink/SimulationInput/sim
-In MultiSim.internal.runSingleSim
-In MultiSim.internal/SimulationRunnerSerial/executeImplSingle
-In MultiSim.internal/SimulationRunnerSerial/executeImpl
-In Simulink/SimulationManager/executeSims
-In Simulink/SimulationManager/execute
-In Simulink/SimulationManager/run
-In Simulink.Simulation.internal.DesktopSimHelper.runUsingManager
-In Simulink/SimulationInput/runSingleSimWithOptions
-In Simulink/SimulationInput/sim
-In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('run_everything_slowly', 'C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m', 43)" style="font-weight:bold">run_everything_slowly</a> (<a href="matlab: opentoline('C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m',43,0)">line 43</a>)] 
-Elapsed time is 1038.934330 seconds.
-{Error using <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('plus')" style="font-weight:bold"> + </a>
-Arrays have incompatible sizes for this operation.
+Elapsed time is 251.617205 seconds.
+Max flow speed for LH2 is 98.5778m/s.
+Max flow speed for GH2 is 134.4415m/s.
+Max mass flow rate for GH2 during warm tank warmup is 3.0716e-07kg/s.
+Mean mass flow rate for GH2 during warm tank warmup is 1.991e-07kg/s.
+Max mass flow rate  for GH2 during cold tank warmup is 1.711e-06kg/s.
+Mean mass flow rate for GH2 during cold tank warmup is 1.1249e-06kg/s.
+Max mass flow rate for GH2 during defuel tank drain is 0.067301kg/s.
+Mean mass flow rate for GH2 during defuel tank drain is 0.021712kg/s.
+Max mass flow rate for LH2 during warm tank chilldown is 6.6614e-10kg/s.
+Mean mass flow rate for LH2 during warm tank chilldown is 1.3655e-10kg/s.
+Max mass flow rate for LH2 during warm tank fill is 1.2477e-09kg/s.
+Mean mass flow rate for LH2 during warm tank fill is 9.4655e-10kg/s.
+Max mass flow rate for LH2 during cold tank chilldown is 3.3394e-07kg/s.
+Mean mass flow rate for LH2 during cold tank chilldown is 2.8153e-07kg/s.
+Max mass flow rate for LH2 during cold tank fill is 3.3259e-07kg/s.
+Mean mass flow rate for LH2 during cold tank fill is 3.0877e-07kg/s.
+Max mass flow rate for LH2 during defuel chilldown is 0.0012162kg/s.
+Mean mass flow rate for LH2 during defuel chilldown is 0.00099327kg/s.
+            <strong>Operation phase</strong>            <strong>Mean flow rate</strong>    <strong>Unit</strong> 
+    <strong>_______________________________</strong>    <strong>______________</strong>    <strong>_____</strong>
 
-Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('valve_diameter_sweep_setup', 'C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\Functions\valve_diameter_sweep_setup.m', 15)" style="font-weight:bold">valve_diameter_sweep_setup</a> (<a href="matlab: opentoline('C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\Functions\valve_diameter_sweep_setup.m',15,0)">line 15</a>)
-                                'LoggingFileName','Graphs/valve_diameter_simOut' + i + '.mat');
+    "Warm tank refuel chilldown"         2.6773e-08      "m/s"
+    "Warm tank refuel tank filling"      7.0254e-08      "m/s"
+    "Warm tank refuel warmup"            4.1714e-07      "m/s"
+    "Cold tank refuel chilldown"          1.334e-06      "m/s"
+    "Cold tank refuel tank filling"      1.4171e-06      "m/s"
+    "Cold tank refuel warmup"                 2.608      "m/s"
+    "Defuel chilldown"                       3.5953      "m/s"
+    "Defuel wamrup"                          58.761      "m/s"
 
-Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('run_everything_slowly', 'C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m', 64)" style="font-weight:bold">run_everything_slowly</a> (<a href="matlab: opentoline('C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m',64,0)">line 64</a>)
-[valve_diameter_sweep_simIn, valve_diameter_vector] = valve_diameter_sweep_setup(rapid_flag, accel_flag, ...
+Total LH2 supplied by ground station = 4.4982e-05kg.
+Total LH2 in the UAM tank = 0kg.
+Total LH2 supplied by ground station = 0.00025878kg.
+Total LH2 in the UAM tank = 0kg.
+open("LH2_usage_graphing")
+close all
+LH2_usage_graphing(normal_flow_rate_simOut)
+  Columns 1 through 13
 
-<a href="matlab:helpview('matlab','error_sizeDimensionsMustMatch')" style="font-weight:bold">Related documentation</a>
+   11.0000   54.0000  139.0000  328.0000  338.5000  348.5000  416.5000  427.0000  471.0000  523.0000  708.0000  718.5000  729.0000
+
+  Columns 14 through 15
+
+  770.5000  967.5000
+
+Total LH2 supplied by ground station = 4.4982e-05kg.
+Total LH2 in the UAM tank = 0kg.
+Total LH2 supplied by ground station = 0.00025878kg.
+Total LH2 in the UAM tank = 0kg.
+normal_flow_rate_simOut = logging_file_repackage("normal_flow_rate_simOut", 1);
+close all
+LH2_usage_graphing(normal_flow_rate_simOut)
+  Columns 1 through 13
+
+   11.0000   54.0000  139.0000  328.0000  338.5000  348.5000  416.5000  427.0000  471.0000  523.0000  708.0000  718.5000  729.0000
+
+  Columns 14 through 15
+
+  770.5000  967.5000
+
+Total LH2 supplied by ground station = 34.8981kg.
+Total LH2 in the UAM tank = 16.0817kg.
+Total LH2 supplied by ground station = 30.9408kg.
+Total LH2 in the UAM tank = 16.0817kg.
+Max flow speed for LH2 is 98.5778m/s.
+Max flow speed for GH2 is 134.4415m/s.
+Max mass flow rate for GH2 during warm tank warmup is 2.0692kg/s.
+Mean mass flow rate for GH2 during warm tank warmup is 0.10967kg/s.
+Max mass flow rate  for GH2 during cold tank warmup is 0.78726kg/s.
+Mean mass flow rate for GH2 during cold tank warmup is 0.12418kg/s.
+Max mass flow rate for GH2 during defuel tank drain is 2.376kg/s.
+Mean mass flow rate for GH2 during defuel tank drain is 0.3645kg/s.
+Max mass flow rate for LH2 during warm tank chilldown is 0.067301kg/s.
+Mean mass flow rate for LH2 during warm tank chilldown is 0.022961kg/s.
+Max mass flow rate for LH2 during warm tank fill is 0.96451kg/s.
+Mean mass flow rate for LH2 during warm tank fill is 0.13101kg/s.
+Max mass flow rate for LH2 during cold tank chilldown is 0.2663kg/s.
+Mean mass flow rate for LH2 during cold tank chilldown is 0.031739kg/s.
+Max mass flow rate for LH2 during cold tank fill is 0.9244kg/s.
+Mean mass flow rate for LH2 during cold tank fill is 0.24697kg/s.
+Max mass flow rate for LH2 during defuel chilldown is 0.27473kg/s.
+Mean mass flow rate for LH2 during defuel chilldown is 0.019206kg/s.
+            <strong>Operation phase</strong>            <strong>Mean flow rate</strong>    <strong>Unit</strong> 
+    <strong>_______________________________</strong>    <strong>______________</strong>    <strong>_____</strong>
+
+    "Warm tank refuel chilldown"           33.716        "m/s"
+    "Warm tank refuel tank filling"        2.8643        "m/s"
+    "Warm tank refuel warmup"              17.673        "m/s"
+    "Cold tank refuel chilldown"           46.868        "m/s"
+    "Cold tank refuel tank filling"        10.836        "m/s"
+    "Cold tank refuel warmup"              17.844        "m/s"
+    "Defuel chilldown"                     30.489        "m/s"
+    "Defuel wamrup"                        15.696        "m/s"
+
+  Columns 1 through 13
+
+   11.0000   54.0000  139.0000  328.0000  338.5000  348.5000  416.5000  427.0000  471.0000  523.0000  708.0000  718.5000  729.0000
+
+  Columns 14 through 15
+
+  770.5000  967.5000
+
+Total LH2 supplied by ground station = 34.8981kg.
+Total LH2 in the UAM tank = 16.0817kg.
+Total LH2 supplied by ground station = 30.9408kg.
+Total LH2 in the UAM tank = 16.0817kg.
+Total LH2 supplied by ground station = 34.8527kg.
+Total LH2 in the UAM tank = 16.0822kg.
+Total LH2 supplied by ground station = 35.0561kg.
+Total LH2 in the UAM tank = 16.2523kg.
+Total LH2 supplied by ground station = 34.7583kg.
+Total LH2 in the UAM tank = 15.9785kg.
+Total LH2 supplied by ground station = 34.8913kg.
+Total LH2 in the UAM tank = 16.0914kg.
+Total LH2 supplied by ground station = 35.0205kg.
+Total LH2 in the UAM tank = 16.2043kg.
+Total LH2 supplied by ground station = 35.1139kg.
+Total LH2 in the UAM tank = 16.2786kg.
+Total LH2 supplied by ground station = 34.7203kg.
+Total LH2 in the UAM tank = 15.9331kg.
+Total LH2 supplied by ground station = 34.7825kg.
+Total LH2 in the UAM tank = 15.986kg.
+Total LH2 supplied by ground station = 34.8487kg.
+Total LH2 in the UAM tank = 16.0405kg.
+Total LH2 supplied by ground station = 34.9029kg.
+Total LH2 in the UAM tank = 16.0866kg.
+Total LH2 supplied by ground station = 34.7666kg.
+Total LH2 in the UAM tank = 15.9641kg.
+Total LH2 supplied by ground station = 34.8117kg.
+Total LH2 in the UAM tank = 16.0052kg.
+Total LH2 supplied by ground station = 34.8383kg.
+Total LH2 in the UAM tank = 16.0305kg.
+Total LH2 supplied by ground station = 34.8687kg.
+Total LH2 in the UAM tank = 16.0561kg.
+Total LH2 supplied by ground station = 34.8776kg.
+Total LH2 in the UAM tank = 16.0649kg.
+Total LH2 supplied by ground station = 34.8899kg.
+Total LH2 in the UAM tank = 16.0738kg.
+Total LH2 supplied by ground station = 34.8991kg.
+Total LH2 in the UAM tank = 16.0826kg.
+Total LH2 supplied by ground station = 34.9142kg.
+Total LH2 in the UAM tank = 16.0971kg.
+Total LH2 supplied by ground station = 34.9251kg.
+Total LH2 in the UAM tank = 16.1071kg.
+Total LH2 supplied by ground station = 34.9384kg.
+Total LH2 in the UAM tank = 16.1163kg.
+Full run failed, check error messages and aborts
+Array indices must be positive integers or logical values.
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('turn_simOut_into_graphing_data', 'C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\Functions\Base functions\turn_simOut_into_graphing_data.m', 26)" style="font-weight:bold">turn_simOut_into_graphing_data</a> (<a href="matlab: opentoline('C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\Functions\Base functions\turn_simOut_into_graphing_data.m',26,0)">line 26</a>)
+        disp("Total LH2 supplied by ground station = " + Ground_LH2_total(idle_1_index) + "kg.")
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('tank_wall_vapour_heat_transfer_coeff_graphing', 'C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\Functions\tank_wall_vapour_heat_transfer_coeff_graphing.m', 10)" style="font-weight:bold">tank_wall_vapour_heat_transfer_coeff_graphing</a> (<a href="matlab: opentoline('C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\Functions\tank_wall_vapour_heat_transfer_coeff_graphing.m',10,0)">line 10</a>)
+    turn_simOut_into_graphing_data(tank_wall_vapour_heat_transfer_coeff_simOut, vapour_heat_transfer_coeff_vector);
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('RUN_EVERYTHING', 'C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\RUN_EVERYTHING.m', 164)" style="font-weight:bold">RUN_EVERYTHING</a> (<a href="matlab: opentoline('C:\Users\MW\Documents\Bristol\Year 3\RP3\Model\LH2_Refuel_Model\Model\Sensitivity_sweep\RUN_EVERYTHING.m',164,0)">line 164</a>)
+tank_wall_vapour_heat_transfer_coeff_graphing(simOut(1,
+valve_discharge_coeff_sweep_pos+1:tank_wall_vapour_heat_transfer_coeff_pos),...
+
+LH2_feed_temp
+{Unrecognized function or variable 'LH2_feed_temp'.
 } 
-open(" valve_diameter_sweep_setup")
-'Graphs/valve_diameter_simOut' + 1 + '.mat'
-{Error using <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('plus')" style="font-weight:bold"> + </a>
-Arrays have incompatible sizes for this operation.
+LH2_Feed_Temp
 
-<a href="matlab:helpview('matlab','error_sizeDimensionsMustMatch')" style="font-weight:bold">Related documentation</a>
-} 
-[26-Mar-2025 11:09:42] Checking for availability of parallel pool...
-Starting parallel pool (parpool) using the 'LocalProfile2' profile ...
-26-Mar-2025 11:11:10: Job Queued. Waiting for parallel pool job with ID 1 to start ...
-26-Mar-2025 11:12:11: Job Queued. Waiting for parallel pool job with ID 1 to start ...
-26-Mar-2025 11:13:11: Job Queued. Waiting for parallel pool job with ID 1 to start ...
-26-Mar-2025 11:14:11: Job Running. Waiting for parallel pool workers to connect ...
-Connected to parallel pool with 10 workers.
-[26-Mar-2025 11:14:28] Starting Simulink on parallel workers...
-[26-Mar-2025 11:14:30] Configuring simulation cache folder on parallel workers...
-[26-Mar-2025 11:14:31] Loading model on parallel workers...
-[26-Mar-2025 11:15:21] Running simulations...
-[26-Mar-2025 11:22:04] Completed 1 of 10 simulation runs. Run 1 has errors.
-[26-Mar-2025 11:22:04] Completed 2 of 10 simulation runs. Run 8 has errors.
-[26-Mar-2025 11:22:04] Completed 3 of 10 simulation runs. Run 10 has errors.
-[26-Mar-2025 11:22:04] Completed 4 of 10 simulation runs. Run 5 has errors.
-[26-Mar-2025 11:22:05] Completed 5 of 10 simulation runs. Run 4 has errors.
-[26-Mar-2025 11:22:05] Completed 6 of 10 simulation runs. Run 2 has errors.
-[26-Mar-2025 11:22:08] Completed 7 of 10 simulation runs. Run 6 has errors.
-[26-Mar-2025 11:22:08] Completed 8 of 10 simulation runs. Run 3 has errors.
-[26-Mar-2025 11:22:08] Completed 9 of 10 simulation runs. Run 9 has errors.
-[26-Mar-2025 11:22:13] Completed 10 of 10 simulation runs. Run 7 has errors.
-[Warning: One or more simulations completed with errors. For more information, inspect the
-SimulationOutput objects at these indices:
-[1 2 3 4 5 6 7 8 9 10]] 
-[26-Mar-2025 11:22:14] Cleaning up parallel workers...
-Elapsed time is 769.543262 seconds.
-strcat('Graphs/valve_diameter_simOut', 1, '.mat')
+LH2_Feed_Temp =
 
-ans =
+    20
 
-    'Graphs/valve_diameter_simOut.mat'
+LH2_Feed_Temp = 18
 
-length(valve_diameter_vector) 
+LH2_Feed_Temp =
 
-ans =
+    18
 
-    10
+open("multiple_sim_phase_parsing")
+[Warning: The following error was caught while executing 'onCleanup' class destructor:
+Error using close
+Invalid figure handle.
 
-class(length(valve_diameter_vector) )
+Error in simscape.logging.internal.ResultsExplorerController
 
-ans =
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('onCleanup/delete', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\lang\onCleanup.m', 25)" style="font-weight:bold">onCleanup/delete</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\lang\onCleanup.m',25,0)">line 25</a>)
+            obj.task();
 
-    'double'
+Error in simscape.logging.internal.ResultsExplorerController
 
-num2str(length(valve_diameter_vector))
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('simscapeResultsExplorer', 'C:\Program Files\MATLAB\R2024a\toolbox\physmod\common\logging\sli\m\simscapeResultsExplorer.m', 48)" style="font-weight:bold">simscapeResultsExplorer</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\physmod\common\logging\sli\m\simscapeResultsExplorer.m',48,0)">line 48</a>)
+    ResultsExplorerController(model,view);
 
-ans =
+Error in simscape.logging.internal.exploreForSlToolstrip
 
-    '10'
+Error in simscape.internal.sl_toolstrip.simscapeResultsCB] 
+[> In simscape.logging.internal/ResultsExplorerController
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('simscapeResultsExplorer', 'C:\Program Files\MATLAB\R2024a\toolbox\physmod\common\logging\sli\m\simscapeResultsExplorer.m', 48)" style="font-weight:bold">simscapeResultsExplorer</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\physmod\common\logging\sli\m\simscapeResultsExplorer.m',48,0)">line 48</a>)
+In simscape.logging.internal.exploreForSlToolstrip
+In simscape.internal.sl_toolstrip.simscapeResultsCB] 
+Max flow speed for LH2 is 98.5778m/s.
+Max flow speed for GH2 is 134.4415m/s.
+Max mass flow rate for GH2 during warm tank warmup is 2.0692kg/s.
+Mean mass flow rate for GH2 during warm tank warmup is 0.10967kg/s.
+Max mass flow rate  for GH2 during cold tank warmup is 0.78726kg/s.
+Mean mass flow rate for GH2 during cold tank warmup is 0.12418kg/s.
+Max mass flow rate for GH2 during defuel tank drain is 2.376kg/s.
+Mean mass flow rate for GH2 during defuel tank drain is 0.3645kg/s.
+Max mass flow rate for LH2 during warm tank chilldown is 0.067301kg/s.
+Mean mass flow rate for LH2 during warm tank chilldown is 0.022961kg/s.
+Max mass flow rate for LH2 during warm tank fill is 0.96451kg/s.
+Mean mass flow rate for LH2 during warm tank fill is 0.13101kg/s.
+Max mass flow rate for LH2 during cold tank chilldown is 0.2663kg/s.
+Mean mass flow rate for LH2 during cold tank chilldown is 0.031739kg/s.
+Max mass flow rate for LH2 during cold tank fill is 0.9244kg/s.
+Mean mass flow rate for LH2 during cold tank fill is 0.24697kg/s.
+Max mass flow rate for LH2 during defuel chilldown is 0.27473kg/s.
+Mean mass flow rate for LH2 during defuel chilldown is 0.019206kg/s.
+            <strong>Operation phase</strong>            <strong>Mean flow rate</strong>    <strong>Unit</strong> 
+    <strong>_______________________________</strong>    <strong>______________</strong>    <strong>_____</strong>
 
-[26-Mar-2025 11:25:18] Checking for availability of parallel pool...
-[26-Mar-2025 11:25:18] Starting Simulink on parallel workers...
-[26-Mar-2025 11:25:20] Configuring simulation cache folder on parallel workers...
-[26-Mar-2025 11:25:20] Loading model on parallel workers...
-[26-Mar-2025 11:25:26] Running simulations...
-[26-Mar-2025 11:39:53] Completed 1 of 10 simulation runs
-[26-Mar-2025 11:40:13] Completed 2 of 10 simulation runs
-[26-Mar-2025 11:40:30] Completed 3 of 10 simulation runs
-[26-Mar-2025 11:40:45] Completed 4 of 10 simulation runs
-[26-Mar-2025 11:41:01] Completed 5 of 10 simulation runs
-[26-Mar-2025 11:41:19] Completed 6 of 10 simulation runs
-[26-Mar-2025 11:41:36] Completed 7 of 10 simulation runs
-[26-Mar-2025 11:41:55] Completed 8 of 10 simulation runs
-[26-Mar-2025 11:42:14] Completed 9 of 10 simulation runs
-[26-Mar-2025 11:42:35] Completed 10 of 10 simulation runs
-[26-Mar-2025 11:42:35] Cleaning up parallel workers...
-Elapsed time is 1053.166332 seconds.
-[26-Mar-2025 11:44:29] Checking for availability of parallel pool...
-[26-Mar-2025 11:44:29] Starting Simulink on parallel workers...
-[26-Mar-2025 11:44:31] Configuring simulation cache folder on parallel workers...
-[26-Mar-2025 11:44:31] Loading model on parallel workers...
-[26-Mar-2025 11:44:36] Running simulations...
-[26-Mar-2025 11:56:37] Completed 1 of 10 simulation runs
-[26-Mar-2025 11:56:56] Completed 2 of 10 simulation runs
-[26-Mar-2025 11:57:14] Completed 3 of 10 simulation runs
-[26-Mar-2025 11:57:33] Completed 4 of 10 simulation runs
-[26-Mar-2025 11:57:55] Completed 5 of 10 simulation runs
-[26-Mar-2025 11:58:14] Completed 6 of 10 simulation runs
-[26-Mar-2025 11:58:36] Completed 7 of 10 simulation runs
-[26-Mar-2025 11:58:59] Completed 8 of 10 simulation runs
-[26-Mar-2025 11:59:21] Completed 9 of 10 simulation runs
-[26-Mar-2025 11:59:44] Completed 10 of 10 simulation runs
-[26-Mar-2025 11:59:44] Cleaning up parallel workers...
-Elapsed time is 924.601076 seconds.
-Error using <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('plus')" style="font-weight:bold"> + </a>
-Arrays have incompatible sizes for this operation.
+    "Warm tank refuel chilldown"           33.716        "m/s"
+    "Warm tank refuel tank filling"        2.8643        "m/s"
+    "Warm tank refuel warmup"              17.673        "m/s"
+    "Cold tank refuel chilldown"           46.868        "m/s"
+    "Cold tank refuel tank filling"        10.836        "m/s"
+    "Cold tank refuel warmup"              17.844        "m/s"
+    "Defuel chilldown"                     30.489        "m/s"
+    "Defuel wamrup"                        15.696        "m/s"
 
-Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('tank_wall_vapour_heat_transfer_coeff_setup', 'C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\Functions\tank_wall_vapour_heat_transfer_coeff_setup.m', 14)" style="font-weight:bold">tank_wall_vapour_heat_transfer_coeff_setup</a> (<a href="matlab: opentoline('C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\Functions\tank_wall_vapour_heat_transfer_coeff_setup.m',14,0)">line 14</a>)
-                                'LoggingFileName','Graphs/tank_wall_vapour_heat_transfer_coeff_simOut'+i+'.mat');
+  Columns 1 through 13
 
-Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('run_everything_slowly', 'C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m', 128)" style="font-weight:bold">run_everything_slowly</a> (<a href="matlab: opentoline('C:\Users\hc21562\Documents\Year_3\RP3\LH2_Refuel_Model\Model\Sensitivity_sweep\run_everything_slowly.m',128,0)">line 128</a>)
-    tank_wall_vapour_heat_transfer_coeff_setup(rapid_flag, accel_flag, mdl,...
+   11.0000   54.0000  139.0000  328.0000  338.5000  348.5000  416.5000  427.0000  471.0000  523.0000  708.0000  718.5000  729.0000
 
-<a href="matlab:helpview('matlab','error_sizeDimensionsMustMatch')" style="font-weight:bold">Related documentation</a>
+  Columns 14 through 15
 
-[26-Mar-2025 12:02:01] Checking for availability of parallel pool...
-[26-Mar-2025 12:02:01] Starting Simulink on parallel workers...
-[26-Mar-2025 12:02:02] Configuring simulation cache folder on parallel workers...
-[26-Mar-2025 12:02:02] Loading model on parallel workers...
-[26-Mar-2025 12:02:04] Running simulations...
-[26-Mar-2025 12:11:01] Completed 1 of 10 simulation runs
-[26-Mar-2025 12:11:34] Completed 2 of 10 simulation runs
-[26-Mar-2025 12:12:13] Completed 3 of 10 simulation runs
-[26-Mar-2025 12:12:47] Completed 4 of 10 simulation runs
-[26-Mar-2025 12:13:04] Completed 5 of 10 simulation runs
-[26-Mar-2025 12:13:54] Completed 6 of 10 simulation runs
-[Warning: While loading an object of class 'Node':
-Cannot load 'simscape.logging.Node' object. The file might be corrupted.] 
-[26-Mar-2025 12:13:55] Completed 7 of 10 simulation runs
-[26-Mar-2025 12:18:26] Cleaning up parallel workers...
-[26-Mar-2025 12:19:06] Checking for availability of parallel pool...
-[26-Mar-2025 12:19:06] Starting Simulink on parallel workers...
-[26-Mar-2025 12:19:07] Configuring simulation cache folder on parallel workers...
-[26-Mar-2025 12:19:07] Loading model on parallel workers...
-[26-Mar-2025 12:19:10] Running simulations...
-[Warning: Graphics timeout occurred. To share details of this issue with MathWorks technical
-support, please include that this is an unresponsive graphics client with your service request.] 
-[Warning: 1 worker(s) crashed while executing code in the current parallel pool. MATLAB may
-attempt to run the code again on the remaining workers of the pool, unless an spmd block has
-run. <a href="matlab:edit('C:\Users\hc21562\Documents\Matlab_parallel\Job1\matlab_crash_dump.52564-1')">View the crash dump files to determine what caused the workers to crash.</a>] 
-[Warning: 1 worker(s) crashed while executing code in the current parallel pool. MATLAB may
-attempt to run the code again on the remaining workers of the pool, unless an spmd block has
-run. <a href="matlab:edit('C:\Users\hc21562\Documents\Matlab_parallel\Job1\matlab_crash_dump.52564-1')">View the crash dump files to determine what caused the workers to crash.</a>] 
+  770.5000  967.5000
+
+Total LH2 supplied by ground station = 34.8981kg.
+Total LH2 in the UAM tank = 16.0817kg.
+Total LH2 supplied by ground station = 30.9408kg.
+Total LH2 in the UAM tank = 16.0817kg.
+Total LH2 supplied by ground station = 34.8527kg.
+Total LH2 in the UAM tank = 16.0822kg.
+Total LH2 supplied by ground station = 35.0561kg.
+Total LH2 in the UAM tank = 16.2523kg.
+Total LH2 supplied by ground station = 34.7583kg.
+Total LH2 in the UAM tank = 15.9785kg.
+Total LH2 supplied by ground station = 34.8913kg.
+Total LH2 in the UAM tank = 16.0914kg.
+Total LH2 supplied by ground station = 35.0205kg.
+Total LH2 in the UAM tank = 16.2043kg.
+Total LH2 supplied by ground station = 35.1139kg.
+Total LH2 in the UAM tank = 16.2786kg.
+Total LH2 supplied by ground station = 34.7203kg.
+Total LH2 in the UAM tank = 15.9331kg.
+Total LH2 supplied by ground station = 34.7825kg.
+Total LH2 in the UAM tank = 15.986kg.
+Total LH2 supplied by ground station = 34.8487kg.
+Total LH2 in the UAM tank = 16.0405kg.
+Total LH2 supplied by ground station = 34.9029kg.
+Total LH2 in the UAM tank = 16.0866kg.
+Total LH2 supplied by ground station = 34.7666kg.
+Total LH2 in the UAM tank = 15.9641kg.
+Total LH2 supplied by ground station = 34.8117kg.
+Total LH2 in the UAM tank = 16.0052kg.
+Total LH2 supplied by ground station = 34.8383kg.
+Total LH2 in the UAM tank = 16.0305kg.
+Total LH2 supplied by ground station = 34.8687kg.
+Total LH2 in the UAM tank = 16.0561kg.
+Total LH2 supplied by ground station = 34.8776kg.
+Total LH2 in the UAM tank = 16.0649kg.
+Total LH2 supplied by ground station = 34.8899kg.
+Total LH2 in the UAM tank = 16.0738kg.
+Total LH2 supplied by ground station = 34.8991kg.
+Total LH2 in the UAM tank = 16.0826kg.
+Total LH2 supplied by ground station = 34.9142kg.
+Total LH2 in the UAM tank = 16.0971kg.
+Total LH2 supplied by ground station = 34.9251kg.
+Total LH2 in the UAM tank = 16.1071kg.
+Total LH2 supplied by ground station = 34.9384kg.
+Total LH2 in the UAM tank = 16.1163kg.
+Full run failed, check error messages and aborts
+System aborted, handling in graphing
+Full run failed, check error messages and aborts
+System aborted, handling in graphing
+Full run failed, check error messages and aborts
+System aborted, handling in graphing
+Total LH2 supplied by ground station = 38.1202kg.
+Total LH2 in the UAM tank = 15.3905kg.
+Total LH2 supplied by ground station = 37.3772kg.
+Total LH2 in the UAM tank = 15.336kg.
+Total LH2 supplied by ground station = 36.8012kg.
+Total LH2 in the UAM tank = 15.6938kg.
+Total LH2 supplied by ground station = 36.0012kg.
+Total LH2 in the UAM tank = 16.07kg.
+Total LH2 supplied by ground station = 34.9949kg.
+Total LH2 in the UAM tank = 16.2607kg.
+Total LH2 supplied by ground station = 34.0533kg.
+Total LH2 in the UAM tank = 16.2884kg.
+Total LH2 supplied by ground station = 33.6728kg.
+Total LH2 in the UAM tank = 16.7044kg.
+Full run failed, check error messages and aborts
+System aborted, handling in graphing
+Full run failed, check error messages and aborts
+System aborted, handling in graphing
+Total LH2 supplied by ground station = 30.6723kg.
+Total LH2 in the UAM tank = 16.5527kg.
+Total LH2 supplied by ground station = 31.1942kg.
+Total LH2 in the UAM tank = 16.4255kg.
+Total LH2 supplied by ground station = 32.2797kg.
+Total LH2 in the UAM tank = 17.0292kg.
+Total LH2 supplied by ground station = 33.7398kg.
+Total LH2 in the UAM tank = 16.742kg.
+Total LH2 supplied by ground station = 34.6282kg.
+Total LH2 in the UAM tank = 15.922kg.
+Total LH2 supplied by ground station = 35.3717kg.
+Total LH2 in the UAM tank = 16.3808kg.
+Total LH2 supplied by ground station = 35.4678kg.
+Total LH2 in the UAM tank = 16.4763kg.
+Total LH2 supplied by ground station = 35.5559kg.
+Total LH2 in the UAM tank = 16.5993kg.
+Total LH2 supplied by ground station = 25.6034kg.
+Total LH2 in the UAM tank = 16.1907kg.
+Total LH2 supplied by ground station = 26.6566kg.
+Total LH2 in the UAM tank = 16.0733kg.
+Total LH2 supplied by ground station = 27.8032kg.
+Total LH2 in the UAM tank = 16.1599kg.
+Total LH2 supplied by ground station = 28.5837kg.
+Total LH2 in the UAM tank = 15.9388kg.
+Total LH2 supplied by ground station = 29.8398kg.
+Total LH2 in the UAM tank = 16.2097kg.
+Total LH2 supplied by ground station = 30.9769kg.
+Total LH2 in the UAM tank = 16.2633kg.
+Total LH2 supplied by ground station = 31.68kg.
+Total LH2 in the UAM tank = 15.931kg.
+Total LH2 supplied by ground station = 32.8938kg.
+Total LH2 in the UAM tank = 16.1022kg.
+Total LH2 supplied by ground station = 34.1418kg.
+Total LH2 in the UAM tank = 16.3068kg.
+Total LH2 supplied by ground station = 34.9029kg.
+Total LH2 in the UAM tank = 16.0866kg.
+Total LH2 supplied by ground station = 34.9138kg.
+Total LH2 in the UAM tank = 16.0466kg.
+Total LH2 supplied by ground station = 34.9229kg.
+Total LH2 in the UAM tank = 16.0573kg.
+Total LH2 supplied by ground station = 34.9079kg.
+Total LH2 in the UAM tank = 16.044kg.
+Total LH2 supplied by ground station = 34.9057kg.
+Total LH2 in the UAM tank = 16.0454kg.
+Total LH2 supplied by ground station = 34.9175kg.
+Total LH2 in the UAM tank = 16.0667kg.
+Total LH2 supplied by ground station = 34.9015kg.
+Total LH2 in the UAM tank = 16.0714kg.
+Total LH2 supplied by ground station = 34.8873kg.
+Total LH2 in the UAM tank = 16.1048kg.
+Total LH2 supplied by ground station = 34.8517kg.
+Total LH2 in the UAM tank = 16.1701kg.
+Total LH2 supplied by ground station = 35.2679kg.
+Total LH2 in the UAM tank = 16.7637kg.
+Total LH2 supplied by ground station = 35.1151kg.
+Total LH2 in the UAM tank = 17.1838kg.
+[Warning: Exported image displays axes toolbar. To remove axes toolbar from image, export again.] 
+Total LH2 supplied by ground station = 34.3339kg.
+Total LH2 in the UAM tank = 15.5348kg.
+Total LH2 supplied by ground station = 40.2642kg.
+Total LH2 in the UAM tank = 21.1842kg.
+Total LH2 supplied by ground station = 45.6757kg.
+Total LH2 in the UAM tank = 26.3247kg.
+Total LH2 supplied by ground station = 51.4926kg.
+Total LH2 in the UAM tank = 31.6789kg.
+Total LH2 supplied by ground station = 57.8964kg.
+Total LH2 in the UAM tank = 38.6705kg.
+Total LH2 supplied by ground station = 63.6478kg.
+Total LH2 in the UAM tank = 43.3786kg.
+Total LH2 supplied by ground station = 69.5905kg.
+Total LH2 in the UAM tank = 49.2685kg.
+Total LH2 supplied by ground station = 75.7913kg.
+Total LH2 in the UAM tank = 55.3489kg.
+Total LH2 supplied by ground station = 81.6613kg.
+Total LH2 in the UAM tank = 61.0143kg.
+Total LH2 supplied by ground station = 87.7651kg.
+Total LH2 in the UAM tank = 66.9421kg.
+Total LH2 supplied by ground station = 33.624kg.
+Total LH2 in the UAM tank = 16.2405kg.
+Full run failed, check error messages and aborts
+System aborted, handling in graphing
+Total LH2 supplied by ground station = 34.5613kg.
+Total LH2 in the UAM tank = 16.2413kg.
+Total LH2 supplied by ground station = 34.9029kg.
+Total LH2 in the UAM tank = 16.0866kg.
+Total LH2 supplied by ground station = 35.1865kg.
+Total LH2 in the UAM tank = 16.0726kg.
+Total LH2 supplied by ground station = 34.9159kg.
+Total LH2 in the UAM tank = 15.7575kg.
+Total LH2 supplied by ground station = 34.997kg.
+Total LH2 in the UAM tank = 15.7574kg.
+Total LH2 supplied by ground station = 35.144kg.
+Total LH2 in the UAM tank = 15.8271kg.
+Full run failed, check error messages and aborts
+System aborted, handling in graphing
+Full run failed, check error messages and aborts
+System aborted, handling in graphing
+Full run failed, check error messages and aborts
+System aborted, handling in graphing
+Full run failed, check error messages and aborts
+System aborted, handling in graphing
+Full run failed, check error messages and aborts
+System aborted, handling in graphing
+Full run failed, check error messages and aborts
+System aborted, handling in graphing
+Full run failed, check error messages and aborts
+System aborted, handling in graphing
+Total LH2 supplied by ground station = 35.0403kg.
+Total LH2 in the UAM tank = 16.2319kg.
+Total LH2 supplied by ground station = 34.9029kg.
+Total LH2 in the UAM tank = 16.0866kg.
+Total LH2 supplied by ground station = 34.8579kg.
+Total LH2 in the UAM tank = 16.0205kg.
+Total LH2 supplied by ground station = 35.2007kg.
+Total LH2 in the UAM tank = 16.312kg.
+Total LH2 supplied by ground station = 35.0335kg.
+Total LH2 in the UAM tank = 16.1606kg.
+Total LH2 supplied by ground station = 34.9044kg.
+Total LH2 in the UAM tank = 16.0896kg.
+Total LH2 supplied by ground station = 34.9069kg.
+Total LH2 in the UAM tank = 16.0926kg.
+Total LH2 supplied by ground station = 34.9027kg.
+Total LH2 in the UAM tank = 16.0904kg.
+Total LH2 supplied by ground station = 34.9003kg.
+Total LH2 in the UAM tank = 16.0833kg.
+Total LH2 supplied by ground station = 34.9021kg.
+Total LH2 in the UAM tank = 16.0841kg.
+Total LH2 supplied by ground station = 34.9131kg.
+Total LH2 in the UAM tank = 16.0859kg.
+Total LH2 supplied by ground station = 34.954kg.
+Total LH2 in the UAM tank = 16.1318kg.
+Total LH2 supplied by ground station = 34.7543kg.
+Total LH2 in the UAM tank = 15.9748kg.
+Total LH2 supplied by ground station = 34.9973kg.
+Total LH2 in the UAM tank = 16.0707kg.
+Total LH2 supplied by ground station = 37.5652kg.
+Total LH2 in the UAM tank = 16.2446kg.
+Total LH2 supplied by ground station = 35.3157kg.
+Total LH2 in the UAM tank = 16.0656kg.
+Total LH2 supplied by ground station = 35.0332kg.
+Total LH2 in the UAM tank = 16.0445kg.
+Total LH2 supplied by ground station = 35.0488kg.
+Total LH2 in the UAM tank = 16.0504kg.
+Total LH2 supplied by ground station = 35.0441kg.
+Total LH2 in the UAM tank = 16.0543kg.
+Total LH2 supplied by ground station = 34.885kg.
+Total LH2 in the UAM tank = 15.984kg.
+Total LH2 supplied by ground station = 34.8533kg.
+Total LH2 in the UAM tank = 16.143kg.
+Total LH2 supplied by ground station = 34.8376kg.
+Total LH2 in the UAM tank = 16.4477kg.
+Total LH2 supplied by ground station = 34.2882kg.
+Total LH2 in the UAM tank = 16.3722kg.
+Total LH2 supplied by ground station = 33.9013kg.
+Total LH2 in the UAM tank = 16.3752kg.
+Total LH2 supplied by ground station = 33.8345kg.
+Total LH2 in the UAM tank = 16.5328kg.

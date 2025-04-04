@@ -82,6 +82,7 @@ function [start_warm_chilldown_index, start_warm_tank_fill_index, ...
             start_defuel_chilldown_index = 0;
             start_defuel_drain_index = 0;
             start_defuel_disconnect = 0;
+            system_aborted = true;
         end
     else
         disp("An error occured. Please check error messages.")

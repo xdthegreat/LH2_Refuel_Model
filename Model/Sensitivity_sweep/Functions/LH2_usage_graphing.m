@@ -14,7 +14,10 @@ function LH2_usage_graphing(LH2_usage_simOut)
             mode_breakpoint_array = [mode_breakpoint_array, AC_mode_time(i+1)];
         end
     end
-        start_warm_chilldown_index = find_nearest(mode_breakpoint_array(1), LH2_usage_simOut.tout);
+
+    disp(mode_breakpoint_array)
+    
+    start_warm_chilldown_index = find_nearest(mode_breakpoint_array(1), LH2_usage_simOut.tout);
     start_warm_tank_fill_index = find_nearest(mode_breakpoint_array(2), LH2_usage_simOut.tout);
     start_warm_warmup_index = find_nearest(mode_breakpoint_array(3), LH2_usage_simOut.tout);
     start_warm_disconnect_index = find_nearest(mode_breakpoint_array(4), LH2_usage_simOut.tout);
@@ -49,13 +52,13 @@ function LH2_usage_graphing(LH2_usage_simOut)
     hold on
     title("Total usage of LH2 for warm tank refuel")
     plot(Ground_LH2_total_time(start_warm_chilldown_index:idle_1_index), ...
-        Ground_LH2_total(start_warm_chilldown_index:idle_1_index))
+        Ground_LH2_total(start_warm_chilldown_index:idle_1_index), 'LineWidth', 2)
     plot(Ground_LH2_total_time(start_warm_chilldown_index:idle_1_index), ...
-        AC_LH2_total(start_warm_chilldown_index:idle_1_index))
+        AC_LH2_total(start_warm_chilldown_index:idle_1_index),'-.', 'LineWidth', 2)
     legend(["Supplied by ground station", "UAM tank gauge"])
     xlabel("Time (s)")
     ylabel("LH2 used (kg)")
-    ylim([0, 70])
+    ylim([0, 45])
     hold off
     disp("Total LH2 supplied by ground station = "+Ground_LH2_total(idle_1_index)+"kg.")
     disp("Total LH2 in the UAM tank = "+AC_LH2_total(idle_1_index)+"kg.")
@@ -78,13 +81,13 @@ function LH2_usage_graphing(LH2_usage_simOut)
     hold on
     title("Total usage of LH2 for cold tank refuel")
     plot(Ground_LH2_total_time(start_cold_chilldown_index:idle_3_index) - Ground_LH2_total_time(start_cold_chilldown_index), ...
-        Ground_LH2_total(start_cold_chilldown_index:idle_3_index) - Ground_LH2_total(start_cold_chilldown_index))
+        Ground_LH2_total(start_cold_chilldown_index:idle_3_index) - Ground_LH2_total(start_cold_chilldown_index), 'LineWidth', 2)
     plot(Ground_LH2_total_time(start_cold_chilldown_index:idle_3_index) - Ground_LH2_total_time(start_cold_chilldown_index), ...
-        AC_LH2_total(start_cold_chilldown_index:idle_3_index))
+        AC_LH2_total(start_cold_chilldown_index:idle_3_index), '-.', 'LineWidth', 2)
     legend(["Supplied by ground station", "Stored in UAM tank"])
     xlabel("Time (s)")
     ylabel("LH2 used (kg)")
-    ylim([0, 60])
+    ylim([0, 45])
     hold off
     disp("Total LH2 supplied by ground station = " + ...
         (Ground_LH2_total(idle_3_index)-Ground_LH2_total(start_cold_chilldown_index)) + "kg.")

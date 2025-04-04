@@ -27,3 +27,6 @@ xlabel("Temperature (K)")
 title("Boiling point of LH2")
 saveas(gcf, 'Graphs/LH2 phase diagram.png')
 
+
+%% 
+LH2_nominal_density = py.CoolProp.CoolProp.PropsSI('D','P',120000,'T',20,'Hydrogen');
